@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>anton</title>
+    <description>A small growth today makes progression happen...</description>
+    <link>www.anton23.com/</link>
+    <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 17 Jul 2014 22:46:56 -0700</pubDate>
+    <lastBuildDate>Thu, 17 Jul 2014 22:46:56 -0700</lastBuildDate>
+    <generator>Jekyll v2.1.0</generator>
+    
+      <item>
+        <title>Design: Layout</title>
+        <description>&lt;h2 id=&quot;visual-hierarchy&quot;&gt;Visual Hierarchy&lt;/h2&gt;
+&lt;p&gt;Arrange elements to engage and direct the users eye.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;English is read from left to right, so start from the upper-left corner especially with logo/brand.&lt;/li&gt;
+  &lt;li&gt;Next is navigation.
+    &lt;ul&gt;
+      &lt;li&gt;Few items – Horizontal (top bar) or Vertical (side bar) works well.&lt;/li&gt;
+      &lt;li&gt;Many items – Vertical excels.  Horizontal works if it’s a tiered system.&lt;/li&gt;
+      &lt;li&gt;Dropdowns/Flyouts – works well in both systems.&lt;/li&gt;
+      &lt;li&gt;Vertical navigation is not used that much&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Main Content – content should reinforce the hierarchy
+    &lt;ul&gt;
+      &lt;li&gt;Make sure all directional cues are pointing to the content.
+        &lt;ul&gt;
+          &lt;li&gt;e.g., Use images of people that look towards the content (see image below).&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Secondary Content – should be smaller and relegated to the side or underneath the main content.&lt;/li&gt;
+  &lt;li&gt;Footer – bottom of the page and provides quick hint information for users. 
+    &lt;ul&gt;
+      &lt;li&gt;It should always span the width of the page.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/zZesJtv.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/9BaPcDn.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;the-grid-system&quot;&gt;The Grid System&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;It is made up of vertical lines that create columns with gutters in-between them.&lt;/li&gt;
+  &lt;li&gt;It also has horizontal lines that create a baseline for text that is equal to the line-height.&lt;/li&gt;
+  &lt;li&gt;Always respect the gutters&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/yoArX79.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;fixed-vs-fluid&quot;&gt;Fixed vs Fluid&lt;/h3&gt;
+&lt;p&gt;Fixed grid has constant width.  A fluid grid grows and shrinks with the browser window.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;incorporate-whitespace&quot;&gt;Incorporate Whitespace&lt;/h2&gt;
+
+&lt;p&gt;Ample empty space around elements can increase readability and create a mood of elegance.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Even in images, there’s white space that’s surrounding the subject.&lt;/li&gt;
+  &lt;li&gt;Density is lack of whitespace.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;balance-all-the-things&quot;&gt;Balance all the things&lt;/h2&gt;
+&lt;p&gt;A good design is a balanced design.  It can be symmetrical or asymmetrical.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Symmetry – portrays a sense of stabilty and trust.&lt;/li&gt;
+  &lt;li&gt;Asymmetry – effective in drawing attention and breaking monotony.  It is inherently balanced, and creates intrigue and demands attention.  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/gmGesNH.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;all-of-the-principles-together-contribute-to-balance&quot;&gt;All of the principles together Contribute to Balance.&lt;/h3&gt;
+&lt;p&gt;Size, Color, Contribute, Alignment (grid), Whitespace (or lack thereof–density) and Symmetry create balance.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;final-notes&quot;&gt;Final Notes:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If you can’t defend it, Change It
+    &lt;ul&gt;
+      &lt;li&gt;Design with intentionality, the ability to defend your design decisions in a conversational manner. If you can’t defend it, its probably not the right choice.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Experiment Often
+    &lt;ul&gt;
+      &lt;li&gt;The first solution is rarely the best one, don’t rush the process.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 12 Jul 2014 07:43:58 -0700</pubDate>
+        <link>www.anton23.com/skills/2014/07/12/design-layout/</link>
+        <guid isPermaLink="true">www.anton23.com/skills/2014/07/12/design-layout/</guid>
+        
+        
+        <category>skills</category>
+        
+      </item>
+    
+      <item>
+        <title>Design: Color</title>
+        <description>&lt;h2 id=&quot;color-theory-101&quot;&gt;Color Theory 101:&lt;/h2&gt;
+&lt;p&gt;There are 2 types of color: color you can touch (subtractive color)
+and color you can’t touch (additive color).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Subtractive Color – CMYK&lt;/li&gt;
+  &lt;li&gt;Additive Color – RGB&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hsl&quot;&gt;HSL&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Humans process color in Hue, Saturation, Lightness.  &lt;/li&gt;
+  &lt;li&gt;Most applications refer to Lightness as Brightness where the maximum value is 
+the most vibrant color.  (Lightness’s maximum value is white.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;color-scheme&quot;&gt;Color Scheme&lt;/h2&gt;
+&lt;p&gt;It’s a collection of 4-5 colors built into the style guide.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/81q88zc.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Steps in Building a Color Scheme:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Start by selecting a base color – different colors create different moods.
+    &lt;ul&gt;
+      &lt;li&gt;red – heat, passion, excitement. Easily grabs a)ention and evokes speed and energy.&lt;/li&gt;
+      &lt;li&gt;orange – warmth, vitality.  Associated with reliability &amp;amp; playfulness.&lt;/li&gt;
+      &lt;li&gt;yellow – optimism, creativity.  Represents sunshine, cheer, and happiness.&lt;/li&gt;
+      &lt;li&gt;green – serenity, health.  Connotes growth, nature, freshness.&lt;/li&gt;
+      &lt;li&gt;blue – security, truth, stability. Implies loyalty, reliability and an open communication&lt;/li&gt;
+      &lt;li&gt;purple – spirituality, intelligence, wealth.  Also means royal, sentimental, and sophisticated.&lt;/li&gt;
+      &lt;li&gt;pink – youthful intensity.  Conveys energy, fun and excitement.&lt;/li&gt;
+      &lt;li&gt;brown – durability, class. Represents age, stabili$ and relaxation.&lt;/li&gt;
+      &lt;li&gt;black – power, drama. It’s serious, bold and strong.&lt;/li&gt;
+      &lt;li&gt;white – simplicity, cleanliness.  It’s message is youthful, mild and pure.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Keep culture in mind when choosing a base color.&lt;/li&gt;
+  &lt;li&gt;Build Scheme around base color.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/NM1JoMf.png&quot; alt=&quot;w500&quot; /&gt;
+&lt;img src=&quot;http://i.imgur.com/qsGyiAG.png&quot; alt=&quot;w500&quot; /&gt;
+&lt;img src=&quot;http://i.imgur.com/RepXI6G.png&quot; alt=&quot;w500&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;color--type&quot;&gt;Color &amp;amp; type&lt;/h2&gt;
+
+&lt;p&gt;Contrast is the difference in colors.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Contrast of Hue&lt;/li&gt;
+  &lt;li&gt;Contrast of Saturation&lt;/li&gt;
+  &lt;li&gt;Contrast of Lightness&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;most-contrasts-are-multi-faceted&quot;&gt;Most contrasts are multi-faceted.&lt;/h3&gt;
+
+&lt;p&gt;It’s common to combine contrasts of Hue,
+Saturation, or Brightness. The left part of the image below shows a contrast of 
+Hue only; the right part shows a contrast of Hue &amp;amp; Brightness. WCAG determines the the standard for contrasts.  It stands for Web Content 
+Accessibility Guidelines.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/gMRWgSh.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;High-contrast colors are the best (e.g., black and white)&lt;/li&gt;
+  &lt;li&gt;Same Hue, but high saturation &amp;amp; brightness contrast are second. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some contrasts are intrinsically difficult for humans to distinguish (and 
+are plain ugly too).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/QmBHemf.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;natural-values&quot;&gt;Natural Values&lt;/h3&gt;
+&lt;p&gt;Different colors have different natural values.  For example, yellow is a 
+naturally light color and blue is naturally dark.  Creating contrast where
+yellow is darker than the blue creates an awkward user-experience.  However,
+this can be fixed by adjusting the lightness to make yellow be lighter and blue 
+darker – so as to correspond with the natural values.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/9SAMo1W.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;warm--cold-colors&quot;&gt;Warm &amp;amp; Cold Colors&lt;/h3&gt;
+&lt;p&gt;Red, orange, &amp;amp; yellow side are warm.  Green, blue, and purple are on the cooler side.
+Use warm &amp;amp; cold to create depth.  Warm is always closer, and cold is in the back.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/GdjR4nf.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/jpd33E4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;visual-hierarchy&quot;&gt;Visual Hierarchy&lt;/h3&gt;
+&lt;p&gt;Combine colors to reinforce a hierarchy.  Use color differences to contribute 
+to relationships between elements on the page.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/XqQ2sZF.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;types-and-images&quot;&gt;Types and Images&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Don’t be tacky – Don’t add effects (dropshadows, strokes, etc.) on text.
+    &lt;ul&gt;
+      &lt;li&gt;Instead, treat the image (overlay, darken, etc.) on the background to make the text stand out.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Type in an image – Dont do it! Professional copy doesn’t belong in an image.
+    &lt;ul&gt;
+      &lt;li&gt;(Unless it’s cat meme, or a blog post for personal use ;-) )&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Below is a good example of color combination that was used on Code School’s site.
+A combination of analogous, complementary colors with high enough contrast for 
+text colors and backgrounds.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/UN2it1x.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 11 Jul 2014 07:43:58 -0700</pubDate>
+        <link>www.anton23.com/skills/2014/07/11/design-color/</link>
+        <guid isPermaLink="true">www.anton23.com/skills/2014/07/11/design-color/</guid>
+        
+        
+        <category>skills</category>
+        
+      </item>
+    
+      <item>
+        <title>Design: Typography</title>
+        <description>&lt;h2 id=&quot;style-guide&quot;&gt;Style Guide&lt;/h2&gt;
+&lt;p&gt;Reference document for multiple instances of typography/styles that would 
+be used throughout your application.  An example is shown below.  Putting this
+guide beforehand will avoid any inconsistency and create a better overall 
+design/user-experience.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ZLXQtur.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;typography-is-both-visual-and-verbal&quot;&gt;Typography is both Visual and Verbal&lt;/h2&gt;
+&lt;p&gt;Different classifications of type create different moods that will either
+server your content well or not. The reader surveys the overall graphical 
+patterns of the page, and then parse the language and read.  &lt;/p&gt;
+
+&lt;p&gt;History… A basic system for classifying typefaces was devised in the nineteenth century, when printers sought to identify a heritage for their own craft analogous to that of art history. &lt;em&gt;Humanist&lt;/em&gt; letterforms are closely connected to calligraphy and the movement of the hand. &lt;em&gt;Transitional&lt;/em&gt; and &lt;em&gt;modern&lt;/em&gt; typefaces are more abstract and less organic. These three main groups correspond roughly to the Renaissance, Baroque, and Enlightenment periods in art and literature. Designers in the twentieth and twenty-first centuries have continued to create new typefaces based on historic characteristics. &lt;a href=&quot;http://papress.com/thinkingwithtype/letter/classification.htm&quot;&gt;Source&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Below are the most common classification of types…&lt;/p&gt;
+
+&lt;h3 id=&quot;serif-font&quot;&gt;Serif Font&lt;/h3&gt;
+&lt;p&gt;Serifs are the small lines tailing from the edges of letters. Some styles of 
+type in this Serif Classification are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Humanist – great for historical or journalism applications&lt;/li&gt;
+  &lt;li&gt;Transitional – traditional academia and legal&lt;/li&gt;
+  &lt;li&gt;Modern – arts and culture&lt;/li&gt;
+  &lt;li&gt;Egyptian – marketing and promotional&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/Zs5zo2S.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;http://i.imgur.com/y2oLzyq.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;http://i.imgur.com/vF8inNJ.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;http://i.imgur.com/xYv4Sbh.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;sans-serif-font&quot;&gt;Sans Serif Font&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Humanist Sans – government or education&lt;/li&gt;
+  &lt;li&gt;Transitional Sans – technology or transportation&lt;/li&gt;
+  &lt;li&gt;Geometric Sans – science or architecture&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ZbM9mpq.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;http://i.imgur.com/LhxJsqI.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;http://i.imgur.com/MzJ38Os.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;script-font&quot;&gt;Script Font&lt;/h3&gt;
+&lt;p&gt;Good for adding human element to the site, but not so great for body copy.
+Comic sans is technically a script font.&lt;/p&gt;
+
+&lt;h2 id=&quot;mix--mingle&quot;&gt;Mix &amp;amp; Mingle&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Don’t choose two fonts from the same style (e.g., humanist serif &amp;amp; humanist serif)&lt;/li&gt;
+  &lt;li&gt;Don’t choose two fonts from the same style (e.g., humanist serif &amp;amp; slan serif)&lt;/li&gt;
+  &lt;li&gt;When mixing classes find a similar trait (e.g., humanist serif &amp;amp; humanist sans)
+    &lt;ul&gt;
+      &lt;li&gt;this trait can even be largely abstract&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Strive for &lt;strong&gt;Contrast over Harmony&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;A good rule of thumb to follow is “Keep it the same or 
+change it a lot. Look for emphatic differences rather than mushy transitions.”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Single Typeface is Okay – never feel obligated to use two.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;font-size&quot;&gt;Font Size&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Humans create relationships.  It’s how our brain processes. 
+    &lt;ul&gt;
+      &lt;li&gt;bigger items that stand out appear to be more important.&lt;/li&gt;
+      &lt;li&gt;the headline in big/bold fonts indicate the main topic of an article.&lt;/li&gt;
+      &lt;li&gt;a pic of red bell pepper on a site indicates food theme&lt;/li&gt;
+      &lt;li&gt;a sea of text becomes on a site becomes troublesome for the audience 
+because it’s hard to &lt;strong&gt;assess&lt;/strong&gt; what the site is about right away.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;So create a visual hierarchy!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;when-creating-a-style-guide&quot;&gt;When creating a style guide…&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Set the Body Copy first – this is usually around 16px (convert to ems or rems when necessary).&lt;/li&gt;
+  &lt;li&gt;Headline Text – around 200% to 300% of the body copy.&lt;/li&gt;
+  &lt;li&gt;B-head (or sub-head) Text – around 150% of the body copy.&lt;/li&gt;
+  &lt;li&gt;Navigational Text – same size as body copy.&lt;/li&gt;
+  &lt;li&gt;Byline Text – around 75% of the body copy.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;leading&quot;&gt;Leading&lt;/h3&gt;
+&lt;p&gt;Leading is the amount of space between lines of text.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Leading that is too large negatively affects readability and produces discontinuity&lt;/li&gt;
+  &lt;li&gt;Leading that is too tight creates a claustrophobic feel&lt;/li&gt;
+  &lt;li&gt;Good leading is around 120% to 150% of the body copy size.
+    &lt;ul&gt;
+      &lt;li&gt;setting &lt;code&gt;line-height: 1.5&lt;/code&gt; provides 150% the font’s size.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bold--italics&quot;&gt;Bold &amp;amp; Italics&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use a “less is more” approach.&lt;/li&gt;
+  &lt;li&gt;Use natural convention – e.g., eyes naturally expect headlines to be in bold rather than body copy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;line-width&quot;&gt;Line Width&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Lines that are too short are difficult to read as the user’s eyes have to jump 
+quickly from line to line.&lt;/li&gt;
+  &lt;li&gt;Lines that are too long can get the user’s eyes lost easily.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;characters-per-line&quot;&gt;Characters per Line&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Line width is measured in CPL (characters per line)
+    &lt;ul&gt;
+      &lt;li&gt;50 - 70 CPL is ideal (including spaces)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In CSS, CPL can be adjusted using &lt;code&gt;max-width&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;save-the-orphans-and-widows&quot;&gt;Save the Orphans and Widows&lt;/h3&gt;
+&lt;p&gt;They impede the natural flow of reading for the user.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A widow is a single word on a line of text&lt;/li&gt;
+  &lt;li&gt;An orphan is a single line of text on a column/page&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 10 Jul 2014 07:43:59 -0700</pubDate>
+        <link>www.anton23.com/skills/2014/07/10/design-typography/</link>
+        <guid isPermaLink="true">www.anton23.com/skills/2014/07/10/design-typography/</guid>
+        
+        
+        <category>skills</category>
+        
+      </item>
+    
+      <item>
+        <title>Design Fundamentals</title>
+        <description>&lt;h2 id=&quot;design-theory-101&quot;&gt;Design Theory 101:&lt;/h2&gt;
+
+&lt;h3 id=&quot;content-is-king&quot;&gt;Content is King&lt;/h3&gt;
+&lt;p&gt;Attributes of Content that Influence Design&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Audience – age, race, gender, cultural niche?&lt;/li&gt;
+  &lt;li&gt;Tone – casual, formal, friendly, sarcastic?&lt;/li&gt;
+  &lt;li&gt;Purpose – informational, conversion-driven?&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 09 Jul 2014 07:43:58 -0700</pubDate>
+        <link>www.anton23.com/skills/2014/07/09/design-fundamentals/</link>
+        <guid isPermaLink="true">www.anton23.com/skills/2014/07/09/design-fundamentals/</guid>
+        
+        
+        <category>skills</category>
+        
+      </item>
+    
+      <item>
+        <title>Mobile Journey</title>
+        <description>&lt;h3 id=&quot;fluid-layouts&quot;&gt;Fluid Layouts&lt;/h3&gt;
+&lt;p&gt;Fluid layouts are layouts that scale.  What makes a fluid site?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fluid Grid&lt;/li&gt;
+  &lt;li&gt;Using relative values (i.e., percentages for widths)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;adaptive-design&quot;&gt;Adaptive Design&lt;/h3&gt;
+&lt;p&gt;Design for controlled adaptation where context and/or device is known and
+you design accordingly.&lt;/p&gt;
+
+&lt;p&gt;Four Design Principles&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Who is your user?&lt;/li&gt;
+  &lt;li&gt;How will they use the site?&lt;/li&gt;
+  &lt;li&gt;Context – i.e. what device?&lt;/li&gt;
+  &lt;li&gt;Content – how will it adapt based on the context?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mobile-first-approach&quot;&gt;Mobile First Approach&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;”…prepares you for the explosive growth and new opportunities on the mobile 
+internet, forces you to focus, and enables you to innovate in ways you 
+previously couldn’t”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;~&lt;em&gt;Luke Wroblewski&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Mobile First Approach forces you to focus on the most important things (because
+of how much real estate one has):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Simplifying content&lt;/li&gt;
+  &lt;li&gt;Prioritizing layout&lt;/li&gt;
+  &lt;li&gt;Optimizing user experience&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;responsive-design&quot;&gt;Responsive Design&lt;/h3&gt;
+&lt;p&gt;In responsive design, the content defines breakpoints.  We provide continuity 
+between a variety of different context (e.g., screen size).&lt;/p&gt;
+
+&lt;h3 id=&quot;media-queries&quot;&gt;Media Queries&lt;/h3&gt;
+&lt;p&gt;Best practice is to place them at the bottom of stylesheet&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;sr&quot;&gt;/*-----------------&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;Media Queries&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;------------------*/&lt;/span&gt;
+&lt;span class=&quot;vi&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;screen&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;320&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;responsive-media&quot;&gt;Responsive Media&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;img, embed, object, video { max-width: 100%; }&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;retina-images&quot;&gt;Retina Images&lt;/h3&gt;
+&lt;p&gt;Retina images have 1.5x - 2x the pixel density. (Most iPhones have pixel density
+of 2, while some Android devices have 1.5).  Use media queries to target
+devices that have retina displays and optimize images.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;vi&quot;&gt;@media&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;only&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;screen&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;device&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pixel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;ratio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;only&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;screen&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;device&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pixel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;ratio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logo&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;png&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;iOS’s naming convention for retina-images is &lt;code&gt;logo@2x.png&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;be explicit with the &lt;code&gt;size&lt;/code&gt; because browsers will serve images in their 
+original size&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;relative-font-sizing&quot;&gt;Relative Font-sizing&lt;/h3&gt;
+&lt;p&gt;Formula is &lt;code&gt;target/context = result&lt;/code&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 08 Jul 2014 07:42:59 -0700</pubDate>
+        <link>www.anton23.com/skills/2014/07/08/mobile-journey/</link>
+        <guid isPermaLink="true">www.anton23.com/skills/2014/07/08/mobile-journey/</guid>
+        
+        
+        <category>skills</category>
+        
+      </item>
+    
+      <item>
+        <title>CSS Cross Country</title>
+        <description>&lt;h3 id=&quot;primary-dom-selectors&quot;&gt;Primary DOM Selectors&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Element Selector&lt;/li&gt;
+  &lt;li&gt;Class Selector&lt;/li&gt;
+  &lt;li&gt;ID Selector&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;cascade-order-priority&quot;&gt;Cascade Order Priority&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Using &lt;code&gt;!important&lt;/code&gt; – (Highest Priority)&lt;/li&gt;
+  &lt;li&gt;Inline style attribute&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; definition&lt;/li&gt;
+  &lt;li&gt;External &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt; – (Lowest Priority)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;combinator-selectors&quot;&gt;Combinator Selectors&lt;/h3&gt;
+&lt;p&gt;Combinator – shows relationship&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Descendant Selector  – elements that are descendants 
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;div p { background-color: yellow; }&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Child Selector – elements that are immediate children
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;div &amp;gt; p { background-color: yellow; }&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Adjacent Sibling Selector – ‘p’ that are placed immediately after ‘div’ in 
+example below: 
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;div + p { background-color: yellow; }&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;General Sibling Selector – all ‘p’ that are siblings of ‘div’ in example below:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;div ~ p { background-color: yellow; }&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;clearing-floats-the-clearfix&quot;&gt;Clearing Floats: The Clearfix&lt;/h3&gt;
+&lt;p&gt;A clean technique to clear floats.  When used on the parent, the children will 
+be self-cleared.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:before&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:after&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:after&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;clear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;both&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;zoom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/* IE6&amp;amp;7 */&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;specificity&quot;&gt;Specificity&lt;/h3&gt;
+&lt;p&gt;Priority of a Selector follows this order: &lt;strong&gt;A, B, C, D, E&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A – any inline style? (Highest priority)&lt;/li&gt;
+  &lt;li&gt;B – # of ID Selectors&lt;/li&gt;
+  &lt;li&gt;C – # of Class Selectors&lt;/li&gt;
+  &lt;li&gt;D – # of Element Selectors &lt;/li&gt;
+  &lt;li&gt;E – any inherited style? (Lowest priority)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;collapsing-margins&quot;&gt;Collapsing Margins&lt;/h3&gt;
+&lt;p&gt;Happens when the margins of two block elements collapse to the larger one
+instead of adding the two. &lt;a href=&quot;http://www.w3.org/TR/CSS2/box.html#collapsing-margins&quot;&gt;Source.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/KXipDH8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Collapsing margins will not occur when one or more block element has:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;padding or border&lt;/li&gt;
+  &lt;li&gt;relative or absolute positioning&lt;/li&gt;
+  &lt;li&gt;a float left or right&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;image-use&quot;&gt;Image Use&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Always ask: Content or Layout?&lt;/li&gt;
+  &lt;li&gt;Resize images server-side when possible&lt;/li&gt;
+  &lt;li&gt;Use overflow hidden when necessary&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Rental&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Products&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/h4&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;&amp;lt;ul class=&amp;quot;rental&amp;quot;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;  &amp;lt;li class=&amp;quot;crop&amp;quot;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;  &amp;lt;img src=&amp;quot;snowboard.jpg&amp;quot; alt=&amp;quot;Snowboard&amp;quot; /&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;&amp;lt;/u&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;crop&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;overflow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;crop&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;logoimage-replacement&quot;&gt;Logo/Image Replacement&lt;/h3&gt;
+
+&lt;p&gt;Add descriptive text to image-replaced elements for best-practice especially
+on screen-readers.  Then, use &lt;code&gt;text-indent: -9999px&lt;/code&gt; in CSS to hide the 
+placeholder text.&lt;/p&gt;
+
+&lt;h3 id=&quot;sprites&quot;&gt;Sprites&lt;/h3&gt;
+
+&lt;p&gt;Use sprites when swapping backgroud images to prevent issues such as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The need to preload an image&lt;/li&gt;
+  &lt;li&gt;Adding an extra HTTP request&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;pseudo-classes&quot;&gt;Pseudo Classes&lt;/h3&gt;
+&lt;p&gt;Allow you to conditionally select an element based on state or position.  Below 
+are the most useful selectors:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;:hover / :focus / :active / :visited&lt;/li&gt;
+  &lt;li&gt;:first-child / :last-child / :only-child&lt;/li&gt;
+  &lt;li&gt;:nth-child(odd/even/an+b) / :nth-of-type()  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;pseudo-element&quot;&gt;Pseudo Element&lt;/h3&gt;
+&lt;p&gt;Allows you to modify an element’s content for styling.  Below are the most 
+utilized pseudo elements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;:before / :after – needs &lt;code&gt;content&lt;/code&gt; property to be used.&lt;/li&gt;
+  &lt;li&gt;:first-letter / :first-line  – doesn’t need &lt;code&gt;content&lt;/code&gt; property to be used.
+￼&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 07 Jul 2014 07:42:59 -0700</pubDate>
+        <link>www.anton23.com/skills/2014/07/07/css-cross-country/</link>
+        <guid isPermaLink="true">www.anton23.com/skills/2014/07/07/css-cross-country/</guid>
+        
+        
+        <category>skills</category>
+        
+      </item>
+    
+      <item>
+        <title>Front-end Formations</title>
+        <description>&lt;h3 id=&quot;new-html5-elements&quot;&gt;New HTML5 elements…&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; – Acts like a ‘div’.  However, a ‘div’ has no semantic meaning, 
+but the ‘section’ element does.  It’s used for grouping together thematically 
+related content and for showing document outline.  As Jeremey Keith 
+mentioned, &lt;em&gt;“ask yourself: is all of the content related?”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;header&amp;gt;&lt;/code&gt; – A group of introductory content or navigational aids or both.&lt;br /&gt;
+It should describe the content it is contained within.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;footer&amp;gt;&lt;/code&gt; – Similar to ‘header’.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;aside&amp;gt;&lt;/code&gt; – Tangentially related to the content surrounding it (i.e., it is 
+indirectly related to the content).  However, it’s been utilized as a 
+sidebar for sites too.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;nav&amp;gt;&lt;/code&gt; – Intended for major navigation.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt; – It represents a self-contained composition that is independently
+distributable.  It’s similar to a ‘section’, but the question to ask is: &lt;em&gt;would 
+you syndicate this in an RSS feed?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;main&amp;gt;&lt;/code&gt; – It consists of content that is directly to or expands upon the 
+central topic of the document.  Two pracitices: 1. Do not include more than one 
+‘main’ in a document, and 2. Do not make it a child of ‘article’, ‘aside’, 
+‘footer’, ‘header’, or ‘nav’.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;figure&amp;gt;&lt;/code&gt; &amp;amp; &lt;code&gt;&amp;lt;figcaption&amp;gt;&lt;/code&gt; – A ‘figure’ element is self-contained and that
+can be moved away from the main flow of the document without affecting the 
+document’s meaning.  A ‘figcaption’ is used as supplemental information for the 
+‘figure’.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;time&amp;gt;&lt;/code&gt; – It’s used for time representation. duh.&lt;/p&gt;
+
+&lt;h3 id=&quot;new-html5-input-types&quot;&gt;New HTML5 input types…&lt;/h3&gt;
+
+&lt;p&gt;Using the correct type provides users added usability on mobile browsers.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Search – This also adds an extra UI benefit of a clear icon.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Email&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;URL&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Tel&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Number&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Range – provides a slider input.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Date – provides a date picker.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Month&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Week&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Time&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Datetime&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Datetime-local – just like Datetime but with no time zone associated with it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Color – provides color picker.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;font-face&quot;&gt;Font Face&lt;/h3&gt;
+&lt;p&gt;Ability to provide online fonts for use on websites.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;vi&quot;&gt;@font&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;face&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;OpenSansRegular&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;OpenSansRegular-webfont.eot&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;OpenSansRegular&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Arial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;serif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 05 Jul 2014 07:42:59 -0700</pubDate>
+        <link>www.anton23.com/skills/2014/07/05/front-end-formations/</link>
+        <guid isPermaLink="true">www.anton23.com/skills/2014/07/05/front-end-formations/</guid>
+        
+        
+        <category>skills</category>
+        
+      </item>
+    
+      <item>
+        <title>Learning to Jekyll!</title>
+        <description>&lt;p&gt;Today I received my blog’s web hosting bill from Amazon Web Services. What
+used to be 52 cents have been multiplied 5,300 folds.  I’m guessing a few 
+people got hold of my blog and the link was passed around. Hence, now 
+I’m switching to &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; and &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt; for support!&lt;/p&gt;
+
+&lt;p&gt;The transition was pretty simple and everything has been pretty straightforward.
+I guess it also helped that I’ve used Github in the past and have tinkered with
+&lt;a href=&quot;http://middlemanapp.com/&quot;&gt;The Middleman&lt;/a&gt; in my previous web projects.&lt;/p&gt;
+
+&lt;p&gt;The transition is not complete yet, but I have a good 85% of it set. &lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 03 Jul 2014 07:42:59 -0700</pubDate>
+        <link>www.anton23.com/jekyll/update/2014/07/03/learning-to-jekyll/</link>
+        <guid isPermaLink="true">www.anton23.com/jekyll/update/2014/07/03/learning-to-jekyll/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Investing... Here we go again.</title>
+        <description>&lt;p&gt;I’ve looked into investing pretty heavily about 5 years ago.  I wish I made notes of the terms that ought to be remembered and the approach I followed.  Oh well, it’s not too late to refresh my memory and make notes.  So here goes…&lt;/p&gt;
+
+&lt;p&gt;It’s 2014.  The approach I’ll be using is making my portfolio.  &lt;/p&gt;
+
+&lt;p&gt;First off, reading…&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;I Will Teach You To Be Rich – as far as investing is concerned, you cannot beat the market and you’re better off investing in index funds because of the low fees.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The Boglehead’s Guide to Investing&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A Random Walk Down Wall Street&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Tue, 01 Jul 2014 07:43:59 -0700</pubDate>
+        <link>www.anton23.com/investing/2014/07/01/investing-again/</link>
+        <guid isPermaLink="true">www.anton23.com/investing/2014/07/01/investing-again/</guid>
+        
+        
+        <category>investing</category>
+        
+      </item>
+    
+      <item>
+        <title>Strength Training</title>
+        <description>&lt;p&gt;&lt;strong&gt;Progression.&lt;/strong&gt;  This is the most important concept of strength training, and unfortunately the last concept I learned. I wish I learned it before everything else.  It’s been called “progressive overload” or “linear progression” in the strength-training world, but all it means is seeing a progressive pattern overtime.  I kind of stumbled upon it when I finally tuned out of the world and just went on my own.&lt;/p&gt;
+
+&lt;p&gt;A simple example of the progression concept is pull-ups.  If the maximum pull-ups I could do last week was 10 and this week’s was 13, there was progression and it means I’ve developed strength.  It’s also safe to assume that I’ve developed muscle size (albeit very small) because there’s a positive correlation between increase in strength and increase in muscle size.  For this reason, it would make sense to keep track of the progression overtime (i.e. strength) because that would indicate any increase in muscle-size.&lt;/p&gt;
+
+&lt;p&gt;One of the things that amaze me about the human body is how it learns to adapt.  If I squatted 200 lbs today for 4 repetitions, in a couple of days I would be able to increase the repetitions to 6 provided I got regular sleep and nutrition.  Now imagine if I was squatting over the course of 10 months?  How much progress would that be?&lt;/p&gt;
+
+&lt;h2 id=&quot;the-hazy-period&quot;&gt;The Hazy Period.&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;It’s like shooting darts in the dark.&lt;/strong&gt;  When I started lifting, it was not very inspiring.  I would go to the gym and would get some good workout, but I wasn’t seeing any results even after several months of working out.  The good thing that came out of it was that I learned various exercises. The bad thing was that I wasted soo much time as there was no way for me to see where I was in the grand scheme of things.  I was in this period for a long time, and since it did not occur to me to focus on my progression, there’s no data to see other than some random photos taken at arbitrary times.  :/&lt;/p&gt;
+
+&lt;iframe class=&quot;imgur-album&quot; width=&quot;100%&quot; height=&quot;550&quot; frameborder=&quot;0&quot; src=&quot;http://imgur.com/a/8uBDi/embed&quot;&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&quot;the-first-wave&quot;&gt;The First Wave.&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Keeping it simple.&lt;/strong&gt; 
+When I tuned out of the world, I decided to stop following all the recommended routines I’ve read online, and decided to just focus on my own.  I kept things simple by doing upper and lower body splits.  And since I do enjoy bodyweight exercises, I felt having a calisthenics day too.&lt;/p&gt;
+
+&lt;p&gt;My Routines (In this order):&lt;/p&gt;
+
+&lt;p&gt;Lower Body Day:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Squats (Low-bar).&lt;/strong&gt; 3 sets.  Max Reps of 8.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Deadlifts.&lt;/strong&gt; 3 sets. Max Reps of 5.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;A whatever exercise&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Upper Body Day:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Shoulder Press (Barbell, Standing).&lt;/strong&gt;  3 sets. Max Reps of 8.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Chest Press (Barbell, Flat Bench).&lt;/strong&gt; 3 sets. Max Reps of 10.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;A whatever exercise&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Calisthenic Day:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Stretching Routine&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pull-up/Chin-up Medley.&lt;/strong&gt; 3 sets each.&lt;/li&gt;
+  &lt;li&gt;Dragon Flags. 3 sets.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;A whatever exercise&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Items in &lt;strong&gt;bold&lt;/strong&gt; are the main exercises, and I kept track of them to see if there’s progression. At first I used my cellphone’s Excel sheet for logging, but I switched to  a notebook as it proved to be more convenient.  All the bolded items when combined together make a complete body workout.  If there’s an exercise that’s a li’l redundant it’s probably chest presses because the upper chest gets activated during shoulder presses already.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;whatever exercise&lt;/em&gt; was any exercise that I fancied doing because I was already in the gym and I haven’t even spent a full hour yet, so I might as well do an extra exercise. On days I wouldn’t have time or not feel well, I would skip it.  This was usually some kind of light exercise like calf raises or dumbbell curls.  I did not keep track of the &lt;em&gt;whatever exercise&lt;/em&gt;, and it’s the exercise I allow myself to half-ass.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, I’m not the best logger of all time and I started creating logs in October 2013, and I’m pretty sure I started doing the routine even earlier than that. I did with the routine above for a few months.  There was small progression in the lift’s numbers; however, some noticeable progression on the physique could be seen. &lt;/p&gt;
+
+&lt;iframe class=&quot;imgur-album&quot; width=&quot;100%&quot; height=&quot;550&quot; frameborder=&quot;0&quot; src=&quot;http://imgur.com/a/kV3sR/embed&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;strong&gt;Documentation.&lt;/strong&gt; In October 2013, I decided to start a monthly check-in and keep an electronic log of my current lifts and photos. I even created my own notation for logging sets and reps with &lt;em&gt;Weight: Rep, Rep, Rep&lt;/em&gt;.  Take the squats entry  in the first photo for example. Before that photo was taken, I squatted 190 lbs with 6 reps for the 1st set, 6 reps for the 2nd set, and 8 reps for the 3rd; hence, 190: 6, 6, 8. &lt;/p&gt;
+
+&lt;p&gt;If the first set (i.e., 190 lbs at 6 reps) was converted to a &lt;a href=&quot;https://en.wikipedia.org/wiki/One-repetition_maximum&quot;&gt;1 rep max&lt;/a&gt;, it would be “235 1RM”, which I could use to compare with next month’s lift. Think of 1RM as a conversion unit to compare 2 measurements with different units because that’s the only way you can compare lifting 190 lbs at 6 reps vs 185 lbs at 8 reps. The items in the brackets [] are my personal notes.  &lt;/p&gt;
+
+&lt;p&gt;The first 2  months of documenting was not really inspiring as I wasn’t seeing much changes.  Once the 3rd month hit, there was some noticeable changes in the photos and lifting logs.  Since then, documenting the monthly progression started to become something I look forward to every month. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rule on Progression.&lt;/strong&gt; For any of the main exercises, I would do three sets (aka working sets), and in each set  I would shoot for the max reps.  Let’s take squats for example.  If today I lifted 190 lbs for 3 sets with 6, 6, and 8 reps respectively.  This means that when I do squats next time, I would still use the same weight of 190 lbs for 3 sets.  The only time I would increase the weight to 200 lbs is once I hit the max reps of 8 for each set (which might take  a few weeks if I’m consistent enough).  For the lower body, I would increase the weight by 10 lbs; upper body would get 5 lbs.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Diet.&lt;/strong&gt; During this period, I was in a very low carb diet, which was almost keto on certain days. Since I was a vagabond (a story for another blog), I would only buy food  to be finished that day.  I would eat about 1.25 lbs of cooked meat from Albertson’s, a bag of vegetables, and 12 hard-boiled eggs.  There would be certain days when I would buy a couple of bananas and yogurt because I felt I needed more calories and they’re cheap.  I would throw in protein powder at times.  With the exception of protein powder and yogurt, all of my caloric intake was paleo.  The chart below shows what typical food items I would eat, and the total calories would average between 2200 - 2600. In addition to all of these, I followed an &lt;a href=&quot;https://en.wikipedia.org/wiki/Intermittent_fasting&quot;&gt;intermittent fasting&lt;/a&gt; way of eating where I typically would eat within an 8 hour window and fast for the other 16 hours of the day.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/HodJd64.jpg&quot; width=&quot;500px&quot; align=&quot;center&quot; alt=&quot;Food Log&quot; title=&quot;Food Log&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Order of Exercises.&lt;/strong&gt;  The only rule I followed was to always Squat before Deadlift.  All other main exercises could be shuffled.  Also, &lt;em&gt;whatever exercises&lt;/em&gt; must be done after main exercises.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Warm-up.&lt;/strong&gt;  The entire point of warm-up is to get use to the motion before doing heavier weight.  I would usually do 1-3 sets of warm-up before a main exercise. The more taxing an exercise (i.e., squats) is, the more sets it would get.  The &lt;em&gt;whatever exercises&lt;/em&gt; and calisthenics did not get warm-up sets.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Resting.&lt;/strong&gt; Rule of thumb was to be aware of my body (queue in meditation here), check if my breathing/heart rate is back to normal, and ensure that my body isn’t about to go cold.  Squats and Deadlifts are the most taxing exercises, and I would find myself resting about 4 minutes between sets.  Shoulder Press and Chest Press took less time, usually about 2 minutes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Frequency.&lt;/strong&gt; Witht the exceptionof being sick, My rule of thumb was that if I had ample sleep and a couple of square meals, I owe it to my body to do major physical movements.  There were days when I wasn’t able to lift, so I just did calisthenics at home or a nearby playground.  Also, since I do it almosty daily, working out just became part of my normal routine, similar to eating lunch is. My internal discussions if I should workout today, for example, have stopped altogether because my mind knows working out is part of my daily cycle.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-change-up&quot;&gt;The Change Up.&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Changing the exercise because of injury.&lt;/strong&gt;  Condensing the exercises into two days was not really necessary, and the three-day split I had was fine as it was.  The main change-up was in my style of Squats and Chest Presses because of injury. (The &lt;em&gt;whatever exercise&lt;/em&gt; is now called &lt;em&gt;accessory exercise&lt;/em&gt;.)&lt;/p&gt;
+
+&lt;p&gt;Lower-body Day:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Squat (Highbar).&lt;/strong&gt; 3 sets. Max reps of 8.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Deadlifts.&lt;/strong&gt; 3 sets. Max reps of 5.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;One Accessory Exercise.&lt;/em&gt; 2 sets. Max reps of 13.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;One Ab Exercise (Dragon Flags).&lt;/em&gt; 2 sets. Max reps of 13.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Upper-body Day:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Pull-up/Chin-up Medley&lt;/strong&gt;. 3 sets (6 total). Max reps of 13.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Shoulder Presses  (Barbell, Standing).&lt;/strong&gt; 3 sets. Max reps of 8.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Chest Presses (Single-arm Dumbbell, Flat bench).&lt;/strong&gt; 3 sets. Maxrep 10.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;One Accessory Exercise&lt;/em&gt;. 2 sets. Max reps of 13.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;One Ab Exercise (Dragon Flags).&lt;/em&gt; 2 sets. Max reps of 13.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Form and Injury.&lt;/strong&gt; It took me several months to figure out my form for various exercises. The more I did an exercise, the more l’d notice the nuances on bodily movements and what muscle group was firing (no surprise here, Sherlock).  It also helped that I video recorded my Squats, Deadlifts, and Shoulder Presses, and then later assessed them myself or asked feedback from reputable online forums with lifting coaches.  As for other learning materials, for Deadlifts, Chest Press, and Shoulder Press, I based them on the book Starting Strength 3rd Edition.  The pull-up/chin-up, I played with it.  I noticed that my back is more activated during a wide grip pull-up and a shoulder-width grip chin-up. I also learned to never lock-out on the bottom of a pull-up/chin-up to prevent shoulder injury.&lt;/p&gt;
+
+&lt;p&gt;I based my squats (low-bar) initially from the Starting Strength book too, but a low-bar style of squats caused  some knee pain; hence, I looked into the high-bar style (aka Ass-To-Grass) squats which is the more natural way of squatting (this is the squat that a toddler naturally does if he was to squat or pick something up from the ground).  I had to start from very light weight again when I switched, so I could learn and critique my form. Once I got hold of the proper motion, I felt at home with the high-bar squat.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/l4YPY8p.jpg&quot; width=&quot;500px&quot; align=&quot;center&quot; alt=&quot;Natural Squat Form&quot; title=&quot;Natural Squat Form&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I also have developed some shoulder pain when doing bench press with a barbell.  I switched to dumbbells and it no longer bothers me.  My observation was that barbell puts my arm in a less-natural position (probably due to length and my anatomy, I don’t know).  By switching to dumbbells, my arm has been able to position itself optimally, so I experience no pain.&lt;/p&gt;
+
+&lt;p&gt;Also, since I’m now doing a different style of squat and chest press now, I had to track them separately from my previous squat and chest press logs (i.e., they’re a different kind of exercises and should not be considered a continuation of the old style.)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Safety.&lt;/strong&gt;  Weight lifting is very safe compared to any other sports (Starting Strength has the stats).  Barbell Bench Press is the only one that has killed and injured people since most people do it with no spotter or a lousy spotter; hence, I recommend to always do it with an attentive spotter.  Squats is very safe provided you use safety pins (I use it all the time); it’s even safer if you know the bail-out technique (I use this too).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Diet.&lt;/strong&gt; After moving to an apartment, I started preparing meals on the daily.  I incorporated more carbs into my diet because I needed to increase my caloric intake;  I was already satisfying my protein and fat intake, so carb had to increase and the cheapest way was to incorporate white rice.  White rice is not paleo, but it’s gluten-free – which is not a bad tradeoff. My main source of protein was still eggs and animal meat.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/cMgPDmZ.jpg&quot; width=&quot;500px&quot; align=&quot;center&quot; alt=&quot;Food&quot; title=&quot;Food&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Progression.&lt;/strong&gt; The charts below show my progression on the main exercises from my monthly check-ins.  I separated the pull-up/chin-up routine in a different graph because it doesn’t involve added weights.  As I mentioned earlier, Squats and Chest Press have 2 logs each (one for each style) which doesn’t really help to show the overall trend of their progression because of the shorter time period.  Nonetheless, there is a trend that ought to be noticed on the deadlifts, shoulder presses, and pull-up/chin-up – they’re progressing overtime.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/pxmWAtp.jpg&quot; width=&quot;700px&quot; align=&quot;center&quot; alt=&quot;Food&quot; title=&quot;Food&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/XRODF2l.jpg&quot; width=&quot;700px&quot; align=&quot;center&quot; alt=&quot;Food&quot; title=&quot;Food&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/tum7drw.jpg&quot; width=&quot;700px&quot; align=&quot;center&quot; alt=&quot;Food&quot; title=&quot;Food&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 01 Jun 2014 07:43:59 -0700</pubDate>
+        <link>www.anton23.com/exercise/2014/06/01/strength-training/</link>
+        <guid isPermaLink="true">www.anton23.com/exercise/2014/06/01/strength-training/</guid>
+        
+        
+        <category>exercise</category>
+        
+      </item>
+    
+  </channel>
+</rss>

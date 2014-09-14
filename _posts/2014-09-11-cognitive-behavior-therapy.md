@@ -64,5 +64,15 @@ Anger is often produced by thinking that external situations should be better. F
 Anger is often only displayed where the person feels in a powerful position or at least in an equal position. For example, parents often get angry with children…people are reticent to get too grumpy at their boss (at least openly).
 
 
+----
+
+##Thoughts
+
+#### David Burns’ Warped Thoughts 
+
+**All or None Thinking.** Everything is perceived to be either full on or full off.  If something isn't fully completed, right, or perfect then it's entirely incomplete/wrong/spoiled.
+
+**Overgeneralization.** One instance of a mistake/error is interpreted as a pattern of mistakes/errors.
+
 
 ---

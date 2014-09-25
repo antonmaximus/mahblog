@@ -72,7 +72,16 @@ Anger is often only displayed where the person feels in a powerful position or a
 
 **All or None Thinking.** Everything is perceived to be either full on or full off.  If something isn't fully completed, right, or perfect then it's entirely incomplete/wrong/spoiled.
 
-**Overgeneralization.** One instance of a mistake/error is interpreted as a pattern of mistakes/errors.
+**Overgeneralization.** One instance of a mistake/error is interpreted as a pattern of mistakes/errors (as if it's gonna happen always).
+
+**Mental Filter.** The small (negative) part of the picture is examined to the exclusion of the larger (positive) part.
+
+**Denying the Positive.** Dismissing the positive remark/compliment given to you.  (e.g., My brother said he looked up to me... but what does he know... he's just a kid.)
+
+**Jumping to Conclusions.** You think about what others would say (mind reading) or you think about what will happen in the future (fortune telling) without any evidence.
+
+
+
 
 
 ---

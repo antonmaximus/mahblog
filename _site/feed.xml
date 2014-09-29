@@ -5,9 +5,72 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 25 Sep 2014 11:02:33 -0700</pubDate>
-    <lastBuildDate>Thu, 25 Sep 2014 11:02:33 -0700</lastBuildDate>
+    <pubDate>Mon, 29 Sep 2014 15:20:58 -0700</pubDate>
+    <lastBuildDate>Mon, 29 Sep 2014 15:20:58 -0700</lastBuildDate>
     <generator>Jekyll v2.1.0</generator>
+    
+      <item>
+        <title>Angular.js</title>
+        <description>&lt;h2 id=&quot;example-of-minimum-set-up-for-angular&quot;&gt;Example of minimum set-up for Angular&lt;/h2&gt;
+
+&lt;p&gt;index.html.haml&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;!!! 5
+%html{&quot;ng-app&quot;=&amp;gt;&quot;gemStore&quot;}
+  %head
+    / $BOOTSTRAP  CSS CDN 
+    %link(rel=&quot;stylesheet&quot;  href=&#39;//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css&#39;)
+
+    / Stylesheets
+    = stylesheet_link_tag &#39;custom&#39;
+
+  %body{&quot;ng-controller&quot;=&amp;gt;&quot;StoreController as store&quot;}
+    .container
+      .product.row{&quot;ng-hide&quot; =&amp;gt; &quot;store.product.soldOut&quot;}
+        %h3
+          {{store.product.name}}
+          %em.pull-right ${{store.product.price}}
+        %button{&quot;ng-show&quot; =&amp;gt; &quot;store.product.canPurchase&quot;} Add to Cart
+
+
+    / JQUERY CDN
+    = javascript_include_tag  &quot;//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js&quot;
+
+    / AngularJS
+    = javascript_include_tag &quot;//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js&quot;
+
+    / Javascripts
+    = javascript_include_tag &quot;app.js&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;app.js&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(function() {
+  var app = angular.module(&#39;gemStore&#39;, []);
+
+  app.controller(&#39;StoreController&#39;, function(){
+    this.product = gem;
+  });
+
+  var gem = {
+    name: &#39;Azurite&#39;,
+    price: 110.50,
+    canPurchase: true,
+    soldOut: false
+  };
+})();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Wed, 24 Sep 2014 07:43:58 -0700</pubDate>
+        <link>www.anton23.com/skill/2014/09/24/angular/</link>
+        <guid isPermaLink="true">www.anton23.com/skill/2014/09/24/angular/</guid>
+        
+        
+        <category>skill</category>
+        
+      </item>
     
       <item>
         <title>Cognitive Behavior Therapy</title>
@@ -718,154 +781,6 @@ original size&lt;/li&gt;
         <pubDate>Tue, 08 Jul 2014 07:42:59 -0700</pubDate>
         <link>www.anton23.com/skills/2014/07/08/mobile-journey/</link>
         <guid isPermaLink="true">www.anton23.com/skills/2014/07/08/mobile-journey/</guid>
-        
-        
-        <category>skills</category>
-        
-      </item>
-    
-      <item>
-        <title>CSS Cross Country</title>
-        <description>&lt;h3 id=&quot;primary-dom-selectors&quot;&gt;Primary DOM Selectors&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Element Selector&lt;/li&gt;
-  &lt;li&gt;Class Selector&lt;/li&gt;
-  &lt;li&gt;ID Selector&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;cascade-order-priority&quot;&gt;Cascade Order Priority&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Using &lt;code&gt;!important&lt;/code&gt; – (Highest Priority)&lt;/li&gt;
-  &lt;li&gt;Inline style attribute&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; definition&lt;/li&gt;
-  &lt;li&gt;External &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt; – (Lowest Priority)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;combinator-selectors&quot;&gt;Combinator Selectors&lt;/h3&gt;
-&lt;p&gt;Combinator – shows relationship&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Descendant Selector  – elements that are descendants 
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;div p { background-color: yellow; }&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Child Selector – elements that are immediate children
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;div &amp;gt; p { background-color: yellow; }&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Adjacent Sibling Selector – ‘p’ that are placed immediately after ‘div’ in 
-example below: 
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;div + p { background-color: yellow; }&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;General Sibling Selector – all ‘p’ that are siblings of ‘div’ in example below:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;div ~ p { background-color: yellow; }&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;clearing-floats-the-clearfix&quot;&gt;Clearing Floats: The Clearfix&lt;/h3&gt;
-&lt;p&gt;A clean technique to clear floats.  When used on the parent, the children will 
-be self-cleared.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:before&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:after&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:after&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;clear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;both&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;zoom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/* IE6&amp;amp;7 */&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;specificity&quot;&gt;Specificity&lt;/h3&gt;
-&lt;p&gt;Priority of a Selector follows this order: &lt;strong&gt;A, B, C, D, E&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A – any inline style? (Highest priority)&lt;/li&gt;
-  &lt;li&gt;B – # of ID Selectors&lt;/li&gt;
-  &lt;li&gt;C – # of Class Selectors&lt;/li&gt;
-  &lt;li&gt;D – # of Element Selectors &lt;/li&gt;
-  &lt;li&gt;E – any inherited style? (Lowest priority)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;collapsing-margins&quot;&gt;Collapsing Margins&lt;/h3&gt;
-&lt;p&gt;Happens when the margins of two block elements collapse to the larger one
-instead of adding the two. &lt;a href=&quot;http://www.w3.org/TR/CSS2/box.html#collapsing-margins&quot;&gt;Source.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/KXipDH8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Collapsing margins will not occur when one or more block element has:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;padding or border&lt;/li&gt;
-  &lt;li&gt;relative or absolute positioning&lt;/li&gt;
-  &lt;li&gt;a float left or right&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;image-use&quot;&gt;Image Use&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Always ask: Content or Layout?&lt;/li&gt;
-  &lt;li&gt;Resize images server-side when possible&lt;/li&gt;
-  &lt;li&gt;Use overflow hidden when necessary&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Rental&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Products&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/h4&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;sr&quot;&gt;&amp;lt;ul class=&amp;quot;rental&amp;quot;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;sr&quot;&gt;  &amp;lt;li class=&amp;quot;crop&amp;quot;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;sr&quot;&gt;  &amp;lt;img src=&amp;quot;snowboard.jpg&amp;quot; alt=&amp;quot;Snowboard&amp;quot; /&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/li&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;sr&quot;&gt;&amp;lt;/u&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;crop&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;ss&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;ss&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;ss&quot;&gt;overflow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;crop&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;ss&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;ss&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;logoimage-replacement&quot;&gt;Logo/Image Replacement&lt;/h3&gt;
-
-&lt;p&gt;Add descriptive text to image-replaced elements for best-practice especially
-on screen-readers.  Then, use &lt;code&gt;text-indent: -9999px&lt;/code&gt; in CSS to hide the 
-placeholder text.&lt;/p&gt;
-
-&lt;h3 id=&quot;sprites&quot;&gt;Sprites&lt;/h3&gt;
-
-&lt;p&gt;Use sprites when swapping backgroud images to prevent issues such as:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The need to preload an image&lt;/li&gt;
-  &lt;li&gt;Adding an extra HTTP request&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;pseudo-classes&quot;&gt;Pseudo Classes&lt;/h3&gt;
-&lt;p&gt;Allow you to conditionally select an element based on state or position.  Below 
-are the most useful selectors:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;:hover / :focus / :active / :visited&lt;/li&gt;
-  &lt;li&gt;:first-child / :last-child / :only-child&lt;/li&gt;
-  &lt;li&gt;:nth-child(odd/even/an+b) / :nth-of-type()  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;pseudo-element&quot;&gt;Pseudo Element&lt;/h3&gt;
-&lt;p&gt;Allows you to modify an element’s content for styling.  Below are the most 
-utilized pseudo elements:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;:before / :after – needs &lt;code&gt;content&lt;/code&gt; property to be used.&lt;/li&gt;
-  &lt;li&gt;:first-letter / :first-line  – doesn’t need &lt;code&gt;content&lt;/code&gt; property to be used.
-￼&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 07 Jul 2014 07:42:59 -0700</pubDate>
-        <link>www.anton23.com/skills/2014/07/07/css-cross-country/</link>
-        <guid isPermaLink="true">www.anton23.com/skills/2014/07/07/css-cross-country/</guid>
         
         
         <category>skills</category>

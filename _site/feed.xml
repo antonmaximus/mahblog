@@ -5,9 +5,105 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 29 Sep 2014 15:20:58 -0700</pubDate>
-    <lastBuildDate>Mon, 29 Sep 2014 15:20:58 -0700</lastBuildDate>
+    <pubDate>Tue, 30 Sep 2014 16:56:18 -0700</pubDate>
+    <lastBuildDate>Tue, 30 Sep 2014 16:56:18 -0700</lastBuildDate>
     <generator>Jekyll v2.1.0</generator>
+    
+      <item>
+        <title>Impostor Syndrome</title>
+        <description>&lt;p&gt;A programmer friend of mine sent me a presentation by  Julie Pagano on Impostor Syndrome.  I believe it’s a highly important subject in the coding world (or any world actually).  Below is a link to the video, and the takeaways…&lt;/p&gt;
+
+&lt;h2 id=&quot;impostor-syndrome&quot;&gt;Impostor Syndrome&lt;/h2&gt;
+
+&lt;p&gt;“A psychological phenomenon in  which people are unable to internalize their accomplishments.”&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;To an average person, there’s equilibrium in seeing failures and successes.&lt;/li&gt;
+  &lt;li&gt;To someone who suffers from Impostor Syndrome, “victories diminish in importance; failures loom large.”
+    &lt;ul&gt;
+      &lt;li&gt;I was just lucky&lt;/li&gt;
+      &lt;li&gt;I’m not that smart&lt;/li&gt;
+      &lt;li&gt;I’m not a good programmer&lt;/li&gt;
+      &lt;li&gt;I’m a FRAUD&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Those with Impostor Syndrome hold themselves back, do not share knowledge (because of feeling inadequate), avoid collaboration, don’t help with open-source, and don’t apply for jobs.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Those with Impostor Syndrome: “Start small. Remain small.  End up small.”&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Some people with Impostor Syndrome go to other end and feel pressured to play catch-up where they &lt;strong&gt;push themselves too hard&lt;/strong&gt; – upto burnout.  &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;burnout&quot;&gt;Burnout&lt;/h3&gt;
+&lt;p&gt;“Long-term exhaustion and diminished interest in work.”  People with burntout makes it hard to come back sometimes – game over.  &lt;/p&gt;
+
+&lt;h3 id=&quot;dunning-kruger-effect&quot;&gt;Dunning-Kruger Effect&lt;/h3&gt;
+&lt;p&gt;“A cognitive bias in which unskilled individuals suffer from illusory superiority, mistakenly rating their ability much higher than average.”&lt;/p&gt;
+
+&lt;h2 id=&quot;solutions&quot;&gt;Solutions?&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Build a Party
+    &lt;ul&gt;
+      &lt;li&gt;People whom you could trust for feedback&lt;/li&gt;
+      &lt;li&gt;You’re going to have bad days, and this party should provide support&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Track Measurable Progress
+    &lt;ul&gt;
+      &lt;li&gt;Have an objective data for you to assess yourself.&lt;/li&gt;
+      &lt;li&gt;Setting practical and achievable goals.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Train Yourself to Look for Positives
+    &lt;ul&gt;
+      &lt;li&gt;Making a Habit (e.g., once a day?)&lt;/li&gt;
+      &lt;li&gt;Help others find positives&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Avoid Negatives
+    &lt;ul&gt;
+      &lt;li&gt;Avoid “that person” (e.g., nasty person).  They’re invalid source of data.&lt;/li&gt;
+      &lt;li&gt;Avoid creating negative space in the world
+        &lt;ul&gt;
+          &lt;li&gt;No feigning surprise&lt;/li&gt;
+          &lt;li&gt;No &lt;em&gt;“well… actually”&lt;/em&gt;&lt;/li&gt;
+          &lt;li&gt;No backseat driving&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Help Others
+    &lt;ul&gt;
+      &lt;li&gt;It gives you a different perspective on things you don’t expect.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Kill Your Heroes
+    &lt;ul&gt;
+      &lt;li&gt;See the human being.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;iframe width=&quot;480&quot; height=&quot;360&quot; allowfullscreen=&quot;&quot; class=&quot;youtube-player&quot; src=&quot;//www.youtube.com/embed/1i8ylq4j_EY?wmode=transparent&amp;amp;amp;autoplay=0&amp;amp;amp;rel=0&amp;amp;amp;showinfo=0&amp;amp;amp;autohide=1&amp;amp;amp;color=white&amp;amp;amp;&quot; type=&quot;text/html&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Tue, 30 Sep 2014 07:43:58 -0700</pubDate>
+        <link>www.anton23.com/skill/2014/09/30/impostor/</link>
+        <guid isPermaLink="true">www.anton23.com/skill/2014/09/30/impostor/</guid>
+        
+        
+        <category>skill</category>
+        
+      </item>
     
       <item>
         <title>Angular.js</title>
@@ -688,99 +784,6 @@ quickly from line to line.&lt;/li&gt;
         <pubDate>Wed, 09 Jul 2014 07:43:58 -0700</pubDate>
         <link>www.anton23.com/skills/2014/07/09/design-fundamentals/</link>
         <guid isPermaLink="true">www.anton23.com/skills/2014/07/09/design-fundamentals/</guid>
-        
-        
-        <category>skills</category>
-        
-      </item>
-    
-      <item>
-        <title>Mobile Journey</title>
-        <description>&lt;h3 id=&quot;fluid-layouts&quot;&gt;Fluid Layouts&lt;/h3&gt;
-&lt;p&gt;Fluid layouts are layouts that scale.  What makes a fluid site?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Fluid Grid&lt;/li&gt;
-  &lt;li&gt;Using relative values (i.e., percentages for widths)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;adaptive-design&quot;&gt;Adaptive Design&lt;/h3&gt;
-&lt;p&gt;Design for controlled adaptation where context and/or device is known and
-you design accordingly.&lt;/p&gt;
-
-&lt;p&gt;Four Design Principles&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Who is your user?&lt;/li&gt;
-  &lt;li&gt;How will they use the site?&lt;/li&gt;
-  &lt;li&gt;Context – i.e. what device?&lt;/li&gt;
-  &lt;li&gt;Content – how will it adapt based on the context?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mobile-first-approach&quot;&gt;Mobile First Approach&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;”…prepares you for the explosive growth and new opportunities on the mobile 
-internet, forces you to focus, and enables you to innovate in ways you 
-previously couldn’t”&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;~&lt;em&gt;Luke Wroblewski&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Mobile First Approach forces you to focus on the most important things (because
-of how much real estate one has):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Simplifying content&lt;/li&gt;
-  &lt;li&gt;Prioritizing layout&lt;/li&gt;
-  &lt;li&gt;Optimizing user experience&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;responsive-design&quot;&gt;Responsive Design&lt;/h3&gt;
-&lt;p&gt;In responsive design, the content defines breakpoints.  We provide continuity 
-between a variety of different context (e.g., screen size).&lt;/p&gt;
-
-&lt;h3 id=&quot;media-queries&quot;&gt;Media Queries&lt;/h3&gt;
-&lt;p&gt;Best practice is to place them at the bottom of stylesheet&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;sr&quot;&gt;/*-----------------&lt;/span&gt;
-&lt;span class=&quot;sr&quot;&gt;Media Queries&lt;/span&gt;
-&lt;span class=&quot;sr&quot;&gt;------------------*/&lt;/span&gt;
-&lt;span class=&quot;vi&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;screen&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;320&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;responsive-media&quot;&gt;Responsive Media&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;img, embed, object, video { max-width: 100%; }&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;retina-images&quot;&gt;Retina Images&lt;/h3&gt;
-&lt;p&gt;Retina images have 1.5x - 2x the pixel density. (Most iPhones have pixel density
-of 2, while some Android devices have 1.5).  Use media queries to target
-devices that have retina displays and optimize images.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;vi&quot;&gt;@media&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;only&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;screen&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;device&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pixel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;ratio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;only&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;screen&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;device&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pixel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;ratio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logo&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;png&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;iOS’s naming convention for retina-images is &lt;code&gt;logo@2x.png&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;be explicit with the &lt;code&gt;size&lt;/code&gt; because browsers will serve images in their 
-original size&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;relative-font-sizing&quot;&gt;Relative Font-sizing&lt;/h3&gt;
-&lt;p&gt;Formula is &lt;code&gt;target/context = result&lt;/code&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 08 Jul 2014 07:42:59 -0700</pubDate>
-        <link>www.anton23.com/skills/2014/07/08/mobile-journey/</link>
-        <guid isPermaLink="true">www.anton23.com/skills/2014/07/08/mobile-journey/</guid>
         
         
         <category>skills</category>

@@ -5,8 +5,8 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 30 Sep 2014 23:03:10 -0700</pubDate>
-    <lastBuildDate>Tue, 30 Sep 2014 23:03:10 -0700</lastBuildDate>
+    <pubDate>Wed, 01 Oct 2014 14:06:20 -0700</pubDate>
+    <lastBuildDate>Wed, 01 Oct 2014 14:06:20 -0700</lastBuildDate>
     <generator>Jekyll v2.1.0</generator>
     
       <item>
@@ -194,6 +194,23 @@
   };
 })();
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;module&quot;&gt;Module&lt;/h2&gt;
+
+&lt;p&gt;Think of a module as a container for the different parts of your app&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Controller&lt;/li&gt;
+  &lt;li&gt;Services&lt;/li&gt;
+  &lt;li&gt;filters&lt;/li&gt;
+  &lt;li&gt;directive&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;http://i.imgur.com/K5JtyLj.png&quot; alt=&quot;&quot; /&gt;
+  &lt;figcaption&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=fNV7jfv2fGQ&amp;amp;list=PLrUFyg1unBb_fMt4CW2hGaO03co02Rqv_&amp;amp;index=1&quot;&gt;Angular YouTube Tutorial&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
 
 &lt;hr /&gt;
 </description>

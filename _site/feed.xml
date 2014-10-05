@@ -5,9 +5,213 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 01 Oct 2014 14:06:20 -0700</pubDate>
-    <lastBuildDate>Wed, 01 Oct 2014 14:06:20 -0700</lastBuildDate>
+    <pubDate>Sat, 04 Oct 2014 17:49:07 -0700</pubDate>
+    <lastBuildDate>Sat, 04 Oct 2014 17:49:07 -0700</lastBuildDate>
     <generator>Jekyll v2.1.0</generator>
+    
+      <item>
+        <title>jQuery Basics</title>
+        <description>&lt;h3 id=&quot;simple-jquery&quot;&gt;1. Simple jQuery&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
+  &amp;lt;style&amp;gt;
+  ul li { color: red;}
+  .emphasis { color: green;}
+  &amp;lt;/style&amp;gt;
+  
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;hello&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;hello 2&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;hello 3&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;script&amp;gt;
+  jQuery(&#39;ul li&#39;).addClass(&#39;emphasis&#39;);
+  $(&#39;ul li&#39;).addClass(&#39;emphasis&#39;);
+&amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;document-ready&quot;&gt;2. Document Ready?&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
+  &amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;style&amp;gt;
+  .emphasis { font-weight: bold;}
+  &amp;lt;/style&amp;gt;
+
+  &amp;lt;script&amp;gt;
+
+  // This commented function is identical to the other one below
+  // $(function() {
+  //  $(&#39;li:first-child&#39;).addClass(&#39;emphasis&#39;);
+  // });
+
+  $(document).ready(function() {
+    $(&#39;li:first-child&#39;).addClass(&#39;emphasis&#39;);
+  });
+  &amp;lt;/script&amp;gt; 
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;hello&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;hello 2&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;hello 3&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;the-basics-of-querying-the-dom&quot;&gt;3. The Basics of Querying the DOM&lt;/h3&gt;
+
+&lt;p&gt;See &lt;a href=&quot;http://api.jquery.com/&quot;&gt;api.jquery.com&lt;/a&gt; for functions.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
+  &amp;lt;style&amp;gt;
+  .container { color: green;}
+  &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;div class=&quot;container&quot;&amp;gt;
+  &amp;lt;h1&amp;gt;Welcome to My Website &amp;lt;/h1&amp;gt;
+  &amp;lt;p&amp;gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat.
+  &amp;lt;/p&amp;gt;
+
+  &amp;lt;div class=&quot;container&quot;&amp;gt;
+    &amp;lt;ul class=&quot;emphasis container&quot;&amp;gt;
+      &amp;lt;li&amp;gt;item&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;item 2&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;item 2&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;item 4&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;item 5&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;
+        &amp;lt;ul&amp;gt;
+          &amp;lt;li&amp;gt;hello from the nest.&amp;lt;/li&amp;gt;
+        &amp;lt;/ul
+
+      &amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;script&amp;gt;
+  // Chaining
+  // $(&#39;ul.emphasis&#39;)
+  //  .children(&#39;li&#39;)
+  //    .eq(3)
+  //    .prev().text(&#39;added with jQuery&#39;);
+
+  // Parents vs Closest
+  // console.log($(&#39;ul&#39;).parents(&#39;.container&#39;));
+  // console.log($(&#39;ul&#39;).closest(&#39;.container&#39;));
+&amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;events-101&quot;&gt;4. Events 101&lt;/h3&gt;
+
+&lt;p&gt;index.html&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;jQuery Events&amp;lt;/title&amp;gt;
+  &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;day.css&quot;&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;h1&amp;gt;My Website&amp;lt;/h1&amp;gt;
+
+&amp;lt;button data-file=&quot;day&quot;&amp;gt;Day&amp;lt;/button&amp;gt;
+&amp;lt;button data-file=&quot;night&quot;&amp;gt;Night&amp;lt;/button&amp;gt;
+
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+&amp;lt;script&amp;gt;
+
+(function() {
+  var link = $(&#39;link&#39;);
+  
+  $(&#39;button&#39;).on(&#39;click&#39;, function() {
+    var $this = $(this),
+      stylesheet = $this.data(&#39;file&#39;);
+
+    link.attr(&#39;href&#39;, stylesheet + &#39;.css&#39;);
+
+    $this
+      .siblings(&#39;button&#39;)
+        .removeAttr(&#39;disabled&#39;)
+        .end()
+      .attr(&#39;disabled&#39;, &#39;disabled&#39;);
+  });
+})();
+
+&amp;lt;/script&amp;gt;
+
+
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;day.css&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;body {
+  background: yellow;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;night.css&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;body {
+  background: black;
+  color: white;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Sat, 04 Oct 2014 07:43:58 -0700</pubDate>
+        <link>www.anton23.com/exercise/2014/10/04/jquery-basics/</link>
+        <guid isPermaLink="true">www.anton23.com/exercise/2014/10/04/jquery-basics/</guid>
+        
+        
+        <category>exercise</category>
+        
+      </item>
     
       <item>
         <title>Impostor Syndrome</title>
@@ -197,20 +401,7 @@
 
 &lt;h2 id=&quot;module&quot;&gt;Module&lt;/h2&gt;
 
-&lt;p&gt;Think of a module as a container for the different parts of your app&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Controller&lt;/li&gt;
-  &lt;li&gt;Services&lt;/li&gt;
-  &lt;li&gt;filters&lt;/li&gt;
-  &lt;li&gt;directive&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;figure&gt;&lt;img src=&quot;http://i.imgur.com/K5JtyLj.png&quot; alt=&quot;&quot; /&gt;
-  &lt;figcaption&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=fNV7jfv2fGQ&amp;amp;list=PLrUFyg1unBb_fMt4CW2hGaO03co02Rqv_&amp;amp;index=1&quot;&gt;Angular YouTube Tutorial&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.angularjs.org/guide/module&quot;&gt;You can think of a module as a container for the different parts of your app – controllers, services, filters, directives, etc.&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 </description>
@@ -660,162 +851,6 @@ text colors and backgrounds.&lt;/p&gt;
         <pubDate>Fri, 11 Jul 2014 07:43:58 -0700</pubDate>
         <link>www.anton23.com/skills/2014/07/11/design-color/</link>
         <guid isPermaLink="true">www.anton23.com/skills/2014/07/11/design-color/</guid>
-        
-        
-        <category>skills</category>
-        
-      </item>
-    
-      <item>
-        <title>Design: Typography</title>
-        <description>&lt;h2 id=&quot;style-guide&quot;&gt;Style Guide&lt;/h2&gt;
-&lt;p&gt;Reference document for multiple instances of typography/styles that would 
-be used throughout your application.  An example is shown below.  Putting this
-guide beforehand will avoid any inconsistency and create a better overall 
-design/user-experience.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ZLXQtur.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;typography-is-both-visual-and-verbal&quot;&gt;Typography is both Visual and Verbal&lt;/h2&gt;
-&lt;p&gt;Different classifications of type create different moods that will either
-server your content well or not. The reader surveys the overall graphical 
-patterns of the page, and then parse the language and read.  &lt;/p&gt;
-
-&lt;p&gt;History… A basic system for classifying typefaces was devised in the nineteenth century, when printers sought to identify a heritage for their own craft analogous to that of art history. &lt;em&gt;Humanist&lt;/em&gt; letterforms are closely connected to calligraphy and the movement of the hand. &lt;em&gt;Transitional&lt;/em&gt; and &lt;em&gt;modern&lt;/em&gt; typefaces are more abstract and less organic. These three main groups correspond roughly to the Renaissance, Baroque, and Enlightenment periods in art and literature. Designers in the twentieth and twenty-first centuries have continued to create new typefaces based on historic characteristics. &lt;a href=&quot;http://papress.com/thinkingwithtype/letter/classification.htm&quot;&gt;Source&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Below are the most common classification of types…&lt;/p&gt;
-
-&lt;h3 id=&quot;serif-font&quot;&gt;Serif Font&lt;/h3&gt;
-&lt;p&gt;Serifs are the small lines tailing from the edges of letters. Some styles of 
-type in this Serif Classification are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Humanist – great for historical or journalism applications&lt;/li&gt;
-  &lt;li&gt;Transitional – traditional academia and legal&lt;/li&gt;
-  &lt;li&gt;Modern – arts and culture&lt;/li&gt;
-  &lt;li&gt;Egyptian – marketing and promotional&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/Zs5zo2S.jpg&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;http://i.imgur.com/y2oLzyq.jpg&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;http://i.imgur.com/vF8inNJ.jpg&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;http://i.imgur.com/xYv4Sbh.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;sans-serif-font&quot;&gt;Sans Serif Font&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Humanist Sans – government or education&lt;/li&gt;
-  &lt;li&gt;Transitional Sans – technology or transportation&lt;/li&gt;
-  &lt;li&gt;Geometric Sans – science or architecture&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ZbM9mpq.jpg&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;http://i.imgur.com/LhxJsqI.jpg&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;http://i.imgur.com/MzJ38Os.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;script-font&quot;&gt;Script Font&lt;/h3&gt;
-&lt;p&gt;Good for adding human element to the site, but not so great for body copy.
-Comic sans is technically a script font.&lt;/p&gt;
-
-&lt;h2 id=&quot;mix--mingle&quot;&gt;Mix &amp;amp; Mingle&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Don’t choose two fonts from the same style (e.g., humanist serif &amp;amp; humanist serif)&lt;/li&gt;
-  &lt;li&gt;Don’t choose two fonts from the same style (e.g., humanist serif &amp;amp; slan serif)&lt;/li&gt;
-  &lt;li&gt;When mixing classes find a similar trait (e.g., humanist serif &amp;amp; humanist sans)
-    &lt;ul&gt;
-      &lt;li&gt;this trait can even be largely abstract&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Strive for &lt;strong&gt;Contrast over Harmony&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;A good rule of thumb to follow is “Keep it the same or 
-change it a lot. Look for emphatic differences rather than mushy transitions.”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Single Typeface is Okay – never feel obligated to use two.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;font-size&quot;&gt;Font Size&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Humans create relationships.  It’s how our brain processes. 
-    &lt;ul&gt;
-      &lt;li&gt;bigger items that stand out appear to be more important.&lt;/li&gt;
-      &lt;li&gt;the headline in big/bold fonts indicate the main topic of an article.&lt;/li&gt;
-      &lt;li&gt;a pic of red bell pepper on a site indicates food theme&lt;/li&gt;
-      &lt;li&gt;a sea of text becomes on a site becomes troublesome for the audience 
-because it’s hard to &lt;strong&gt;assess&lt;/strong&gt; what the site is about right away.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;So create a visual hierarchy!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;when-creating-a-style-guide&quot;&gt;When creating a style guide…&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Set the Body Copy first – this is usually around 16px (convert to ems or rems when necessary).&lt;/li&gt;
-  &lt;li&gt;Headline Text – around 200% to 300% of the body copy.&lt;/li&gt;
-  &lt;li&gt;B-head (or sub-head) Text – around 150% of the body copy.&lt;/li&gt;
-  &lt;li&gt;Navigational Text – same size as body copy.&lt;/li&gt;
-  &lt;li&gt;Byline Text – around 75% of the body copy.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;leading&quot;&gt;Leading&lt;/h3&gt;
-&lt;p&gt;Leading is the amount of space between lines of text.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Leading that is too large negatively affects readability and produces discontinuity&lt;/li&gt;
-  &lt;li&gt;Leading that is too tight creates a claustrophobic feel&lt;/li&gt;
-  &lt;li&gt;Good leading is around 120% to 150% of the body copy size.
-    &lt;ul&gt;
-      &lt;li&gt;setting &lt;code&gt;line-height: 1.5&lt;/code&gt; provides 150% the font’s size.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;bold--italics&quot;&gt;Bold &amp;amp; Italics&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Use a “less is more” approach.&lt;/li&gt;
-  &lt;li&gt;Use natural convention – e.g., eyes naturally expect headlines to be in bold rather than body copy&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;line-width&quot;&gt;Line Width&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Lines that are too short are difficult to read as the user’s eyes have to jump 
-quickly from line to line.&lt;/li&gt;
-  &lt;li&gt;Lines that are too long can get the user’s eyes lost easily.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;characters-per-line&quot;&gt;Characters per Line&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Line width is measured in CPL (characters per line)
-    &lt;ul&gt;
-      &lt;li&gt;50 - 70 CPL is ideal (including spaces)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;In CSS, CPL can be adjusted using &lt;code&gt;max-width&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;save-the-orphans-and-widows&quot;&gt;Save the Orphans and Widows&lt;/h3&gt;
-&lt;p&gt;They impede the natural flow of reading for the user.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A widow is a single word on a line of text&lt;/li&gt;
-  &lt;li&gt;An orphan is a single line of text on a column/page&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 10 Jul 2014 07:43:59 -0700</pubDate>
-        <link>www.anton23.com/skills/2014/07/10/design-typography/</link>
-        <guid isPermaLink="true">www.anton23.com/skills/2014/07/10/design-typography/</guid>
         
         
         <category>skills</category>

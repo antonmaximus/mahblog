@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Angular.js</title>
+    <title>jQuery Basics</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="A small growth today makes progression happen...">
-    <link rel="canonical" href="www.anton23.com/skill/2014/09/24/angular/">
+    <link rel="canonical" href="www.anton23.com/exercise/2014/10/04/jquery-basics/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -57,64 +57,201 @@
       <div class="post">
 
   <header class="post-header">
-    <h1>Angular.js</h1>
-    <p class="meta">Sep 24, 2014</p>
+    <h1>jQuery Basics</h1>
+    <p class="meta">Oct 4, 2014</p>
   </header>
 
   <article class="post-content">
-  <h2 id="example-of-minimum-set-up-for-angular">Example of minimum set-up for Angular</h2>
+  <h3 id="simple-jquery">1. Simple jQuery</h3>
 
-<p>index.html.haml</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=utf-8&gt;
+  &lt;title&gt;&lt;/title&gt;
+  &lt;style&gt;
+  ul li { color: red;}
+  .emphasis { color: green;}
+  &lt;/style&gt;
+  
+&lt;/head&gt;
+&lt;body&gt;
 
-<pre><code>!!! 5
-%html{"ng-app"=&gt;"gemStore"}
-  %head
-    / $BOOTSTRAP  CSS CDN 
-    %link(rel="stylesheet"  href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+&lt;ul&gt;
+  &lt;li&gt;hello&lt;/li&gt;
+  &lt;li&gt;hello 2&lt;/li&gt;
+  &lt;li&gt;hello 3&lt;/li&gt;
+&lt;/ul&gt;
 
-    / Stylesheets
-    = stylesheet_link_tag 'custom'
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"&gt;&lt;/script&gt;
 
-  %body{"ng-controller"=&gt;"StoreController as store"}
-    .container
-      .product.row{"ng-hide" =&gt; "store.product.soldOut"}
-        %h3
-          {{store.product.name}}
-          %em.pull-right ${{store.product.price}}
-        %button{"ng-show" =&gt; "store.product.canPurchase"} Add to Cart
+&lt;script&gt;
+  jQuery('ul li').addClass('emphasis');
+  $('ul li').addClass('emphasis');
+&lt;/script&gt;
 
-
-    / JQUERY CDN
-    = javascript_include_tag  "//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"
-
-    / AngularJS
-    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"
-
-    / Javascripts
-    = javascript_include_tag "app.js"
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
-<p>app.js</p>
+<h3 id="document-ready">2. Document Ready?</h3>
 
-<pre><code>(function() {
-  var app = angular.module('gemStore', []);
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=utf-8&gt;
+  &lt;title&gt;&lt;/title&gt;
+  &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"&gt;&lt;/script&gt;
+  &lt;style&gt;
+  .emphasis { font-weight: bold;}
+  &lt;/style&gt;
 
-  app.controller('StoreController', function(){
-    this.product = gem;
+  &lt;script&gt;
+
+  // This commented function is identical to the other one below
+  // $(function() {
+  //  $('li:first-child').addClass('emphasis');
+  // });
+
+  $(document).ready(function() {
+    $('li:first-child').addClass('emphasis');
   });
+  &lt;/script&gt; 
+&lt;/head&gt;
+&lt;body&gt;
 
-  var gem = {
-    name: 'Azurite',
-    price: 110.50,
-    canPurchase: true,
-    soldOut: false
-  };
-})();
+&lt;ul&gt;
+  &lt;li&gt;hello&lt;/li&gt;
+  &lt;li&gt;hello 2&lt;/li&gt;
+  &lt;li&gt;hello 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
-<h2 id="module">Module</h2>
+<h3 id="the-basics-of-querying-the-dom">3. The Basics of Querying the DOM</h3>
 
-<p><a href="https://docs.angularjs.org/guide/module">You can think of a module as a container for the different parts of your app – controllers, services, filters, directives, etc.</a></p>
+<p>See <a href="http://api.jquery.com/">api.jquery.com</a> for functions.</p>
+
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=utf-8&gt;
+  &lt;title&gt;&lt;/title&gt;
+  &lt;style&gt;
+  .container { color: green;}
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="container"&gt;
+  &lt;h1&gt;Welcome to My Website &lt;/h1&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat.
+  &lt;/p&gt;
+
+  &lt;div class="container"&gt;
+    &lt;ul class="emphasis container"&gt;
+      &lt;li&gt;item&lt;/li&gt;
+      &lt;li&gt;item 2&lt;/li&gt;
+      &lt;li&gt;item 2&lt;/li&gt;
+      &lt;li&gt;item 4&lt;/li&gt;
+      &lt;li&gt;item 5&lt;/li&gt;
+      &lt;li&gt;
+        &lt;ul&gt;
+          &lt;li&gt;hello from the nest.&lt;/li&gt;
+        &lt;/ul
+
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+  // Chaining
+  // $('ul.emphasis')
+  //  .children('li')
+  //    .eq(3)
+  //    .prev().text('added with jQuery');
+
+  // Parents vs Closest
+  // console.log($('ul').parents('.container'));
+  // console.log($('ul').closest('.container'));
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3 id="events-101">4. Events 101</h3>
+
+<p>index.html</p>
+
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=utf-8&gt;
+  &lt;title&gt;jQuery Events&lt;/title&gt;
+  &lt;link rel="stylesheet" href="day.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My Website&lt;/h1&gt;
+
+&lt;button data-file="day"&gt;Day&lt;/button&gt;
+&lt;button data-file="night"&gt;Night&lt;/button&gt;
+
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+
+
+&lt;script&gt;
+
+(function() {
+  var link = $('link');
+  
+  $('button').on('click', function() {
+    var $this = $(this),
+      stylesheet = $this.data('file');
+
+    link.attr('href', stylesheet + '.css');
+
+    $this
+      .siblings('button')
+        .removeAttr('disabled')
+        .end()
+      .attr('disabled', 'disabled');
+  });
+})();
+
+&lt;/script&gt;
+
+
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>day.css</p>
+
+<pre><code>body {
+  background: yellow;
+}
+</code></pre>
+
+<p>night.css</p>
+
+<pre><code>body {
+  background: black;
+  color: white;
+}
+</code></pre>
 
 <hr />
 

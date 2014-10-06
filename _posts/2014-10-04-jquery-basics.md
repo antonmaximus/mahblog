@@ -204,4 +204,187 @@ night.css
 
 
 
+###5. Events 201
+index.html
+{% raw %}
+    <html>
+    <head>
+      <meta charset=utf-8>
+      <title>jQuery Events 201</title>
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+    <dl>
+      <dt>What are your hours?</dt>
+      <dd>We are open 24/7.</dd>
+      <dt>What are your hours?</dt>
+      <dd>We are open 24/7.</dd>
+      <dt>What are your hours?</dt>
+      <dd>We are open 24/7.</dd>
+      <dt>What are your hours?</dt>
+      <dd>We are open 24/7.</dd>
+      <dt>What are your hours?</dt>
+      <dd>We are open 24/7.</dd>
+    </dl>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+
+    <script>
+
+    (function() {
+      
+      $('dd').filter(':nth-child(n+4)').addClass('hide');
+
+      $('dl').on('mouseenter', 'dt', function() {
+        $(this)
+          .next()
+            .slideDown(200)
+            .siblings('dd')
+              .slideUp(200);
+      });
+    })();
+
+
+    </script>
+
+    </body>
+    </html>
+{% endraw %}
+
+style.css
+{% raw %}
+    body {
+        width: 500px;
+      
+        margin: auto;
+        text-align: center;
+    }
+
+    dl {      
+    }
+
+    dd {
+        margin: 0;
+      
+        padding: 1em 0;
+    }
+
+    dt {
+        cursor: pointer;
+        
+      
+        font-weight: bold;
+        font-size : 1.5em;
+        line-height: 2em;
+        background: #e3e3e3;
+        border-bottom: 1px solid #c5c5c5;
+        border-top: 1px solid white;
+    }
+
+    dt:first-child { border-top: none; }
+    dt:nth-last-child(2) { border-bottom: none; }
+
+    .hide { display: none;}
+{% endraw %}
+
+
+###6. Bind...Live...Delegate... just use On!
+No info.  
+
+
+###7. Creating and Appending Content
+
+{% raw %}
+    <html>
+    <head>
+      <meta charset=utf-8>
+      <title>Appending Content</title>
+      <style>
+      article {
+        width: 600px;
+        margin: auto;
+      }
+      blockquote.co {
+        float: right;
+        background: #e3e3e3;
+        font-size: 2em;
+        width: 35%;
+        text-align: center;
+      }
+      </style>
+    </head>
+    <body>
+
+
+    <article>
+      <h1>My Awesome Post</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <p>
+        <span class=co>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <p>
+        Consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. <span class=co>Hello from JavaScript.</span> sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </article>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+
+    <script>
+
+    (function() {
+
+      var co = $('article').find('span.co').each(function() {
+        var $this = $(this);
+
+        $('<blockquote></blockquote>', {
+          class: 'co',
+          text: $this.text()
+        }).prependTo( $this.closest('p') );
+        
+      });
+      
+
+    })();
+
+    </script>
+
+    </body>
+    </html>
+{% endraw %}
+
+
+
+
+
+
+
+
+
+
 ---

@@ -5,8 +5,8 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 04 Oct 2014 17:49:07 -0700</pubDate>
-    <lastBuildDate>Sat, 04 Oct 2014 17:49:07 -0700</lastBuildDate>
+    <pubDate>Sun, 05 Oct 2014 21:51:42 -0700</pubDate>
+    <lastBuildDate>Sun, 05 Oct 2014 21:51:42 -0700</lastBuildDate>
     <generator>Jekyll v2.1.0</generator>
     
       <item>
@@ -200,6 +200,177 @@
   background: black;
   color: white;
 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;events-201&quot;&gt;5. Events 201&lt;/h3&gt;
+&lt;p&gt;index.html&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;jQuery Events 201&amp;lt;/title&amp;gt;
+  &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;dl&amp;gt;
+  &amp;lt;dt&amp;gt;What are your hours?&amp;lt;/dt&amp;gt;
+  &amp;lt;dd&amp;gt;We are open 24/7.&amp;lt;/dd&amp;gt;
+  &amp;lt;dt&amp;gt;What are your hours?&amp;lt;/dt&amp;gt;
+  &amp;lt;dd&amp;gt;We are open 24/7.&amp;lt;/dd&amp;gt;
+  &amp;lt;dt&amp;gt;What are your hours?&amp;lt;/dt&amp;gt;
+  &amp;lt;dd&amp;gt;We are open 24/7.&amp;lt;/dd&amp;gt;
+  &amp;lt;dt&amp;gt;What are your hours?&amp;lt;/dt&amp;gt;
+  &amp;lt;dd&amp;gt;We are open 24/7.&amp;lt;/dd&amp;gt;
+  &amp;lt;dt&amp;gt;What are your hours?&amp;lt;/dt&amp;gt;
+  &amp;lt;dd&amp;gt;We are open 24/7.&amp;lt;/dd&amp;gt;
+&amp;lt;/dl&amp;gt;
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+&amp;lt;script&amp;gt;
+
+(function() {
+  
+  $(&#39;dd&#39;).filter(&#39;:nth-child(n+4)&#39;).addClass(&#39;hide&#39;);
+
+  $(&#39;dl&#39;).on(&#39;mouseenter&#39;, &#39;dt&#39;, function() {
+    $(this)
+      .next()
+        .slideDown(200)
+        .siblings(&#39;dd&#39;)
+          .slideUp(200);
+  });
+})();
+
+
+&amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;style.css&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;body {
+    width: 500px;
+  
+    margin: auto;
+    text-align: center;
+}
+
+dl {      
+}
+
+dd {
+    margin: 0;
+  
+    padding: 1em 0;
+}
+
+dt {
+    cursor: pointer;
+    
+  
+    font-weight: bold;
+    font-size : 1.5em;
+    line-height: 2em;
+    background: #e3e3e3;
+    border-bottom: 1px solid #c5c5c5;
+    border-top: 1px solid white;
+}
+
+dt:first-child { border-top: none; }
+dt:nth-last-child(2) { border-bottom: none; }
+
+.hide { display: none;}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;bindlivedelegate-just-use-on&quot;&gt;6. Bind…Live…Delegate… just use On!&lt;/h3&gt;
+&lt;p&gt;No info.  &lt;/p&gt;
+
+&lt;h3 id=&quot;creating-and-appending-content&quot;&gt;7. Creating and Appending Content&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;Appending Content&amp;lt;/title&amp;gt;
+  &amp;lt;style&amp;gt;
+  article {
+    width: 600px;
+    margin: auto;
+  }
+  blockquote.co {
+    float: right;
+    background: #e3e3e3;
+    font-size: 2em;
+    width: 35%;
+    text-align: center;
+  }
+  &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+
+&amp;lt;article&amp;gt;
+  &amp;lt;h1&amp;gt;My Awesome Post&amp;lt;/h1&amp;gt;
+  &amp;lt;p&amp;gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  &amp;lt;/p&amp;gt;
+  &amp;lt;p&amp;gt;
+    &amp;lt;span class=co&amp;gt;Lorem ipsum dolor sit amet&amp;lt;/span&amp;gt;, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  &amp;lt;/p&amp;gt;
+  &amp;lt;p&amp;gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  &amp;lt;/p&amp;gt;
+  &amp;lt;p&amp;gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  &amp;lt;/p&amp;gt;
+  &amp;lt;p&amp;gt;
+    Consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. &amp;lt;span class=co&amp;gt;Hello from JavaScript.&amp;lt;/span&amp;gt; sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  &amp;lt;/p&amp;gt;
+&amp;lt;/article&amp;gt;
+
+
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+&amp;lt;script&amp;gt;
+
+(function() {
+
+  var co = $(&#39;article&#39;).find(&#39;span.co&#39;).each(function() {
+    var $this = $(this);
+
+    $(&#39;&amp;lt;blockquote&amp;gt;&amp;lt;/blockquote&amp;gt;&#39;, {
+      class: &#39;co&#39;,
+      text: $this.text()
+    }).prependTo( $this.closest(&#39;p&#39;) );
+    
+  });
+  
+
+})();
+
+&amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;

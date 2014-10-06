@@ -253,6 +253,177 @@
 }
 </code></pre>
 
+<h3 id="events-201">5. Events 201</h3>
+<p>index.html</p>
+
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=utf-8&gt;
+  &lt;title&gt;jQuery Events 201&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;What are your hours?&lt;/dt&gt;
+  &lt;dd&gt;We are open 24/7.&lt;/dd&gt;
+  &lt;dt&gt;What are your hours?&lt;/dt&gt;
+  &lt;dd&gt;We are open 24/7.&lt;/dd&gt;
+  &lt;dt&gt;What are your hours?&lt;/dt&gt;
+  &lt;dd&gt;We are open 24/7.&lt;/dd&gt;
+  &lt;dt&gt;What are your hours?&lt;/dt&gt;
+  &lt;dd&gt;We are open 24/7.&lt;/dd&gt;
+  &lt;dt&gt;What are your hours?&lt;/dt&gt;
+  &lt;dd&gt;We are open 24/7.&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+
+
+&lt;script&gt;
+
+(function() {
+  
+  $('dd').filter(':nth-child(n+4)').addClass('hide');
+
+  $('dl').on('mouseenter', 'dt', function() {
+    $(this)
+      .next()
+        .slideDown(200)
+        .siblings('dd')
+          .slideUp(200);
+  });
+})();
+
+
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>style.css</p>
+
+<pre><code>body {
+    width: 500px;
+  
+    margin: auto;
+    text-align: center;
+}
+
+dl {      
+}
+
+dd {
+    margin: 0;
+  
+    padding: 1em 0;
+}
+
+dt {
+    cursor: pointer;
+    
+  
+    font-weight: bold;
+    font-size : 1.5em;
+    line-height: 2em;
+    background: #e3e3e3;
+    border-bottom: 1px solid #c5c5c5;
+    border-top: 1px solid white;
+}
+
+dt:first-child { border-top: none; }
+dt:nth-last-child(2) { border-bottom: none; }
+
+.hide { display: none;}
+</code></pre>
+
+<h3 id="bindlivedelegate-just-use-on">6. Bind…Live…Delegate… just use On!</h3>
+<p>No info.  </p>
+
+<h3 id="creating-and-appending-content">7. Creating and Appending Content</h3>
+
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=utf-8&gt;
+  &lt;title&gt;Appending Content&lt;/title&gt;
+  &lt;style&gt;
+  article {
+    width: 600px;
+    margin: auto;
+  }
+  blockquote.co {
+    float: right;
+    background: #e3e3e3;
+    font-size: 2em;
+    width: 35%;
+    text-align: center;
+  }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+
+&lt;article&gt;
+  &lt;h1&gt;My Awesome Post&lt;/h1&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;span class=co&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  &lt;/p&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  &lt;/p&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  &lt;/p&gt;
+  &lt;p&gt;
+    Consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. &lt;span class=co&gt;Hello from JavaScript.&lt;/span&gt; sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  &lt;/p&gt;
+&lt;/article&gt;
+
+
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+
+
+&lt;script&gt;
+
+(function() {
+
+  var co = $('article').find('span.co').each(function() {
+    var $this = $(this);
+
+    $('&lt;blockquote&gt;&lt;/blockquote&gt;', {
+      class: 'co',
+      text: $this.text()
+    }).prependTo( $this.closest('p') );
+    
+  });
+  
+
+})();
+
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
 <hr />
 
   </article>

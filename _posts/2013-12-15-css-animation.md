@@ -2,7 +2,7 @@
 layout: post
 title:  "Pure HTML & CSS Squat Animation"
 date:   2013-12-15 14:43:59
-categories: skills
+categories: craft
 ---
 
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "jQuery Basics"
 date:   2014-10-04 14:43:58
-categories: exercise
+categories: craft
 ---
 
 

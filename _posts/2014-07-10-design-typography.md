@@ -2,7 +2,7 @@
 layout: post
 title:  "Design: Typography"
 date:   2014-07-10 14:43:59
-categories: skills
+categories: craft
 ---
 
 ## Style Guide

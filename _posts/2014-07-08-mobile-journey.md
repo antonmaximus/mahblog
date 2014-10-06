@@ -2,7 +2,7 @@
 layout: post
 title:  "Mobile Journey"
 date:   2014-07-08 14:42:59
-categories: skills
+categories: craft
 ---
 
 

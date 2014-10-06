@@ -2,7 +2,7 @@
 layout: post
 title:  "Design Fundamentals"
 date:   2014-07-09 14:43:58
-categories: skills
+categories: craft
 ---
 
 ## Design Theory 101:

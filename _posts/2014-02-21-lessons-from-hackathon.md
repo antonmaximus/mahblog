@@ -2,7 +2,7 @@
 layout: post
 title:  "Lessons learned from a Hackathon"
 date:   2014-02-21 14:43:59
-categories: skills
+categories: craft
 ---
 
 I attended a [UX Design Hackathon](https://www.eventbrite.com/e/redesign-a-ux-design-hackathon-tickets-10500873395) this past Sunday in Santa Monica.  A few takeaways from my observation... 

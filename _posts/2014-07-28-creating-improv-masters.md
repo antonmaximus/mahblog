@@ -2,7 +2,7 @@
 layout: post
 title:  "Creating Improv Masters"
 date:   2014-07-28 14:43:58
-categories: skills
+categories: craft
 ---
 
 

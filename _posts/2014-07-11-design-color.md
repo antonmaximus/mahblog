@@ -2,7 +2,7 @@
 layout: post
 title:  "Design: Color"
 date:   2014-07-11 14:43:58
-categories: skills
+categories: craft
 ---
 
 ## Color Theory 101:

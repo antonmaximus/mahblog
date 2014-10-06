@@ -2,7 +2,7 @@
 layout: post
 title:  "CSS Cross Country"
 date:   2014-07-07 14:42:59
-categories: skills
+categories: craft
 ---
 
 ### Primary DOM Selectors

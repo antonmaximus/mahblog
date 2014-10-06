@@ -2,7 +2,7 @@
 layout: post
 title:  "Finding the Right Track"
 date:   2013-05-23 14:43:59
-categories: skills
+categories: life
 ---
 
 How I ended up finding myself reading [an Oprah article](http://www.oprah.com/money/Find-Your-Career-Path) about careers, I do not know.  Nonetheless, the article made me think about parallelism in how animals find their way in the wild by way of instinct and how people find their way in their career....  

@@ -2,7 +2,7 @@
 layout: post
 title:  "Design: Layout"
 date:   2014-07-12 14:43:58
-categories: skills
+categories: craft
 ---
 
 ## Visual Hierarchy

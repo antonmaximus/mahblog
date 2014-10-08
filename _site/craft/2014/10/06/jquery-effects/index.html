@@ -383,10 +383,309 @@ $('div').flashFlash();
 &lt;/script&gt;
 
 &lt;/body&gt;
-&lt;/html&gt; {% raw %}
+&lt;/html&gt;
 </code></pre>
 
-<hr />
+<h3 id="full-control-with-animate">3.5 Full Control With Animate</h3>
+<p>No code for this one.</p>
+
+<h3 id="homework-solutions">3.6 Homework Solutions</h3>
+
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=utf-8&gt;
+  &lt;title&gt;Animate&lt;/title&gt;
+  &lt;style&gt;
+  body { width: 400px; margin: 100px auto; }
+
+  .box {
+    width: 400px;
+    background: red;
+    position: relative;
+    overflow: hidden;
+    padding: 1em;
+  }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+
+&lt;div class="box"&gt;
+  &lt;h2&gt;Hi There&lt;/h2&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;button&gt;FadeSlideToggle&lt;/button&gt;&lt;/p&gt;
+
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+
+(function() {
+  var box = $('div.box');
+
+  $.fn.FadeSlideToggle = function(speed, fn) {
+    // fadeToggle = opacity
+    // slideToggle = height
+    return $(this).animate({
+      'height': 'toggle',
+      'opacity': 'toggle'
+    }, speed || 400, function() {
+      $.isFunction(fn) &amp;&amp; fn.call(this);
+    });
+  };
+
+  $('button').on('click', function() {
+    box.FadeSlideToggle(500);
+  }); 
+
+})();
+
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3 id="the-obligatory-slider-first-attempt">3.7 The Obligatory Slider (First Attempt)</h3>
+
+<p>index.html</p>
+
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=utf-8&gt;
+  &lt;title&gt;The Obligatory Slider&lt;/title&gt;
+  &lt;style&gt;
+  body {
+    width: 600px;
+    margin: 100px auto 0;
+  }
+  * { margin: 0; padding: 0; }
+  &lt;/style&gt;
+  &lt;link rel="stylesheet" href="slider.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="slider"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;img src="img/img1.gif" alt="image"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src="img/img2.gif" alt="image"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src="img/img3.gif" alt="image"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src="img/img4.gif" alt="image"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src="img/img1.gif" alt="image"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src="img/img2.gif" alt="image"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src="img/img3.gif" alt="image"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src="img/img4.gif" alt="image"&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id="slider-nav"&gt;
+  &lt;button data-dir="prev"&gt;Previous&lt;/button&gt;
+  &lt;button data-dir="next"&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="slider.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>slider.css</p>
+
+<pre><code>#slider-nav { 
+  display: none; 
+  margin-top: 1em;
+}
+
+#slider-nav button {
+  padding: 1em;
+  margin-right: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.slider {
+  width: inherit;
+  height: 300px;
+  overflow: scroll;
+}
+
+.slider ul {
+  width: 10000px;
+  list-style: none;
+}
+
+.slider li {
+  float: left;
+}
+</code></pre>
+
+<p>slider.js</p>
+
+<pre><code>// the procedural method
+(function($) {
+  var sliderUL = $('div.slider').css('overflow', 'hidden').children('ul'),
+    imgs = sliderUL.find('img'),
+    imgWidth = imgs[0].width, // 600
+    imgsLen = imgs.length, // 4
+    current = 1,
+    totalImgsWidth = imgsLen * imgWidth; // 2400
+
+  $('#slider-nav').show().find('button').on('click', function() {
+    var direction = $(this).data('dir'),
+      loc = imgWidth; // 600
+
+    // update current value
+    ( direction === 'next' ) ? ++current : --current;
+
+    // if first image
+    if ( current === 0 ) {
+      current = imgsLen;
+      loc = totalImgsWidth - imgWidth; // 2400 - 600 = 1800
+      direction = 'next';
+    } else if ( current - 1 === imgsLen ) { // Are we at end? Should we reset?
+      current = 1;
+      loc = 0;
+    }
+
+    transition(sliderUL, loc, direction);
+  });
+
+  function transition( container, loc, direction ) {
+    var unit; // -= +=
+
+    if ( direction &amp;&amp; loc !== 0 ) {
+      unit = ( direction === 'next' ) ? '-=' : '+=';
+    }
+
+    container.animate({
+      'margin-left': unit ? (unit + loc) : loc
+    });
+  }
+
+})(jQuery);
+</code></pre>
+
+<h3 id="prototypal-inheritance-and-refactoring-the-slider">3.8 Prototypal Inheritance and Refactoring the Slider</h3>
+
+<p>index.html</p>
+
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=utf-8&gt;
+  &lt;title&gt;The Obligatory Slider&lt;/title&gt;
+  &lt;style&gt;
+  body {
+    width: 600px;
+    margin: 100px auto 0;
+  }
+  * { margin: 0; padding: 0; }
+  &lt;/style&gt;
+  &lt;link rel="stylesheet" href="slider.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="slider"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;img src="img/img1.gif" alt="image"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src="img/img2.gif" alt="image"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src="img/img3.gif" alt="image"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src="img/img4.gif" alt="image"&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id="slider-nav"&gt;
+  &lt;button data-dir="prev"&gt;Previous&lt;/button&gt;
+  &lt;button data-dir="next"&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script src="slider.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+
+(function() {
+  var container = $('div.slider').css('overflow', 'hidden').children('ul'),
+    slider = new Slider( container, $('#slider-nav') );
+
+  slider.nav.find('button').on('click', function() {
+    slider.setCurrent( $(this).data('dir') );
+    slider.transition();
+  });   
+})();
+
+
+
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+
+#slider-nav { 
+  display: none; 
+  margin-top: 1em;
+}
+
+#slider-nav button {
+  padding: 1em;
+  margin-right: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.slider {
+  width: inherit;
+  height: 300px;
+  overflow: scroll;
+}
+
+.slider ul {
+  width: 10000px;
+  list-style: none;
+}
+
+.slider li {
+  float: left;
+}
+
+
+
+function Slider( container, nav ) {
+  this.container = container;
+  this.nav = nav.show();
+
+  this.imgs = this.container.find('img');
+  this.imgWidth = this.imgs[0].width; // 600
+  this.imgsLen = this.imgs.length;
+
+  this.current = 0;
+}
+
+Slider.prototype.transition = function( coords ) {
+  this.container.animate({
+    'margin-left': coords || -( this.current * this.imgWidth )
+  });
+};
+
+Slider.prototype.setCurrent = function( dir ) {
+  var pos = this.current;
+
+  pos += ( ~~( dir === 'next' ) || -1 );
+  this.current = ( pos &lt; 0 ) ? this.imgsLen - 1 : pos % this.imgsLen;
+
+  return pos;
+};
+</code></pre>
+
+<h3 id="your-questions-answered">3.9 Your Questions Answered</h3>
+<p>No code for this one.
+—</p>
 
 
   </article>

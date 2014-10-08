@@ -5,9 +5,228 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 06 Oct 2014 16:36:54 -0700</pubDate>
-    <lastBuildDate>Mon, 06 Oct 2014 16:36:54 -0700</lastBuildDate>
+    <pubDate>Wed, 08 Oct 2014 15:57:15 -0700</pubDate>
+    <lastBuildDate>Wed, 08 Oct 2014 15:57:15 -0700</lastBuildDate>
     <generator>Jekyll v2.1.0</generator>
+    
+      <item>
+        <title>jQuery Utilities</title>
+        <description>&lt;h3 id=&quot;each-and-templating&quot;&gt;4.1 $.each and Templating&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;Q&amp;amp;A&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;script id=blogTemplate type=tuts/template&amp;gt;
+  &amp;lt;h2&amp;gt; {{title}} &amp;lt;/h2&amp;gt;
+  &amp;lt;img src={{thumbnail}} alt={{title}}&amp;gt;
+&amp;lt;/script&amp;gt;
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;script&amp;gt;
+
+(function() {
+  var content = [
+    {
+      title: &#39;My awesome blog post&#39;,
+      thumbnail: &#39;http://d2o0t5hpnwv4c1.cloudfront.net/1137_terminal/preview.png&#39;,
+    },
+    {
+      title: &#39;My second awesome blog post&#39;,
+      thumbnail: &#39;http://d2o0t5hpnwv4c1.cloudfront.net/1133_newrelic/200.jpg&#39;,
+    },
+    {
+      title: &#39;My third blog post&#39;,
+      thumbnail: &#39;http://d2o0t5hpnwv4c1.cloudfront.net/1137_terminal/preview.png&#39;,
+    }
+  ],
+    template = $.trim( $(&#39;#blogTemplate&#39;).html() ),
+    frag = &#39;&#39;;
+
+
+
+  $.each( content, function( index, obj ) {
+    frag +=
+      template.replace( /{{title}}/ig, obj.title )
+          .replace( /{{thumbnail}}/ig, obj.thumbnail );   
+  });
+
+  $(&#39;body&#39;).append(frag);
+
+})();
+
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;say-hello-to-handlebars&quot;&gt;4.2 Say Hello to Handlebars&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;Mustache&amp;lt;/title&amp;gt;
+&amp;lt;style&amp;gt;
+h2 span { color: gray; font-size: .8em; }
+&amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;ul class=&quot;tweets&quot;&amp;gt;
+  &amp;lt;script id=&quot;template&quot; type=&quot;text/x-handlebars-template&quot;&amp;gt;
+    {{#each this}}
+    &amp;lt;li&amp;gt;
+      &amp;lt;h2&amp;gt;{{fullName author}}&amp;lt;/h2&amp;gt;
+      &amp;lt;p&amp;gt;{{{tweet}}}&amp;lt;/p&amp;gt;
+
+      {{#if quote}}
+        &amp;lt;h5&amp;gt;{{quote}}&amp;lt;/h5&amp;gt;
+      {{else}}
+        &amp;lt;h5&amp;gt;Author does not have a quote.&amp;lt;/h5&amp;gt;
+      {{/if}}
+    &amp;lt;/li&amp;gt;
+    {{/each}}
+  &amp;lt;/script&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;script src=&quot;http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;script&amp;gt;
+
+(function() {
+  var context = [
+    {
+      author: { first: &#39;Jeffrey&#39;, last: &#39;Way&#39;, age: 27 },
+      tweet: &#39;30 Days to Learn jQuery Rocks&#39;,
+      quote: &#39;Never ever, ever, ever give up.&#39;
+    },
+    {
+      author: { first: &#39;John&#39;, last: &#39;Doe&#39;, age: 45 },
+      tweet: &#39;&amp;lt;strong&amp;gt;30 Days&amp;lt;/strong&amp;gt; to Learn jQuery Rocks&#39;,
+    }
+  ],
+    template = Handlebars.compile( $(&#39;#template&#39;).html() );
+
+  Handlebars.registerHelper(&#39;fullName&#39;, function( author ) {
+    return author.first + &#39; &#39; + author.last + &#39; - &#39; + author.age;
+  });
+
+  $(&#39;ul.tweets&#39;).append( template(context) );
+
+})();
+
+&amp;lt;/script&amp;gt;
+
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;the-twitter-api&quot;&gt;4.3 The Twitter API&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;Twitter&amp;lt;/title&amp;gt;
+  &amp;lt;style&amp;gt;
+  body { width: 600px; margin: auto; }
+  ul { list-style: none; }
+  li { padding-bottom: 1em; }
+  img { float: left; padding-right: 1em; }
+  a { text-decoration: none; color: #333; }
+  &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;ul id=&quot;biebster-tweets&quot;&amp;gt;
+  &amp;lt;script id=&quot;tweets-template&quot; type=&quot;text/x-handlebars-template&quot;&amp;gt;
+    {{#each this}}
+    &amp;lt;li&amp;gt;
+      &amp;lt;img src=&quot;{{thumb}}&quot; alt=&quot;{{author}}&quot;&amp;gt;
+      &amp;lt;p&amp;gt;&amp;lt;a href=&quot;{{url}}&quot;&amp;gt;{{tweet}}&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+    &amp;lt;/li&amp;gt;
+    {{/each}}
+  &amp;lt;/script&amp;gt;   
+&amp;lt;/ul&amp;gt;
+
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;script src=&quot;http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;script&amp;gt;
+
+(function() {
+
+  var Twitter = {
+    init: function( config ) {
+      this.url = &#39;http://search.twitter.com/search.json?q=&#39; + config.query + &#39;&amp;amp;callback=?&#39;;
+      this.template = config.template;
+      this.container = config.container;
+
+      this.fetch();
+    },
+
+    attachTemplate: function() {
+      var template = Handlebars.compile( this.template );
+
+      this.container.append( template( this.tweets ) );
+
+    },
+
+    fetch: function() {
+      var self = this;
+
+      $.getJSON( this.url, function( data ) {
+        self.tweets = $.map( data.results, function( tweet ) {
+          return {
+            author: tweet.from_user,
+            tweet: tweet.text,
+            thumb: tweet.profile_image_url,
+            url: &#39;http://twitter.com/&#39; + tweet.from_user + &#39;/status/&#39; + tweet.id_str
+          };
+        });
+
+        // For future lessons, research $.deferred, viewers. :)
+        self.attachTemplate(); 
+      });
+    }
+  };
+
+  Twitter.init({
+    template: $(&#39;#tweets-template&#39;).html(),
+    container: $(&#39;#biebster-tweets&#39;),
+    query: &#39;Justin Bieber&#39;
+  });
+
+})();
+
+&amp;lt;/script&amp;gt;
+
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+</description>
+        <pubDate>Wed, 08 Oct 2014 07:43:58 -0700</pubDate>
+        <link>www.anton23.com/craft/2014/10/08/jquery-utilities/</link>
+        <guid isPermaLink="true">www.anton23.com/craft/2014/10/08/jquery-utilities/</guid>
+        
+        
+        <category>craft</category>
+        
+      </item>
     
       <item>
         <title>jQuery Effects</title>
@@ -332,10 +551,309 @@ $(&#39;div&#39;).flashFlash();
 &amp;lt;/script&amp;gt;
 
 &amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt; {% raw %}
+&amp;lt;/html&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;hr /&gt;
+&lt;h3 id=&quot;full-control-with-animate&quot;&gt;3.5 Full Control With Animate&lt;/h3&gt;
+&lt;p&gt;No code for this one.&lt;/p&gt;
+
+&lt;h3 id=&quot;homework-solutions&quot;&gt;3.6 Homework Solutions&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;Animate&amp;lt;/title&amp;gt;
+  &amp;lt;style&amp;gt;
+  body { width: 400px; margin: 100px auto; }
+
+  .box {
+    width: 400px;
+    background: red;
+    position: relative;
+    overflow: hidden;
+    padding: 1em;
+  }
+  &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+
+&amp;lt;div class=&quot;box&quot;&amp;gt;
+  &amp;lt;h2&amp;gt;Hi There&amp;lt;/h2&amp;gt;
+  &amp;lt;p&amp;gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  &amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;button&amp;gt;FadeSlideToggle&amp;lt;/button&amp;gt;&amp;lt;/p&amp;gt;
+
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;script&amp;gt;
+
+(function() {
+  var box = $(&#39;div.box&#39;);
+
+  $.fn.FadeSlideToggle = function(speed, fn) {
+    // fadeToggle = opacity
+    // slideToggle = height
+    return $(this).animate({
+      &#39;height&#39;: &#39;toggle&#39;,
+      &#39;opacity&#39;: &#39;toggle&#39;
+    }, speed || 400, function() {
+      $.isFunction(fn) &amp;amp;&amp;amp; fn.call(this);
+    });
+  };
+
+  $(&#39;button&#39;).on(&#39;click&#39;, function() {
+    box.FadeSlideToggle(500);
+  }); 
+
+})();
+
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;the-obligatory-slider-first-attempt&quot;&gt;3.7 The Obligatory Slider (First Attempt)&lt;/h3&gt;
+
+&lt;p&gt;index.html&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;The Obligatory Slider&amp;lt;/title&amp;gt;
+  &amp;lt;style&amp;gt;
+  body {
+    width: 600px;
+    margin: 100px auto 0;
+  }
+  * { margin: 0; padding: 0; }
+  &amp;lt;/style&amp;gt;
+  &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;slider.css&quot;&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;div class=&quot;slider&quot;&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img1.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img2.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img3.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img4.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img1.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img2.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img3.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img4.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div id=&quot;slider-nav&quot;&amp;gt;
+  &amp;lt;button data-dir=&quot;prev&quot;&amp;gt;Previous&amp;lt;/button&amp;gt;
+  &amp;lt;button data-dir=&quot;next&quot;&amp;gt;Next&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;slider.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;slider.css&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#slider-nav { 
+  display: none; 
+  margin-top: 1em;
+}
+
+#slider-nav button {
+  padding: 1em;
+  margin-right: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.slider {
+  width: inherit;
+  height: 300px;
+  overflow: scroll;
+}
+
+.slider ul {
+  width: 10000px;
+  list-style: none;
+}
+
+.slider li {
+  float: left;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;slider.js&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// the procedural method
+(function($) {
+  var sliderUL = $(&#39;div.slider&#39;).css(&#39;overflow&#39;, &#39;hidden&#39;).children(&#39;ul&#39;),
+    imgs = sliderUL.find(&#39;img&#39;),
+    imgWidth = imgs[0].width, // 600
+    imgsLen = imgs.length, // 4
+    current = 1,
+    totalImgsWidth = imgsLen * imgWidth; // 2400
+
+  $(&#39;#slider-nav&#39;).show().find(&#39;button&#39;).on(&#39;click&#39;, function() {
+    var direction = $(this).data(&#39;dir&#39;),
+      loc = imgWidth; // 600
+
+    // update current value
+    ( direction === &#39;next&#39; ) ? ++current : --current;
+
+    // if first image
+    if ( current === 0 ) {
+      current = imgsLen;
+      loc = totalImgsWidth - imgWidth; // 2400 - 600 = 1800
+      direction = &#39;next&#39;;
+    } else if ( current - 1 === imgsLen ) { // Are we at end? Should we reset?
+      current = 1;
+      loc = 0;
+    }
+
+    transition(sliderUL, loc, direction);
+  });
+
+  function transition( container, loc, direction ) {
+    var unit; // -= +=
+
+    if ( direction &amp;amp;&amp;amp; loc !== 0 ) {
+      unit = ( direction === &#39;next&#39; ) ? &#39;-=&#39; : &#39;+=&#39;;
+    }
+
+    container.animate({
+      &#39;margin-left&#39;: unit ? (unit + loc) : loc
+    });
+  }
+
+})(jQuery);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;prototypal-inheritance-and-refactoring-the-slider&quot;&gt;3.8 Prototypal Inheritance and Refactoring the Slider&lt;/h3&gt;
+
+&lt;p&gt;index.html&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;The Obligatory Slider&amp;lt;/title&amp;gt;
+  &amp;lt;style&amp;gt;
+  body {
+    width: 600px;
+    margin: 100px auto 0;
+  }
+  * { margin: 0; padding: 0; }
+  &amp;lt;/style&amp;gt;
+  &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;slider.css&quot;&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;div class=&quot;slider&quot;&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img1.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img2.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img3.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img4.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div id=&quot;slider-nav&quot;&amp;gt;
+  &amp;lt;button data-dir=&quot;prev&quot;&amp;gt;Previous&amp;lt;/button&amp;gt;
+  &amp;lt;button data-dir=&quot;next&quot;&amp;gt;Next&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;script src=&quot;slider.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script&amp;gt;
+
+(function() {
+  var container = $(&#39;div.slider&#39;).css(&#39;overflow&#39;, &#39;hidden&#39;).children(&#39;ul&#39;),
+    slider = new Slider( container, $(&#39;#slider-nav&#39;) );
+
+  slider.nav.find(&#39;button&#39;).on(&#39;click&#39;, function() {
+    slider.setCurrent( $(this).data(&#39;dir&#39;) );
+    slider.transition();
+  });   
+})();
+
+
+
+&amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+
+
+#slider-nav { 
+  display: none; 
+  margin-top: 1em;
+}
+
+#slider-nav button {
+  padding: 1em;
+  margin-right: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.slider {
+  width: inherit;
+  height: 300px;
+  overflow: scroll;
+}
+
+.slider ul {
+  width: 10000px;
+  list-style: none;
+}
+
+.slider li {
+  float: left;
+}
+
+
+
+function Slider( container, nav ) {
+  this.container = container;
+  this.nav = nav.show();
+
+  this.imgs = this.container.find(&#39;img&#39;);
+  this.imgWidth = this.imgs[0].width; // 600
+  this.imgsLen = this.imgs.length;
+
+  this.current = 0;
+}
+
+Slider.prototype.transition = function( coords ) {
+  this.container.animate({
+    &#39;margin-left&#39;: coords || -( this.current * this.imgWidth )
+  });
+};
+
+Slider.prototype.setCurrent = function( dir ) {
+  var pos = this.current;
+
+  pos += ( ~~( dir === &#39;next&#39; ) || -1 );
+  this.current = ( pos &amp;lt; 0 ) ? this.imgsLen - 1 : pos % this.imgsLen;
+
+  return pos;
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;your-questions-answered&quot;&gt;3.9 Your Questions Answered&lt;/h3&gt;
+&lt;p&gt;No code for this one.
+—&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 06 Oct 2014 07:43:58 -0700</pubDate>
@@ -1053,13 +1571,11 @@ dt:nth-last-child(2) { border-bottom: none; }
 &lt;hr /&gt;
 </description>
         <pubDate>Wed, 27 Aug 2014 07:43:58 -0700</pubDate>
-        <link>www.anton23.com/life/exercise/interact/2014/08/27/the-voice/</link>
-        <guid isPermaLink="true">www.anton23.com/life/exercise/interact/2014/08/27/the-voice/</guid>
+        <link>www.anton23.com/life/interact/2014/08/27/the-voice/</link>
+        <guid isPermaLink="true">www.anton23.com/life/interact/2014/08/27/the-voice/</guid>
         
         
         <category>life</category>
-        
-        <category>exercise</category>
         
         <category>interact</category>
         
@@ -1126,106 +1642,6 @@ orange? It’s complementary blue, of course.  Hence, here’s the scheme:&lt;/p
         <pubDate>Mon, 28 Jul 2014 07:43:58 -0700</pubDate>
         <link>www.anton23.com/craft/2014/07/28/creating-improv-masters/</link>
         <guid isPermaLink="true">www.anton23.com/craft/2014/07/28/creating-improv-masters/</guid>
-        
-        
-        <category>craft</category>
-        
-      </item>
-    
-      <item>
-        <title>Design: Layout</title>
-        <description>&lt;h2 id=&quot;visual-hierarchy&quot;&gt;Visual Hierarchy&lt;/h2&gt;
-&lt;p&gt;Arrange elements to engage and direct the users eye.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;English is read from left to right, so start from the upper-left corner especially with logo/brand.&lt;/li&gt;
-  &lt;li&gt;Next is navigation.
-    &lt;ul&gt;
-      &lt;li&gt;Few items – Horizontal (top bar) or Vertical (side bar) works well.&lt;/li&gt;
-      &lt;li&gt;Many items – Vertical excels.  Horizontal works if it’s a tiered system.&lt;/li&gt;
-      &lt;li&gt;Dropdowns/Flyouts – works well in both systems.&lt;/li&gt;
-      &lt;li&gt;Vertical navigation is not used that much&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Main Content – content should reinforce the hierarchy
-    &lt;ul&gt;
-      &lt;li&gt;Make sure all directional cues are pointing to the content.
-        &lt;ul&gt;
-          &lt;li&gt;e.g., Use images of people that look towards the content (see image below).&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Secondary Content – should be smaller and relegated to the side or underneath the main content.&lt;/li&gt;
-  &lt;li&gt;Footer – bottom of the page and provides quick hint information for users. 
-    &lt;ul&gt;
-      &lt;li&gt;It should always span the width of the page.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/zZesJtv.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/9BaPcDn.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;the-grid-system&quot;&gt;The Grid System&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;It is made up of vertical lines that create columns with gutters in-between them.&lt;/li&gt;
-  &lt;li&gt;It also has horizontal lines that create a baseline for text that is equal to the line-height.&lt;/li&gt;
-  &lt;li&gt;Always respect the gutters&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/yoArX79.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;fixed-vs-fluid&quot;&gt;Fixed vs Fluid&lt;/h3&gt;
-&lt;p&gt;Fixed grid has constant width.  A fluid grid grows and shrinks with the browser window.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;incorporate-whitespace&quot;&gt;Incorporate Whitespace&lt;/h2&gt;
-
-&lt;p&gt;Ample empty space around elements can increase readability and create a mood of elegance.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Even in images, there’s white space that’s surrounding the subject.&lt;/li&gt;
-  &lt;li&gt;Density is lack of whitespace.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;balance-all-the-things&quot;&gt;Balance all the things&lt;/h2&gt;
-&lt;p&gt;A good design is a balanced design.  It can be symmetrical or asymmetrical.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Symmetry – portrays a sense of stabilty and trust.&lt;/li&gt;
-  &lt;li&gt;Asymmetry – effective in drawing attention and breaking monotony.  It is inherently balanced, and creates intrigue and demands attention.  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/gmGesNH.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;all-of-the-principles-together-contribute-to-balance&quot;&gt;All of the principles together Contribute to Balance.&lt;/h3&gt;
-&lt;p&gt;Size, Color, Contribute, Alignment (grid), Whitespace (or lack thereof–density) and Symmetry create balance.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;final-notes&quot;&gt;Final Notes:&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;If you can’t defend it, Change It
-    &lt;ul&gt;
-      &lt;li&gt;Design with intentionality, the ability to defend your design decisions in a conversational manner. If you can’t defend it, its probably not the right choice.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Experiment Often
-    &lt;ul&gt;
-      &lt;li&gt;The first solution is rarely the best one, don’t rush the process.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 12 Jul 2014 07:43:58 -0700</pubDate>
-        <link>www.anton23.com/craft/2014/07/12/design-layout/</link>
-        <guid isPermaLink="true">www.anton23.com/craft/2014/07/12/design-layout/</guid>
         
         
         <category>craft</category>

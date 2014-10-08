@@ -341,7 +341,7 @@ categories: craft
 
     </body>
     </html>
-{% raw %}
+{% endraw %}
 
 
 
@@ -350,18 +350,308 @@ No code for this one.
 
 
 
+###3.6 Homework Solutions
+{% raw %}
+    <html>
+    <head>
+      <meta charset=utf-8>
+      <title>Animate</title>
+      <style>
+      body { width: 400px; margin: 100px auto; }
+
+      .box {
+        width: 400px;
+        background: red;
+        position: relative;
+        overflow: hidden;
+        padding: 1em;
+      }
+      </style>
+    </head>
+    <body>
+
+
+    <div class="box">
+      <h2>Hi There</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+
+    <p><button>FadeSlideToggle</button></p>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script>
+
+    (function() {
+      var box = $('div.box');
+
+      $.fn.FadeSlideToggle = function(speed, fn) {
+        // fadeToggle = opacity
+        // slideToggle = height
+        return $(this).animate({
+          'height': 'toggle',
+          'opacity': 'toggle'
+        }, speed || 400, function() {
+          $.isFunction(fn) && fn.call(this);
+        });
+      };
+
+      $('button').on('click', function() {
+        box.FadeSlideToggle(500);
+      }); 
+
+    })();
+
+    </script>
+    </body>
+    </html>
+{% endraw %}
 
 
 
 
+###3.7 The Obligatory Slider (First Attempt)
+
+index.html
+{% raw %}
+    <html>
+    <head>
+      <meta charset=utf-8>
+      <title>The Obligatory Slider</title>
+      <style>
+      body {
+        width: 600px;
+        margin: 100px auto 0;
+      }
+      * { margin: 0; padding: 0; }
+      </style>
+      <link rel="stylesheet" href="slider.css">
+    </head>
+    <body>
+
+    <div class="slider">
+      <ul>
+        <li><img src="img/img1.gif" alt="image"></li>
+        <li><img src="img/img2.gif" alt="image"></li>
+        <li><img src="img/img3.gif" alt="image"></li>
+        <li><img src="img/img4.gif" alt="image"></li>
+        <li><img src="img/img1.gif" alt="image"></li>
+        <li><img src="img/img2.gif" alt="image"></li>
+        <li><img src="img/img3.gif" alt="image"></li>
+        <li><img src="img/img4.gif" alt="image"></li>
+      </ul>
+    </div>
+
+    <div id="slider-nav">
+      <button data-dir="prev">Previous</button>
+      <button data-dir="next">Next</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="slider.js"></script>
+
+    </body>
+    </html>
+{% endraw %}
+
+slider.css
+{% raw %}
+    #slider-nav { 
+      display: none; 
+      margin-top: 1em;
+    }
+
+    #slider-nav button {
+      padding: 1em;
+      margin-right: 1em;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .slider {
+      width: inherit;
+      height: 300px;
+      overflow: scroll;
+    }
+
+    .slider ul {
+      width: 10000px;
+      list-style: none;
+    }
+
+    .slider li {
+      float: left;
+    }
+{% endraw %}
+
+slider.js
+{% raw %}
+    // the procedural method
+    (function($) {
+      var sliderUL = $('div.slider').css('overflow', 'hidden').children('ul'),
+        imgs = sliderUL.find('img'),
+        imgWidth = imgs[0].width, // 600
+        imgsLen = imgs.length, // 4
+        current = 1,
+        totalImgsWidth = imgsLen * imgWidth; // 2400
+
+      $('#slider-nav').show().find('button').on('click', function() {
+        var direction = $(this).data('dir'),
+          loc = imgWidth; // 600
+
+        // update current value
+        ( direction === 'next' ) ? ++current : --current;
+
+        // if first image
+        if ( current === 0 ) {
+          current = imgsLen;
+          loc = totalImgsWidth - imgWidth; // 2400 - 600 = 1800
+          direction = 'next';
+        } else if ( current - 1 === imgsLen ) { // Are we at end? Should we reset?
+          current = 1;
+          loc = 0;
+        }
+
+        transition(sliderUL, loc, direction);
+      });
+
+      function transition( container, loc, direction ) {
+        var unit; // -= +=
+
+        if ( direction && loc !== 0 ) {
+          unit = ( direction === 'next' ) ? '-=' : '+=';
+        }
+
+        container.animate({
+          'margin-left': unit ? (unit + loc) : loc
+        });
+      }
+
+    })(jQuery);
+{% endraw %}
 
 
 
+###3.8 Prototypal Inheritance and Refactoring the Slider
+
+index.html
+{% raw %}
+    <html>
+    <head>
+      <meta charset=utf-8>
+      <title>The Obligatory Slider</title>
+      <style>
+      body {
+        width: 600px;
+        margin: 100px auto 0;
+      }
+      * { margin: 0; padding: 0; }
+      </style>
+      <link rel="stylesheet" href="slider.css">
+    </head>
+    <body>
+
+    <div class="slider">
+      <ul>
+        <li><img src="img/img1.gif" alt="image"></li>
+        <li><img src="img/img2.gif" alt="image"></li>
+        <li><img src="img/img3.gif" alt="image"></li>
+        <li><img src="img/img4.gif" alt="image"></li>
+      </ul>
+    </div>
+
+    <div id="slider-nav">
+      <button data-dir="prev">Previous</button>
+      <button data-dir="next">Next</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script src="slider.js"></script>
+    <script>
+
+    (function() {
+      var container = $('div.slider').css('overflow', 'hidden').children('ul'),
+        slider = new Slider( container, $('#slider-nav') );
+
+      slider.nav.find('button').on('click', function() {
+        slider.setCurrent( $(this).data('dir') );
+        slider.transition();
+      });   
+    })();
 
 
 
+    </script>
+
+    </body>
+    </html>
+{% endraw %}
+
+{% raw %}
+    #slider-nav { 
+      display: none; 
+      margin-top: 1em;
+    }
+
+    #slider-nav button {
+      padding: 1em;
+      margin-right: 1em;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .slider {
+      width: inherit;
+      height: 300px;
+      overflow: scroll;
+    }
+
+    .slider ul {
+      width: 10000px;
+      list-style: none;
+    }
+
+    .slider li {
+      float: left;
+    }
+{% endraw %}
+
+{% raw %}
+    function Slider( container, nav ) {
+      this.container = container;
+      this.nav = nav.show();
+
+      this.imgs = this.container.find('img');
+      this.imgWidth = this.imgs[0].width; // 600
+      this.imgsLen = this.imgs.length;
+
+      this.current = 0;
+    }
+
+    Slider.prototype.transition = function( coords ) {
+      this.container.animate({
+        'margin-left': coords || -( this.current * this.imgWidth )
+      });
+    };
+
+    Slider.prototype.setCurrent = function( dir ) {
+      var pos = this.current;
+
+      pos += ( ~~( dir === 'next' ) || -1 );
+      this.current = ( pos < 0 ) ? this.imgsLen - 1 : pos % this.imgsLen;
+
+      return pos;
+    };
+{% endraw %}
 
 
+###3.9 Your Questions Answered
+No code for this one.
 ---
 
 

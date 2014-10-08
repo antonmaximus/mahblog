@@ -345,7 +345,8 @@ categories: craft
 
 
 
-
+###3.5 Full Control With Animate
+No code for this one.
 
 
 

@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>jQuery Utilities</title>
+    <title>jQuery Custom Events</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="A small growth today makes progression happen...">
-    <link rel="canonical" href="www.anton23.com/craft/2014/10/08/jquery-utilities/">
+    <link rel="canonical" href="www.anton23.com/craft/2014/10/09/jquery-custom-events/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -57,265 +57,191 @@
       <div class="post">
 
   <header class="post-header">
-    <h1>jQuery Utilities</h1>
-    <p class="meta">Oct 8, 2014</p>
+    <h1>jQuery Custom Events</h1>
+    <p class="meta">Oct 9, 2014</p>
   </header>
 
   <article class="post-content">
-  <h3 id="each-and-templating">4.1 $.each and Templating</h3>
+  <h3 id="custom-events-and-the-observer-pattern">5.1 Custom Events and the Observer Pattern</h3>
+<p>index.html</p>
 
 <pre><code>&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
-  &lt;title&gt;Q&amp;A&lt;/title&gt;
+  &lt;title&gt;Custom Events&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
-&lt;script id=blogTemplate type=tuts/template&gt;
-  &lt;h2&gt; {{title}} &lt;/h2&gt;
-  &lt;img src={{thumbnail}} alt={{title}}&gt;
-&lt;/script&gt;
-
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
-
-&lt;script&gt;
-
-(function() {
-  var content = [
-    {
-      title: 'My awesome blog post',
-      thumbnail: 'http://d2o0t5hpnwv4c1.cloudfront.net/1137_terminal/preview.png',
-    },
-    {
-      title: 'My second awesome blog post',
-      thumbnail: 'http://d2o0t5hpnwv4c1.cloudfront.net/1133_newrelic/200.jpg',
-    },
-    {
-      title: 'My third blog post',
-      thumbnail: 'http://d2o0t5hpnwv4c1.cloudfront.net/1137_terminal/preview.png',
-    }
-  ],
-    template = $.trim( $('#blogTemplate').html() ),
-    frag = '';
-
-
-
-  $.each( content, function( index, obj ) {
-    frag +=
-      template.replace( /{{title}}/ig, obj.title )
-          .replace( /{{thumbnail}}/ig, obj.thumbnail );   
-  });
-
-  $('body').append(frag);
-
-})();
-
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-<h3 id="say-hello-to-handlebars">4.2 Say Hello to Handlebars</h3>
-
-<pre><code>&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset=utf-8&gt;
-  &lt;title&gt;Mustache&lt;/title&gt;
-&lt;style&gt;
-h2 span { color: gray; font-size: .8em; }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;ul class="tweets"&gt;
-  &lt;script id="template" type="text/x-handlebars-template"&gt;
-    {{#each this}}
-    &lt;li&gt;
-      &lt;h2&gt;{{fullName author}}&lt;/h2&gt;
-      &lt;p&gt;{{{tweet}}}&lt;/p&gt;
-
-      {{#if quote}}
-        &lt;h5&gt;{{quote}}&lt;/h5&gt;
-      {{else}}
-        &lt;h5&gt;Author does not have a quote.&lt;/h5&gt;
-      {{/if}}
-    &lt;/li&gt;
-    {{/each}}
-  &lt;/script&gt;
-&lt;/ul&gt;
+&lt;h1&gt;Hi There&lt;/h1&gt;
 
 
 &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
 
-&lt;script src="http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js"&gt;&lt;/script&gt;
 
 &lt;script&gt;
+  
+// PubSub
+(function( $ ) {
+  var o = $( {} );
 
-(function() {
-  var context = [
-    {
-      author: { first: 'Jeffrey', last: 'Way', age: 27 },
-      tweet: '30 Days to Learn jQuery Rocks',
-      quote: 'Never ever, ever, ever give up.'
-    },
-    {
-      author: { first: 'John', last: 'Doe', age: 45 },
-      tweet: '&lt;strong&gt;30 Days&lt;/strong&gt; to Learn jQuery Rocks',
-    }
-  ],
-    template = Handlebars.compile( $('#template').html() );
-
-  Handlebars.registerHelper('fullName', function( author ) {
-    return author.first + ' ' + author.last + ' - ' + author.age;
+  $.each({
+    trigger: 'publish',
+    on: 'subscribe',
+    off: 'unsubscribe'
+  }, function( key, val ) {
+    jQuery[val] = function() {
+      o[key].apply( o, arguments );
+    };
   });
+})( jQuery );
 
-  $('ul.tweets').append( template(context) );
 
-})();
+$.getJSON('http://search.twitter.com/search.json?q=dogs&amp;callback=?', function( results) { 
+  $.publish( 'twitter/results', results );
+});
+
+// ...
+$.subscribe( 'twitter/results', function( e, results ) {
+  $('body').html(
+    $.map( results.results, function( obj, index) {
+      return '&lt;li&gt;' + obj.text + '&lt;/li&gt;';
+    }).join('')
+  );
+});
+
 
 &lt;/script&gt;
-
 
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
 
-<h3 id="the-twitter-api">4.3 The Twitter API</h3>
+<p>tweets.html</p>
 
-<pre><code>&lt;html&gt;
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
-  &lt;title&gt;Twitter&lt;/title&gt;
+  &lt;title&gt;Custom Events&lt;/title&gt;
   &lt;style&gt;
-  body { width: 600px; margin: auto; }
-  ul { list-style: none; }
-  li { padding-bottom: 1em; }
-  img { float: left; padding-right: 1em; }
-  a { text-decoration: none; color: #333; }
+  body { width: 600px; margin: auto; font-family: sans-serif; text-align: center; }
+  li { text-align: left; padding-bottom: 1em; }
   &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
-&lt;ul id="biebster-tweets"&gt;
-  &lt;script id="tweets-template" type="text/x-handlebars-template"&gt;
-    {{#each this}}
-    &lt;li&gt;
-      &lt;img src="{{thumb}}" alt="{{author}}"&gt;
-      &lt;p&gt;&lt;a href="{{url}}"&gt;{{tweet}}&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    {{/each}}
-  &lt;/script&gt;   
-&lt;/ul&gt;
+&lt;h2&gt;What Are You Interested In?&lt;/h2&gt;
+
+&lt;form action="#"&gt;
+  &lt;p&gt;&lt;input type="text" name="q" id="q"&gt;&lt;/p&gt;
+&lt;/form&gt;
+
+&lt;ul class="tweets"&gt;&lt;/ul&gt;
 
 
 &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
 
-&lt;script src="http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js"&gt;&lt;/script&gt;
 
 &lt;script&gt;
 
-(function() {
+(function($) {
+  var o = $( {} );
 
+  $.each({
+    on: 'subscribe',
+    trigger: 'publish',
+    off: 'unsubscribe'
+  }, function( key, api ) {
+    $[api] = function() {
+      o[key].apply( o, arguments );
+    }
+  });
+
+})(jQuery);
+
+
+(function($) {
+    
   var Twitter = {
-    init: function( config ) {
-      this.url = 'http://search.twitter.com/search.json?q=' + config.query + '&amp;callback=?';
-      this.template = config.template;
-      this.container = config.container;
+    init: function() {
+      this.template = '&lt;li&gt;{{tweet}}&lt;/li&gt;';
+      this.query = '@tutspremium';
+      this.tweets = [];
+      this.timer;
 
-      this.fetch();
+      this.cache();
+      this.bindEvents();
+      this.subscriptions();
+
+
+      $.publish( 'twitter/query' );
+      this.searchInput.val( this.query );
+
+
+      return this;
     },
 
-    attachTemplate: function() {
-      var template = Handlebars.compile( this.template );
-
-      this.container.append( template( this.tweets ) );
-
+    cache: function() { 
+      this.container = $('ul.tweets');
+      this.searchInput = $('#q');
     },
 
-    fetch: function() {
-      var self = this;
+    bindEvents: function() {
+      this.searchInput.on( 'keyup', this.search );
+    },
 
-      $.getJSON( this.url, function( data ) {
-        self.tweets = $.map( data.results, function( tweet ) {
-          return {
-            author: tweet.from_user,
-            tweet: tweet.text,
-            thumb: tweet.profile_image_url,
-            url: 'http://twitter.com/' + tweet.from_user + '/status/' + tweet.id_str
-          };
-        });
+    subscriptions: function() {
+      $.subscribe( 'twitter/query', this.fetchJSON );
+      $.subscribe( 'twitter/results', this.renderResults );
+    },
 
-        // For future lessons, research $.deferred, viewers. :)
-        self.attachTemplate(); 
+    search: function() {
+      var self = Twitter,
+        input = this;
+
+      clearTimeout( self.timer );
+
+      self.timer = ( input.value.length &gt;= 3 ) &amp;&amp; setTimeout(function() {
+        self.query = input.value;
+        $.publish( 'twitter/query' );
+      }, 400);
+    },
+
+    fetchJSON: function() {
+      var url = 'http://search.twitter.com/search.json?callback=?&amp;q=';
+
+      return $.getJSON( url + Twitter.query, function( data ) {
+        Twitter.tweets = data.results;
+        $.publish( 'twitter/results' );
       });
+    },
+
+    renderResults: function() {
+      var self = Twitter,
+        frag = [],
+        tweet;
+
+      self.container.html(
+        $.map( self.tweets, function( obj, index ) {
+          var t = 
+            obj.text.replace(/(http:[^\s]+)/, '&lt;a href="$1"&gt;$1&lt;/a&gt;')
+                .replace(/@([^\s:]+)/, '&lt;a href="http://twitter.com/$1"&gt;@$1&lt;/a&gt;');
+
+          return self.template.replace(/{{tweet}}/, t);
+        }).join('')
+      );
     }
   };
 
-  Twitter.init({
-    template: $('#tweets-template').html(),
-    container: $('#biebster-tweets'),
-    query: 'Justin Bieber'
-  });
+  window.Twitter = Twitter.init();
 
-})();
+})(jQuery);
 
 &lt;/script&gt;
-
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
-<h3 id="filtering-with-jquerygrep">4.4 Filtering with jQuery.grep</h3>
-
-<pre><code>&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset=utf-8&gt;
-  &lt;title&gt;$.grep&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
-
-&lt;script&gt;
-  (function() {
-    
-    var arr = [
-      {
-        first: 'Jeffrey',
-        last: 'Way'
-      },
-      {
-        first: 'Allison',
-        last: 'Way'
-      },
-      {
-        first: 'Jeffrey',
-        last: 'Smith'
-      },
-      {
-        first: 'John',
-        last: 'Doe'
-      },
-      {
-        first: 'Thomas',
-        last: 'Way'
-      }
-    ];
-
-    arr = $.grep( arr, function( obj, index) {
-      return obj.last === 'Way';
-    });
-
-    console.log(arr);
-
-  })();
-&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt; {% raw %}
 </code></pre>
 
 <hr />

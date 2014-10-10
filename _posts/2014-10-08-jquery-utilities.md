@@ -216,6 +216,63 @@ categories: craft
 
 
 
+###4.4 Filtering with jQuery.grep
+{% raw %}
+    <html>
+    <head>
+      <meta charset=utf-8>
+      <title>$.grep</title>
+    </head>
+    <body>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script>
+      (function() {
+        
+        var arr = [
+          {
+            first: 'Jeffrey',
+            last: 'Way'
+          },
+          {
+            first: 'Allison',
+            last: 'Way'
+          },
+          {
+            first: 'Jeffrey',
+            last: 'Smith'
+          },
+          {
+            first: 'John',
+            last: 'Doe'
+          },
+          {
+            first: 'Thomas',
+            last: 'Way'
+          }
+        ];
+
+        arr = $.grep( arr, function( obj, index) {
+          return obj.last === 'Way';
+        });
+
+        console.log(arr);
+
+      })();
+    </script>
+
+    </body>
+    </html>
+{% raw %}
+
+
+
+
+
+
+
 
 
 

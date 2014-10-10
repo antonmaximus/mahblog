@@ -5,9 +5,594 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 08 Oct 2014 15:57:15 -0700</pubDate>
-    <lastBuildDate>Wed, 08 Oct 2014 15:57:15 -0700</lastBuildDate>
+    <pubDate>Fri, 10 Oct 2014 15:03:19 -0700</pubDate>
+    <lastBuildDate>Fri, 10 Oct 2014 15:03:19 -0700</lastBuildDate>
     <generator>Jekyll v2.1.0</generator>
+    
+      <item>
+        <title>jQuery Plugin Development</title>
+        <description>&lt;h3 id=&quot;head-first-into-plugin-development&quot;&gt;7.1 Head First Into Plugin Development&lt;/h3&gt;
+&lt;p&gt;index.html&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;jQuery Plugins&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;h1&amp;gt;My Tweets&amp;lt;/h1&amp;gt;
+&amp;lt;div class=&quot;tweets&quot;&amp;gt;&amp;lt;/div&amp;gt;
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;searchTwitter.jquery.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;script&amp;gt;
+$(&#39;div.tweets&#39;).queryTwitter({
+  search: &#39;your&#39;,
+  limit: 10,
+  // onComplete: function() {
+  //  console.log(arguments);
+  // },
+  refresh: 4000,
+  transition: &#39;slideToggle&#39;
+});
+
+&amp;lt;/script&amp;gt;
+
+
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;searchTwitter.jquery.js&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Utility
+if ( typeof Object.create !== &#39;function&#39; ) {
+  Object.create = function( obj ) {
+    function F() {};
+    F.prototype = obj;
+    return new F();
+  };
+}
+
+(function( $, window, document, undefined ) {
+  var Twitter = {
+    init: function( options, elem ) {
+      var self = this;
+
+      self.elem = elem;
+      self.$elem = $( elem );
+
+      self.url = &#39;http://search.twitter.com/search.json&#39;;
+
+      self.search = ( typeof options === &#39;string&#39; )
+        ? options
+        : options.search;
+
+      self.options = $.extend( {}, $.fn.queryTwitter.options, options );
+
+      self.refresh( 1 );
+    },
+
+    refresh: function( length ) {
+      var self = this;
+
+      setTimeout(function() {
+        self.fetch().done(function( results ) {
+          results = self.limit( results.results, self.options.limit );
+
+          self.buildFrag( results );
+
+          self.display();
+
+          if ( typeof self.options.onComplete === &#39;function&#39; ) {
+            self.options.onComplete.apply( self.elem, arguments );
+          }
+
+          if ( self.options.refresh ) {
+            self.refresh();
+          }
+        });
+      }, length || self.options.refresh );
+    },
+
+    fetch: function() {
+      return $.ajax({
+        url: this.url,
+        data: { q: this.search },
+        dataType: &#39;jsonp&#39;
+      });
+    },
+
+    buildFrag: function( results ) {
+      var self = this;
+
+      self.tweets = $.map( results, function( obj, i) {
+        return $( self.options.wrapEachWith ).append ( obj.text )[0];
+      });
+    },
+
+    display: function() {
+      var self = this;
+
+      if ( self.options.transition === &#39;none&#39; || !self.options.transition ) {
+        self.$elem.html( self.tweets ); // that&#39;s available??
+      } else {
+        self.$elem[ self.options.transition ]( 500, function() {
+          $(this).html( self.tweets )[ self.options.transition ]( 500 );
+        });
+      }
+    },
+
+    limit: function( obj, count ) {
+      return obj.slice( 0, count );
+    }
+  };
+
+  $.fn.queryTwitter = function( options ) {
+    return this.each(function() {
+      var twitter = Object.create( Twitter );
+      
+      twitter.init( options, this );
+
+      $.data( this, &#39;queryTwitter&#39;, twitter );
+    });
+  };
+
+  $.fn.queryTwitter.options = {
+    search: &#39;@tutspremium&#39;,
+    wrapEachWith: &#39;&amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;&#39;,
+    limit: 10,
+    refresh: null,
+    onComplete: null,
+    transition: &#39;fadeToggle&#39;
+  };
+
+})( jQuery, window, document );
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+</description>
+        <pubDate>Fri, 10 Oct 2014 07:44:58 -0700</pubDate>
+        <link>www.anton23.com/craft/2014/10/10/jquery-plugin-development/</link>
+        <guid isPermaLink="true">www.anton23.com/craft/2014/10/10/jquery-plugin-development/</guid>
+        
+        
+        <category>craft</category>
+        
+      </item>
+    
+      <item>
+        <title>jQuery AJAX</title>
+        <description>&lt;h3 id=&quot;loading-pages-asynchronously&quot;&gt;6.1 Loading Pages Asynchronously&lt;/h3&gt;
+&lt;p&gt;index.html&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;AJAX: load&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;nav&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;about.html&quot;&amp;gt;About&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;contact.html&quot;&amp;gt;Contact&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+
+&amp;lt;div class=&quot;wrap&quot;&amp;gt;&amp;lt;/div&amp;gt;
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+&amp;lt;script&amp;gt;
+
+(function() {
+  var wrap = $(&#39;div.wrap&#39;);
+
+  $(&#39;a&#39;).on(&#39;click&#39;, function( e ) {
+    var href = $(this).attr(&#39;href&#39;);
+
+    wrap.load( href + &#39; .container&#39; );
+
+    e.preventDefault();
+  }); 
+})();
+
+&amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;about.html&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;AJAX: load&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+
+&amp;lt;div class=&quot;container&quot;&amp;gt;
+  &amp;lt;h2&amp;gt;About Me&amp;lt;/h2&amp;gt;
+  &amp;lt;p&amp;gt;I work for Envato!&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;contact.html&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;AJAX: load&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+
+&amp;lt;div class=&quot;container&quot;&amp;gt;
+  &amp;lt;h2&amp;gt;Contact Me&amp;lt;/h2&amp;gt;
+  &amp;lt;p&amp;gt;Represent contact form.&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;interacting-with-the-server-side&quot;&gt;6.2 Interacting with the Server-Side&lt;/h3&gt;
+&lt;p&gt;index.html&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;AJAX: POST&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;h1&amp;gt;Something to Save&amp;lt;/h1&amp;gt;
+&amp;lt;form action=&quot;#&quot;&amp;gt;
+  &amp;lt;textarea name=&quot;content&quot; id=&quot;content&quot; cols=&quot;30&quot; rows=&quot;10&quot;&amp;gt;&amp;lt;/textarea&amp;gt;
+  &amp;lt;p&amp;gt;&amp;lt;button type=&quot;submit&quot;&amp;gt;Save&amp;lt;/button&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/form&amp;gt;
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;script&amp;gt;
+
+  $.post( &#39;load.php&#39;, function(data) {
+    if ( data ) {
+      $(&#39;#content&#39;).val( data );
+    }
+  });
+
+
+  // listen for click
+  $(&#39;form&#39;).on(&#39;submit&#39;, function(e) {
+    $.post( &#39;save.php&#39;, $(this).serialize(), function(response) {
+      alert( response );
+    });
+    // disable default action
+    e.preventDefault();
+  });
+
+  
+
+  // grab textarea content
+
+  // post content to script, and save
+&amp;lt;/script&amp;gt;
+  
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;save.php&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+
+$f = fopen(&#39;data.txt&#39;, &#39;w&#39;);
+fwrite( $f, $_POST[&#39;content&#39;]);
+fclose($f);
+
+echo &#39;Comment has been saved&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;load.php&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+
+$data = file( &#39;data.txt&#39;);
+echo stripslashes( $data[0] );
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;6.3&lt;/h3&gt;
+&lt;p&gt;index.html&lt;/p&gt;
+
+&lt;h3 id=&quot;deferreds&quot;&gt;6.5 Deferreds&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;jQuery Deferreds&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+&amp;lt;script&amp;gt;
+
+function getTweets( search ) {
+  return $.ajax({
+    url: &#39;http://search.twitter.com/search.json&#39;,
+    data: { q: search },
+    dataType: &#39;jsonp&#39;
+  });
+}
+
+
+$.when( getTweets(&#39;dogs&#39;), getTweets(&#39;cats&#39;) ).done(function(results1, results2) {
+  console.log(results1);
+  console.log(results2);
+});
+
+  
+// $.searchTwitter = function( search ) {
+//  return $.ajax({
+//    url: &#39;http://search.twitter.com/search.json&#39;,
+//    data: { q: search },
+//    dataType: &#39;jsonp&#39;
+//  }).promise();
+// };
+
+// var outer = $.searchTwitter(&#39;cats&#39;);
+
+// outer.then(function  ( results ) {
+//  console.log(results);
+// });
+
+// // ...
+
+// outer.then(function(results) {
+//  console.log(results);
+// });
+
+
+
+&amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+</description>
+        <pubDate>Thu, 09 Oct 2014 07:44:58 -0700</pubDate>
+        <link>www.anton23.com/craft/2014/10/09/jquery-ajax/</link>
+        <guid isPermaLink="true">www.anton23.com/craft/2014/10/09/jquery-ajax/</guid>
+        
+        
+        <category>craft</category>
+        
+      </item>
+    
+      <item>
+        <title>jQuery Custom Events</title>
+        <description>&lt;h3 id=&quot;custom-events-and-the-observer-pattern&quot;&gt;5.1 Custom Events and the Observer Pattern&lt;/h3&gt;
+&lt;p&gt;index.html&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;Custom Events&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;h1&amp;gt;Hi There&amp;lt;/h1&amp;gt;
+
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+&amp;lt;script&amp;gt;
+  
+// PubSub
+(function( $ ) {
+  var o = $( {} );
+
+  $.each({
+    trigger: &#39;publish&#39;,
+    on: &#39;subscribe&#39;,
+    off: &#39;unsubscribe&#39;
+  }, function( key, val ) {
+    jQuery[val] = function() {
+      o[key].apply( o, arguments );
+    };
+  });
+})( jQuery );
+
+
+$.getJSON(&#39;http://search.twitter.com/search.json?q=dogs&amp;amp;callback=?&#39;, function( results) { 
+  $.publish( &#39;twitter/results&#39;, results );
+});
+
+// ...
+$.subscribe( &#39;twitter/results&#39;, function( e, results ) {
+  $(&#39;body&#39;).html(
+    $.map( results.results, function( obj, index) {
+      return &#39;&amp;lt;li&amp;gt;&#39; + obj.text + &#39;&amp;lt;/li&amp;gt;&#39;;
+    }).join(&#39;&#39;)
+  );
+});
+
+
+&amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tweets.html&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;Custom Events&amp;lt;/title&amp;gt;
+  &amp;lt;style&amp;gt;
+  body { width: 600px; margin: auto; font-family: sans-serif; text-align: center; }
+  li { text-align: left; padding-bottom: 1em; }
+  &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;h2&amp;gt;What Are You Interested In?&amp;lt;/h2&amp;gt;
+
+&amp;lt;form action=&quot;#&quot;&amp;gt;
+  &amp;lt;p&amp;gt;&amp;lt;input type=&quot;text&quot; name=&quot;q&quot; id=&quot;q&quot;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/form&amp;gt;
+
+&amp;lt;ul class=&quot;tweets&quot;&amp;gt;&amp;lt;/ul&amp;gt;
+
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+&amp;lt;script&amp;gt;
+
+(function($) {
+  var o = $( {} );
+
+  $.each({
+    on: &#39;subscribe&#39;,
+    trigger: &#39;publish&#39;,
+    off: &#39;unsubscribe&#39;
+  }, function( key, api ) {
+    $[api] = function() {
+      o[key].apply( o, arguments );
+    }
+  });
+
+})(jQuery);
+
+
+(function($) {
+    
+  var Twitter = {
+    init: function() {
+      this.template = &#39;&amp;lt;li&amp;gt;{{tweet}}&amp;lt;/li&amp;gt;&#39;;
+      this.query = &#39;@tutspremium&#39;;
+      this.tweets = [];
+      this.timer;
+
+      this.cache();
+      this.bindEvents();
+      this.subscriptions();
+
+
+      $.publish( &#39;twitter/query&#39; );
+      this.searchInput.val( this.query );
+
+
+      return this;
+    },
+
+    cache: function() { 
+      this.container = $(&#39;ul.tweets&#39;);
+      this.searchInput = $(&#39;#q&#39;);
+    },
+
+    bindEvents: function() {
+      this.searchInput.on( &#39;keyup&#39;, this.search );
+    },
+
+    subscriptions: function() {
+      $.subscribe( &#39;twitter/query&#39;, this.fetchJSON );
+      $.subscribe( &#39;twitter/results&#39;, this.renderResults );
+    },
+
+    search: function() {
+      var self = Twitter,
+        input = this;
+
+      clearTimeout( self.timer );
+
+      self.timer = ( input.value.length &amp;gt;= 3 ) &amp;amp;&amp;amp; setTimeout(function() {
+        self.query = input.value;
+        $.publish( &#39;twitter/query&#39; );
+      }, 400);
+    },
+
+    fetchJSON: function() {
+      var url = &#39;http://search.twitter.com/search.json?callback=?&amp;amp;q=&#39;;
+
+      return $.getJSON( url + Twitter.query, function( data ) {
+        Twitter.tweets = data.results;
+        $.publish( &#39;twitter/results&#39; );
+      });
+    },
+
+    renderResults: function() {
+      var self = Twitter,
+        frag = [],
+        tweet;
+
+      self.container.html(
+        $.map( self.tweets, function( obj, index ) {
+          var t = 
+            obj.text.replace(/(http:[^\s]+)/, &#39;&amp;lt;a href=&quot;$1&quot;&amp;gt;$1&amp;lt;/a&amp;gt;&#39;)
+                .replace(/@([^\s:]+)/, &#39;&amp;lt;a href=&quot;http://twitter.com/$1&quot;&amp;gt;@$1&amp;lt;/a&amp;gt;&#39;);
+
+          return self.template.replace(/{{tweet}}/, t);
+        }).join(&#39;&#39;)
+      );
+    }
+  };
+
+  window.Twitter = Twitter.init();
+
+})(jQuery);
+
+&amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+</description>
+        <pubDate>Thu, 09 Oct 2014 07:43:58 -0700</pubDate>
+        <link>www.anton23.com/craft/2014/10/09/jquery-custom-events/</link>
+        <guid isPermaLink="true">www.anton23.com/craft/2014/10/09/jquery-custom-events/</guid>
+        
+        
+        <category>craft</category>
+        
+      </item>
     
       <item>
         <title>jQuery Utilities</title>
@@ -214,6 +799,57 @@ h2 span { color: gray; font-size: .8em; }
 
 &amp;lt;/body&amp;gt;
 &amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;filtering-with-jquerygrep&quot;&gt;4.4 Filtering with jQuery.grep&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=utf-8&amp;gt;
+  &amp;lt;title&amp;gt;$.grep&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+
+&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;script&amp;gt;
+  (function() {
+    
+    var arr = [
+      {
+        first: &#39;Jeffrey&#39;,
+        last: &#39;Way&#39;
+      },
+      {
+        first: &#39;Allison&#39;,
+        last: &#39;Way&#39;
+      },
+      {
+        first: &#39;Jeffrey&#39;,
+        last: &#39;Smith&#39;
+      },
+      {
+        first: &#39;John&#39;,
+        last: &#39;Doe&#39;
+      },
+      {
+        first: &#39;Thomas&#39;,
+        last: &#39;Way&#39;
+      }
+    ];
+
+    arr = $.grep( arr, function( obj, index) {
+      return obj.last === &#39;Way&#39;;
+    });
+
+    console.log(arr);
+
+  })();
+&amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt; {% raw %}
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;
@@ -1527,124 +2163,6 @@ dt:nth-last-child(2) { border-bottom: none; }
         
         
         <category>life</category>
-        
-      </item>
-    
-      <item>
-        <title>The Voice</title>
-        <description>&lt;p&gt;I’d like to think that the voice has some calming effects.  In some ways, it should be considered as a mutant power (I’m a super-hero fanboy after all).  Hence, today I set out to find exercises that would help me improve the way I project my voice.  &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1. Resonate your voice through your chest.&lt;/strong&gt;  Science has said time and time again that a deeper voice in men is correlated to positive attributes.  The only way to deepen the voice is if one is talking through the chest as opposed thru the throat or nose, and if one coordinates breathing accordingly.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. Enunciate and pronounce the words correctly.&lt;/strong&gt;  Can you even hear yourself (volume)?  Are you talking thru each syllable you just uttered (tempo/speed)?  &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. Pause accordingly.&lt;/strong&gt; Stop using sounds/words as a crutch (e.g., ummm…, so…) to continuously talk.  Have you start creating any dramatic effect with your pauses?&lt;/p&gt;
-
-&lt;p&gt;Most of your power as a man is conveyed through your bodylanguage and the way you speak. In this post I want to spend a few words on the way you speak, just some basics to get the ball rolling. You don’t have to sound like Barry White and you don’t have to sound like a robot intoning every syllable, but certain principles hold: &lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Enunciate clearly and slowly — slow the fuck down when you speak—most people speak too fast. Fast speaking stems from a fear that your input is worthless and it bespeaks insecurity and sounds unnnnsexy (even in women, over-fast speaking looks anxious and nervy). There’s nothing as annoying as a mumbling person you can’t understand or you have to struggle to understand, so speak up. Project your voice, make it heard. Tyler Durden aka Owen Cook doesn’t have a deep voice at all but he’s excellent at projecting his voice.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Don’t trail off or end sentences with “so”, or end your sentences with uptalk (aka a rising inflection) as though you’re maybe asking a question? It’s you know, very beta? Speak like a fuckin man maybe, like?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Violently excise all lip smacking shit and weird tics like swallowing while talking; it’s immensely annoying.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Reduce verbal filler, like uhh, uhmm, like, yaknow. Silence is better while you gather your thoughts, as long as it doesn’t stretch on too long. In general don’t worry about the silences (Ironically, it’s when you blather that people are less likely to listen to and value your words.)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Don’t let people cut you off and talk over you when you’re making a point. Finish your sentence.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;In public speaking use moderate tones. Low talkers (edit: speaking too quietly) and shouters don’t sound confident, and they’re annoying.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Using vivid metaphors and imagery is a secret to making your words memorable, even captivating. You may not have realised why, but the most boring speakers are speakers who rarely use metaphors and whose words are steeped in fuzzy abstractions.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Listen well. It’s immensely charming when someone shows a genuine interest in the other person - there’s a skill to this, which is hard to convey in writing, but the essence of it is: don’t appear to be trying to listen too hard with some ulterior motive. Sincere interest in another person and asking them questions, and not just waiting to speak - this is like psychologically stroking someone. Caveat: tone it town for spastic and hot attention whores.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;This last one is important: Don’t be verbally incontinent. Laconicism is sexier than stream of consciousness blathering. Verbosity is womanly, especially self-absorbed verbosity. Doesn’t mean you have to be Clint Eastwood, but unless your personality is fruity and high energy then make your words count, make your input to the group conversation valuable.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-</description>
-        <pubDate>Wed, 27 Aug 2014 07:43:58 -0700</pubDate>
-        <link>www.anton23.com/life/interact/2014/08/27/the-voice/</link>
-        <guid isPermaLink="true">www.anton23.com/life/interact/2014/08/27/the-voice/</guid>
-        
-        
-        <category>life</category>
-        
-        <category>interact</category>
-        
-      </item>
-    
-      <item>
-        <title>A Poem for Rob</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/y4xXSQ1.png&quot; alt=&quot;Alt text&quot; title=&quot;Image Unit&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This week is my former boss’s last week at Lucasfilm, and those of use who were close 
-to him were asked to create a going away note which will be presented to him on his final day.
-I ended up being more creative than I thought.  I originally intended to just create a poem.  After
-everything’s been done, an awesome backdrop has been made along with the poem using GIMP.&lt;/p&gt;
-
-&lt;p&gt;Farewell, Rob!  T’was a ride.&lt;/p&gt;
-
-&lt;h2 id=&quot;o-captain-my-captain&quot;&gt;O Captain! My Captain!&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;O Captain! My Captain! Our fearful trip is done;&lt;br /&gt;
-The ship has weather’d every rack, the prize we sought is won;&lt;br /&gt;
-The port is near, the bells I hear, the people all exulting,&lt;br /&gt;
-While follow eyes the steady keel, the vessel grim and daring.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;O Captain! My Captain! You sailed the ship to the beat of its drum;&lt;br /&gt;
-One by one your men has gone, and now your time has come.&lt;br /&gt;
-Through triumphs, through turmoil, and all else in between, 
-All we can say is “Thank You.” What a journey it has been!&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;O Captain! My Captain! Farewell to thee…&lt;br /&gt;
-In your new voyage I know you’ll be set free.&lt;br /&gt;
-‘Tis time for a new adventure, a new ship, and a new crew.&lt;br /&gt;
-Make us proud, make it true, may your focus be you.&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-</description>
-        <pubDate>Tue, 26 Aug 2014 07:43:58 -0700</pubDate>
-        <link>www.anton23.com/poems/2014/08/26/a-poem-for-rob/</link>
-        <guid isPermaLink="true">www.anton23.com/poems/2014/08/26/a-poem-for-rob/</guid>
-        
-        
-        <category>poems</category>
-        
-      </item>
-    
-      <item>
-        <title>Creating Improv Masters</title>
-        <description>&lt;h2 id=&quot;pick-the-color-scheme&quot;&gt;Pick the Color Scheme…&lt;/h2&gt;
-
-&lt;p&gt;Orange is the color of Energy, Happiness, and Vitality.  These qualities embody 
-improv, so this will be the main color of the Improv Masters site. And what goes well with
-orange? It’s complementary blue, of course.  Hence, here’s the scheme:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/EuAL9Mh.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;typography&quot;&gt;Typography&lt;/h2&gt;
-
-&lt;p&gt;Since improv is within arts and culture, the type will be in Modern Serif Fonts.
-&lt;img src=&quot;http://i.imgur.com/s5R8WUM.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Didot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Didot&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;LT&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;STD&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;”&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Hoefler&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;”&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Garamond&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Times&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;New&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Roman&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;”&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-</description>
-        <pubDate>Mon, 28 Jul 2014 07:43:58 -0700</pubDate>
-        <link>www.anton23.com/craft/2014/07/28/creating-improv-masters/</link>
-        <guid isPermaLink="true">www.anton23.com/craft/2014/07/28/creating-improv-masters/</guid>
-        
-        
-        <category>craft</category>
         
       </item>
     

@@ -37,7 +37,7 @@ much time reading.
   * Be very wary of interviews with less than 2 days notice -- not enought time to prepare
 
 ### During
-* Be Grounded -- To me, being grounded means being fully present: physically, emotionally and energetically. It means your mind is not wandering or pulling your energy elsewhere. Your heart and soul are not searching somewhere in the past or looking into the future. (Take a deep breath ... there, you're grounded!)
+* Be Grounded -- *To me, being grounded means being fully present: physically, emotionally and energetically. It means your mind is not wandering or pulling your energy elsewhere. Your heart and soul are not searching somewhere in the past or looking into the future. (Take a deep breath ... there, you're grounded!)*
   * Breathe and listen to yourself.
 * Be calm and composed  -- You want the other party to be composed? You should start it.
 * Interact, Connect, and Improv -- with anyone and everyone.

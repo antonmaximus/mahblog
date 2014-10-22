@@ -5,9 +5,127 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 10 Oct 2014 15:03:19 -0700</pubDate>
-    <lastBuildDate>Fri, 10 Oct 2014 15:03:19 -0700</lastBuildDate>
+    <pubDate>Wed, 22 Oct 2014 10:15:19 -0700</pubDate>
+    <lastBuildDate>Wed, 22 Oct 2014 10:15:19 -0700</lastBuildDate>
     <generator>Jekyll v2.1.0</generator>
+    
+      <item>
+        <title>G Interviewing: What Worked and What Didn&#39;t</title>
+        <description>&lt;h2 id=&quot;what-worked&quot;&gt;What Worked&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You were excited – this made you alert and attentive.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-didnt&quot;&gt;What Didn’t&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You were too excited like a kid – one who’s looking to add a person is looking to
+solve issues and not take care of one.&lt;/li&gt;
+  &lt;li&gt;You were not calm – the need to be composed and interested at the same time&lt;/li&gt;
+  &lt;li&gt;You were not prepared – you went to the interview on a 24 hour notice and didn’t spend 
+much time reading.&lt;/li&gt;
+  &lt;li&gt;Your website didn’t showcase enough of you – add projects you’ve completed.&lt;/li&gt;
+  &lt;li&gt;Being funny.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;always&quot;&gt;Always:&lt;/h2&gt;
+
+&lt;h3 id=&quot;before&quot;&gt;Before&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Get Interview Itinerary – This should include:
+    &lt;ul&gt;
+      &lt;li&gt;People whom you’ll be talking to and their background.&lt;/li&gt;
+      &lt;li&gt;Duration of each interview&lt;/li&gt;
+      &lt;li&gt;Type of interview (e.g., technical, group, one-on-one)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Have questions ready&lt;/li&gt;
+  &lt;li&gt;Preparation is key, so read up
+    &lt;ul&gt;
+      &lt;li&gt;Industry the team is in.&lt;/li&gt;
+      &lt;li&gt;Key people.&lt;/li&gt;
+      &lt;li&gt;The team’s previous products.&lt;/li&gt;
+      &lt;li&gt;Be very wary of interviews with less than 2 days notice – not enought time to prepare&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;during&quot;&gt;During&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Be Grounded – To me, being grounded means being fully present: physically, emotionally and energetically. It means your mind is not wandering or pulling your energy elsewhere. Your heart and soul are not searching somewhere in the past or looking into the future. (Take a deep breath … there, you’re grounded!)
+    &lt;ul&gt;
+      &lt;li&gt;Breathe and listen to yourself.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Be calm and composed  – You want the other party to be composed? You should start it.&lt;/li&gt;
+  &lt;li&gt;Interact, Connect, and Improv – with anyone and everyone.
+    &lt;ul&gt;
+      &lt;li&gt;Ask your favorite question at each interview (even if it’s repetitive to you, each
+person will have a different take on it).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Improv rule: Avoid being funny.  Humor comes naturally and we want clever lines.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;after&quot;&gt;After&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Expect that they’re also interviewing other people – This means you’re not that 
+special.  And that even if you did really well to the best of your ability, they’d 
+still go with someone who’s done it better than you did (so it may not be all you after all).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+</description>
+        <pubDate>Wed, 22 Oct 2014 07:44:58 -0700</pubDate>
+        <link>www.anton23.com/craft/2014/10/22/interview/</link>
+        <guid isPermaLink="true">www.anton23.com/craft/2014/10/22/interview/</guid>
+        
+        
+        <category>craft</category>
+        
+      </item>
+    
+      <item>
+        <title>JavaScript: Mail of Modularity</title>
+        <description>&lt;h2 id=&quot;namespacing-basics&quot;&gt;Namespacing Basics&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The key to creating a namespace is a single global Object, commonly called the “wrapper” for the space.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Now that the function and all the necessary variables are “encapsulated” within the namespace, we’ll need to call that namespace in order to access any of them.&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;var ARMORY = (function( war ){
+  var weaponList = [ *list of weapon Objects* ]; 
+  var armorList = [ *list of armor Objects* ]; 
+  var removeWeapon = function(...){};
+  var replaceWeapon = function(...){};
+  var removeArmor = function(...){};
+  var replaceArmor = function(...){};
+
+    return {
+      makeWeaponRequest: function(...){
+        if(war) //let civilians have weaponry
+       },
+      makeArmorRequest: function(...){}
+    };
+})(wartime);
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+</description>
+        <pubDate>Sat, 11 Oct 2014 07:44:58 -0700</pubDate>
+        <link>www.anton23.com/craft/2014/10/11/javascript-mail-of-modularity/</link>
+        <guid isPermaLink="true">www.anton23.com/craft/2014/10/11/javascript-mail-of-modularity/</guid>
+        
+        
+        <category>craft</category>
+        
+      </item>
     
       <item>
         <title>jQuery Plugin Development</title>
@@ -2007,162 +2125,6 @@ dt:nth-last-child(2) { border-bottom: none; }
         
         
         <category>exercise</category>
-        
-      </item>
-    
-      <item>
-        <title>Angular.js</title>
-        <description>&lt;h2 id=&quot;example-of-minimum-set-up-for-angular&quot;&gt;Example of minimum set-up for Angular&lt;/h2&gt;
-
-&lt;p&gt;index.html.haml&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;!!! 5
-%html{&quot;ng-app&quot;=&amp;gt;&quot;gemStore&quot;}
-  %head
-    / $BOOTSTRAP  CSS CDN 
-    %link(rel=&quot;stylesheet&quot;  href=&#39;//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css&#39;)
-
-    / Stylesheets
-    = stylesheet_link_tag &#39;custom&#39;
-
-  %body{&quot;ng-controller&quot;=&amp;gt;&quot;StoreController as store&quot;}
-    .container
-      .product.row{&quot;ng-hide&quot; =&amp;gt; &quot;store.product.soldOut&quot;}
-        %h3
-          {{store.product.name}}
-          %em.pull-right ${{store.product.price}}
-        %button{&quot;ng-show&quot; =&amp;gt; &quot;store.product.canPurchase&quot;} Add to Cart
-
-
-    / JQUERY CDN
-    = javascript_include_tag  &quot;//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js&quot;
-
-    / AngularJS
-    = javascript_include_tag &quot;//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js&quot;
-
-    / Javascripts
-    = javascript_include_tag &quot;app.js&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;app.js&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;(function() {
-  var app = angular.module(&#39;gemStore&#39;, []);
-
-  app.controller(&#39;StoreController&#39;, function(){
-    this.product = gem;
-  });
-
-  var gem = {
-    name: &#39;Azurite&#39;,
-    price: 110.50,
-    canPurchase: true,
-    soldOut: false
-  };
-})();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;module&quot;&gt;Module&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.angularjs.org/guide/module&quot;&gt;You can think of a module as a container for the different parts of your app – controllers, services, filters, directives, etc.&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-</description>
-        <pubDate>Wed, 24 Sep 2014 07:43:58 -0700</pubDate>
-        <link>www.anton23.com/craft/2014/09/24/angular/</link>
-        <guid isPermaLink="true">www.anton23.com/craft/2014/09/24/angular/</guid>
-        
-        
-        <category>craft</category>
-        
-      </item>
-    
-      <item>
-        <title>Cognitive Behavior Therapy</title>
-        <description>&lt;h2 id=&quot;feelings&quot;&gt;Feelings&lt;/h2&gt;
-
-&lt;h4 id=&quot;why-do-you-feel-the-way-you-do&quot;&gt;Why do you feel the way you do?&lt;/h4&gt;
-
-&lt;p&gt;According to Cognitive Behaviour Therapy, people feel emotionally bad for three reasons:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;They have a negative view of themselves as people;&lt;/li&gt;
-  &lt;li&gt;They interpret experiences in a negative and biased way; and&lt;/li&gt;
-  &lt;li&gt;They have a negative view of the future – they expect everything to continue the way it is.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If this is true, this might also mean that happy people feel happy for the following reasons:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;They have a positive view of themselves as people;&lt;/li&gt;
-  &lt;li&gt;They interpret experiences in a positive and unbiased (or even positively biased) way; and&lt;/li&gt;
-  &lt;li&gt;They have a positive view of the future, they expect everything to continue the way it is.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;identifying-negative-thoughts-in-people&quot;&gt;Identifying Negative Thoughts in People.&lt;/h4&gt;
-
-&lt;p&gt;Do they…&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Have a negative view of themselves as people?&lt;/li&gt;
-  &lt;li&gt;Have a negative biased view of situations?&lt;/li&gt;
-  &lt;li&gt;Feel negatively about the future?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;why-think-that-way-if-it-is-so-self-defeating&quot;&gt;Why think that way if it is so self-defeating?&lt;/h4&gt;
-
-&lt;p&gt;Most depressed or anxious people do not like feeling unhappy, depressed or anxious. However, having a negative view of oneself, of the situation and of the future can become a habit. Depression or vulnerability to depression may come from too many years of holding wrong views of oneself as weak or unlovable, thinking in negative or biased ways, and knowing (or thinking one knows) that problems will continue in the future.&lt;/p&gt;
-
-&lt;h4 id=&quot;am-i-to-blame-if-i-feel-bad&quot;&gt;Am I to blame if I feel bad?&lt;/h4&gt;
-
-&lt;p&gt;No, not at all! Many factors contribute to feeling depressed and anxious. It is suggested that you might be able to protect yourself from some of these feelings by taking positive action to improve your thinking patterns and thereby changing your life.&lt;/p&gt;
-
-&lt;h4 id=&quot;what-is-lack-of-sadness-or-anxiety-related-to&quot;&gt;What is lack of sadness or anxiety related to?&lt;/h4&gt;
-
-&lt;p&gt;The good news is that you can be happy, even if you are as poor as the next person and you don’t have wonderful possessions, glamorous looks, fabulous clothes, a great job, icons and successes etc. The bad news is that you might need to work at developing skills which protect you against feeling depressed and anxious.&lt;/p&gt;
-
-&lt;h4 id=&quot;wutiwuf&quot;&gt;WUTIWUF&lt;/h4&gt;
-
-&lt;p&gt;Changing your view about yourself, changing your thoughts about events and changing your view of the future will change the way you feel. This is a really simple idea but highly effective. Cognitive Therapy maintains that your emotions are strongly influenced by what you think. Negative emotions are caused by thinking negative (or warped) thoughts. Positive emotions are caused by thinking positive (or unwarped) thoughts.&lt;/p&gt;
-
-&lt;p&gt;What you think is what you feel is not a new strategy. Shakespeare, for example, gave Hamlet the following lines “There is neither good nor ill but thinking makes it so”. Here he recognised that it is one’s interpretations of events rather than the quality of the event that determines their emotional impact.&lt;/p&gt;
-
-&lt;h4 id=&quot;exercises&quot;&gt;EXERCISES:&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1UxoDyqfTBL6QPys_IkFk7XiGZnmWBVcloM6b1aFtGLU/edit#gid=0&quot;&gt;Auto Talk Quiz and Bad Hair Day&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;do-the-same-thoughts-result-in-the-same-feelings&quot;&gt;Do the same thoughts result in the same feelings?&lt;/h4&gt;
-
-&lt;p&gt;As you probably noticed by now, different feelings are often produced by different types of thoughts. For example, misery and depression usually arise from internal criticism (I’m hopeless, useless, unlovable, etc).&lt;/p&gt;
-
-&lt;p&gt;Anger is often produced by thinking that external situations should be better. For example, the world should work differently, life should be fairer, I should not be misjudged, it is not reasonable, they should understand my point of view, etc.&lt;/p&gt;
-
-&lt;p&gt;Anger is often only displayed where the person feels in a powerful position or at least in an equal position. For example, parents often get angry with children…people are reticent to get too grumpy at their boss (at least openly).&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;thoughts&quot;&gt;Thoughts&lt;/h2&gt;
-
-&lt;h4 id=&quot;david-burns-warped-thoughts&quot;&gt;David Burns’ Warped Thoughts&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;All or None Thinking.&lt;/strong&gt; Everything is perceived to be either full on or full off.  If something isn’t fully completed, right, or perfect then it’s entirely incomplete/wrong/spoiled.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Overgeneralization.&lt;/strong&gt; One instance of a mistake/error is interpreted as a pattern of mistakes/errors (as if it’s gonna happen always).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Mental Filter.&lt;/strong&gt; The small (negative) part of the picture is examined to the exclusion of the larger (positive) part.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Denying the Positive.&lt;/strong&gt; Dismissing the positive remark/compliment given to you.  (e.g., My brother said he looked up to me… but what does he know… he’s just a kid.)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Jumping to Conclusions.&lt;/strong&gt; You think about what others would say (mind reading) or you think about what will happen in the future (fortune telling) without any evidence.&lt;/p&gt;
-
-&lt;hr /&gt;
-</description>
-        <pubDate>Thu, 11 Sep 2014 07:43:58 -0700</pubDate>
-        <link>www.anton23.com/life/2014/09/11/cognitive-behavior-therapy/</link>
-        <guid isPermaLink="true">www.anton23.com/life/2014/09/11/cognitive-behavior-therapy/</guid>
-        
-        
-        <category>life</category>
         
       </item>
     

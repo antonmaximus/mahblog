@@ -11,7 +11,7 @@ categories: craft
 I ran into "Doin Simple Stuff to Make Our Websites Faster."  Below is the video and I've listed
 the TL;DW.
 
-1. **Gzip.** Check http://gzipwtf.com/ to see if your site's assets was delivered with compression enabled.
+1. **Gzip.** Check [http://gzipwtf.com/](http://gzipwtf.com/) to see if your site's assets was delivered with compression enabled.
 
 2. **Cache Stuff.**
   * The slowest thing a website can do is go ask for a file across the internet and wait for it to arrive.
@@ -19,8 +19,8 @@ the TL;DW.
 
 3. **Losslessly Optimize Images.**  Use tools to compress images.
  * Codekit
- * https://imageoptim.com/
- * http://pnggauntlet.com/
+ * [https://imageoptim.com/](https://imageoptim.com/)
+ * [http://pnggauntlet.com/](http://pnggauntlet.com/)
 
 4. **Combine CSS and JS files.**
  * If you can, do sprites for images too.

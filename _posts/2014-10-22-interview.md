@@ -50,6 +50,7 @@ much time reading.
 * Expect that they're also interviewing other people -- This means you're not that 
 special.  And that even if you did really well to the best of your ability, they'd 
 still go with someone who's done it better than you did (so it may not be all you after all).
+* There will be a waiting game.  Don't play it by focusing on more important items on your to-do list.
 
 
 

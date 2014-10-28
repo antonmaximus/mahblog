@@ -5,9 +5,37 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 22 Oct 2014 14:54:14 -0700</pubDate>
-    <lastBuildDate>Wed, 22 Oct 2014 14:54:14 -0700</lastBuildDate>
+    <pubDate>Tue, 28 Oct 2014 08:59:18 -0700</pubDate>
+    <lastBuildDate>Tue, 28 Oct 2014 08:59:18 -0700</lastBuildDate>
     <generator>Jekyll v2.1.0</generator>
+    
+      <item>
+        <title>Belle Beauty Salon</title>
+        <description>&lt;h2 id=&quot;concept-art&quot;&gt;Concept Art&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://indulgence-hair-salon.com/&quot;&gt;Light background&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.toniguy.com/&quot;&gt;Dark background&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.myesalon.com/wp-content/uploads/2014/04/homepagescreenshot1.png&quot;&gt;Lots of curves&lt;/a&gt; &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+</description>
+        <pubDate>Fri, 24 Oct 2014 07:00:00 -0700</pubDate>
+        <link>www.anton23.com/craft/2014/10/24/belle-salon/</link>
+        <guid isPermaLink="true">www.anton23.com/craft/2014/10/24/belle-salon/</guid>
+        
+        
+        <category>craft</category>
+        
+      </item>
     
       <item>
         <title>Optimize Web Speed: Low Effort, Big Impact</title>
@@ -18,7 +46,7 @@ the TL;DW.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Gzip.&lt;/strong&gt; Check http://gzipwtf.com/ to see if your site’s assets was delivered with compression enabled.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Gzip.&lt;/strong&gt; Check &lt;a href=&quot;http://gzipwtf.com/&quot;&gt;http://gzipwtf.com/&lt;/a&gt; to see if your site’s assets was delivered with compression enabled.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Cache Stuff.&lt;/strong&gt;
     &lt;ul&gt;
@@ -29,8 +57,8 @@ the TL;DW.&lt;/p&gt;
   &lt;li&gt;&lt;strong&gt;Losslessly Optimize Images.&lt;/strong&gt;  Use tools to compress images.
     &lt;ul&gt;
       &lt;li&gt;Codekit&lt;/li&gt;
-      &lt;li&gt;https://imageoptim.com/&lt;/li&gt;
-      &lt;li&gt;http://pnggauntlet.com/&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://imageoptim.com/&quot;&gt;https://imageoptim.com/&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://pnggauntlet.com/&quot;&gt;http://pnggauntlet.com/&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Combine CSS and JS files.&lt;/strong&gt;
@@ -120,6 +148,7 @@ person will have a different take on it).&lt;/li&gt;
   &lt;li&gt;Expect that they’re also interviewing other people – This means you’re not that 
 special.  And that even if you did really well to the best of your ability, they’d 
 still go with someone who’s done it better than you did (so it may not be all you after all).&lt;/li&gt;
+  &lt;li&gt;There will be a waiting game.  Don’t play it by focusing on more important items on your to-do list.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -2038,104 +2067,6 @@ dt:nth-last-child(2) { border-bottom: none; }
         
         
         <category>craft</category>
-        
-      </item>
-    
-      <item>
-        <title>Impostor Syndrome</title>
-        <description>&lt;p&gt;A programmer friend of mine sent me a presentation by  Julie Pagano on Impostor Syndrome.  I believe it’s a highly important subject in the coding world (or any world actually).  Below is a link to the video, and the takeaways…&lt;/p&gt;
-
-&lt;h2 id=&quot;impostor-syndrome&quot;&gt;Impostor Syndrome&lt;/h2&gt;
-
-&lt;p&gt;“A psychological phenomenon in  which people are unable to internalize their accomplishments.”&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;To an average person, there’s equilibrium in seeing failures and successes.&lt;/li&gt;
-  &lt;li&gt;To someone who suffers from Impostor Syndrome, “victories diminish in importance; failures loom large.”
-    &lt;ul&gt;
-      &lt;li&gt;I was just lucky&lt;/li&gt;
-      &lt;li&gt;I’m not that smart&lt;/li&gt;
-      &lt;li&gt;I’m not a good programmer&lt;/li&gt;
-      &lt;li&gt;I’m a FRAUD&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Those with Impostor Syndrome hold themselves back, do not share knowledge (because of feeling inadequate), avoid collaboration, don’t help with open-source, and don’t apply for jobs.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Those with Impostor Syndrome: “Start small. Remain small.  End up small.”&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Some people with Impostor Syndrome go to other end and feel pressured to play catch-up where they &lt;strong&gt;push themselves too hard&lt;/strong&gt; – upto burnout.  &lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;burnout&quot;&gt;Burnout&lt;/h3&gt;
-&lt;p&gt;“Long-term exhaustion and diminished interest in work.”  People with burntout makes it hard to come back sometimes – game over.  &lt;/p&gt;
-
-&lt;h3 id=&quot;dunning-kruger-effect&quot;&gt;Dunning-Kruger Effect&lt;/h3&gt;
-&lt;p&gt;“A cognitive bias in which unskilled individuals suffer from illusory superiority, mistakenly rating their ability much higher than average.”&lt;/p&gt;
-
-&lt;h2 id=&quot;solutions&quot;&gt;Solutions?&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Build a Party
-    &lt;ul&gt;
-      &lt;li&gt;People whom you could trust for feedback&lt;/li&gt;
-      &lt;li&gt;You’re going to have bad days, and this party should provide support&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Track Measurable Progress
-    &lt;ul&gt;
-      &lt;li&gt;Have an objective data for you to assess yourself.&lt;/li&gt;
-      &lt;li&gt;Setting practical and achievable goals.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Train Yourself to Look for Positives
-    &lt;ul&gt;
-      &lt;li&gt;Making a Habit (e.g., once a day?)&lt;/li&gt;
-      &lt;li&gt;Help others find positives&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Avoid Negatives
-    &lt;ul&gt;
-      &lt;li&gt;Avoid “that person” (e.g., nasty person).  They’re invalid source of data.&lt;/li&gt;
-      &lt;li&gt;Avoid creating negative space in the world
-        &lt;ul&gt;
-          &lt;li&gt;No feigning surprise&lt;/li&gt;
-          &lt;li&gt;No &lt;em&gt;“well… actually”&lt;/em&gt;&lt;/li&gt;
-          &lt;li&gt;No backseat driving&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Help Others
-    &lt;ul&gt;
-      &lt;li&gt;It gives you a different perspective on things you don’t expect.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Kill Your Heroes
-    &lt;ul&gt;
-      &lt;li&gt;See the human being.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;iframe width=&quot;480&quot; height=&quot;360&quot; allowfullscreen=&quot;&quot; class=&quot;youtube-player&quot; src=&quot;//www.youtube.com/embed/1i8ylq4j_EY?wmode=transparent&amp;amp;amp;autoplay=0&amp;amp;amp;rel=0&amp;amp;amp;showinfo=0&amp;amp;amp;autohide=1&amp;amp;amp;color=white&amp;amp;amp;&quot; type=&quot;text/html&quot;&gt;&lt;/iframe&gt;
-
-&lt;hr /&gt;
-</description>
-        <pubDate>Tue, 30 Sep 2014 07:43:58 -0700</pubDate>
-        <link>www.anton23.com/craft/life/2014/09/30/impostor/</link>
-        <guid isPermaLink="true">www.anton23.com/craft/life/2014/09/30/impostor/</guid>
-        
-        
-        <category>craft</category>
-        
-        <category>life</category>
         
       </item>
     

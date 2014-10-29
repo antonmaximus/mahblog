@@ -16,7 +16,7 @@ a few things that stood out when I could tell the interviewers were unprepared.
 
 **1. They asked for a copy of my resume.**  No they weren't testing me if I was prepared
 and brought copies to the interview.  When I handed my resume to them, they had this 
-hurried look on their face that says, *"Let's see what's interesting here,"* or *"
+hurried look on their face that said, *"Let's see what's interesting here,"* or *"
 What's a good question to ask about from this resume?"*  You could literally tell that
 it was their first time seeing the resume.  
 
@@ -29,17 +29,18 @@ they already lack information about what's on my resume, they naturally gravitat
 asking questions that wouldn't expose their ill-preparedness.  
 
 These questions are the ones that would make your mind react with *"What the hell? 
-Are you really asking that? You can do better than that".*  And my mind did. Nonetheless, I still gave my answers to them.
+Are you really asking that? You can do better than that".*  And my mind did react like that.
+ Nonetheless, I still gave my answers to them.
 However, my only **regret is that I didn't ask the questions back as a courtesy** -- 
 and this is how you determine if a question is fair or if it's silly and embellished in corporate jargon. For example...
 
 * ***What did you dislike about your previous job?*** This question has "It's a trap!" written 
 all over it since it already assumes that there were things you disliked about your ex-employer
 and that you're supposed to unleash the dirty dishes.  If one were to ask back the question, this would be 
-*"What did you dislike about your ex-employees?"*  -- Is it obvious now how it ridiculous it sounds?
+*"What did you dislike about your ex-employees?"*  -- Is it obvious now how ridiculous it sounds?
 
 * ***What are your 3 strengths and 3 weaknesses?*** Now imagine you ask back, *"What is your
-company's [or the interviewer's] 3 strengths and 3 weaknesses?*" Sounds silly to me.
+company's (or the interviewer's) 3 strengths and 3 weaknesses?*" Sounds silly to me.
 
 
 Remember, it's always a courtesy to ask the same questions back in a healthy business 

@@ -5,9 +5,76 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 28 Oct 2014 08:59:18 -0700</pubDate>
-    <lastBuildDate>Tue, 28 Oct 2014 08:59:18 -0700</lastBuildDate>
+    <pubDate>Wed, 29 Oct 2014 10:12:00 -0700</pubDate>
+    <lastBuildDate>Wed, 29 Oct 2014 10:12:00 -0700</lastBuildDate>
     <generator>Jekyll v2.1.0</generator>
+    
+      <item>
+        <title>Is your Interviewer Prepared?</title>
+        <description>&lt;p&gt;I was back to the grind in the past few weeks and found myself doing quite a few interviews.
+I’m a mid-level programmer and by no means the perfect interviewee, but 
+with enough practice/repetition I became 
+a better interviewee overtime and became more aware of the dynamics that take place which 
+I haven’t seen in a long time being away from interviews.&lt;/p&gt;
+
+&lt;p&gt;Throughout the slew of final interviews I went through at various companies, there were 
+a few things that stood out when I could tell the interviewers were unprepared.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. They asked for a copy of my resume.&lt;/strong&gt;  No they weren’t testing me if I was prepared
+and brought copies to the interview.  When I handed my resume to them, they had this 
+hurried look on their face that says, &lt;em&gt;“Let’s see what’s interesting here,”&lt;/em&gt; or &lt;em&gt;”
+What’s a good question to ask about from this resume?”&lt;/em&gt;  You could literally tell that
+it was their first time seeing the resume.  &lt;/p&gt;
+
+&lt;p&gt;I noticed this more from C-level officers at startups.  They’re startups, so I’m 
+sure they didn’t have much time or manpower to devote – but still, it was a flag for me.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. They would ask outright BS questions.&lt;/strong&gt; I noticed this from the same interviewers who
+gave me the impression that they’ve never seen my resume.  Since 
+they already lack information about what’s on my resume, they naturally gravitated to 
+asking questions that wouldn’t expose their ill-preparedness.  &lt;/p&gt;
+
+&lt;p&gt;These questions are the ones that would make your mind react with &lt;em&gt;“What the hell? 
+Are you really asking that? You can do better than that”.&lt;/em&gt;  And my mind did. Nonetheless, I still gave my answers to them.
+However, my only &lt;strong&gt;regret is that I didn’t ask the questions back as a courtesy&lt;/strong&gt; – 
+and this is how you determine if a question is fair or if it’s silly and embellished in corporate jargon. For example…&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;em&gt;What did you dislike about your previous job?&lt;/em&gt;&lt;/strong&gt; This question has “It’s a trap!” written 
+all over it since it already assumes that there were things you disliked about your ex-employer
+and that you’re supposed to unleash the dirty dishes.  If one were to ask back the question, this would be 
+&lt;em&gt;“What did you dislike about your ex-employees?”&lt;/em&gt;  – Is it obvious now how it ridiculous it sounds?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;em&gt;What are your 3 strengths and 3 weaknesses?&lt;/em&gt;&lt;/strong&gt; Now imagine you ask back, &lt;em&gt;“What is your
+company’s [or the interviewer’s] 3 strengths and 3 weaknesses?&lt;/em&gt;” Sounds silly to me.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Remember, it’s always a courtesy to ask the same questions back in a healthy business 
+relationship. They could have gotten much better mileage from simpler questions, &lt;em&gt;“How was working for X?”&lt;/em&gt;, &lt;em&gt;“What was your last project like?”&lt;/em&gt;, or &lt;em&gt;“How was your day?”&lt;/em&gt;. It could just be me, but BS questions being asked for a
+mid-level position just grinds my gears.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;On the contrary,&lt;/strong&gt; there were a couple of hiring managers that impressed me with their preparation. One
+hiring manager mentioned a cheesey line from my spiel written on my website; suffice it to say hearing it made me laugh
+because I was caught off-guard… and that it was really cheesey.&lt;/p&gt;
+
+&lt;p&gt;What impressed me most was that she inquired further on a project displayed on my site.  This proved
+that in addition to reading up on my resume, she also looked at my site – a process that would have taken no more than
+10 minutes for any hiring manager.  &lt;/p&gt;
+
+&lt;hr /&gt;
+
+</description>
+        <pubDate>Wed, 29 Oct 2014 07:00:00 -0700</pubDate>
+        <link>www.anton23.com/craft/2014/10/29/interview-signs/</link>
+        <guid isPermaLink="true">www.anton23.com/craft/2014/10/29/interview-signs/</guid>
+        
+        
+        <category>craft</category>
+        
+      </item>
     
       <item>
         <title>Belle Beauty Salon</title>
@@ -1689,381 +1756,6 @@ Slider.prototype.setCurrent = function( dir ) {
         <pubDate>Mon, 06 Oct 2014 07:43:58 -0700</pubDate>
         <link>www.anton23.com/craft/2014/10/06/jquery-effects/</link>
         <guid isPermaLink="true">www.anton23.com/craft/2014/10/06/jquery-effects/</guid>
-        
-        
-        <category>craft</category>
-        
-      </item>
-    
-      <item>
-        <title>jQuery Basics</title>
-        <description>&lt;h3 id=&quot;simple-jquery&quot;&gt;1. Simple jQuery&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
-  &amp;lt;style&amp;gt;
-  ul li { color: red;}
-  .emphasis { color: green;}
-  &amp;lt;/style&amp;gt;
-  
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;ul&amp;gt;
-  &amp;lt;li&amp;gt;hello&amp;lt;/li&amp;gt;
-  &amp;lt;li&amp;gt;hello 2&amp;lt;/li&amp;gt;
-  &amp;lt;li&amp;gt;hello 3&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-
-&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-&amp;lt;script&amp;gt;
-  jQuery(&#39;ul li&#39;).addClass(&#39;emphasis&#39;);
-  $(&#39;ul li&#39;).addClass(&#39;emphasis&#39;);
-&amp;lt;/script&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;document-ready&quot;&gt;2. Document Ready?&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
-  &amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-  &amp;lt;style&amp;gt;
-  .emphasis { font-weight: bold;}
-  &amp;lt;/style&amp;gt;
-
-  &amp;lt;script&amp;gt;
-
-  // This commented function is identical to the other one below
-  // $(function() {
-  //  $(&#39;li:first-child&#39;).addClass(&#39;emphasis&#39;);
-  // });
-
-  $(document).ready(function() {
-    $(&#39;li:first-child&#39;).addClass(&#39;emphasis&#39;);
-  });
-  &amp;lt;/script&amp;gt; 
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;ul&amp;gt;
-  &amp;lt;li&amp;gt;hello&amp;lt;/li&amp;gt;
-  &amp;lt;li&amp;gt;hello 2&amp;lt;/li&amp;gt;
-  &amp;lt;li&amp;gt;hello 3&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;the-basics-of-querying-the-dom&quot;&gt;3. The Basics of Querying the DOM&lt;/h3&gt;
-
-&lt;p&gt;See &lt;a href=&quot;http://api.jquery.com/&quot;&gt;api.jquery.com&lt;/a&gt; for functions.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
-  &amp;lt;style&amp;gt;
-  .container { color: green;}
-  &amp;lt;/style&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;div class=&quot;container&quot;&amp;gt;
-  &amp;lt;h1&amp;gt;Welcome to My Website &amp;lt;/h1&amp;gt;
-  &amp;lt;p&amp;gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat.
-  &amp;lt;/p&amp;gt;
-
-  &amp;lt;div class=&quot;container&quot;&amp;gt;
-    &amp;lt;ul class=&quot;emphasis container&quot;&amp;gt;
-      &amp;lt;li&amp;gt;item&amp;lt;/li&amp;gt;
-      &amp;lt;li&amp;gt;item 2&amp;lt;/li&amp;gt;
-      &amp;lt;li&amp;gt;item 2&amp;lt;/li&amp;gt;
-      &amp;lt;li&amp;gt;item 4&amp;lt;/li&amp;gt;
-      &amp;lt;li&amp;gt;item 5&amp;lt;/li&amp;gt;
-      &amp;lt;li&amp;gt;
-        &amp;lt;ul&amp;gt;
-          &amp;lt;li&amp;gt;hello from the nest.&amp;lt;/li&amp;gt;
-        &amp;lt;/ul
-
-      &amp;lt;/li&amp;gt;
-    &amp;lt;/ul&amp;gt;
-  &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-&amp;lt;script&amp;gt;
-  // Chaining
-  // $(&#39;ul.emphasis&#39;)
-  //  .children(&#39;li&#39;)
-  //    .eq(3)
-  //    .prev().text(&#39;added with jQuery&#39;);
-
-  // Parents vs Closest
-  // console.log($(&#39;ul&#39;).parents(&#39;.container&#39;));
-  // console.log($(&#39;ul&#39;).closest(&#39;.container&#39;));
-&amp;lt;/script&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;events-101&quot;&gt;4. Events 101&lt;/h3&gt;
-
-&lt;p&gt;index.html&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;jQuery Events&amp;lt;/title&amp;gt;
-  &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;day.css&quot;&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;h1&amp;gt;My Website&amp;lt;/h1&amp;gt;
-
-&amp;lt;button data-file=&quot;day&quot;&amp;gt;Day&amp;lt;/button&amp;gt;
-&amp;lt;button data-file=&quot;night&quot;&amp;gt;Night&amp;lt;/button&amp;gt;
-
-
-&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-
-&amp;lt;script&amp;gt;
-
-(function() {
-  var link = $(&#39;link&#39;);
-  
-  $(&#39;button&#39;).on(&#39;click&#39;, function() {
-    var $this = $(this),
-      stylesheet = $this.data(&#39;file&#39;);
-
-    link.attr(&#39;href&#39;, stylesheet + &#39;.css&#39;);
-
-    $this
-      .siblings(&#39;button&#39;)
-        .removeAttr(&#39;disabled&#39;)
-        .end()
-      .attr(&#39;disabled&#39;, &#39;disabled&#39;);
-  });
-})();
-
-&amp;lt;/script&amp;gt;
-
-
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;day.css&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;body {
-  background: yellow;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;night.css&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;body {
-  background: black;
-  color: white;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;events-201&quot;&gt;5. Events 201&lt;/h3&gt;
-&lt;p&gt;index.html&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;jQuery Events 201&amp;lt;/title&amp;gt;
-  &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;dl&amp;gt;
-  &amp;lt;dt&amp;gt;What are your hours?&amp;lt;/dt&amp;gt;
-  &amp;lt;dd&amp;gt;We are open 24/7.&amp;lt;/dd&amp;gt;
-  &amp;lt;dt&amp;gt;What are your hours?&amp;lt;/dt&amp;gt;
-  &amp;lt;dd&amp;gt;We are open 24/7.&amp;lt;/dd&amp;gt;
-  &amp;lt;dt&amp;gt;What are your hours?&amp;lt;/dt&amp;gt;
-  &amp;lt;dd&amp;gt;We are open 24/7.&amp;lt;/dd&amp;gt;
-  &amp;lt;dt&amp;gt;What are your hours?&amp;lt;/dt&amp;gt;
-  &amp;lt;dd&amp;gt;We are open 24/7.&amp;lt;/dd&amp;gt;
-  &amp;lt;dt&amp;gt;What are your hours?&amp;lt;/dt&amp;gt;
-  &amp;lt;dd&amp;gt;We are open 24/7.&amp;lt;/dd&amp;gt;
-&amp;lt;/dl&amp;gt;
-
-&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-
-&amp;lt;script&amp;gt;
-
-(function() {
-  
-  $(&#39;dd&#39;).filter(&#39;:nth-child(n+4)&#39;).addClass(&#39;hide&#39;);
-
-  $(&#39;dl&#39;).on(&#39;mouseenter&#39;, &#39;dt&#39;, function() {
-    $(this)
-      .next()
-        .slideDown(200)
-        .siblings(&#39;dd&#39;)
-          .slideUp(200);
-  });
-})();
-
-
-&amp;lt;/script&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;style.css&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;body {
-    width: 500px;
-  
-    margin: auto;
-    text-align: center;
-}
-
-dl {      
-}
-
-dd {
-    margin: 0;
-  
-    padding: 1em 0;
-}
-
-dt {
-    cursor: pointer;
-    
-  
-    font-weight: bold;
-    font-size : 1.5em;
-    line-height: 2em;
-    background: #e3e3e3;
-    border-bottom: 1px solid #c5c5c5;
-    border-top: 1px solid white;
-}
-
-dt:first-child { border-top: none; }
-dt:nth-last-child(2) { border-bottom: none; }
-
-.hide { display: none;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;bindlivedelegate-just-use-on&quot;&gt;6. Bind…Live…Delegate… just use On!&lt;/h3&gt;
-&lt;p&gt;No info.  &lt;/p&gt;
-
-&lt;h3 id=&quot;creating-and-appending-content&quot;&gt;7. Creating and Appending Content&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;Appending Content&amp;lt;/title&amp;gt;
-  &amp;lt;style&amp;gt;
-  article {
-    width: 600px;
-    margin: auto;
-  }
-  blockquote.co {
-    float: right;
-    background: #e3e3e3;
-    font-size: 2em;
-    width: 35%;
-    text-align: center;
-  }
-  &amp;lt;/style&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-
-&amp;lt;article&amp;gt;
-  &amp;lt;h1&amp;gt;My Awesome Post&amp;lt;/h1&amp;gt;
-  &amp;lt;p&amp;gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-  &amp;lt;/p&amp;gt;
-  &amp;lt;p&amp;gt;
-    &amp;lt;span class=co&amp;gt;Lorem ipsum dolor sit amet&amp;lt;/span&amp;gt;, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-  &amp;lt;/p&amp;gt;
-  &amp;lt;p&amp;gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-  &amp;lt;/p&amp;gt;
-  &amp;lt;p&amp;gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-  &amp;lt;/p&amp;gt;
-  &amp;lt;p&amp;gt;
-    Consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. &amp;lt;span class=co&amp;gt;Hello from JavaScript.&amp;lt;/span&amp;gt; sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-  &amp;lt;/p&amp;gt;
-&amp;lt;/article&amp;gt;
-
-
-
-&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-
-&amp;lt;script&amp;gt;
-
-(function() {
-
-  var co = $(&#39;article&#39;).find(&#39;span.co&#39;).each(function() {
-    var $this = $(this);
-
-    $(&#39;&amp;lt;blockquote&amp;gt;&amp;lt;/blockquote&amp;gt;&#39;, {
-      class: &#39;co&#39;,
-      text: $this.text()
-    }).prependTo( $this.closest(&#39;p&#39;) );
-    
-  });
-  
-
-})();
-
-&amp;lt;/script&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-</description>
-        <pubDate>Sat, 04 Oct 2014 07:43:58 -0700</pubDate>
-        <link>www.anton23.com/craft/2014/10/04/jquery-basics/</link>
-        <guid isPermaLink="true">www.anton23.com/craft/2014/10/04/jquery-basics/</guid>
         
         
         <category>craft</category>

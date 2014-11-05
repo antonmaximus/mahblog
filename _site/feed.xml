@@ -5,71 +5,669 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 29 Oct 2014 10:12:00 -0700</pubDate>
-    <lastBuildDate>Wed, 29 Oct 2014 10:12:00 -0700</lastBuildDate>
+    <pubDate>Tue, 04 Nov 2014 18:27:38 -0800</pubDate>
+    <lastBuildDate>Tue, 04 Nov 2014 18:27:38 -0800</lastBuildDate>
     <generator>Jekyll v2.1.0</generator>
     
       <item>
-        <title>Is your Interviewer Prepared?</title>
-        <description>&lt;p&gt;I was back to the grind in the past few weeks and found myself doing quite a few interviews.
-I’m a mid-level programmer and by no means the perfect interviewee, but 
-with enough practice/repetition I became 
-a better interviewee overtime and became more aware of the dynamics that take place which 
-I haven’t seen in a long time being away from interviews.&lt;/p&gt;
+        <title>Anatomy of Backbone A2</title>
+        <description>&lt;h2 id=&quot;collections&quot;&gt;5. Collections&lt;/h2&gt;
 
-&lt;p&gt;Throughout the slew of final interviews I went through at various companies, there were 
-a few things that stood out when I could tell the interviewers were unprepared.&lt;/p&gt;
+&lt;p&gt;Set of Models&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1. They asked for a copy of my resume.&lt;/strong&gt;  No they weren’t testing me if I was prepared
-and brought copies to the interview.  When I handed my resume to them, they had this 
-hurried look on their face that says, &lt;em&gt;“Let’s see what’s interesting here,”&lt;/em&gt; or &lt;em&gt;”
-What’s a good question to ask about from this resume?”&lt;/em&gt;  You could literally tell that
-it was their first time seeing the resume.  &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var TodoList = Backbone.Collection.extend({
+  model: TodoItem
+});
+var todoList = new TodoList();
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;I noticed this more from C-level officers at startups.  They’re startups, so I’m 
-sure they didn’t have much time or manpower to devote – but still, it was a flag for me.&lt;/p&gt;
+&lt;p&gt;Add/remove/get&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2. They would ask outright BS questions.&lt;/strong&gt; I noticed this from the same interviewers who
-gave me the impression that they’ve never seen my resume.  Since 
-they already lack information about what’s on my resume, they naturally gravitated to 
-asking questions that wouldn’t expose their ill-preparedness.  &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;todoList.length; //# of models
+todoList.add(todoItem1); // add model instance
+todoList.at(0); //get model instance at index 0
+todoList.get(1); // get by id
+todoList.remove(todoItem1); //remove model instance
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;These questions are the ones that would make your mind react with &lt;em&gt;“What the hell? 
-Are you really asking that? You can do better than that”.&lt;/em&gt;  And my mind did. Nonetheless, I still gave my answers to them.
-However, my only &lt;strong&gt;regret is that I didn’t ask the questions back as a courtesy&lt;/strong&gt; – 
-and this is how you determine if a question is fair or if it’s silly and embellished in corporate jargon. For example…&lt;/p&gt;
+&lt;p&gt;Bulk Population&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;&lt;em&gt;What did you dislike about your previous job?&lt;/em&gt;&lt;/strong&gt; This question has “It’s a trap!” written 
-all over it since it already assumes that there were things you disliked about your ex-employer
-and that you’re supposed to unleash the dirty dishes.  If one were to ask back the question, this would be 
-&lt;em&gt;“What did you dislike about your ex-employees?”&lt;/em&gt;  – Is it obvious now how it ridiculous it sounds?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;&lt;em&gt;What are your 3 strengths and 3 weaknesses?&lt;/em&gt;&lt;/strong&gt; Now imagine you ask back, &lt;em&gt;“What is your
-company’s [or the interviewer’s] 3 strengths and 3 weaknesses?&lt;/em&gt;” Sounds silly to me.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;var todos = [
+  {description: &#39;Pick up milk.&#39;, status: &#39;incomplete&#39;},
+  {description: &#39;Get a car wash&#39;, status: &#39;incomplete&#39;},
+  {description: &#39;Learn Backbone&#39;, status: &#39;incomplete&#39;}
+];
+todoList.reset(todos);
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Remember, it’s always a courtesy to ask the same questions back in a healthy business 
-relationship. They could have gotten much better mileage from simpler questions, &lt;em&gt;“How was working for X?”&lt;/em&gt;, &lt;em&gt;“What was your last project like?”&lt;/em&gt;, or &lt;em&gt;“How was your day?”&lt;/em&gt;. It could just be me, but BS questions being asked for a
-mid-level position just grinds my gears.&lt;/p&gt;
+&lt;h3 id=&quot;fetching-data-from-the-server&quot;&gt;Fetching Data from the Server&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;On the contrary,&lt;/strong&gt; there were a couple of hiring managers that impressed me with their preparation. One
-hiring manager mentioned a cheesey line from my spiel written on my website; suffice it to say hearing it made me laugh
-because I was caught off-guard… and that it was really cheesey.&lt;/p&gt;
+&lt;p&gt;URL to get JSON data from&lt;/p&gt;
 
-&lt;p&gt;What impressed me most was that she inquired further on a project displayed on my site.  This proved
-that in addition to reading up on my resume, she also looked at my site – a process that would have taken no more than
-10 minutes for any hiring manager.  &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var TodoList = Backbone.Collection.extend({
+  url: &#39;/todos&#39;
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Populate collection from server&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;todoList.fetch();  // =&amp;gt; GET /todos
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;collections-can-have-events&quot;&gt;Collections can have Events&lt;/h3&gt;
+
+&lt;p&gt;To listen for an event on a collection, and run an event: (works just like models)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;todoListon(&#39;event-name&#39;, function(){
+  alert(&#39;event-name happened!&#39;);
+});
+todoList.trigger(&#39;event-name&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;special-events&quot;&gt;Special Events&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;//Listen for events
+todoList.on(&#39;reset&#39;, doThing);  
+
+// Event Triggered on reset and fetch
+todoList.fetch();
+todoList.reset();
+
+// Event triggered without notification
+todoList.fetch({silent: true});
+todoList.reset({silent: true});
+
+// Remove event listener
+todoList.off(&#39;reset&#39;, doThing);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Syntax&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;todoList.on(&amp;lt;event&amp;gt;, &amp;lt;function&amp;gt;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Built-in Events. &lt;/p&gt;
+&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;add&lt;/td&gt;&lt;td&gt;When a model is added&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;removed&lt;/td&gt;&lt;td&gt;When a model is removed&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;reset&lt;/td&gt;&lt;td&gt;When reset or fetched&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Models in collection.  Events triggered on a model in a collection will also be triggered on the collection.&lt;/p&gt;
+&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;change&lt;/td&gt;&lt;td&gt;When an attribute is modified&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;change:&amp;lt;attr&amp;gt;&lt;/td&gt;&lt;td&gt;When &amp;lt;attr&amp;gt; is modified&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;destroy&lt;/td&gt;&lt;td&gt;When a model is destroyed&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;sync&lt;/td&gt;&lt;td&gt;Whenever successfully synced&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;error&lt;/td&gt;&lt;td&gt;When model save or validation fails&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;all&lt;/td&gt;&lt;td&gt;Any triggered event&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;iteration&quot;&gt;Iteration&lt;/h3&gt;
+
+&lt;p&gt;Example collection&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;todoList.reset([
+  {description: &#39;Pick up milk.&#39;, status: &#39;incomplete&#39;, id: 1},
+  {description: &#39;Get a car wash.&#39;, status: &#39;complete&#39;, id: 2}
+]);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Alert each model’s description&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;todoList.forEach(function(todoItem){
+  alert(todoItem.get(&#39;description&#39;));
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Build an array of description&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;todoList.map(function(todoItem){
+  return todoItem.get(&#39;description&#39;);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Filter models of some criteria&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;todoList.filter(function(todoItem){
+  return todoItem.get(&#39;status&#39;) === &quot;incomplete&quot;;
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Other Iteration Functions&lt;/p&gt;
+&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;forEach&lt;/td&gt;&lt;td&gt;reduce&lt;/td&gt;&lt;td&gt;reduceRight&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;find&lt;/td&gt;&lt;td&gt;filter&lt;/td&gt;&lt;td&gt;reject&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;every&lt;/td&gt;&lt;td&gt;all&lt;/td&gt;&lt;td&gt;some&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;include&lt;/td&gt;&lt;td&gt;invoke&lt;/td&gt;&lt;td&gt;max&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;min&lt;/td&gt;&lt;td&gt;sortBy&lt;/td&gt;&lt;td&gt;groupBy&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;sortedIndex&lt;/td&gt;&lt;td&gt;shuffle&lt;/td&gt;&lt;td&gt;toArray&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;size&lt;/td&gt;&lt;td&gt;first&lt;/td&gt;&lt;td&gt;initial&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;rest&lt;/td&gt;&lt;td&gt;last&lt;/td&gt;&lt;td&gt;without&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;indexOf&lt;/td&gt;&lt;td&gt;lastIndexOf&lt;/td&gt;&lt;td&gt;isEmpty&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;chain&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://documentcloud.github.io/backbone/#Collection-Underscore-Methods&quot;&gt;Link to Functions&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;collections--views&quot;&gt;6. Collections &amp;amp; Views&lt;/h2&gt;
+
+&lt;p&gt;Collection + View == Collection View!&lt;/p&gt;
+
+&lt;p&gt;Review our Model View&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoView = Backbone.View.extend({
+  render: function(){
+    this.$el.html(this.template(this.model.toJSON()));
+    return this;
+  }
+... });
+var todoItem = new TodoItem();
+var todoView = new TodoView({model: todoItem});
+console.log(todoView.render().el);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;define-and-render&quot;&gt;Define and Render&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoListView = Backbone.View.extend({});
+var todoListView = new TodoListView({collection: todoList});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;First Crack at Render&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;render: function(){
+  this.collection.forEach(function(todoItem){
+    var todoView = new TodoView({model: todoItem});
+    this.$el.append(todoView.render().el);  // !!! `this` changes context in forEach
+}); }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Use addOne (2nd Crack at Render)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;render: function(){ this.collection.forEach(this.addOne, this);  // !!! 2nd param saves context
+}
+addOne: function(todoItem){
+  var todoView = new TodoView({model: todoItem});
+  this.$el.append(todoView.render().el);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To finish off…&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var todoListView = new TodoListView({collection: todoList});
+todoListView.render();
+console.log(todoListView.el);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;adding-new-models&quot;&gt;Adding new Models&lt;/h3&gt;
+
+&lt;p&gt;Since this is a collection, you must listen to the &lt;code&gt;add&lt;/code&gt; event in the initalize function&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoListView = Backbone.View.extend({
+  initialize: function(){
+    this.collection.on(&#39;add&#39;, this.addOne, this);
+},
+  addOne: function(todoItem){
+    var todoView = new TodoView({model: todoItem});
+    this.$el.append(todoView.render().el);
+  },
+  render: function(){
+    this.collection.forEach(this.addOne, this);
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- tsk --&gt;
+&lt;pre&gt;&lt;code&gt;var newTodoItem = new TodoItem({
+  description: &#39;Take out trash.&#39;,
+  status: &#39;incomplete&#39;
+});
+todoList.add(newTodoItem);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;reset-event&quot;&gt;Reset Event&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoListView = Backbone.View.extend({
+  initialize: function(){
+    this.collection.on(&#39;add&#39;, this.addOne, this);
+    this.collection.on(&#39;reset&#39;, this.addAll, this);
+  },
+  addOne: function(todoItem){
+    var todoView = new TodoView({model: todoItem});
+    this.$el.append(todoView.render().el);
+  },
+  addAll: function(){
+    this.collection.forEach(this.addOne, this);
+￼  },
+  render: function(){
+    this.addAll();
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- tsk --&gt;
+&lt;pre&gt;&lt;code&gt;var todoList = new TodoList();
+var todoListView = new TodoListView({
+  collection: todoList
+});
+todoList.fetch();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;fixing-remove-with-custom-events&quot;&gt;Fixing remove with custom events&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;todoList.remove(todoItem);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;TodoList Collection&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;initialize: function(){
+  this.on(&#39;remove&#39;, this.hideModel);
+},
+hideModel: function(model){
+  model.trigger(&#39;hide&#39;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;TodoItem View&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;initialize: function(){
+  this.model.on(&#39;hide&#39;, this.remove, this);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;router--history&quot;&gt;7. Router &amp;amp; History&lt;/h2&gt;
+
+&lt;h3 id=&quot;the-router&quot;&gt;The Router&lt;/h3&gt;
+
+&lt;p&gt;Routers map URLs to actions&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Index Action
+var router = new Backbone.Router({
+  routes: { &quot;todos&quot;: &#39;index&#39; },
+  index: function(){
+    ...
+} });
+
+// OR Show Action
+var router = new Backbone.Router({
+  routes: { &quot;todos/:id&quot;: &#39;show&#39; }
+  show: function(id){ ... }
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;triggering-routes&quot;&gt;Triggering Routes&lt;/h3&gt;
+
+&lt;p&gt;router.navigate(“todos/1”, {
+    trigger: true
+  });&lt;/p&gt;
+
+&lt;p&gt;Backbone History&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Backbone.history.start({pushState: true});  // !!! pushState on!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- tsk --&gt;
+&lt;pre&gt;&lt;code&gt;router.navigate(&quot;todos/1&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;show-action&quot;&gt;Show Action&lt;/h3&gt;
+
+&lt;p&gt;Define Router Class&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoRouter = Backbone.Router.extend({
+  routes: { &quot;todos/:id&quot;: &quot;show&quot; },
+  show: function(id){
+    this.todoList.focusOnTodoItem(id);
+  },
+  initialize: function(options){
+    this.todoList = options.todoList;
+  } 
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Instantiate router instance&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var todoList = new TodoList();
+var TodoApp = new TodoRouter({todoList: todoList});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;index-action&quot;&gt;Index Action&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoRouter = Backbone.Router.extend({ routes: { &quot;&quot;: &quot;index&quot;,
+            &quot;todos/:id&quot;: &quot;show&quot; },
+  index: function(){
+    this.todoList.fetch();
+},
+  show: function(id){
+    this.todoList.focusOnTodoItem(id);
+},
+  initialize: function(options){
+    this.todoList = options.todoList;
+} });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;app-organization&quot;&gt;App Organization&lt;/h3&gt;
+
+&lt;p&gt;Since there’s only one router&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoApp = new (Backbone.Router.extend({
+  routes: { &quot;&quot;: &quot;index&quot;, &quot;todos/:id&quot;: &quot;show&quot; },
+  initialize: function(){
+    this.todoList = new TodoList();
+    this.todosView = new TodoListView({collection: this.todoList});
+    $(&#39;#app&#39;).append(this.todosView.el);
+  },
+  start: function(){
+    Backbone.history.start({pushState: true});
+  },
+  index: function(){
+    this.todoList.fetch();
+  },
+  show: function(id){
+    this.todoList.focusOnTodoItem(id);
+  }
+}));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- tsk --&gt;
+&lt;pre&gt;&lt;code&gt;$(function(){ TodoApp.start() });
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;
 
 </description>
-        <pubDate>Wed, 29 Oct 2014 07:00:00 -0700</pubDate>
-        <link>www.anton23.com/craft/2014/10/29/interview-signs/</link>
-        <guid isPermaLink="true">www.anton23.com/craft/2014/10/29/interview-signs/</guid>
+        <pubDate>Tue, 04 Nov 2014 06:00:01 -0800</pubDate>
+        <link>www.anton23.com/craft/2014/11/04/backbone-anatomy-a2/</link>
+        <guid isPermaLink="true">www.anton23.com/craft/2014/11/04/backbone-anatomy-a2/</guid>
+        
+        
+        <category>craft</category>
+        
+      </item>
+    
+      <item>
+        <title>Anatomy of Backbone A1</title>
+        <description>&lt;h2 id=&quot;models&quot;&gt;2. Models&lt;/h2&gt;
+
+&lt;p&gt;Generating a model class and a model instance:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoItem = Backbone.Model.extend({});￼
+var todoItem = new TodoItem(
+  { description: &#39;Pick up milk&#39;, status: &#39;incomplete&#39;, id: 1 }
+);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To get, set, and save an attribute&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;todoItem.get(&#39;description&#39;); 
+todoItem.set({status: &#39;complete&#39;}); 
+todoItem.save();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;fetching-data-from-the-server&quot;&gt;Fetching Data from The Server&lt;/h3&gt;
+
+&lt;p&gt;URL to get JSON data for model. RESTful web service flavor.  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoItem = Backbone.Model.extend({urlRoot: &#39;/todos&#39; });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To populate model from server.  Fetch todo with id=1.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var todoItem = new TodoItem({id: 1})
+todoItem.fetch();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Destroying a todo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;todoItem.get(&#39;id&#39;);
+todoItem.destroy();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Creating Default Values&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoItem = Backbone.Model.extend({
+  defaults: {
+    description: &#39;Empty todo...&#39;,
+    status: &#39;incomplete&#39;
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;models-can-have-events&quot;&gt;Models can have Events&lt;/h3&gt;
+
+&lt;p&gt;To listen for an event on a model, and run the event:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;todoItem.on(&#39;event-name&#39;, function() {
+  alert(&#39;event-name happened!&#39;);
+});
+todoItem.trigger(&#39;event-name&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;special-events&quot;&gt;Special Events&lt;/h3&gt;
+
+&lt;p&gt;Syntax&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;todoItem.on(&amp;lt;event&amp;gt;, &amp;lt;method&amp;gt;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To listen for changes,  to see how it’s triggered on change, to set without triggering, and to remove listener:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;todoItem.on(&#39;change&#39;, doThing);
+todoItem.set({description: &#39;Fill prescription.&#39;});
+todoItem.set({description: &#39;Fill prescription.&#39;}, {silent: true});
+todoItem.off(&#39;change&#39;, doThing);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Built-in Events&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;change&lt;/td&gt;&lt;td&gt;When an attribute is modified&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;change:&amp;lt;attr&amp;gt;&lt;/td&gt;&lt;td&gt;When &amp;lt;attr&amp;gt; is modified&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;destroy&lt;/td&gt;&lt;td&gt;When a model is destroyed&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;sync&lt;/td&gt;&lt;td&gt;Whenever successfully synced&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;error&lt;/td&gt;&lt;td&gt;When model save or validation fails&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;all&lt;/td&gt;&lt;td&gt;Any triggered event&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;views&quot;&gt;3. Views&lt;/h2&gt;
+
+&lt;p&gt;Create a view class and a view instance&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoView = Backbone.View.extend({});￼ ￼   var todoView = new TodoView({ model: todoItem });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Rendering the view.  Every view has a top level &lt;code&gt;el&lt;/code&gt; (element) where &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; is the default tag.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoView = Backbone.View.extend({
+  render: function(){
+    var html = &#39;&amp;lt;h3&amp;gt;&#39; + this.model.get(&#39;description&#39;) + &#39;&amp;lt;/h3&amp;gt;&#39;;
+    todoView.$el.html(html);  // todoView.$el.html(html) works too, but slower.
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To use a different tag:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var SimpleView = Backbone.View.extend({tagName: &#39;li&#39;});
+var simpleView = new SimpleView();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;using-a-template&quot;&gt;Using a Template&lt;/h3&gt;
+
+&lt;p&gt;Underscore Library is part of Backbone&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoView = Backbone.View.extend({
+  tagName: &#39;article&#39;,
+  id: &#39;todo-view&#39;,
+  className: &#39;todo&#39;,
+  template: _.template(&#39;&amp;lt;h3&amp;gt;&amp;lt;%= description %&amp;gt;&amp;lt;/h3&amp;gt;&#39;),
+￼} });
+
+
+var todoView = new TodoView({ model: todoItem });
+todoView.render();
+console.log(todoView.el);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Other Templating Engines&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Underscore.js&lt;/li&gt;
+  &lt;li&gt;Mustache.js&lt;/li&gt;
+  &lt;li&gt;Haml-js&lt;/li&gt;
+  &lt;li&gt;Edo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;adding-view-events&quot;&gt;Adding View Events&lt;/h3&gt;
+
+&lt;p&gt;Syntax&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&quot;&amp;lt;event&amp;gt; &amp;lt;selector&amp;gt;&quot;: &quot;&amp;lt;method&amp;gt;&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoView = Backbone.View.extend({
+  events: {
+    &quot;click h3&quot;: &quot;alertStatus&quot;
+  },
+  alertStatus: function(e){
+    alert(&#39;Hey you clicked the h3!&#39;);
+} });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Selector is scoped to the &lt;code&gt;el&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;this.$el.delegate(&#39;h3&#39;, &#39;click&#39;, alertStatus);  //delegate is deprecated, but same idea
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Views can have many events on the &lt;code&gt;el&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var DocumentView = Backbone.View.extend({
+  events: {
+    &quot;dblclick&quot;                : &quot;open&quot;,
+    &quot;click .icon.doc&quot;         : &quot;select&quot;,
+    &quot;click .show_notes&quot;       : &quot;toggleNotes&quot;,
+    &quot;click .title .lock&quot;      : &quot;editAccessLevel&quot;,
+    &quot;mouseover .title .date&quot;  : &quot;showTooltip&quot;
+  }, 
+  ...
+
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;view-event-options&quot;&gt;View Event Options&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;var SampleView = Backbone.View.extend({
+  events: {
+    &quot;&amp;lt;event&amp;gt; &amp;lt;selector&amp;gt;&quot;: &quot;&amp;lt;method&amp;gt;&quot;
+  },
+... });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Events: &lt;/p&gt;
+
+&lt;p&gt;change click dblclick focus focusin
+focusout hover keydown keypress load
+mousedown mouseenter mouseleave mousemove mouseout
+mouseover mouseup ready resize scroll
+select unload&lt;/p&gt;
+
+&lt;h2 id=&quot;models-and-views&quot;&gt;4. Models and Views&lt;/h2&gt;
+
+&lt;p&gt;Review of model &amp;amp; view&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoView = Backbone.View.extend({
+  template: _.template(&#39;&amp;lt;h3&amp;gt;&amp;lt;%= description %&amp;gt;&amp;lt;/h3&amp;gt;&#39;),
+  render: function(){
+    this.$el.html(this.template(this.model.toJSON()));
+} });
+
+
+var todoView = new TodoView({ model: todoItem });
+todoView.render();
+console.log(todoView.el);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Adding a Checkbox (that can be updated on the UI)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoView = Backbone.View.extend({ 
+  template: _.template(&#39;&amp;lt;h3&amp;gt;&#39; +
+    &#39;&amp;lt;input type=checkbox &#39; +
+    &#39;&amp;lt;% if(status === &quot;complete&quot;) print(&quot;checked&quot;) %&amp;gt;/&amp;gt;&#39; +
+    &#39;&amp;lt;%= description %&amp;gt; &amp;lt;/h3&amp;gt;&#39;),
+
+  render: function() {
+    this.$el.html(this.template(this.model.toJSON()));
+  }
+} });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;View events update the Model (Update model on UI event, and Refactor to separate what’s for the Model)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoView = Backbone.View.extend({
+  events: {
+    &#39;change input&#39;: &#39;toggleStatus&#39;
+  },
+  toggleStatus: function(){
+   this.model.toggleStatus();
+  }
+});
+
+var TodoItem = Backbone.Model.extend({
+  toggleStatus: function(){
+    if(this.get(&#39;status&#39;) === &#39;incomplete&#39;){
+      this.set({&#39;status&#39;: &#39;complete&#39;});
+    }else{
+      this.set({&#39;status&#39;: &#39;incomplete&#39;});
+￼   } 
+    this.save();  // Synch changes to the server
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Re-render the view (Model updates change the view)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoView = Backbone.View.extend({
+  events: {
+    &#39;change input&#39;: &#39;toggleStatus&#39;
+  },
+  initialize: function(){
+    this.model.on(&#39;change&#39;, this.render, this);
+  },
+  toggleStatus: function(){
+   this.model.toggleStatus();
+  },
+  render: function(){
+    this.$el.html(this.template(this.model.toJSON()));
+} });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Why the 3rd argument (i.e., What is &lt;strong&gt;&lt;em&gt;this&lt;/em&gt;&lt;/strong&gt;)?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/vM1T1jh.png&quot; alt=&quot;&quot; title=&quot;&quot; /&gt;
+&lt;img src=&quot;http://i.imgur.com/GpBENlX.png&quot; alt=&quot;&quot; title=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Remove View on model destroy&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var TodoView = Backbone.View.extend({
+  initialize: function(){
+    this.model.on(&#39;change&#39;, this.render, this);
+    this.model.on(&#39;destroy&#39;, this.remove, this);
+},
+  render: function(){
+   this.$el.html(this.template(this.model.toJSON()));
+},
+  remove: function(){
+    this.$el.remove();
+} });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+</description>
+        <pubDate>Tue, 04 Nov 2014 06:00:00 -0800</pubDate>
+        <link>www.anton23.com/craft/2014/11/04/backbone-anatomy-a1/</link>
+        <guid isPermaLink="true">www.anton23.com/craft/2014/11/04/backbone-anatomy-a1/</guid>
         
         
         <category>craft</category>
@@ -1119,643 +1717,6 @@ h2 span { color: gray; font-size: .8em; }
         <pubDate>Wed, 08 Oct 2014 07:43:58 -0700</pubDate>
         <link>www.anton23.com/craft/2014/10/08/jquery-utilities/</link>
         <guid isPermaLink="true">www.anton23.com/craft/2014/10/08/jquery-utilities/</guid>
-        
-        
-        <category>craft</category>
-        
-      </item>
-    
-      <item>
-        <title>jQuery Effects</title>
-        <description>&lt;h3 id=&quot;slides-and-structure&quot;&gt;3.1 Slides and Structure&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;Slides and Structure&amp;lt;/title&amp;gt;
-  &amp;lt;style&amp;gt;
-
-  body {
-    width: 600px;
-    margin: auto;
-    font-family: sans-serif;
-  }
-
-  #contact { 
-    background: #e3e3e3; 
-    padding: 1em 2em; 
-    position: relative;
-  }
-
-  .js #contact {
-    position: absolute;
-    top: 0;
-    width: inherit;
-    display: none;
-  } 
-
-  #contact h2 { margin-top: 0; }
-
-  #contact ul { padding: 0; }
-
-  #contact li { 
-    list-style: none;
-    margin-bottom: 1em;
-  }
-
-  /* Close button on form */
-  .close {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    font-weight: bold;
-    font-family: sans-serif;
-    cursor: pointer;
-  } 
-
-  /* Form inputs */
-  input, textarea { width: 100%; line-height: 2em;}
-  input[type=submit] { width: auto;  }
-  label { display: block; text-align: left; }
-
-  &amp;lt;/style&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-
-&amp;lt;article&amp;gt;
-  &amp;lt;h1&amp;gt;My Awesome Post&amp;lt;/h1&amp;gt;
-  &amp;lt;p&amp;gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  &amp;lt;/p&amp;gt;
-  &amp;lt;p&amp;gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  &amp;lt;/p&amp;gt;
-  &amp;lt;p&amp;gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  &amp;lt;/p&amp;gt;
-  &amp;lt;p&amp;gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  &amp;lt;/p&amp;gt;
-&amp;lt;/article&amp;gt;
-
-&amp;lt;div id=&quot;contact&quot;&amp;gt;
-  &amp;lt;h2&amp;gt;Contact Me&amp;lt;/h2&amp;gt;
-  &amp;lt;form action=&quot;#&quot;&amp;gt;
-    &amp;lt;ul&amp;gt;
-      &amp;lt;li&amp;gt;
-        &amp;lt;label for=&quot;name&quot;&amp;gt;Name: &amp;lt;/label&amp;gt;
-        &amp;lt;input name=&quot;name&quot; id=&quot;name&quot;&amp;gt;
-      &amp;lt;/li&amp;gt;
-
-      &amp;lt;li&amp;gt;
-        &amp;lt;label for=&quot;email&quot;&amp;gt;Email Address: &amp;lt;/label&amp;gt;
-        &amp;lt;input name=&quot;email&quot; id=&quot;email&quot;&amp;gt;
-      &amp;lt;/li&amp;gt;
-
-      &amp;lt;li&amp;gt;
-        &amp;lt;label for=&quot;comments&quot;&amp;gt;What&#39;s Up?&amp;lt;/label&amp;gt;
-        &amp;lt;textarea name=&quot;comments&quot; id=&quot;comments&quot; cols=&quot;30&quot; rows=&quot;10&quot;&amp;gt;&amp;lt;/textarea&amp;gt;
-      &amp;lt;/li&amp;gt;
-      &amp;lt;li&amp;gt;
-        &amp;lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&amp;gt;
-      &amp;lt;/li&amp;gt;
-    &amp;lt;/ul&amp;gt;
-  &amp;lt;/form&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-
-&amp;lt;script&amp;gt;
-
-(function() {
-  
-$(&#39;html&#39;).addClass(&#39;js&#39;);
-
-var contactForm = {
-
-  container: $(&#39;#contact&#39;),
-
-  config: {
-    effect: &#39;slideToggle&#39;,
-    speed: 500
-  },
-
-  init: function(config) {
-    $.extend(this.config, config);
-
-    $(&#39;&amp;lt;button&amp;gt;&amp;lt;/button&amp;gt;&#39;, {
-      text: &#39;Contact Me&#39;
-    })
-      .insertAfter( &#39;article:first&#39; )
-      .on( &#39;click&#39;, this.show );
-  },
-
-  show: function() {
-    var cf = contactForm,
-      container = cf.container,
-      config = cf.config;
-
-    if ( container.is(&#39;:hidden&#39;) ) {
-      contactForm.close.call(container);
-      // container[config.effect](config.speed);
-      container.fadeToggle();
-    }
-  },
-
-  close: function() {
-    var $this = $(this), // #contact
-      config = contactForm.config;
-
-    if ( $this.find(&#39;span.close&#39;).length ) return;
-
-    $(&#39;&amp;lt;span class=close&amp;gt;X&amp;lt;/span&amp;gt;&#39;)
-      .prependTo(this)
-      .on(&#39;click&#39;, function() {
-        // this = span
-        $this[config.effect](config.speed);
-      })
-  }
-};
-
-contactForm.init({
-  // effect: &#39;fadeToggle&#39;,
-  speed: 300
-});
-
-})();
-
-&amp;lt;/script&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;the-this-keyword&quot;&gt;3.2 The &lt;code&gt;this&lt;/code&gt; Keyword&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;The this Keyword&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-  &amp;lt;a href=&quot;http://tutsplus.com&quot;&amp;gt;Click Me&amp;lt;/a&amp;gt;
-
-
-  &amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-  &amp;lt;script&amp;gt;
-    var obj = {
-      doIt: function(e) {
-        console.log(this);
-        e.preventDefault();
-      }
-    }
-
-    $(&#39;a&#39;).on( &#39;click&#39;, $.proxy(obj.doIt, obj) )
-
-
-    // $(&#39;a&#39;).on(&#39;click&#39;, function(e) {
-    //  // this = anchor that was clicked
-    //  obj.doIt.call(this);
-
-    //  e.preventDefault();
-    // });
-
-  &amp;lt;/script&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;modifying-effect-speeds-and-utilizing-jqueryextend&quot;&gt;3.3 Modifying Effect Speeds (and utilizing jQuery.extend)&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;Custom Effect Methods&amp;lt;/title&amp;gt;
-  &amp;lt;style&amp;gt;
-  p { margin-top: 0;}
-  &amp;lt;/style&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-
-&amp;lt;h1&amp;gt;Reveal&amp;lt;/h1&amp;gt;
-&amp;lt;div class=content&amp;gt;
-  &amp;lt;p&amp;gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  &amp;lt;/p&amp;gt;
-  &amp;lt;p&amp;gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  &amp;lt;/p&amp;gt;  
-&amp;lt;/div&amp;gt;
-
-
-
-&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-&amp;lt;script&amp;gt;
-
-$(&#39;div.content&#39;).hide();
-
-// $.fx.speeds._default = 2000;
-$.fx.speeds.tortoise = 5000;
-
-$(&#39;h1&#39;).on(&#39;click&#39;, function() {
-  $(this).next().slideDown(&#39;fast&#39;);
-})
-
-$.fn.flashFlash = function() {
-  $(this).slideDown(500, function() {
-    $(this).delay(1000).slideUp(500);
-  })
-}
-
-$(&#39;div&#39;).flashFlash();
-
-
-&amp;lt;/script&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;creating-custom-effect-methods&quot;&gt;3.4 Creating Custom Effect Methods&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;Custom Effect Methods&amp;lt;/title&amp;gt;
-  &amp;lt;style&amp;gt;
-  p { margin-top: 0;}
-  &amp;lt;/style&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;h1&amp;gt;Click Me&amp;lt;/h1&amp;gt;
-
-&amp;lt;div class=content&amp;gt;
-  &amp;lt;p&amp;gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  &amp;lt;/p&amp;gt;
-  &amp;lt;p&amp;gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  &amp;lt;/p&amp;gt;  
-&amp;lt;/div&amp;gt;
-
-
-
-&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-&amp;lt;script&amp;gt;
-
-(function() {
-  var content = $(&#39;div.content&#39;).hide();
-
-  jQuery.fn.flash = function( speed, easing, callback ) {
-    var $this = $(this);
-
-    return $this.slideDown(500, function() {
-      $this.delay(2000).slideUp(500);
-    });
-  };
-
-  $(&#39;h1&#39;).on(&#39;click&#39;, function() {
-    content.flash();
-  }); 
-})();
-
-
-
-&amp;lt;/script&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;full-control-with-animate&quot;&gt;3.5 Full Control With Animate&lt;/h3&gt;
-&lt;p&gt;No code for this one.&lt;/p&gt;
-
-&lt;h3 id=&quot;homework-solutions&quot;&gt;3.6 Homework Solutions&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;Animate&amp;lt;/title&amp;gt;
-  &amp;lt;style&amp;gt;
-  body { width: 400px; margin: 100px auto; }
-
-  .box {
-    width: 400px;
-    background: red;
-    position: relative;
-    overflow: hidden;
-    padding: 1em;
-  }
-  &amp;lt;/style&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-
-&amp;lt;div class=&quot;box&quot;&amp;gt;
-  &amp;lt;h2&amp;gt;Hi There&amp;lt;/h2&amp;gt;
-  &amp;lt;p&amp;gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  &amp;lt;/p&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;p&amp;gt;&amp;lt;button&amp;gt;FadeSlideToggle&amp;lt;/button&amp;gt;&amp;lt;/p&amp;gt;
-
-
-&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-&amp;lt;script&amp;gt;
-
-(function() {
-  var box = $(&#39;div.box&#39;);
-
-  $.fn.FadeSlideToggle = function(speed, fn) {
-    // fadeToggle = opacity
-    // slideToggle = height
-    return $(this).animate({
-      &#39;height&#39;: &#39;toggle&#39;,
-      &#39;opacity&#39;: &#39;toggle&#39;
-    }, speed || 400, function() {
-      $.isFunction(fn) &amp;amp;&amp;amp; fn.call(this);
-    });
-  };
-
-  $(&#39;button&#39;).on(&#39;click&#39;, function() {
-    box.FadeSlideToggle(500);
-  }); 
-
-})();
-
-&amp;lt;/script&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;the-obligatory-slider-first-attempt&quot;&gt;3.7 The Obligatory Slider (First Attempt)&lt;/h3&gt;
-
-&lt;p&gt;index.html&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;The Obligatory Slider&amp;lt;/title&amp;gt;
-  &amp;lt;style&amp;gt;
-  body {
-    width: 600px;
-    margin: 100px auto 0;
-  }
-  * { margin: 0; padding: 0; }
-  &amp;lt;/style&amp;gt;
-  &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;slider.css&quot;&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;div class=&quot;slider&quot;&amp;gt;
-  &amp;lt;ul&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img1.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img2.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img3.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img4.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img1.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img2.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img3.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img4.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
-  &amp;lt;/ul&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;div id=&quot;slider-nav&quot;&amp;gt;
-  &amp;lt;button data-dir=&quot;prev&quot;&amp;gt;Previous&amp;lt;/button&amp;gt;
-  &amp;lt;button data-dir=&quot;next&quot;&amp;gt;Next&amp;lt;/button&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script src=&quot;slider.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;slider.css&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#slider-nav { 
-  display: none; 
-  margin-top: 1em;
-}
-
-#slider-nav button {
-  padding: 1em;
-  margin-right: 1em;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.slider {
-  width: inherit;
-  height: 300px;
-  overflow: scroll;
-}
-
-.slider ul {
-  width: 10000px;
-  list-style: none;
-}
-
-.slider li {
-  float: left;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;slider.js&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;// the procedural method
-(function($) {
-  var sliderUL = $(&#39;div.slider&#39;).css(&#39;overflow&#39;, &#39;hidden&#39;).children(&#39;ul&#39;),
-    imgs = sliderUL.find(&#39;img&#39;),
-    imgWidth = imgs[0].width, // 600
-    imgsLen = imgs.length, // 4
-    current = 1,
-    totalImgsWidth = imgsLen * imgWidth; // 2400
-
-  $(&#39;#slider-nav&#39;).show().find(&#39;button&#39;).on(&#39;click&#39;, function() {
-    var direction = $(this).data(&#39;dir&#39;),
-      loc = imgWidth; // 600
-
-    // update current value
-    ( direction === &#39;next&#39; ) ? ++current : --current;
-
-    // if first image
-    if ( current === 0 ) {
-      current = imgsLen;
-      loc = totalImgsWidth - imgWidth; // 2400 - 600 = 1800
-      direction = &#39;next&#39;;
-    } else if ( current - 1 === imgsLen ) { // Are we at end? Should we reset?
-      current = 1;
-      loc = 0;
-    }
-
-    transition(sliderUL, loc, direction);
-  });
-
-  function transition( container, loc, direction ) {
-    var unit; // -= +=
-
-    if ( direction &amp;amp;&amp;amp; loc !== 0 ) {
-      unit = ( direction === &#39;next&#39; ) ? &#39;-=&#39; : &#39;+=&#39;;
-    }
-
-    container.animate({
-      &#39;margin-left&#39;: unit ? (unit + loc) : loc
-    });
-  }
-
-})(jQuery);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;prototypal-inheritance-and-refactoring-the-slider&quot;&gt;3.8 Prototypal Inheritance and Refactoring the Slider&lt;/h3&gt;
-
-&lt;p&gt;index.html&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;The Obligatory Slider&amp;lt;/title&amp;gt;
-  &amp;lt;style&amp;gt;
-  body {
-    width: 600px;
-    margin: 100px auto 0;
-  }
-  * { margin: 0; padding: 0; }
-  &amp;lt;/style&amp;gt;
-  &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;slider.css&quot;&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;div class=&quot;slider&quot;&amp;gt;
-  &amp;lt;ul&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img1.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img2.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img3.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;img src=&quot;img/img4.gif&quot; alt=&quot;image&quot;&amp;gt;&amp;lt;/li&amp;gt;
-  &amp;lt;/ul&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;div id=&quot;slider-nav&quot;&amp;gt;
-  &amp;lt;button data-dir=&quot;prev&quot;&amp;gt;Previous&amp;lt;/button&amp;gt;
-  &amp;lt;button data-dir=&quot;next&quot;&amp;gt;Next&amp;lt;/button&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-&amp;lt;script src=&quot;slider.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script&amp;gt;
-
-(function() {
-  var container = $(&#39;div.slider&#39;).css(&#39;overflow&#39;, &#39;hidden&#39;).children(&#39;ul&#39;),
-    slider = new Slider( container, $(&#39;#slider-nav&#39;) );
-
-  slider.nav.find(&#39;button&#39;).on(&#39;click&#39;, function() {
-    slider.setCurrent( $(this).data(&#39;dir&#39;) );
-    slider.transition();
-  });   
-})();
-
-
-
-&amp;lt;/script&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-
-
-
-#slider-nav { 
-  display: none; 
-  margin-top: 1em;
-}
-
-#slider-nav button {
-  padding: 1em;
-  margin-right: 1em;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.slider {
-  width: inherit;
-  height: 300px;
-  overflow: scroll;
-}
-
-.slider ul {
-  width: 10000px;
-  list-style: none;
-}
-
-.slider li {
-  float: left;
-}
-
-
-
-function Slider( container, nav ) {
-  this.container = container;
-  this.nav = nav.show();
-
-  this.imgs = this.container.find(&#39;img&#39;);
-  this.imgWidth = this.imgs[0].width; // 600
-  this.imgsLen = this.imgs.length;
-
-  this.current = 0;
-}
-
-Slider.prototype.transition = function( coords ) {
-  this.container.animate({
-    &#39;margin-left&#39;: coords || -( this.current * this.imgWidth )
-  });
-};
-
-Slider.prototype.setCurrent = function( dir ) {
-  var pos = this.current;
-
-  pos += ( ~~( dir === &#39;next&#39; ) || -1 );
-  this.current = ( pos &amp;lt; 0 ) ? this.imgsLen - 1 : pos % this.imgsLen;
-
-  return pos;
-};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;your-questions-answered&quot;&gt;3.9 Your Questions Answered&lt;/h3&gt;
-&lt;p&gt;No code for this one.
-—&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 06 Oct 2014 07:43:58 -0700</pubDate>
-        <link>www.anton23.com/craft/2014/10/06/jquery-effects/</link>
-        <guid isPermaLink="true">www.anton23.com/craft/2014/10/06/jquery-effects/</guid>
         
         
         <category>craft</category>

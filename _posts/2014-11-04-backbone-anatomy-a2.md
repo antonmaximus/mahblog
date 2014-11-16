@@ -283,9 +283,9 @@ Routers map URLs to actions
 
 ### Triggering Routes
 
-  router.navigate("todos/1", {
-    trigger: true
-  });
+    router.navigate("todos/1", {
+      trigger: true
+    });
 
 Backbone History
 

@@ -999,11 +999,97 @@ boostrapping the HTML data which will be called on <code>append</code> anyways�
 
 <h2 id="customizing-backbone">7. Customizing Backbone</h2>
 
-<p>Using Other Templates</p>
+<h3 id="using-other-templates">Using Other Templates</h3>
+
+<p>￼Underscore template:</p>
+
+<pre><code>_.template("&lt;span&gt;&lt;%= description %&gt;&lt;/span" +
+  "&lt;em&gt;&lt;%= assigned_to %&gt;&lt;/em&gt;")
+</code></pre>
+
+<p>: </p>
+
+<pre><code>Mustache.compile("&lt;span&gt;&lt;/span" +
+  "&lt;em&gt;&lt;/em&gt;")
+</code></pre>
+
+<p>NOTE: Mustache doesn’t allow arbitrary js, but Underscore does.  Underscore could be strange
+and verbose, and Mustache is cleaner.</p>
+
+<h3 id="default-restful-persistence-strategy">Default RESTful Persistence Strategy</h3>
+
+<p>var todoItem = new TodoItem({id: 1}) </p>
+
+<p>C.R.U.D.: 
+    ￼￼￼
+    // Read￼
+    todoItem.fetch(); // ==&gt; GET /todos/1</p>
+
+<pre><code>// Update
+todoItem.save(): // ==&gt; PUT /todos/1
+
+// Delete
+todoItem.delete(); // ==&gt; DELETE /todos/1
+
+// Create
+(new TodoItem({description: "Pickup Kids"})).save(); // ==&gt; POST /todos
+</code></pre>
+
+<h3 id="make-read-only-model">Make Read-only Model</h3>
+
+<p>Override the sync function.  <code>method</code> below is either ‘create’, ‘read’, ‘update’,
+or ‘delete’.</p>
+
+<pre><code>var TodoItem = Backbone.Model.extend({
+  sync: function(method, model, options){
+    if (method === "read"){
+      Backbone.sync(method, model, options);
+    }else{
+      console.error("You can not " + method + " the TodoItem model");
+    }
+  }
+});
+</code></pre>
+
+<!-- tsk -->
+<pre><code>todoItem.fetch(); // This works
+</code></pre>
+
+<!-- tsk -->
+<pre><code>todoItem.save();  // ==&gt; "You can not update the TodoItem model"
+</code></pre>
+
+<h3 id="completely-replace-persistence-strategy">Completely Replace Persistence Strategy</h3>
 
 <p>￼
-    _.template(“<span>&lt;%= description %&gt;&lt;/span” +
-      “<em>&lt;%= assigned_to %&gt;</em>”)</span></p>
+var TodoItem = Backbone.Model.extend({
+  sync: function(method, model, options){
+    options || (options = {});</p>
+
+<pre><code>switch(method){
+  case 'create':
+    var key = "TodoItem-" + model.id;
+    localStorage.setItem(key, JSON.stringify(model));
+  break;
+
+  case 'read':
+    var key = "TodoItem-" + model.id;
+    var result = localStorage.getItem(key);
+    if (result){
+      result = JSON.parse(result);
+      options.success &amp;&amp; options.success(result);
+    }else if (options.error){
+      options.error("Couldn't find TodoItem id=" + model.id);
+    } 
+  break;
+
+
+  case 'update':
+  break;
+
+  case 'delete':
+  break; } } });
+</code></pre>
 
 <hr />
 

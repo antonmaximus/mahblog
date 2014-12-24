@@ -84,5 +84,8 @@ and the like.  Just keep in mind that (especially for a young person) the more t
 ### 6. Save for retirement in a taxable account
 If there's still lump sump after covering all the bases, open a taxable brokerage account and invest according to your retirement asset allocation. You'll want to have a decent grasp on [asset allocation in multiple accounts](http://www.bogleheads.org/wiki/Asset_allocation_in_multiple_accounts) and [tax-efficient fund placement.](http://www.bogleheads.org/wiki/Principles_of_tax-efficient_fund_placement)
 
+## December Note...
+*"Not All Income are Taxed the same."*  This is what I learned after watching [Boglehead's Investment Philosophy](http://www.bogleheads.org/wiki/Video:Bogleheads%C2%AE_investment_philosophy) where the basic building blocks of investing is discussed.
+
 
 ---

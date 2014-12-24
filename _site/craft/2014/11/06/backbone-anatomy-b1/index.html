@@ -1061,38 +1061,39 @@ or ‘delete’.</p>
 
 <h3 id="completely-replace-persistence-strategy">Completely Replace Persistence Strategy</h3>
 
-<p>￼
+<pre><code>￼
 var TodoItem = Backbone.Model.extend({
   sync: function(method, model, options){
-    options || (options = {});</p>
+    options || (options = {});
 
-<pre><code>switch(method){
-  case 'create':
-    var key = "TodoItem-" + model.id;
-    localStorage.setItem(key, JSON.stringify(model));
-  break;
+    switch(method){
+      case 'create':
+        var key = "TodoItem-" + model.id;
+        localStorage.setItem(key, JSON.stringify(model));
+      break;
 
-  case 'read':
-    var key = "TodoItem-" + model.id;
-    var result = localStorage.getItem(key);
-    if (result){
-      result = JSON.parse(result);
-      options.success &amp;&amp; options.success(result);
-    }else if (options.error){
-      options.error("Couldn't find TodoItem id=" + model.id);
-    } 
-  break;
+      case 'read':
+        var key = "TodoItem-" + model.id;
+        var result = localStorage.getItem(key);
+        if (result){
+          result = JSON.parse(result);
+          options.success &amp;&amp; options.success(result);
+        }else if (options.error){
+          options.error("Couldn't find TodoItem id=" + model.id);
+        } 
+      break;
 
 
-  case 'update':
-  break;
+      case 'update':
+      break;
 
-  case 'delete':
-  break; } } });
+      case 'delete':
+      break;
+} }
+});
 </code></pre>
 
 <hr />
-
 
   </article>
 

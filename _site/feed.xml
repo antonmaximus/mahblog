@@ -5,8 +5,8 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 29 Nov 2014 21:32:41 -0800</pubDate>
-    <lastBuildDate>Sat, 29 Nov 2014 21:32:41 -0800</lastBuildDate>
+    <pubDate>Tue, 23 Dec 2014 21:46:39 -0800</pubDate>
+    <lastBuildDate>Tue, 23 Dec 2014 21:46:39 -0800</lastBuildDate>
     <generator>Jekyll v2.5.1</generator>
     
       <item>
@@ -1101,38 +1101,39 @@ or ‘delete’.&lt;/p&gt;
 
 &lt;h3 id=&quot;completely-replace-persistence-strategy&quot;&gt;Completely Replace Persistence Strategy&lt;/h3&gt;
 
-&lt;p&gt;￼
+&lt;pre&gt;&lt;code&gt;￼
 var TodoItem = Backbone.Model.extend({
   sync: function(method, model, options){
-    options || (options = {});&lt;/p&gt;
+    options || (options = {});
 
-&lt;pre&gt;&lt;code&gt;switch(method){
-  case &#39;create&#39;:
-    var key = &quot;TodoItem-&quot; + model.id;
-    localStorage.setItem(key, JSON.stringify(model));
-  break;
+    switch(method){
+      case &#39;create&#39;:
+        var key = &quot;TodoItem-&quot; + model.id;
+        localStorage.setItem(key, JSON.stringify(model));
+      break;
 
-  case &#39;read&#39;:
-    var key = &quot;TodoItem-&quot; + model.id;
-    var result = localStorage.getItem(key);
-    if (result){
-      result = JSON.parse(result);
-      options.success &amp;amp;&amp;amp; options.success(result);
-    }else if (options.error){
-      options.error(&quot;Couldn&#39;t find TodoItem id=&quot; + model.id);
-    } 
-  break;
+      case &#39;read&#39;:
+        var key = &quot;TodoItem-&quot; + model.id;
+        var result = localStorage.getItem(key);
+        if (result){
+          result = JSON.parse(result);
+          options.success &amp;amp;&amp;amp; options.success(result);
+        }else if (options.error){
+          options.error(&quot;Couldn&#39;t find TodoItem id=&quot; + model.id);
+        } 
+      break;
 
 
-  case &#39;update&#39;:
-  break;
+      case &#39;update&#39;:
+      break;
 
-  case &#39;delete&#39;:
-  break; } } });
+      case &#39;delete&#39;:
+      break;
+} }
+});
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;
-
 </description>
         <pubDate>Thu, 06 Nov 2014 06:00:00 -0800</pubDate>
         <link>www.anton23.com/craft/2014/11/06/backbone-anatomy-b1/</link>
@@ -1509,11 +1510,10 @@ var TodoApp = new TodoRouter({todoList: todoList});
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;
-
 </description>
-        <pubDate>Tue, 04 Nov 2014 06:00:01 -0800</pubDate>
-        <link>www.anton23.com/craft/2014/11/04/backbone-anatomy-a2/</link>
-        <guid isPermaLink="true">www.anton23.com/craft/2014/11/04/backbone-anatomy-a2/</guid>
+        <pubDate>Wed, 05 Nov 2014 06:00:01 -0800</pubDate>
+        <link>www.anton23.com/craft/2014/11/05/backbone-anatomy-a2/</link>
+        <guid isPermaLink="true">www.anton23.com/craft/2014/11/05/backbone-anatomy-a2/</guid>
         
         
         <category>craft</category>
@@ -1526,11 +1526,10 @@ var TodoApp = new TodoRouter({todoList: todoList});
 
 &lt;p&gt;Generating a model class and a model instance:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var TodoItem = Backbone.Model.extend({});￼
-var todoItem = new TodoItem(
-  { description: &#39;Pick up milk&#39;, status: &#39;incomplete&#39;, id: 1 }
-);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;var TodoItem = Backbone.Model.extend({});￼
+  var todoItem = new TodoItem(
+    { description: ‘Pick up milk’, status: ‘incomplete’, id: 1 }
+  );&lt;/p&gt;
 
 &lt;p&gt;To get, set, and save an attribute&lt;/p&gt;
 

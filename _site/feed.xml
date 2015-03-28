@@ -5,9 +5,34 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/mahblog/</link>
     <atom:link href="www.anton23.com/mahblog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 28 Mar 2015 14:30:46 -0700</pubDate>
-    <lastBuildDate>Sat, 28 Mar 2015 14:30:46 -0700</lastBuildDate>
+    <pubDate>Sat, 28 Mar 2015 15:37:00 -0700</pubDate>
+    <lastBuildDate>Sat, 28 Mar 2015 15:37:00 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>December Deadz</title>
+        <description>&lt;p&gt;I originally planned to write this in December… but alas, laziness and procrastination got in the  and now it’s March.  Nonetheless, better late than never. &lt;/p&gt;
+
+&lt;p&gt;As of early December, I’m pulling 305 lbs in 6 reps (for my first set).  To keep thing simple, I’ll keep track of the first set only throughout my progression. Keep in mind that this usually done after a good set of squats.  In the video below, I’m highly certain that I did it after squats.  I’ll explicitly make a note for it next time.&lt;/p&gt;
+
+&lt;p&gt;For next December (the one in 2015), I’d like to hit 4 plates for 1 – this is about 405 lbs total.  Though, this might sound too ambitious, I think I might be able to come close.  I’m basing this judgment from the graph of my previous numbers (which have been converted to 1 rep max).  Peace.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/eAAPnBF.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;figure&gt;&lt;iframe width=&quot;360&quot; height=&quot;480&quot; allowfullscreen=&quot;&quot; class=&quot;youtube-player&quot; src=&quot;//www.youtube.com/embed/VdZn_FRxY7k?wmode=transparent&amp;amp;amp;autoplay=0&amp;amp;amp;rel=0&amp;amp;amp;showinfo=0&amp;amp;amp;autohide=1&amp;amp;amp;color=white&amp;amp;amp;&quot; type=&quot;text/html&quot;&gt;&lt;/iframe&gt;
+  &lt;figcaption&gt;2014 December Deadz (305x6)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Sat, 28 Mar 2015 07:00:00 -0700</pubDate>
+        <link>www.anton23.com/mahblog/exercise/2015/03/28/december-deadz/</link>
+        <guid isPermaLink="true">www.anton23.com/mahblog/exercise/2015/03/28/december-deadz/</guid>
+        
+        
+        <category>exercise</category>
+        
+      </item>
     
       <item>
         <title>Investing... Here we go again.</title>
@@ -2146,238 +2171,6 @@ if ( typeof Object.create !== &#39;function&#39; ) {
         <pubDate>Fri, 10 Oct 2014 07:44:58 -0700</pubDate>
         <link>www.anton23.com/mahblog/craft/2014/10/10/jquery-plugin-development/</link>
         <guid isPermaLink="true">www.anton23.com/mahblog/craft/2014/10/10/jquery-plugin-development/</guid>
-        
-        
-        <category>craft</category>
-        
-      </item>
-    
-      <item>
-        <title>jQuery AJAX</title>
-        <description>&lt;h3 id=&quot;loading-pages-asynchronously&quot;&gt;6.1 Loading Pages Asynchronously&lt;/h3&gt;
-&lt;p&gt;index.html&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;AJAX: load&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;nav&amp;gt;
-  &amp;lt;ul&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;about.html&quot;&amp;gt;About&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;contact.html&quot;&amp;gt;Contact&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-  &amp;lt;/ul&amp;gt;
-&amp;lt;/nav&amp;gt;
-
-&amp;lt;div class=&quot;wrap&quot;&amp;gt;&amp;lt;/div&amp;gt;
-
-&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-
-&amp;lt;script&amp;gt;
-
-(function() {
-  var wrap = $(&#39;div.wrap&#39;);
-
-  $(&#39;a&#39;).on(&#39;click&#39;, function( e ) {
-    var href = $(this).attr(&#39;href&#39;);
-
-    wrap.load( href + &#39; .container&#39; );
-
-    e.preventDefault();
-  }); 
-})();
-
-&amp;lt;/script&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;about.html&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;AJAX: load&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-
-&amp;lt;div class=&quot;container&quot;&amp;gt;
-  &amp;lt;h2&amp;gt;About Me&amp;lt;/h2&amp;gt;
-  &amp;lt;p&amp;gt;I work for Envato!&amp;lt;/p&amp;gt;
-&amp;lt;/div&amp;gt;
-
-
-
-&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;contact.html&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;AJAX: load&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-
-&amp;lt;div class=&quot;container&quot;&amp;gt;
-  &amp;lt;h2&amp;gt;Contact Me&amp;lt;/h2&amp;gt;
-  &amp;lt;p&amp;gt;Represent contact form.&amp;lt;/p&amp;gt;
-&amp;lt;/div&amp;gt;
-
-
-
-&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;interacting-with-the-server-side&quot;&gt;6.2 Interacting with the Server-Side&lt;/h3&gt;
-&lt;p&gt;index.html&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;AJAX: POST&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;h1&amp;gt;Something to Save&amp;lt;/h1&amp;gt;
-&amp;lt;form action=&quot;#&quot;&amp;gt;
-  &amp;lt;textarea name=&quot;content&quot; id=&quot;content&quot; cols=&quot;30&quot; rows=&quot;10&quot;&amp;gt;&amp;lt;/textarea&amp;gt;
-  &amp;lt;p&amp;gt;&amp;lt;button type=&quot;submit&quot;&amp;gt;Save&amp;lt;/button&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;/form&amp;gt;
-
-&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-&amp;lt;script&amp;gt;
-
-  $.post( &#39;load.php&#39;, function(data) {
-    if ( data ) {
-      $(&#39;#content&#39;).val( data );
-    }
-  });
-
-
-  // listen for click
-  $(&#39;form&#39;).on(&#39;submit&#39;, function(e) {
-    $.post( &#39;save.php&#39;, $(this).serialize(), function(response) {
-      alert( response );
-    });
-    // disable default action
-    e.preventDefault();
-  });
-
-  
-
-  // grab textarea content
-
-  // post content to script, and save
-&amp;lt;/script&amp;gt;
-  
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;save.php&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;?php
-
-$f = fopen(&#39;data.txt&#39;, &#39;w&#39;);
-fwrite( $f, $_POST[&#39;content&#39;]);
-fclose($f);
-
-echo &#39;Comment has been saved&#39;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;load.php&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;?php
-
-$data = file( &#39;data.txt&#39;);
-echo stripslashes( $data[0] );
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;section&quot;&gt;6.3&lt;/h3&gt;
-&lt;p&gt;index.html&lt;/p&gt;
-
-&lt;h3 id=&quot;deferreds&quot;&gt;6.5 Deferreds&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=utf-8&amp;gt;
-  &amp;lt;title&amp;gt;jQuery Deferreds&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-
-&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-
-&amp;lt;script&amp;gt;
-
-function getTweets( search ) {
-  return $.ajax({
-    url: &#39;http://search.twitter.com/search.json&#39;,
-    data: { q: search },
-    dataType: &#39;jsonp&#39;
-  });
-}
-
-
-$.when( getTweets(&#39;dogs&#39;), getTweets(&#39;cats&#39;) ).done(function(results1, results2) {
-  console.log(results1);
-  console.log(results2);
-});
-
-  
-// $.searchTwitter = function( search ) {
-//  return $.ajax({
-//    url: &#39;http://search.twitter.com/search.json&#39;,
-//    data: { q: search },
-//    dataType: &#39;jsonp&#39;
-//  }).promise();
-// };
-
-// var outer = $.searchTwitter(&#39;cats&#39;);
-
-// outer.then(function  ( results ) {
-//  console.log(results);
-// });
-
-// // ...
-
-// outer.then(function(results) {
-//  console.log(results);
-// });
-
-
-
-&amp;lt;/script&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-</description>
-        <pubDate>Thu, 09 Oct 2014 07:44:58 -0700</pubDate>
-        <link>www.anton23.com/mahblog/craft/2014/10/09/jquery-ajax/</link>
-        <guid isPermaLink="true">www.anton23.com/mahblog/craft/2014/10/09/jquery-ajax/</guid>
         
         
         <category>craft</category>

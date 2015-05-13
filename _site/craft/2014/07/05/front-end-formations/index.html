@@ -62,87 +62,62 @@
   </header>
 
   <article class="post-content">
-  <h3 id="new-html5-elements">New HTML5 elements…</h3>
+  <h3>New HTML5 elements...</h3>
 
-<p><code>&lt;section&gt;</code> – Acts like a ‘div’.  However, a ‘div’ has no semantic meaning, 
-but the ‘section’ element does.  It’s used for grouping together thematically 
+<p><code>&lt;section&gt;</code> -- Acts like a &#39;div&#39;.  However, a &#39;div&#39; has no semantic meaning, 
+but the &#39;section&#39; element does.  It&#39;s used for grouping together thematically 
 related content and for showing document outline.  As Jeremey Keith 
-mentioned, <em>“ask yourself: is all of the content related?”</em></p>
+mentioned, <em>&quot;ask yourself: is all of the content related?&quot;</em></p>
 
-<p><code>&lt;header&gt;</code> – A group of introductory content or navigational aids or both.<br />
+<p><code>&lt;header&gt;</code> -- A group of introductory content or navigational aids or both.<br>
 It should describe the content it is contained within.</p>
 
-<p><code>&lt;footer&gt;</code> – Similar to ‘header’.</p>
+<p><code>&lt;footer&gt;</code> -- Similar to &#39;header&#39;.</p>
 
-<p><code>&lt;aside&gt;</code> – Tangentially related to the content surrounding it (i.e., it is 
-indirectly related to the content).  However, it’s been utilized as a 
+<p><code>&lt;aside&gt;</code> -- Tangentially related to the content surrounding it (i.e., it is 
+indirectly related to the content).  However, it&#39;s been utilized as a 
 sidebar for sites too.</p>
 
-<p><code>&lt;nav&gt;</code> – Intended for major navigation.</p>
+<p><code>&lt;nav&gt;</code> -- Intended for major navigation.</p>
 
-<p><code>&lt;article&gt;</code> – It represents a self-contained composition that is independently
-distributable.  It’s similar to a ‘section’, but the question to ask is: <em>would 
+<p><code>&lt;article&gt;</code> -- It represents a self-contained composition that is independently
+distributable.  It&#39;s similar to a &#39;section&#39;, but the question to ask is: <em>would 
 you syndicate this in an RSS feed?</em></p>
 
-<p><code>&lt;main&gt;</code> – It consists of content that is directly to or expands upon the 
+<p><code>&lt;main&gt;</code> -- It consists of content that is directly to or expands upon the 
 central topic of the document.  Two pracitices: 1. Do not include more than one 
-‘main’ in a document, and 2. Do not make it a child of ‘article’, ‘aside’, 
-‘footer’, ‘header’, or ‘nav’.</p>
+&#39;main&#39; in a document, and 2. Do not make it a child of &#39;article&#39;, &#39;aside&#39;, 
+&#39;footer&#39;, &#39;header&#39;, or &#39;nav&#39;.</p>
 
-<p><code>&lt;figure&gt;</code> &amp; <code>&lt;figcaption&gt;</code> – A ‘figure’ element is self-contained and that
+<p><code>&lt;figure&gt;</code> &amp; <code>&lt;figcaption&gt;</code> -- A &#39;figure&#39; element is self-contained and that
 can be moved away from the main flow of the document without affecting the 
-document’s meaning.  A ‘figcaption’ is used as supplemental information for the 
-‘figure’.</p>
+document&#39;s meaning.  A &#39;figcaption&#39; is used as supplemental information for the 
+&#39;figure&#39;.</p>
 
-<p><code>&lt;time&gt;</code> – It’s used for time representation. duh.</p>
+<p><code>&lt;time&gt;</code> -- It&#39;s used for time representation. duh.</p>
 
-<h3 id="new-html5-input-types">New HTML5 input types…</h3>
+<h3>New HTML5 input types...</h3>
 
 <p>Using the correct type provides users added usability on mobile browsers.</p>
 
 <ul>
-  <li>
-    <p>Search – This also adds an extra UI benefit of a clear icon.</p>
-  </li>
-  <li>
-    <p>Email</p>
-  </li>
-  <li>
-    <p>URL</p>
-  </li>
-  <li>
-    <p>Tel</p>
-  </li>
-  <li>
-    <p>Number</p>
-  </li>
-  <li>
-    <p>Range – provides a slider input.</p>
-  </li>
-  <li>
-    <p>Date – provides a date picker.</p>
-  </li>
-  <li>
-    <p>Month</p>
-  </li>
-  <li>
-    <p>Week</p>
-  </li>
-  <li>
-    <p>Time</p>
-  </li>
-  <li>
-    <p>Datetime</p>
-  </li>
-  <li>
-    <p>Datetime-local – just like Datetime but with no time zone associated with it.</p>
-  </li>
-  <li>
-    <p>Color – provides color picker.</p>
-  </li>
+<li><p>Search -- This also adds an extra UI benefit of a clear icon.</p></li>
+<li><p>Email</p></li>
+<li><p>URL</p></li>
+<li><p>Tel</p></li>
+<li><p>Number</p></li>
+<li><p>Range -- provides a slider input.</p></li>
+<li><p>Date -- provides a date picker.</p></li>
+<li><p>Month</p></li>
+<li><p>Week</p></li>
+<li><p>Time</p></li>
+<li><p>Datetime</p></li>
+<li><p>Datetime-local -- just like Datetime but with no time zone associated with it.</p></li>
+<li><p>Color -- provides color picker.</p></li>
 </ul>
 
-<h3 id="font-face">Font Face</h3>
+<h3>Font Face</h3>
+
 <p>Ability to provide online fonts for use on websites.</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="vi">@font</span><span class="o">-</span><span class="n">face</span> <span class="p">{</span>
@@ -155,7 +130,6 @@ document’s meaning.  A ‘figcaption’ is used as supplemental information fo
 <span class="n">h1</span> <span class="p">{</span>
   <span class="n">font</span><span class="o">-</span><span class="ss">family</span><span class="p">:</span> <span class="s1">&#39;OpenSansRegular&#39;</span><span class="p">,</span> <span class="no">Arial</span><span class="p">,</span> <span class="n">sans</span><span class="o">-</span><span class="n">serif</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
-
 
   </article>
 

@@ -62,9 +62,8 @@
   </header>
 
   <article class="post-content">
-  <h3 id="each-and-templating">4.1 $.each and Templating</h3>
-
-<pre><code>&lt;!doctype html&gt;
+  <h3>4.1 $.each and Templating</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
@@ -77,27 +76,27 @@
   &lt;img src={{thumbnail}} alt={{title}}&gt;
 &lt;/script&gt;
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;script&gt;
 
 (function() {
   var content = [
     {
-      title: 'My awesome blog post',
-      thumbnail: 'http://d2o0t5hpnwv4c1.cloudfront.net/1137_terminal/preview.png',
+      title: &#39;My awesome blog post&#39;,
+      thumbnail: &#39;http://d2o0t5hpnwv4c1.cloudfront.net/1137_terminal/preview.png&#39;,
     },
     {
-      title: 'My second awesome blog post',
-      thumbnail: 'http://d2o0t5hpnwv4c1.cloudfront.net/1133_newrelic/200.jpg',
+      title: &#39;My second awesome blog post&#39;,
+      thumbnail: &#39;http://d2o0t5hpnwv4c1.cloudfront.net/1133_newrelic/200.jpg&#39;,
     },
     {
-      title: 'My third blog post',
-      thumbnail: 'http://d2o0t5hpnwv4c1.cloudfront.net/1137_terminal/preview.png',
+      title: &#39;My third blog post&#39;,
+      thumbnail: &#39;http://d2o0t5hpnwv4c1.cloudfront.net/1137_terminal/preview.png&#39;,
     }
   ],
-    template = $.trim( $('#blogTemplate').html() ),
-    frag = '';
+    template = $.trim( $(&#39;#blogTemplate&#39;).html() ),
+    frag = &#39;&#39;;
 
 
 
@@ -107,18 +106,16 @@
           .replace( /{{thumbnail}}/ig, obj.thumbnail );   
   });
 
-  $('body').append(frag);
+  $(&#39;body&#39;).append(frag);
 
 })();
 
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
-<h3 id="say-hello-to-handlebars">4.2 Say Hello to Handlebars</h3>
-
-<pre><code>&lt;html&gt;
+</code></pre></div>
+<h3>4.2 Say Hello to Handlebars</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;Mustache&lt;/title&gt;
@@ -128,8 +125,8 @@ h2 span { color: gray; font-size: .8em; }
 &lt;/head&gt;
 &lt;body&gt;
 
-&lt;ul class="tweets"&gt;
-  &lt;script id="template" type="text/x-handlebars-template"&gt;
+&lt;ul class=&quot;tweets&quot;&gt;
+  &lt;script id=&quot;template&quot; type=&quot;text/x-handlebars-template&quot;&gt;
     {{#each this}}
     &lt;li&gt;
       &lt;h2&gt;{{fullName author}}&lt;/h2&gt;
@@ -146,31 +143,31 @@ h2 span { color: gray; font-size: .8em; }
 &lt;/ul&gt;
 
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
-&lt;script src="http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js&quot;&gt;&lt;/script&gt;
 
 &lt;script&gt;
 
 (function() {
   var context = [
     {
-      author: { first: 'Jeffrey', last: 'Way', age: 27 },
-      tweet: '30 Days to Learn jQuery Rocks',
-      quote: 'Never ever, ever, ever give up.'
+      author: { first: &#39;Jeffrey&#39;, last: &#39;Way&#39;, age: 27 },
+      tweet: &#39;30 Days to Learn jQuery Rocks&#39;,
+      quote: &#39;Never ever, ever, ever give up.&#39;
     },
     {
-      author: { first: 'John', last: 'Doe', age: 45 },
-      tweet: '&lt;strong&gt;30 Days&lt;/strong&gt; to Learn jQuery Rocks',
+      author: { first: &#39;John&#39;, last: &#39;Doe&#39;, age: 45 },
+      tweet: &#39;&lt;strong&gt;30 Days&lt;/strong&gt; to Learn jQuery Rocks&#39;,
     }
   ],
-    template = Handlebars.compile( $('#template').html() );
+    template = Handlebars.compile( $(&#39;#template&#39;).html() );
 
-  Handlebars.registerHelper('fullName', function( author ) {
-    return author.first + ' ' + author.last + ' - ' + author.age;
+  Handlebars.registerHelper(&#39;fullName&#39;, function( author ) {
+    return author.first + &#39; &#39; + author.last + &#39; - &#39; + author.age;
   });
 
-  $('ul.tweets').append( template(context) );
+  $(&#39;ul.tweets&#39;).append( template(context) );
 
 })();
 
@@ -179,11 +176,9 @@ h2 span { color: gray; font-size: .8em; }
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
-<h3 id="the-twitter-api">4.3 The Twitter API</h3>
-
-<pre><code>&lt;html&gt;
+</code></pre></div>
+<h3>4.3 The Twitter API</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;Twitter&lt;/title&gt;
@@ -197,21 +192,21 @@ h2 span { color: gray; font-size: .8em; }
 &lt;/head&gt;
 &lt;body&gt;
 
-&lt;ul id="biebster-tweets"&gt;
-  &lt;script id="tweets-template" type="text/x-handlebars-template"&gt;
+&lt;ul id=&quot;biebster-tweets&quot;&gt;
+  &lt;script id=&quot;tweets-template&quot; type=&quot;text/x-handlebars-template&quot;&gt;
     {{#each this}}
     &lt;li&gt;
-      &lt;img src="{{thumb}}" alt="{{author}}"&gt;
-      &lt;p&gt;&lt;a href="{{url}}"&gt;{{tweet}}&lt;/a&gt;&lt;/p&gt;
+      &lt;img src=&quot;{{thumb}}&quot; alt=&quot;{{author}}&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;{{url}}&quot;&gt;{{tweet}}&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     {{/each}}
   &lt;/script&gt;   
 &lt;/ul&gt;
 
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
-&lt;script src="http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js&quot;&gt;&lt;/script&gt;
 
 &lt;script&gt;
 
@@ -219,7 +214,7 @@ h2 span { color: gray; font-size: .8em; }
 
   var Twitter = {
     init: function( config ) {
-      this.url = 'http://search.twitter.com/search.json?q=' + config.query + '&amp;callback=?';
+      this.url = &#39;http://search.twitter.com/search.json?q=&#39; + config.query + &#39;&amp;callback=?&#39;;
       this.template = config.template;
       this.container = config.container;
 
@@ -242,7 +237,7 @@ h2 span { color: gray; font-size: .8em; }
             author: tweet.from_user,
             tweet: tweet.text,
             thumb: tweet.profile_image_url,
-            url: 'http://twitter.com/' + tweet.from_user + '/status/' + tweet.id_str
+            url: &#39;http://twitter.com/&#39; + tweet.from_user + &#39;/status/&#39; + tweet.id_str
           };
         });
 
@@ -253,9 +248,9 @@ h2 span { color: gray; font-size: .8em; }
   };
 
   Twitter.init({
-    template: $('#tweets-template').html(),
-    container: $('#biebster-tweets'),
-    query: 'Justin Bieber'
+    template: $(&#39;#tweets-template&#39;).html(),
+    container: $(&#39;#biebster-tweets&#39;),
+    query: &#39;Justin Bieber&#39;
   });
 
 })();
@@ -265,11 +260,9 @@ h2 span { color: gray; font-size: .8em; }
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
-<h3 id="filtering-with-jquerygrep">4.4 Filtering with jQuery.grep</h3>
-
-<pre><code>&lt;html&gt;
+</code></pre></div>
+<h3>4.4 Filtering with jQuery.grep</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;$.grep&lt;/title&gt;
@@ -277,36 +270,36 @@ h2 span { color: gray; font-size: .8em; }
 &lt;body&gt;
 
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;script&gt;
   (function() {
-    
+
     var arr = [
       {
-        first: 'Jeffrey',
-        last: 'Way'
+        first: &#39;Jeffrey&#39;,
+        last: &#39;Way&#39;
       },
       {
-        first: 'Allison',
-        last: 'Way'
+        first: &#39;Allison&#39;,
+        last: &#39;Way&#39;
       },
       {
-        first: 'Jeffrey',
-        last: 'Smith'
+        first: &#39;Jeffrey&#39;,
+        last: &#39;Smith&#39;
       },
       {
-        first: 'John',
-        last: 'Doe'
+        first: &#39;John&#39;,
+        last: &#39;Doe&#39;
       },
       {
-        first: 'Thomas',
-        last: 'Way'
+        first: &#39;Thomas&#39;,
+        last: &#39;Way&#39;
       }
     ];
 
     arr = $.grep( arr, function( obj, index) {
-      return obj.last === 'Way';
+      return obj.last === &#39;Way&#39;;
     });
 
     console.log(arr);
@@ -315,11 +308,11 @@ h2 span { color: gray; font-size: .8em; }
 &lt;/script&gt;
 
 &lt;/body&gt;
-&lt;/html&gt; {% raw %}
-</code></pre>
+&lt;/html&gt;
+</code></pre></div>
+<p>{% raw %}</p>
 
-<hr />
-
+<hr>
 
   </article>
 

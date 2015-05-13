@@ -8,5 +8,7 @@ twitter_username: antonmaximus
 github_username:  antonmaximus
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+redcarpet:
+  extensions: ["strikethrough"]
 permalink: pretty

@@ -62,34 +62,30 @@
   </header>
 
   <article class="post-content">
-  <h2 id="namespacing-basics">Namespacing Basics</h2>
+  <h2>Namespacing Basics</h2>
 
 <ul>
-  <li>The key to creating a namespace is a single global Object, commonly called the “wrapper” for the space.</li>
-  <li>
-    <p>Now that the function and all the necessary variables are “encapsulated” within the namespace, we’ll need to call that namespace in order to access any of them.</p>
+<li>The key to creating a namespace is a single global Object, commonly called the “wrapper” for the space.</li>
+<li><p>Now that the function and all the necessary variables are “encapsulated” within the namespace, we’ll need to call that namespace in order to access any of them.</p>
 
-    <pre><code>var ARMORY = (function( war ){
-  var weaponList = [ *list of weapon Objects* ]; 
-  var armorList = [ *list of armor Objects* ]; 
-  var removeWeapon = function(...){};
-  var replaceWeapon = function(...){};
-  var removeArmor = function(...){};
-  var replaceArmor = function(...){};
-
-    return {
-      makeWeaponRequest: function(...){
-        if(war) //let civilians have weaponry
-       },
-      makeArmorRequest: function(...){}
-    };
-})(wartime);
-</code></pre>
-  </li>
+<p>var ARMORY = (function( war ){
+    var weaponList = [ <em>list of weapon Objects</em> ]; 
+    var armorList = [ <em>list of armor Objects</em> ]; 
+    var removeWeapon = function(...){};
+    var replaceWeapon = function(...){};
+    var removeArmor = function(...){};
+    var replaceArmor = function(...){};</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">  return {
+    makeWeaponRequest: function(...){
+      if(war) //let civilians have weaponry
+     },
+    makeArmorRequest: function(...){}
+  };
+</code></pre></div>
+<p>})(wartime);</p></li>
 </ul>
 
-<hr />
-
+<hr>
 
   </article>
 

@@ -62,10 +62,10 @@
   </header>
 
   <article class="post-content">
-  <h3 id="head-first-into-plugin-development">7.1 Head First Into Plugin Development</h3>
-<p>index.html</p>
+  <h3>7.1 Head First Into Plugin Development</h3>
 
-<pre><code>&lt;!doctype html&gt;
+<p>index.html</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
@@ -74,20 +74,20 @@
 &lt;body&gt;
 
 &lt;h1&gt;My Tweets&lt;/h1&gt;
-&lt;div class="tweets"&gt;&lt;/div&gt;
+&lt;div class=&quot;tweets&quot;&gt;&lt;/div&gt;
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script src="searchTwitter.jquery.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;searchTwitter.jquery.js&quot;&gt;&lt;/script&gt;
 
 &lt;script&gt;
-$('div.tweets').queryTwitter({
-  search: 'your',
+$(&#39;div.tweets&#39;).queryTwitter({
+  search: &#39;your&#39;,
   limit: 10,
   // onComplete: function() {
   //  console.log(arguments);
   // },
   refresh: 4000,
-  transition: 'slideToggle'
+  transition: &#39;slideToggle&#39;
 });
 
 &lt;/script&gt;
@@ -96,12 +96,10 @@ $('div.tweets').queryTwitter({
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
+</code></pre></div>
 <p>searchTwitter.jquery.js</p>
-
-<pre><code>// Utility
-if ( typeof Object.create !== 'function' ) {
+<div class="highlight"><pre><code class="language-text" data-lang="text">// Utility
+if ( typeof Object.create !== &#39;function&#39; ) {
   Object.create = function( obj ) {
     function F() {};
     F.prototype = obj;
@@ -117,9 +115,9 @@ if ( typeof Object.create !== 'function' ) {
       self.elem = elem;
       self.$elem = $( elem );
 
-      self.url = 'http://search.twitter.com/search.json';
+      self.url = &#39;http://search.twitter.com/search.json&#39;;
 
-      self.search = ( typeof options === 'string' )
+      self.search = ( typeof options === &#39;string&#39; )
         ? options
         : options.search;
 
@@ -139,7 +137,7 @@ if ( typeof Object.create !== 'function' ) {
 
           self.display();
 
-          if ( typeof self.options.onComplete === 'function' ) {
+          if ( typeof self.options.onComplete === &#39;function&#39; ) {
             self.options.onComplete.apply( self.elem, arguments );
           }
 
@@ -154,7 +152,7 @@ if ( typeof Object.create !== 'function' ) {
       return $.ajax({
         url: this.url,
         data: { q: this.search },
-        dataType: 'jsonp'
+        dataType: &#39;jsonp&#39;
       });
     },
 
@@ -169,8 +167,8 @@ if ( typeof Object.create !== 'function' ) {
     display: function() {
       var self = this;
 
-      if ( self.options.transition === 'none' || !self.options.transition ) {
-        self.$elem.html( self.tweets ); // that's available??
+      if ( self.options.transition === &#39;none&#39; || !self.options.transition ) {
+        self.$elem.html( self.tweets ); // that&#39;s available??
       } else {
         self.$elem[ self.options.transition ]( 500, function() {
           $(this).html( self.tweets )[ self.options.transition ]( 500 );
@@ -186,27 +184,25 @@ if ( typeof Object.create !== 'function' ) {
   $.fn.queryTwitter = function( options ) {
     return this.each(function() {
       var twitter = Object.create( Twitter );
-      
+
       twitter.init( options, this );
 
-      $.data( this, 'queryTwitter', twitter );
+      $.data( this, &#39;queryTwitter&#39;, twitter );
     });
   };
 
   $.fn.queryTwitter.options = {
-    search: '@tutspremium',
-    wrapEachWith: '&lt;li&gt;&lt;/li&gt;',
+    search: &#39;@tutspremium&#39;,
+    wrapEachWith: &#39;&lt;li&gt;&lt;/li&gt;&#39;,
     limit: 10,
     refresh: null,
     onComplete: null,
-    transition: 'fadeToggle'
+    transition: &#39;fadeToggle&#39;
   };
 
 })( jQuery, window, document );
-</code></pre>
-
-<hr />
-
+</code></pre></div>
+<hr>
 
   </article>
 

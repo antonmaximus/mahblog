@@ -62,10 +62,10 @@
   </header>
 
   <article class="post-content">
-  <h3 id="loading-pages-asynchronously">6.1 Loading Pages Asynchronously</h3>
-<p>index.html</p>
+  <h3>6.1 Loading Pages Asynchronously</h3>
 
-<pre><code>&lt;!doctype html&gt;
+<p>index.html</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
@@ -75,25 +75,25 @@
 
 &lt;nav&gt;
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
 
-&lt;div class="wrap"&gt;&lt;/div&gt;
+&lt;div class=&quot;wrap&quot;&gt;&lt;/div&gt;
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 
 &lt;script&gt;
 
 (function() {
-  var wrap = $('div.wrap');
+  var wrap = $(&#39;div.wrap&#39;);
 
-  $('a').on('click', function( e ) {
-    var href = $(this).attr('href');
+  $(&#39;a&#39;).on(&#39;click&#39;, function( e ) {
+    var href = $(this).attr(&#39;href&#39;);
 
-    wrap.load( href + ' .container' );
+    wrap.load( href + &#39; .container&#39; );
 
     e.preventDefault();
   }); 
@@ -103,11 +103,9 @@
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
+</code></pre></div>
 <p>about.html</p>
-
-<pre><code>&lt;html&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;AJAX: load&lt;/title&gt;
@@ -115,23 +113,21 @@
 &lt;body&gt;
 
 
-&lt;div class="container"&gt;
+&lt;div class=&quot;container&quot;&gt;
   &lt;h2&gt;About Me&lt;/h2&gt;
   &lt;p&gt;I work for Envato!&lt;/p&gt;
 &lt;/div&gt;
 
 
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
+</code></pre></div>
 <p>contact.html</p>
-
-<pre><code>&lt;html&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;AJAX: load&lt;/title&gt;
@@ -139,24 +135,23 @@
 &lt;body&gt;
 
 
-&lt;div class="container"&gt;
+&lt;div class=&quot;container&quot;&gt;
   &lt;h2&gt;Contact Me&lt;/h2&gt;
   &lt;p&gt;Represent contact form.&lt;/p&gt;
 &lt;/div&gt;
 
 
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
+</code></pre></div>
+<h3>6.2 Interacting with the Server-Side</h3>
 
-<h3 id="interacting-with-the-server-side">6.2 Interacting with the Server-Side</h3>
 <p>index.html</p>
-
-<pre><code>&lt;html&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;AJAX: POST&lt;/title&gt;
@@ -164,67 +159,62 @@
 &lt;body&gt;
 
 &lt;h1&gt;Something to Save&lt;/h1&gt;
-&lt;form action="#"&gt;
-  &lt;textarea name="content" id="content" cols="30" rows="10"&gt;&lt;/textarea&gt;
-  &lt;p&gt;&lt;button type="submit"&gt;Save&lt;/button&gt;&lt;/p&gt;
+&lt;form action=&quot;#&quot;&gt;
+  &lt;textarea name=&quot;content&quot; id=&quot;content&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;
+  &lt;p&gt;&lt;button type=&quot;submit&quot;&gt;Save&lt;/button&gt;&lt;/p&gt;
 &lt;/form&gt;
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;script&gt;
 
-  $.post( 'load.php', function(data) {
+  $.post( &#39;load.php&#39;, function(data) {
     if ( data ) {
-      $('#content').val( data );
+      $(&#39;#content&#39;).val( data );
     }
   });
 
 
   // listen for click
-  $('form').on('submit', function(e) {
-    $.post( 'save.php', $(this).serialize(), function(response) {
+  $(&#39;form&#39;).on(&#39;submit&#39;, function(e) {
+    $.post( &#39;save.php&#39;, $(this).serialize(), function(response) {
       alert( response );
     });
     // disable default action
     e.preventDefault();
   });
 
-  
+
 
   // grab textarea content
 
   // post content to script, and save
 &lt;/script&gt;
-  
+
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
+</code></pre></div>
 <p>save.php</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php
 
-<pre><code>&lt;?php
-
-$f = fopen('data.txt', 'w');
-fwrite( $f, $_POST['content']);
+$f = fopen(&#39;data.txt&#39;, &#39;w&#39;);
+fwrite( $f, $_POST[&#39;content&#39;]);
 fclose($f);
 
-echo 'Comment has been saved';
-</code></pre>
-
+echo &#39;Comment has been saved&#39;;
+</code></pre></div>
 <p>load.php</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php
 
-<pre><code>&lt;?php
-
-$data = file( 'data.txt');
+$data = file( &#39;data.txt&#39;);
 echo stripslashes( $data[0] );
-</code></pre>
+</code></pre></div>
+<h3>6.3</h3>
 
-<h3 id="section">6.3</h3>
 <p>index.html</p>
 
-<h3 id="deferreds">6.5 Deferreds</h3>
-
-<pre><code>&lt;html&gt;
+<h3>6.5 Deferreds</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;jQuery Deferreds&lt;/title&gt;
@@ -232,35 +222,35 @@ echo stripslashes( $data[0] );
 &lt;body&gt;
 
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 
 &lt;script&gt;
 
 function getTweets( search ) {
   return $.ajax({
-    url: 'http://search.twitter.com/search.json',
+    url: &#39;http://search.twitter.com/search.json&#39;,
     data: { q: search },
-    dataType: 'jsonp'
+    dataType: &#39;jsonp&#39;
   });
 }
 
 
-$.when( getTweets('dogs'), getTweets('cats') ).done(function(results1, results2) {
+$.when( getTweets(&#39;dogs&#39;), getTweets(&#39;cats&#39;) ).done(function(results1, results2) {
   console.log(results1);
   console.log(results2);
 });
 
-  
+
 // $.searchTwitter = function( search ) {
 //  return $.ajax({
-//    url: 'http://search.twitter.com/search.json',
+//    url: &#39;http://search.twitter.com/search.json&#39;,
 //    data: { q: search },
-//    dataType: 'jsonp'
+//    dataType: &#39;jsonp&#39;
 //  }).promise();
 // };
 
-// var outer = $.searchTwitter('cats');
+// var outer = $.searchTwitter(&#39;cats&#39;);
 
 // outer.then(function  ( results ) {
 //  console.log(results);
@@ -278,10 +268,8 @@ $.when( getTweets('dogs'), getTweets('cats') ).done(function(results1, results2)
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
-<hr />
-
+</code></pre></div>
+<hr>
 
   </article>
 

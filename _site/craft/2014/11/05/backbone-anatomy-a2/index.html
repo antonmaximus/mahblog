@@ -62,63 +62,50 @@
   </header>
 
   <article class="post-content">
-  <h2 id="collections">5. Collections</h2>
+  <h2>5. Collections</h2>
 
 <p>Set of Models</p>
-
-<pre><code>var TodoList = Backbone.Collection.extend({
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoList = Backbone.Collection.extend({
   model: TodoItem
 });
 var todoList = new TodoList();
-</code></pre>
-
+</code></pre></div>
 <p>Add/remove/get</p>
-
-<pre><code>todoList.length; //# of models
+<div class="highlight"><pre><code class="language-text" data-lang="text">todoList.length; //# of models
 todoList.add(todoItem1); // add model instance
 todoList.at(0); //get model instance at index 0
 todoList.get(1); // get by id
 todoList.remove(todoItem1); //remove model instance
-</code></pre>
-
+</code></pre></div>
 <p>Bulk Population</p>
-
-<pre><code>var todos = [
-  {description: 'Pick up milk.', status: 'incomplete'},
-  {description: 'Get a car wash', status: 'incomplete'},
-  {description: 'Learn Backbone', status: 'incomplete'}
+<div class="highlight"><pre><code class="language-text" data-lang="text">var todos = [
+  {description: &#39;Pick up milk.&#39;, status: &#39;incomplete&#39;},
+  {description: &#39;Get a car wash&#39;, status: &#39;incomplete&#39;},
+  {description: &#39;Learn Backbone&#39;, status: &#39;incomplete&#39;}
 ];
 todoList.reset(todos);
-</code></pre>
-
-<h3 id="fetching-data-from-the-server">Fetching Data from the Server</h3>
+</code></pre></div>
+<h3>Fetching Data from the Server</h3>
 
 <p>URL to get JSON data from</p>
-
-<pre><code>var TodoList = Backbone.Collection.extend({
-  url: '/todos'
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoList = Backbone.Collection.extend({
+  url: &#39;/todos&#39;
 });
-</code></pre>
-
+</code></pre></div>
 <p>Populate collection from server</p>
-
-<pre><code>todoList.fetch();  // =&gt; GET /todos
-</code></pre>
-
-<h3 id="collections-can-have-events">Collections can have Events</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">todoList.fetch();  // =&gt; GET /todos
+</code></pre></div>
+<h3>Collections can have Events</h3>
 
 <p>To listen for an event on a collection, and run an event: (works just like models)</p>
-
-<pre><code>todoListon('event-name', function(){
-  alert('event-name happened!');
+<div class="highlight"><pre><code class="language-text" data-lang="text">todoListon(&#39;event-name&#39;, function(){
+  alert(&#39;event-name happened!&#39;);
 });
-todoList.trigger('event-name');
-</code></pre>
-
-<h3 id="special-events">Special Events</h3>
-
-<pre><code>//Listen for events
-todoList.on('reset', doThing);  
+todoList.trigger(&#39;event-name&#39;);
+</code></pre></div>
+<h3>Special Events</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">//Listen for events
+todoList.on(&#39;reset&#39;, doThing);  
 
 // Event Triggered on reset and fetch
 todoList.fetch();
@@ -129,22 +116,19 @@ todoList.fetch({silent: true});
 todoList.reset({silent: true});
 
 // Remove event listener
-todoList.off('reset', doThing);
-</code></pre>
-
+todoList.off(&#39;reset&#39;, doThing);
+</code></pre></div>
 <p>Syntax</p>
-
-<pre><code>todoList.on(&lt;event&gt;, &lt;function&gt;);
-</code></pre>
-
-<p>Built-in Events. </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">todoList.on(&lt;event&gt;, &lt;function&gt;);
+</code></pre></div>
+<p>Built-in Events. 
 <table>
   <tr><td>add</td><td>When a model is added</td></tr>
   <tr><td>removed</td><td>When a model is removed</td></tr>
   <tr><td>reset</td><td>When reset or fetched</td></tr>
-</table>
+</table></p>
 
-<p>Models in collection.  Events triggered on a model in a collection will also be triggered on the collection.</p>
+<p>Models in collection.  Events triggered on a model in a collection will also be triggered on the collection.
 <table>
   <tr><td>change</td><td>When an attribute is modified</td></tr>
   <tr><td>change:&lt;attr&gt;</td><td>When &lt;attr&gt; is modified</td></tr>
@@ -152,40 +136,32 @@ todoList.off('reset', doThing);
   <tr><td>sync</td><td>Whenever successfully synced</td></tr>
   <tr><td>error</td><td>When model save or validation fails</td></tr>
   <tr><td>all</td><td>Any triggered event</td></tr>
-</table>
+</table></p>
 
-<h3 id="iteration">Iteration</h3>
+<h3>Iteration</h3>
 
 <p>Example collection</p>
-
-<pre><code>todoList.reset([
-  {description: 'Pick up milk.', status: 'incomplete', id: 1},
-  {description: 'Get a car wash.', status: 'complete', id: 2}
+<div class="highlight"><pre><code class="language-text" data-lang="text">todoList.reset([
+  {description: &#39;Pick up milk.&#39;, status: &#39;incomplete&#39;, id: 1},
+  {description: &#39;Get a car wash.&#39;, status: &#39;complete&#39;, id: 2}
 ]);
-</code></pre>
-
-<p>Alert each model’s description</p>
-
-<pre><code>todoList.forEach(function(todoItem){
-  alert(todoItem.get('description'));
+</code></pre></div>
+<p>Alert each model&#39;s description</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">todoList.forEach(function(todoItem){
+  alert(todoItem.get(&#39;description&#39;));
 });
-</code></pre>
-
+</code></pre></div>
 <p>Build an array of description</p>
-
-<pre><code>todoList.map(function(todoItem){
-  return todoItem.get('description');
+<div class="highlight"><pre><code class="language-text" data-lang="text">todoList.map(function(todoItem){
+  return todoItem.get(&#39;description&#39;);
 });
-</code></pre>
-
+</code></pre></div>
 <p>Filter models of some criteria</p>
-
-<pre><code>todoList.filter(function(todoItem){
-  return todoItem.get('status') === "incomplete";
+<div class="highlight"><pre><code class="language-text" data-lang="text">todoList.filter(function(todoItem){
+  return todoItem.get(&#39;status&#39;) === &quot;incomplete&quot;;
 });
-</code></pre>
-
-<p>Other Iteration Functions</p>
+</code></pre></div>
+<p>Other Iteration Functions
 <table>
   <tr><td>forEach</td><td>reduce</td><td>reduceRight</td></tr>
   <tr><td>find</td><td>filter</td><td>reject</td></tr>
@@ -197,17 +173,16 @@ todoList.off('reset', doThing);
   <tr><td>rest</td><td>last</td><td>without</td></tr>
   <tr><td>indexOf</td><td>lastIndexOf</td><td>isEmpty</td></tr>
   <tr><td>chain</td></tr>
-</table>
+</table></p>
 
 <p><a href="http://documentcloud.github.io/backbone/#Collection-Underscore-Methods">Link to Functions</a></p>
 
-<h2 id="collections--views">6. Collections &amp; Views</h2>
+<h2>6. Collections &amp; Views</h2>
 
 <p>Collection + View == Collection View!</p>
 
 <p>Review our Model View</p>
-
-<pre><code>var TodoView = Backbone.View.extend({
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoView = Backbone.View.extend({
   render: function(){
     this.$el.html(this.template(this.model.toJSON()));
     return this;
@@ -216,47 +191,37 @@ todoList.off('reset', doThing);
 var todoItem = new TodoItem();
 var todoView = new TodoView({model: todoItem});
 console.log(todoView.render().el);
-</code></pre>
-
-<h3 id="define-and-render">Define and Render</h3>
-
-<pre><code>var TodoListView = Backbone.View.extend({});
+</code></pre></div>
+<h3>Define and Render</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoListView = Backbone.View.extend({});
 var todoListView = new TodoListView({collection: todoList});
-</code></pre>
-
+</code></pre></div>
 <p>First Crack at Render</p>
-
-<pre><code>render: function(){
+<div class="highlight"><pre><code class="language-text" data-lang="text">render: function(){
   this.collection.forEach(function(todoItem){
     var todoView = new TodoView({model: todoItem});
     this.$el.append(todoView.render().el);  // !!! `this` changes context in forEach
 }); }
-</code></pre>
-
+</code></pre></div>
 <p>Use addOne (2nd Crack at Render)</p>
-
-<pre><code>render: function(){ this.collection.forEach(this.addOne, this);  // !!! 2nd param saves context
+<div class="highlight"><pre><code class="language-text" data-lang="text">render: function(){ this.collection.forEach(this.addOne, this);  // !!! 2nd param saves context
 }
 addOne: function(todoItem){
   var todoView = new TodoView({model: todoItem});
   this.$el.append(todoView.render().el);
 }
-</code></pre>
-
-<p>To finish off…</p>
-
-<pre><code>var todoListView = new TodoListView({collection: todoList});
+</code></pre></div>
+<p>To finish off...</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var todoListView = new TodoListView({collection: todoList});
 todoListView.render();
 console.log(todoListView.el);
-</code></pre>
-
-<h3 id="adding-new-models">Adding new Models</h3>
+</code></pre></div>
+<h3>Adding new Models</h3>
 
 <p>Since this is a collection, you must listen to the <code>add</code> event in the initalize function</p>
-
-<pre><code>var TodoListView = Backbone.View.extend({
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoListView = Backbone.View.extend({
   initialize: function(){
-    this.collection.on('add', this.addOne, this);
+    this.collection.on(&#39;add&#39;, this.addOne, this);
 },
   addOne: function(todoItem){
     var todoView = new TodoView({model: todoItem});
@@ -266,22 +231,19 @@ console.log(todoListView.el);
     this.collection.forEach(this.addOne, this);
   }
 });
-</code></pre>
-
+</code></pre></div>
 <!-- tsk -->
-<pre><code>var newTodoItem = new TodoItem({
-  description: 'Take out trash.',
-  status: 'incomplete'
+<div class="highlight"><pre><code class="language-text" data-lang="text">var newTodoItem = new TodoItem({
+  description: &#39;Take out trash.&#39;,
+  status: &#39;incomplete&#39;
 });
 todoList.add(newTodoItem);
-</code></pre>
-
-<h3 id="reset-event">Reset Event</h3>
-
-<pre><code>var TodoListView = Backbone.View.extend({
+</code></pre></div>
+<h3>Reset Event</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoListView = Backbone.View.extend({
   initialize: function(){
-    this.collection.on('add', this.addOne, this);
-    this.collection.on('reset', this.addAll, this);
+    this.collection.on(&#39;add&#39;, this.addOne, this);
+    this.collection.on(&#39;reset&#39;, this.addAll, this);
   },
   addOne: function(todoItem){
     var todoView = new TodoView({model: todoItem});
@@ -294,80 +256,64 @@ todoList.add(newTodoItem);
     this.addAll();
   }
 });
-</code></pre>
-
+</code></pre></div>
 <!-- tsk -->
-<pre><code>var todoList = new TodoList();
+<div class="highlight"><pre><code class="language-text" data-lang="text">var todoList = new TodoList();
 var todoListView = new TodoListView({
   collection: todoList
 });
 todoList.fetch();
-</code></pre>
-
-<h3 id="fixing-remove-with-custom-events">Fixing remove with custom events</h3>
-
-<pre><code>todoList.remove(todoItem);
-</code></pre>
-
+</code></pre></div>
+<h3>Fixing remove with custom events</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">todoList.remove(todoItem);
+</code></pre></div>
 <p>TodoList Collection</p>
-
-<pre><code>initialize: function(){
-  this.on('remove', this.hideModel);
+<div class="highlight"><pre><code class="language-text" data-lang="text">initialize: function(){
+  this.on(&#39;remove&#39;, this.hideModel);
 },
 hideModel: function(model){
-  model.trigger('hide');
+  model.trigger(&#39;hide&#39;);
 }
-</code></pre>
-
+</code></pre></div>
 <p>TodoItem View</p>
-
-<pre><code>initialize: function(){
-  this.model.on('hide', this.remove, this);
+<div class="highlight"><pre><code class="language-text" data-lang="text">initialize: function(){
+  this.model.on(&#39;hide&#39;, this.remove, this);
 }
-</code></pre>
+</code></pre></div>
+<h2>7. Router &amp; History</h2>
 
-<h2 id="router--history">7. Router &amp; History</h2>
-
-<h3 id="the-router">The Router</h3>
+<h3>The Router</h3>
 
 <p>Routers map URLs to actions</p>
-
-<pre><code>// Index Action
+<div class="highlight"><pre><code class="language-text" data-lang="text">// Index Action
 var router = new Backbone.Router({
-  routes: { "todos": 'index' },
+  routes: { &quot;todos&quot;: &#39;index&#39; },
   index: function(){
     ...
 } });
 
 // OR Show Action
 var router = new Backbone.Router({
-  routes: { "todos/:id": 'show' }
+  routes: { &quot;todos/:id&quot;: &#39;show&#39; }
   show: function(id){ ... }
 })
-</code></pre>
-
-<h3 id="triggering-routes">Triggering Routes</h3>
-
-<pre><code>router.navigate("todos/1", {
+</code></pre></div>
+<h3>Triggering Routes</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">router.navigate(&quot;todos/1&quot;, {
   trigger: true
 });
-</code></pre>
-
+</code></pre></div>
 <p>Backbone History</p>
-
-<pre><code>Backbone.history.start({pushState: true});  // !!! pushState on!
-</code></pre>
-
+<div class="highlight"><pre><code class="language-text" data-lang="text">Backbone.history.start({pushState: true});  // !!! pushState on!
+</code></pre></div>
 <!-- tsk -->
-<pre><code>router.navigate("todos/1")
-</code></pre>
-
-<h3 id="show-action">Show Action</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">router.navigate(&quot;todos/1&quot;)
+</code></pre></div>
+<h3>Show Action</h3>
 
 <p>Define Router Class</p>
-
-<pre><code>var TodoRouter = Backbone.Router.extend({
-  routes: { "todos/:id": "show" },
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoRouter = Backbone.Router.extend({
+  routes: { &quot;todos/:id&quot;: &quot;show&quot; },
   show: function(id){
     this.todoList.focusOnTodoItem(id);
   },
@@ -375,18 +321,14 @@ var router = new Backbone.Router({
     this.todoList = options.todoList;
   } 
 });
-</code></pre>
-
+</code></pre></div>
 <p>Instantiate router instance</p>
-
-<pre><code>var todoList = new TodoList();
+<div class="highlight"><pre><code class="language-text" data-lang="text">var todoList = new TodoList();
 var TodoApp = new TodoRouter({todoList: todoList});
-</code></pre>
-
-<h3 id="index-action">Index Action</h3>
-
-<pre><code>var TodoRouter = Backbone.Router.extend({ routes: { "": "index",
-            "todos/:id": "show" },
+</code></pre></div>
+<h3>Index Action</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoRouter = Backbone.Router.extend({ routes: { &quot;&quot;: &quot;index&quot;,
+            &quot;todos/:id&quot;: &quot;show&quot; },
   index: function(){
     this.todoList.fetch();
 },
@@ -396,18 +338,16 @@ var TodoApp = new TodoRouter({todoList: todoList});
   initialize: function(options){
     this.todoList = options.todoList;
 } });
-</code></pre>
+</code></pre></div>
+<h3>App Organization</h3>
 
-<h3 id="app-organization">App Organization</h3>
-
-<p>Since there’s only one router</p>
-
-<pre><code>var TodoApp = new (Backbone.Router.extend({
-  routes: { "": "index", "todos/:id": "show" },
+<p>Since there&#39;s only one router</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoApp = new (Backbone.Router.extend({
+  routes: { &quot;&quot;: &quot;index&quot;, &quot;todos/:id&quot;: &quot;show&quot; },
   initialize: function(){
     this.todoList = new TodoList();
     this.todosView = new TodoListView({collection: this.todoList});
-    $('#app').append(this.todosView.el);
+    $(&#39;#app&#39;).append(this.todosView.el);
   },
   start: function(){
     Backbone.history.start({pushState: true});
@@ -419,13 +359,11 @@ var TodoApp = new TodoRouter({todoList: todoList});
     this.todoList.focusOnTodoItem(id);
   }
 }));
-</code></pre>
-
+</code></pre></div>
 <!-- tsk -->
-<pre><code>$(function(){ TodoApp.start() });
-</code></pre>
-
-<hr />
+<div class="highlight"><pre><code class="language-text" data-lang="text">$(function(){ TodoApp.start() });
+</code></pre></div>
+<hr>
 
   </article>
 

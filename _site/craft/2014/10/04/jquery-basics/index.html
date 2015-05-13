@@ -62,9 +62,8 @@
   </header>
 
   <article class="post-content">
-  <h3 id="simple-jquery">1. Simple jQuery</h3>
-
-<pre><code>&lt;!doctype html&gt;
+  <h3>1. Simple jQuery</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
@@ -73,7 +72,7 @@
   ul li { color: red;}
   .emphasis { color: green;}
   &lt;/style&gt;
-  
+
 &lt;/head&gt;
 &lt;body&gt;
 
@@ -83,25 +82,23 @@
   &lt;li&gt;hello 3&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js&quot;&gt;&lt;/script&gt;
 
 &lt;script&gt;
-  jQuery('ul li').addClass('emphasis');
-  $('ul li').addClass('emphasis');
+  jQuery(&#39;ul li&#39;).addClass(&#39;emphasis&#39;);
+  $(&#39;ul li&#39;).addClass(&#39;emphasis&#39;);
 &lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
-<h3 id="document-ready">2. Document Ready?</h3>
-
-<pre><code>&lt;!doctype html&gt;
+</code></pre></div>
+<h3>2. Document Ready?</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;&lt;/title&gt;
-  &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js&quot;&gt;&lt;/script&gt;
   &lt;style&gt;
   .emphasis { font-weight: bold;}
   &lt;/style&gt;
@@ -110,11 +107,11 @@
 
   // This commented function is identical to the other one below
   // $(function() {
-  //  $('li:first-child').addClass('emphasis');
+  //  $(&#39;li:first-child&#39;).addClass(&#39;emphasis&#39;);
   // });
 
   $(document).ready(function() {
-    $('li:first-child').addClass('emphasis');
+    $(&#39;li:first-child&#39;).addClass(&#39;emphasis&#39;);
   });
   &lt;/script&gt; 
 &lt;/head&gt;
@@ -128,13 +125,11 @@
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
-<h3 id="the-basics-of-querying-the-dom">3. The Basics of Querying the DOM</h3>
+</code></pre></div>
+<h3>3. The Basics of Querying the DOM</h3>
 
 <p>See <a href="http://api.jquery.com/">api.jquery.com</a> for functions.</p>
-
-<pre><code>&lt;!doctype html&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
@@ -145,7 +140,7 @@
 &lt;/head&gt;
 &lt;body&gt;
 
-&lt;div class="container"&gt;
+&lt;div class=&quot;container&quot;&gt;
   &lt;h1&gt;Welcome to My Website &lt;/h1&gt;
   &lt;p&gt;
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -154,8 +149,8 @@
     consequat.
   &lt;/p&gt;
 
-  &lt;div class="container"&gt;
-    &lt;ul class="emphasis container"&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;ul class=&quot;emphasis container&quot;&gt;
       &lt;li&gt;item&lt;/li&gt;
       &lt;li&gt;item 2&lt;/li&gt;
       &lt;li&gt;item 2&lt;/li&gt;
@@ -171,62 +166,60 @@
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js&quot;&gt;&lt;/script&gt;
 
 &lt;script&gt;
   // Chaining
-  // $('ul.emphasis')
-  //  .children('li')
+  // $(&#39;ul.emphasis&#39;)
+  //  .children(&#39;li&#39;)
   //    .eq(3)
-  //    .prev().text('added with jQuery');
+  //    .prev().text(&#39;added with jQuery&#39;);
 
   // Parents vs Closest
-  // console.log($('ul').parents('.container'));
-  // console.log($('ul').closest('.container'));
+  // console.log($(&#39;ul&#39;).parents(&#39;.container&#39;));
+  // console.log($(&#39;ul&#39;).closest(&#39;.container&#39;));
 &lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
-<h3 id="events-101">4. Events 101</h3>
+</code></pre></div>
+<h3>4. Events 101</h3>
 
 <p>index.html</p>
-
-<pre><code>&lt;!doctype html&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;jQuery Events&lt;/title&gt;
-  &lt;link rel="stylesheet" href="day.css"&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;day.css&quot;&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
 &lt;h1&gt;My Website&lt;/h1&gt;
 
-&lt;button data-file="day"&gt;Day&lt;/button&gt;
-&lt;button data-file="night"&gt;Night&lt;/button&gt;
+&lt;button data-file=&quot;day&quot;&gt;Day&lt;/button&gt;
+&lt;button data-file=&quot;night&quot;&gt;Night&lt;/button&gt;
 
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 
 &lt;script&gt;
 
 (function() {
-  var link = $('link');
-  
-  $('button').on('click', function() {
-    var $this = $(this),
-      stylesheet = $this.data('file');
+  var link = $(&#39;link&#39;);
 
-    link.attr('href', stylesheet + '.css');
+  $(&#39;button&#39;).on(&#39;click&#39;, function() {
+    var $this = $(this),
+      stylesheet = $this.data(&#39;file&#39;);
+
+    link.attr(&#39;href&#39;, stylesheet + &#39;.css&#39;);
 
     $this
-      .siblings('button')
-        .removeAttr('disabled')
+      .siblings(&#39;button&#39;)
+        .removeAttr(&#39;disabled&#39;)
         .end()
-      .attr('disabled', 'disabled');
+      .attr(&#39;disabled&#39;, &#39;disabled&#39;);
   });
 })();
 
@@ -236,31 +229,26 @@
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
+</code></pre></div>
 <p>day.css</p>
-
-<pre><code>body {
+<div class="highlight"><pre><code class="language-text" data-lang="text">body {
   background: yellow;
 }
-</code></pre>
-
+</code></pre></div>
 <p>night.css</p>
-
-<pre><code>body {
+<div class="highlight"><pre><code class="language-text" data-lang="text">body {
   background: black;
   color: white;
 }
-</code></pre>
+</code></pre></div>
+<h3>5. Events 201</h3>
 
-<h3 id="events-201">5. Events 201</h3>
 <p>index.html</p>
-
-<pre><code>&lt;html&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;jQuery Events 201&lt;/title&gt;
-  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
@@ -277,20 +265,20 @@
   &lt;dd&gt;We are open 24/7.&lt;/dd&gt;
 &lt;/dl&gt;
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 
 &lt;script&gt;
 
 (function() {
-  
-  $('dd').filter(':nth-child(n+4)').addClass('hide');
 
-  $('dl').on('mouseenter', 'dt', function() {
+  $(&#39;dd&#39;).filter(&#39;:nth-child(n+4)&#39;).addClass(&#39;hide&#39;);
+
+  $(&#39;dl&#39;).on(&#39;mouseenter&#39;, &#39;dt&#39;, function() {
     $(this)
       .next()
         .slideDown(200)
-        .siblings('dd')
+        .siblings(&#39;dd&#39;)
           .slideUp(200);
   });
 })();
@@ -300,13 +288,11 @@
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
+</code></pre></div>
 <p>style.css</p>
-
-<pre><code>body {
+<div class="highlight"><pre><code class="language-text" data-lang="text">body {
     width: 500px;
-  
+
     margin: auto;
     text-align: center;
 }
@@ -316,14 +302,14 @@ dl {
 
 dd {
     margin: 0;
-  
+
     padding: 1em 0;
 }
 
 dt {
     cursor: pointer;
-    
-  
+
+
     font-weight: bold;
     font-size : 1.5em;
     line-height: 2em;
@@ -336,14 +322,13 @@ dt:first-child { border-top: none; }
 dt:nth-last-child(2) { border-bottom: none; }
 
 .hide { display: none;}
-</code></pre>
+</code></pre></div>
+<h3>6. Bind...Live...Delegate... just use On!</h3>
 
-<h3 id="bindlivedelegate-just-use-on">6. Bind…Live…Delegate… just use On!</h3>
 <p>No info.  </p>
 
-<h3 id="creating-and-appending-content">7. Creating and Appending Content</h3>
-
-<pre><code>&lt;html&gt;
+<h3>7. Creating and Appending Content</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;Appending Content&lt;/title&gt;
@@ -398,23 +383,23 @@ dt:nth-last-child(2) { border-bottom: none; }
 
 
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 
 &lt;script&gt;
 
 (function() {
 
-  var co = $('article').find('span.co').each(function() {
+  var co = $(&#39;article&#39;).find(&#39;span.co&#39;).each(function() {
     var $this = $(this);
 
-    $('&lt;blockquote&gt;&lt;/blockquote&gt;', {
-      class: 'co',
+    $(&#39;&lt;blockquote&gt;&lt;/blockquote&gt;&#39;, {
+      class: &#39;co&#39;,
       text: $this.text()
-    }).prependTo( $this.closest('p') );
-    
+    }).prependTo( $this.closest(&#39;p&#39;) );
+
   });
-  
+
 
 })();
 
@@ -422,9 +407,8 @@ dt:nth-last-child(2) { border-bottom: none; }
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
-<hr />
+</code></pre></div>
+<hr>
 
   </article>
 

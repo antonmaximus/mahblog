@@ -62,10 +62,10 @@
   </header>
 
   <article class="post-content">
-  <h3 id="custom-events-and-the-observer-pattern">5.1 Custom Events and the Observer Pattern</h3>
-<p>index.html</p>
+  <h3>5.1 Custom Events and the Observer Pattern</h3>
 
-<pre><code>&lt;!doctype html&gt;
+<p>index.html</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
@@ -76,19 +76,19 @@
 &lt;h1&gt;Hi There&lt;/h1&gt;
 
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 
 &lt;script&gt;
-  
+
 // PubSub
 (function( $ ) {
   var o = $( {} );
 
   $.each({
-    trigger: 'publish',
-    on: 'subscribe',
-    off: 'unsubscribe'
+    trigger: &#39;publish&#39;,
+    on: &#39;subscribe&#39;,
+    off: &#39;unsubscribe&#39;
   }, function( key, val ) {
     jQuery[val] = function() {
       o[key].apply( o, arguments );
@@ -97,16 +97,16 @@
 })( jQuery );
 
 
-$.getJSON('http://search.twitter.com/search.json?q=dogs&amp;callback=?', function( results) { 
-  $.publish( 'twitter/results', results );
+$.getJSON(&#39;http://search.twitter.com/search.json?q=dogs&amp;callback=?&#39;, function( results) { 
+  $.publish( &#39;twitter/results&#39;, results );
 });
 
 // ...
-$.subscribe( 'twitter/results', function( e, results ) {
-  $('body').html(
+$.subscribe( &#39;twitter/results&#39;, function( e, results ) {
+  $(&#39;body&#39;).html(
     $.map( results.results, function( obj, index) {
-      return '&lt;li&gt;' + obj.text + '&lt;/li&gt;';
-    }).join('')
+      return &#39;&lt;li&gt;&#39; + obj.text + &#39;&lt;/li&gt;&#39;;
+    }).join(&#39;&#39;)
   );
 });
 
@@ -115,11 +115,9 @@ $.subscribe( 'twitter/results', function( e, results ) {
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
+</code></pre></div>
 <p>tweets.html</p>
-
-<pre><code>&lt;!doctype html&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
@@ -133,14 +131,14 @@ $.subscribe( 'twitter/results', function( e, results ) {
 
 &lt;h2&gt;What Are You Interested In?&lt;/h2&gt;
 
-&lt;form action="#"&gt;
-  &lt;p&gt;&lt;input type="text" name="q" id="q"&gt;&lt;/p&gt;
+&lt;form action=&quot;#&quot;&gt;
+  &lt;p&gt;&lt;input type=&quot;text&quot; name=&quot;q&quot; id=&quot;q&quot;&gt;&lt;/p&gt;
 &lt;/form&gt;
 
-&lt;ul class="tweets"&gt;&lt;/ul&gt;
+&lt;ul class=&quot;tweets&quot;&gt;&lt;/ul&gt;
 
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 
 &lt;script&gt;
@@ -149,9 +147,9 @@ $.subscribe( 'twitter/results', function( e, results ) {
   var o = $( {} );
 
   $.each({
-    on: 'subscribe',
-    trigger: 'publish',
-    off: 'unsubscribe'
+    on: &#39;subscribe&#39;,
+    trigger: &#39;publish&#39;,
+    off: &#39;unsubscribe&#39;
   }, function( key, api ) {
     $[api] = function() {
       o[key].apply( o, arguments );
@@ -162,11 +160,11 @@ $.subscribe( 'twitter/results', function( e, results ) {
 
 
 (function($) {
-    
+
   var Twitter = {
     init: function() {
-      this.template = '&lt;li&gt;{{tweet}}&lt;/li&gt;';
-      this.query = '@tutspremium';
+      this.template = &#39;&lt;li&gt;{{tweet}}&lt;/li&gt;&#39;;
+      this.query = &#39;@tutspremium&#39;;
       this.tweets = [];
       this.timer;
 
@@ -175,7 +173,7 @@ $.subscribe( 'twitter/results', function( e, results ) {
       this.subscriptions();
 
 
-      $.publish( 'twitter/query' );
+      $.publish( &#39;twitter/query&#39; );
       this.searchInput.val( this.query );
 
 
@@ -183,17 +181,17 @@ $.subscribe( 'twitter/results', function( e, results ) {
     },
 
     cache: function() { 
-      this.container = $('ul.tweets');
-      this.searchInput = $('#q');
+      this.container = $(&#39;ul.tweets&#39;);
+      this.searchInput = $(&#39;#q&#39;);
     },
 
     bindEvents: function() {
-      this.searchInput.on( 'keyup', this.search );
+      this.searchInput.on( &#39;keyup&#39;, this.search );
     },
 
     subscriptions: function() {
-      $.subscribe( 'twitter/query', this.fetchJSON );
-      $.subscribe( 'twitter/results', this.renderResults );
+      $.subscribe( &#39;twitter/query&#39;, this.fetchJSON );
+      $.subscribe( &#39;twitter/results&#39;, this.renderResults );
     },
 
     search: function() {
@@ -204,16 +202,16 @@ $.subscribe( 'twitter/results', function( e, results ) {
 
       self.timer = ( input.value.length &gt;= 3 ) &amp;&amp; setTimeout(function() {
         self.query = input.value;
-        $.publish( 'twitter/query' );
+        $.publish( &#39;twitter/query&#39; );
       }, 400);
     },
 
     fetchJSON: function() {
-      var url = 'http://search.twitter.com/search.json?callback=?&amp;q=';
+      var url = &#39;http://search.twitter.com/search.json?callback=?&amp;q=&#39;;
 
       return $.getJSON( url + Twitter.query, function( data ) {
         Twitter.tweets = data.results;
-        $.publish( 'twitter/results' );
+        $.publish( &#39;twitter/results&#39; );
       });
     },
 
@@ -225,11 +223,11 @@ $.subscribe( 'twitter/results', function( e, results ) {
       self.container.html(
         $.map( self.tweets, function( obj, index ) {
           var t = 
-            obj.text.replace(/(http:[^\s]+)/, '&lt;a href="$1"&gt;$1&lt;/a&gt;')
-                .replace(/@([^\s:]+)/, '&lt;a href="http://twitter.com/$1"&gt;@$1&lt;/a&gt;');
+            obj.text.replace(/(http:[^\s]+)/, &#39;&lt;a href=&quot;$1&quot;&gt;$1&lt;/a&gt;&#39;)
+                .replace(/@([^\s:]+)/, &#39;&lt;a href=&quot;http://twitter.com/$1&quot;&gt;@$1&lt;/a&gt;&#39;);
 
           return self.template.replace(/{{tweet}}/, t);
-        }).join('')
+        }).join(&#39;&#39;)
       );
     }
   };
@@ -242,10 +240,8 @@ $.subscribe( 'twitter/results', function( e, results ) {
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
-<hr />
-
+</code></pre></div>
+<hr>
 
   </article>
 

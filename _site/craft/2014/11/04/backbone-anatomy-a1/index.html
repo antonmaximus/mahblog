@@ -62,76 +62,60 @@
   </header>
 
   <article class="post-content">
-  <h2 id="models">2. Models</h2>
+  <h2>2. Models</h2>
 
 <p>Generating a model class and a model instance:</p>
 
 <p>var TodoItem = Backbone.Model.extend({});￼
   var todoItem = new TodoItem(
-    { description: ‘Pick up milk’, status: ‘incomplete’, id: 1 }
+    { description: &#39;Pick up milk&#39;, status: &#39;incomplete&#39;, id: 1 }
   );</p>
 
 <p>To get, set, and save an attribute</p>
-
-<pre><code>todoItem.get('description'); 
-todoItem.set({status: 'complete'}); 
+<div class="highlight"><pre><code class="language-text" data-lang="text">todoItem.get(&#39;description&#39;); 
+todoItem.set({status: &#39;complete&#39;}); 
 todoItem.save();
-</code></pre>
-
-<h3 id="fetching-data-from-the-server">Fetching Data from The Server</h3>
+</code></pre></div>
+<h3>Fetching Data from The Server</h3>
 
 <p>URL to get JSON data for model. RESTful web service flavor.  </p>
-
-<pre><code>var TodoItem = Backbone.Model.extend({urlRoot: '/todos' });
-</code></pre>
-
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoItem = Backbone.Model.extend({urlRoot: &#39;/todos&#39; });
+</code></pre></div>
 <p>To populate model from server.  Fetch todo with id=1.</p>
-
-<pre><code>var todoItem = new TodoItem({id: 1})
+<div class="highlight"><pre><code class="language-text" data-lang="text">var todoItem = new TodoItem({id: 1})
 todoItem.fetch();
-</code></pre>
-
+</code></pre></div>
 <p>Destroying a todo:</p>
-
-<pre><code>todoItem.get('id');
+<div class="highlight"><pre><code class="language-text" data-lang="text">todoItem.get(&#39;id&#39;);
 todoItem.destroy();
-</code></pre>
-
+</code></pre></div>
 <p>Creating Default Values</p>
-
-<pre><code>var TodoItem = Backbone.Model.extend({
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoItem = Backbone.Model.extend({
   defaults: {
-    description: 'Empty todo...',
-    status: 'incomplete'
+    description: &#39;Empty todo...&#39;,
+    status: &#39;incomplete&#39;
   }
 });
-</code></pre>
-
-<h3 id="models-can-have-events">Models can have Events</h3>
+</code></pre></div>
+<h3>Models can have Events</h3>
 
 <p>To listen for an event on a model, and run the event:</p>
-
-<pre><code>todoItem.on('event-name', function() {
-  alert('event-name happened!');
+<div class="highlight"><pre><code class="language-text" data-lang="text">todoItem.on(&#39;event-name&#39;, function() {
+  alert(&#39;event-name happened!&#39;);
 });
-todoItem.trigger('event-name');
-</code></pre>
-
-<h3 id="special-events">Special Events</h3>
+todoItem.trigger(&#39;event-name&#39;);
+</code></pre></div>
+<h3>Special Events</h3>
 
 <p>Syntax</p>
-
-<pre><code>todoItem.on(&lt;event&gt;, &lt;method&gt;);
-</code></pre>
-
-<p>To listen for changes,  to see how it’s triggered on change, to set without triggering, and to remove listener:</p>
-
-<pre><code>todoItem.on('change', doThing);
-todoItem.set({description: 'Fill prescription.'});
-todoItem.set({description: 'Fill prescription.'}, {silent: true});
-todoItem.off('change', doThing);
-</code></pre>
-
+<div class="highlight"><pre><code class="language-text" data-lang="text">todoItem.on(&lt;event&gt;, &lt;method&gt;);
+</code></pre></div>
+<p>To listen for changes,  to see how it&#39;s triggered on change, to set without triggering, and to remove listener:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">todoItem.on(&#39;change&#39;, doThing);
+todoItem.set({description: &#39;Fill prescription.&#39;});
+todoItem.set({description: &#39;Fill prescription.&#39;}, {silent: true});
+todoItem.off(&#39;change&#39;, doThing);
+</code></pre></div>
 <p>Built-in Events</p>
 
 <table>
@@ -143,101 +127,86 @@ todoItem.off('change', doThing);
   <tr><td>all</td><td>Any triggered event</td></tr>
 </table>
 
-<h2 id="views">3. Views</h2>
+<h2>3. Views</h2>
 
 <p>Create a view class and a view instance</p>
-
-<pre><code>var TodoView = Backbone.View.extend({});￼ ￼   var todoView = new TodoView({ model: todoItem });
-</code></pre>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoView = Backbone.View.extend({});￼
+</code></pre></div>
+<p>￼   var todoView = new TodoView({ model: todoItem });</p>
 
 <p>Rendering the view.  Every view has a top level <code>el</code> (element) where <code>&lt;div&gt;</code> is the default tag.</p>
-
-<pre><code>var TodoView = Backbone.View.extend({
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoView = Backbone.View.extend({
   render: function(){
-    var html = '&lt;h3&gt;' + this.model.get('description') + '&lt;/h3&gt;';
+    var html = &#39;&lt;h3&gt;&#39; + this.model.get(&#39;description&#39;) + &#39;&lt;/h3&gt;&#39;;
     todoView.$el.html(html);  // todoView.$el.html(html) works too, but slower.
   }
 });
-</code></pre>
-
+</code></pre></div>
 <p>To use a different tag:</p>
-
-<pre><code>var SimpleView = Backbone.View.extend({tagName: 'li'});
+<div class="highlight"><pre><code class="language-text" data-lang="text">var SimpleView = Backbone.View.extend({tagName: &#39;li&#39;});
 var simpleView = new SimpleView();
-</code></pre>
-
-<h3 id="using-a-template">Using a Template</h3>
+</code></pre></div>
+<h3>Using a Template</h3>
 
 <p>Underscore Library is part of Backbone</p>
-
-<pre><code>var TodoView = Backbone.View.extend({
-  tagName: 'article',
-  id: 'todo-view',
-  className: 'todo',
-  template: _.template('&lt;h3&gt;&lt;%= description %&gt;&lt;/h3&gt;'),
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoView = Backbone.View.extend({
+  tagName: &#39;article&#39;,
+  id: &#39;todo-view&#39;,
+  className: &#39;todo&#39;,
+  template: _.template(&#39;&lt;h3&gt;&lt;%= description %&gt;&lt;/h3&gt;&#39;),
 ￼} });
 
 
 var todoView = new TodoView({ model: todoItem });
 todoView.render();
 console.log(todoView.el);
-</code></pre>
-
+</code></pre></div>
 <p>Other Templating Engines</p>
 
 <ul>
-  <li>Underscore.js</li>
-  <li>Mustache.js</li>
-  <li>Haml-js</li>
-  <li>Edo</li>
+<li>Underscore.js</li>
+<li>Mustache.js</li>
+<li>Haml-js</li>
+<li>Edo</li>
 </ul>
 
-<h3 id="adding-view-events">Adding View Events</h3>
+<h3>Adding View Events</h3>
 
 <p>Syntax</p>
-
-<pre><code>"&lt;event&gt; &lt;selector&gt;": "&lt;method&gt;"
-</code></pre>
-
+<div class="highlight"><pre><code class="language-text" data-lang="text">&quot;&lt;event&gt; &lt;selector&gt;&quot;: &quot;&lt;method&gt;&quot;
+</code></pre></div>
 <p>Example:</p>
-
-<pre><code>var TodoView = Backbone.View.extend({
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoView = Backbone.View.extend({
   events: {
-    "click h3": "alertStatus"
+    &quot;click h3&quot;: &quot;alertStatus&quot;
   },
   alertStatus: function(e){
-    alert('Hey you clicked the h3!');
+    alert(&#39;Hey you clicked the h3!&#39;);
 } });
-</code></pre>
-
+</code></pre></div>
 <p>Selector is scoped to the <code>el</code></p>
-
-<pre><code>this.$el.delegate('h3', 'click', alertStatus);  //delegate is deprecated, but same idea
-</code></pre>
-
+<div class="highlight"><pre><code class="language-text" data-lang="text">this.$el.delegate(&#39;h3&#39;, &#39;click&#39;, alertStatus);  //delegate is deprecated, but same idea
+</code></pre></div>
 <p>Views can have many events on the <code>el</code></p>
-
-<pre><code>var DocumentView = Backbone.View.extend({
+<div class="highlight"><pre><code class="language-text" data-lang="text">var DocumentView = Backbone.View.extend({
   events: {
-    "dblclick"                : "open",
-    "click .icon.doc"         : "select",
-    "click .show_notes"       : "toggleNotes",
-    "click .title .lock"      : "editAccessLevel",
-    "mouseover .title .date"  : "showTooltip"
+    &quot;dblclick&quot;                : &quot;open&quot;,
+    &quot;click .icon.doc&quot;         : &quot;select&quot;,
+    &quot;click .show_notes&quot;       : &quot;toggleNotes&quot;,
+    &quot;click .title .lock&quot;      : &quot;editAccessLevel&quot;,
+    &quot;mouseover .title .date&quot;  : &quot;showTooltip&quot;
   }, 
   ...
 
 });
-</code></pre>
-
-<h3 id="view-event-options">View Event Options</h3>
-<pre><code>var SampleView = Backbone.View.extend({
+</code></pre></div>
+<h3>View Event Options</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var SampleView = Backbone.View.extend({
   events: {
-    "&lt;event&gt; &lt;selector&gt;": "&lt;method&gt;"
+    &quot;&lt;event&gt; &lt;selector&gt;&quot;: &quot;&lt;method&gt;&quot;
   },
 ... });
-</code></pre>
-
+</code></pre></div>
 <p>Events: </p>
 
 <p>change click dblclick focus focusin
@@ -246,12 +215,11 @@ mousedown mouseenter mouseleave mousemove mouseout
 mouseover mouseup ready resize scroll
 select unload</p>
 
-<h2 id="models-and-views">4. Models and Views</h2>
+<h2>4. Models and Views</h2>
 
 <p>Review of model &amp; view</p>
-
-<pre><code>var TodoView = Backbone.View.extend({
-  template: _.template('&lt;h3&gt;&lt;%= description %&gt;&lt;/h3&gt;'),
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoView = Backbone.View.extend({
+  template: _.template(&#39;&lt;h3&gt;&lt;%= description %&gt;&lt;/h3&gt;&#39;),
   render: function(){
     this.$el.html(this.template(this.model.toJSON()));
 } });
@@ -260,27 +228,23 @@ select unload</p>
 var todoView = new TodoView({ model: todoItem });
 todoView.render();
 console.log(todoView.el);
-</code></pre>
-
+</code></pre></div>
 <p>Adding a Checkbox (that can be updated on the UI)</p>
-
-<pre><code>var TodoView = Backbone.View.extend({ 
-  template: _.template('&lt;h3&gt;' +
-    '&lt;input type=checkbox ' +
-    '&lt;% if(status === "complete") print("checked") %&gt;/&gt;' +
-    '&lt;%= description %&gt; &lt;/h3&gt;'),
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoView = Backbone.View.extend({ 
+  template: _.template(&#39;&lt;h3&gt;&#39; +
+    &#39;&lt;input type=checkbox &#39; +
+    &#39;&lt;% if(status === &quot;complete&quot;) print(&quot;checked&quot;) %&gt;/&gt;&#39; +
+    &#39;&lt;%= description %&gt; &lt;/h3&gt;&#39;),
 
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
   }
 } });
-</code></pre>
-
-<p>View events update the Model (Update model on UI event, and Refactor to separate what’s for the Model)</p>
-
-<pre><code>var TodoView = Backbone.View.extend({
+</code></pre></div>
+<p>View events update the Model (Update model on UI event, and Refactor to separate what&#39;s for the Model)</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoView = Backbone.View.extend({
   events: {
-    'change input': 'toggleStatus'
+    &#39;change input&#39;: &#39;toggleStatus&#39;
   },
   toggleStatus: function(){
    this.model.toggleStatus();
@@ -289,24 +253,22 @@ console.log(todoView.el);
 
 var TodoItem = Backbone.Model.extend({
   toggleStatus: function(){
-    if(this.get('status') === 'incomplete'){
-      this.set({'status': 'complete'});
+    if(this.get(&#39;status&#39;) === &#39;incomplete&#39;){
+      this.set({&#39;status&#39;: &#39;complete&#39;});
     }else{
-      this.set({'status': 'incomplete'});
+      this.set({&#39;status&#39;: &#39;incomplete&#39;});
 ￼   } 
     this.save();  // Synch changes to the server
   }
 });
-</code></pre>
-
+</code></pre></div>
 <p>Re-render the view (Model updates change the view)</p>
-
-<pre><code>var TodoView = Backbone.View.extend({
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoView = Backbone.View.extend({
   events: {
-    'change input': 'toggleStatus'
+    &#39;change input&#39;: &#39;toggleStatus&#39;
   },
   initialize: function(){
-    this.model.on('change', this.render, this);
+    this.model.on(&#39;change&#39;, this.render, this);
   },
   toggleStatus: function(){
    this.model.toggleStatus();
@@ -314,19 +276,17 @@ var TodoItem = Backbone.Model.extend({
   render: function(){
     this.$el.html(this.template(this.model.toJSON()));
 } });
-</code></pre>
-
+</code></pre></div>
 <p>Why the 3rd argument (i.e., What is <strong><em>this</em></strong>)?</p>
 
-<p><img src="http://i.imgur.com/vM1T1jh.png" alt="" title="" />
-<img src="http://i.imgur.com/GpBENlX.png" alt="" title="" /></p>
+<p><img src="http://i.imgur.com/vM1T1jh.png" alt="" title="" >
+<img src="http://i.imgur.com/GpBENlX.png" alt="" title="" ></p>
 
 <p>Remove View on model destroy</p>
-
-<pre><code>var TodoView = Backbone.View.extend({
+<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoView = Backbone.View.extend({
   initialize: function(){
-    this.model.on('change', this.render, this);
-    this.model.on('destroy', this.remove, this);
+    this.model.on(&#39;change&#39;, this.render, this);
+    this.model.on(&#39;destroy&#39;, this.remove, this);
 },
   render: function(){
    this.$el.html(this.template(this.model.toJSON()));
@@ -334,10 +294,8 @@ var TodoItem = Backbone.Model.extend({
   remove: function(){
     this.$el.remove();
 } });
-</code></pre>
-
-<hr />
-
+</code></pre></div>
+<hr>
 
   </article>
 

@@ -62,9 +62,8 @@
   </header>
 
   <article class="post-content">
-  <h3 id="slides-and-structure">3.1 Slides and Structure</h3>
-
-<pre><code>&lt;html&gt;
+  <h3>3.1 Slides and Structure</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;Slides and Structure&lt;/title&gt;
@@ -134,57 +133,57 @@
   &lt;/p&gt;
 &lt;/article&gt;
 
-&lt;div id="contact"&gt;
+&lt;div id=&quot;contact&quot;&gt;
   &lt;h2&gt;Contact Me&lt;/h2&gt;
-  &lt;form action="#"&gt;
+  &lt;form action=&quot;#&quot;&gt;
     &lt;ul&gt;
       &lt;li&gt;
-        &lt;label for="name"&gt;Name: &lt;/label&gt;
-        &lt;input name="name" id="name"&gt;
+        &lt;label for=&quot;name&quot;&gt;Name: &lt;/label&gt;
+        &lt;input name=&quot;name&quot; id=&quot;name&quot;&gt;
       &lt;/li&gt;
 
       &lt;li&gt;
-        &lt;label for="email"&gt;Email Address: &lt;/label&gt;
-        &lt;input name="email" id="email"&gt;
+        &lt;label for=&quot;email&quot;&gt;Email Address: &lt;/label&gt;
+        &lt;input name=&quot;email&quot; id=&quot;email&quot;&gt;
       &lt;/li&gt;
 
       &lt;li&gt;
-        &lt;label for="comments"&gt;What's Up?&lt;/label&gt;
-        &lt;textarea name="comments" id="comments" cols="30" rows="10"&gt;&lt;/textarea&gt;
+        &lt;label for=&quot;comments&quot;&gt;What&#39;s Up?&lt;/label&gt;
+        &lt;textarea name=&quot;comments&quot; id=&quot;comments&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;input type="submit" value="Submit"&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/form&gt;
 &lt;/div&gt;
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 
 &lt;script&gt;
 
 (function() {
-  
-$('html').addClass('js');
+
+$(&#39;html&#39;).addClass(&#39;js&#39;);
 
 var contactForm = {
 
-  container: $('#contact'),
+  container: $(&#39;#contact&#39;),
 
   config: {
-    effect: 'slideToggle',
+    effect: &#39;slideToggle&#39;,
     speed: 500
   },
 
   init: function(config) {
     $.extend(this.config, config);
 
-    $('&lt;button&gt;&lt;/button&gt;', {
-      text: 'Contact Me'
+    $(&#39;&lt;button&gt;&lt;/button&gt;&#39;, {
+      text: &#39;Contact Me&#39;
     })
-      .insertAfter( 'article:first' )
-      .on( 'click', this.show );
+      .insertAfter( &#39;article:first&#39; )
+      .on( &#39;click&#39;, this.show );
   },
 
   show: function() {
@@ -192,7 +191,7 @@ var contactForm = {
       container = cf.container,
       config = cf.config;
 
-    if ( container.is(':hidden') ) {
+    if ( container.is(&#39;:hidden&#39;) ) {
       contactForm.close.call(container);
       // container[config.effect](config.speed);
       container.fadeToggle();
@@ -203,11 +202,11 @@ var contactForm = {
     var $this = $(this), // #contact
       config = contactForm.config;
 
-    if ( $this.find('span.close').length ) return;
+    if ( $this.find(&#39;span.close&#39;).length ) return;
 
-    $('&lt;span class=close&gt;X&lt;/span&gt;')
+    $(&#39;&lt;span class=close&gt;X&lt;/span&gt;&#39;)
       .prependTo(this)
-      .on('click', function() {
+      .on(&#39;click&#39;, function() {
         // this = span
         $this[config.effect](config.speed);
       })
@@ -215,7 +214,7 @@ var contactForm = {
 };
 
 contactForm.init({
-  // effect: 'fadeToggle',
+  // effect: &#39;fadeToggle&#39;,
   speed: 300
 });
 
@@ -225,20 +224,18 @@ contactForm.init({
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
-<h3 id="the-this-keyword">3.2 The <code>this</code> Keyword</h3>
-
-<pre><code>&lt;html&gt;
+</code></pre></div>
+<h3>3.2 The <code>this</code> Keyword</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;The this Keyword&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;a href="http://tutsplus.com"&gt;Click Me&lt;/a&gt;
+  &lt;a href=&quot;http://tutsplus.com&quot;&gt;Click Me&lt;/a&gt;
 
 
-  &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
   &lt;script&gt;
     var obj = {
@@ -248,10 +245,10 @@ contactForm.init({
       }
     }
 
-    $('a').on( 'click', $.proxy(obj.doIt, obj) )
+    $(&#39;a&#39;).on( &#39;click&#39;, $.proxy(obj.doIt, obj) )
 
 
-    // $('a').on('click', function(e) {
+    // $(&#39;a&#39;).on(&#39;click&#39;, function(e) {
     //  // this = anchor that was clicked
     //  obj.doIt.call(this);
 
@@ -262,11 +259,9 @@ contactForm.init({
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
-<h3 id="modifying-effect-speeds-and-utilizing-jqueryextend">3.3 Modifying Effect Speeds (and utilizing jQuery.extend)</h3>
-
-<pre><code>&lt;html&gt;
+</code></pre></div>
+<h3>3.3 Modifying Effect Speeds (and utilizing jQuery.extend)</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;Custom Effect Methods&lt;/title&gt;
@@ -297,17 +292,17 @@ contactForm.init({
 
 
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;script&gt;
 
-$('div.content').hide();
+$(&#39;div.content&#39;).hide();
 
 // $.fx.speeds._default = 2000;
 $.fx.speeds.tortoise = 5000;
 
-$('h1').on('click', function() {
-  $(this).next().slideDown('fast');
+$(&#39;h1&#39;).on(&#39;click&#39;, function() {
+  $(this).next().slideDown(&#39;fast&#39;);
 })
 
 $.fn.flashFlash = function() {
@@ -316,18 +311,16 @@ $.fn.flashFlash = function() {
   })
 }
 
-$('div').flashFlash();
+$(&#39;div&#39;).flashFlash();
 
 
 &lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
-<h3 id="creating-custom-effect-methods">3.4 Creating Custom Effect Methods</h3>
-
-<pre><code>&lt;html&gt;
+</code></pre></div>
+<h3>3.4 Creating Custom Effect Methods</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;Custom Effect Methods&lt;/title&gt;
@@ -358,12 +351,12 @@ $('div').flashFlash();
 
 
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;script&gt;
 
 (function() {
-  var content = $('div.content').hide();
+  var content = $(&#39;div.content&#39;).hide();
 
   jQuery.fn.flash = function( speed, easing, callback ) {
     var $this = $(this);
@@ -373,7 +366,7 @@ $('div').flashFlash();
     });
   };
 
-  $('h1').on('click', function() {
+  $(&#39;h1&#39;).on(&#39;click&#39;, function() {
     content.flash();
   }); 
 })();
@@ -384,14 +377,13 @@ $('div').flashFlash();
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
+</code></pre></div>
+<h3>3.5 Full Control With Animate</h3>
 
-<h3 id="full-control-with-animate">3.5 Full Control With Animate</h3>
 <p>No code for this one.</p>
 
-<h3 id="homework-solutions">3.6 Homework Solutions</h3>
-
-<pre><code>&lt;html&gt;
+<h3>3.6 Homework Solutions</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;Animate&lt;/title&gt;
@@ -410,7 +402,7 @@ $('div').flashFlash();
 &lt;body&gt;
 
 
-&lt;div class="box"&gt;
+&lt;div class=&quot;box&quot;&gt;
   &lt;h2&gt;Hi There&lt;/h2&gt;
   &lt;p&gt;
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -421,25 +413,25 @@ $('div').flashFlash();
 &lt;p&gt;&lt;button&gt;FadeSlideToggle&lt;/button&gt;&lt;/p&gt;
 
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;script&gt;
 
 (function() {
-  var box = $('div.box');
+  var box = $(&#39;div.box&#39;);
 
   $.fn.FadeSlideToggle = function(speed, fn) {
     // fadeToggle = opacity
     // slideToggle = height
     return $(this).animate({
-      'height': 'toggle',
-      'opacity': 'toggle'
+      &#39;height&#39;: &#39;toggle&#39;,
+      &#39;opacity&#39;: &#39;toggle&#39;
     }, speed || 400, function() {
       $.isFunction(fn) &amp;&amp; fn.call(this);
     });
   };
 
-  $('button').on('click', function() {
+  $(&#39;button&#39;).on(&#39;click&#39;, function() {
     box.FadeSlideToggle(500);
   }); 
 
@@ -448,13 +440,11 @@ $('div').flashFlash();
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
-<h3 id="the-obligatory-slider-first-attempt">3.7 The Obligatory Slider (First Attempt)</h3>
+</code></pre></div>
+<h3>3.7 The Obligatory Slider (First Attempt)</h3>
 
 <p>index.html</p>
-
-<pre><code>&lt;html&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;The Obligatory Slider&lt;/title&gt;
@@ -465,38 +455,36 @@ $('div').flashFlash();
   }
   * { margin: 0; padding: 0; }
   &lt;/style&gt;
-  &lt;link rel="stylesheet" href="slider.css"&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;slider.css&quot;&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
-&lt;div class="slider"&gt;
+&lt;div class=&quot;slider&quot;&gt;
   &lt;ul&gt;
-    &lt;li&gt;&lt;img src="img/img1.gif" alt="image"&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="img/img2.gif" alt="image"&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="img/img3.gif" alt="image"&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="img/img4.gif" alt="image"&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="img/img1.gif" alt="image"&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="img/img2.gif" alt="image"&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="img/img3.gif" alt="image"&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="img/img4.gif" alt="image"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;img/img1.gif&quot; alt=&quot;image&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;img/img2.gif&quot; alt=&quot;image&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;img/img3.gif&quot; alt=&quot;image&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;img/img4.gif&quot; alt=&quot;image&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;img/img1.gif&quot; alt=&quot;image&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;img/img2.gif&quot; alt=&quot;image&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;img/img3.gif&quot; alt=&quot;image&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;img/img4.gif&quot; alt=&quot;image&quot;&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id="slider-nav"&gt;
-  &lt;button data-dir="prev"&gt;Previous&lt;/button&gt;
-  &lt;button data-dir="next"&gt;Next&lt;/button&gt;
+&lt;div id=&quot;slider-nav&quot;&gt;
+  &lt;button data-dir=&quot;prev&quot;&gt;Previous&lt;/button&gt;
+  &lt;button data-dir=&quot;next&quot;&gt;Next&lt;/button&gt;
 &lt;/div&gt;
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script src="slider.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;slider.js&quot;&gt;&lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-
+</code></pre></div>
 <p>slider.css</p>
-
-<pre><code>#slider-nav { 
+<div class="highlight"><pre><code class="language-text" data-lang="text">#slider-nav { 
   display: none; 
   margin-top: 1em;
 }
@@ -522,31 +510,29 @@ $('div').flashFlash();
 .slider li {
   float: left;
 }
-</code></pre>
-
+</code></pre></div>
 <p>slider.js</p>
-
-<pre><code>// the procedural method
+<div class="highlight"><pre><code class="language-text" data-lang="text">// the procedural method
 (function($) {
-  var sliderUL = $('div.slider').css('overflow', 'hidden').children('ul'),
-    imgs = sliderUL.find('img'),
+  var sliderUL = $(&#39;div.slider&#39;).css(&#39;overflow&#39;, &#39;hidden&#39;).children(&#39;ul&#39;),
+    imgs = sliderUL.find(&#39;img&#39;),
     imgWidth = imgs[0].width, // 600
     imgsLen = imgs.length, // 4
     current = 1,
     totalImgsWidth = imgsLen * imgWidth; // 2400
 
-  $('#slider-nav').show().find('button').on('click', function() {
-    var direction = $(this).data('dir'),
+  $(&#39;#slider-nav&#39;).show().find(&#39;button&#39;).on(&#39;click&#39;, function() {
+    var direction = $(this).data(&#39;dir&#39;),
       loc = imgWidth; // 600
 
     // update current value
-    ( direction === 'next' ) ? ++current : --current;
+    ( direction === &#39;next&#39; ) ? ++current : --current;
 
     // if first image
     if ( current === 0 ) {
       current = imgsLen;
       loc = totalImgsWidth - imgWidth; // 2400 - 600 = 1800
-      direction = 'next';
+      direction = &#39;next&#39;;
     } else if ( current - 1 === imgsLen ) { // Are we at end? Should we reset?
       current = 1;
       loc = 0;
@@ -559,22 +545,20 @@ $('div').flashFlash();
     var unit; // -= +=
 
     if ( direction &amp;&amp; loc !== 0 ) {
-      unit = ( direction === 'next' ) ? '-=' : '+=';
+      unit = ( direction === &#39;next&#39; ) ? &#39;-=&#39; : &#39;+=&#39;;
     }
 
     container.animate({
-      'margin-left': unit ? (unit + loc) : loc
+      &#39;margin-left&#39;: unit ? (unit + loc) : loc
     });
   }
 
 })(jQuery);
-</code></pre>
-
-<h3 id="prototypal-inheritance-and-refactoring-the-slider">3.8 Prototypal Inheritance and Refactoring the Slider</h3>
+</code></pre></div>
+<h3>3.8 Prototypal Inheritance and Refactoring the Slider</h3>
 
 <p>index.html</p>
-
-<pre><code>&lt;html&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=utf-8&gt;
   &lt;title&gt;The Obligatory Slider&lt;/title&gt;
@@ -585,35 +569,35 @@ $('div').flashFlash();
   }
   * { margin: 0; padding: 0; }
   &lt;/style&gt;
-  &lt;link rel="stylesheet" href="slider.css"&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;slider.css&quot;&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
-&lt;div class="slider"&gt;
+&lt;div class=&quot;slider&quot;&gt;
   &lt;ul&gt;
-    &lt;li&gt;&lt;img src="img/img1.gif" alt="image"&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="img/img2.gif" alt="image"&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="img/img3.gif" alt="image"&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="img/img4.gif" alt="image"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;img/img1.gif&quot; alt=&quot;image&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;img/img2.gif&quot; alt=&quot;image&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;img/img3.gif&quot; alt=&quot;image&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;img/img4.gif&quot; alt=&quot;image&quot;&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id="slider-nav"&gt;
-  &lt;button data-dir="prev"&gt;Previous&lt;/button&gt;
-  &lt;button data-dir="next"&gt;Next&lt;/button&gt;
+&lt;div id=&quot;slider-nav&quot;&gt;
+  &lt;button data-dir=&quot;prev&quot;&gt;Previous&lt;/button&gt;
+  &lt;button data-dir=&quot;next&quot;&gt;Next&lt;/button&gt;
 &lt;/div&gt;
 
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
-&lt;script src="slider.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;slider.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
 
 (function() {
-  var container = $('div.slider').css('overflow', 'hidden').children('ul'),
-    slider = new Slider( container, $('#slider-nav') );
+  var container = $(&#39;div.slider&#39;).css(&#39;overflow&#39;, &#39;hidden&#39;).children(&#39;ul&#39;),
+    slider = new Slider( container, $(&#39;#slider-nav&#39;) );
 
-  slider.nav.find('button').on('click', function() {
-    slider.setCurrent( $(this).data('dir') );
+  slider.nav.find(&#39;button&#39;).on(&#39;click&#39;, function() {
+    slider.setCurrent( $(this).data(&#39;dir&#39;) );
     slider.transition();
   });   
 })();
@@ -660,7 +644,7 @@ function Slider( container, nav ) {
   this.container = container;
   this.nav = nav.show();
 
-  this.imgs = this.container.find('img');
+  this.imgs = this.container.find(&#39;img&#39;);
   this.imgWidth = this.imgs[0].width; // 600
   this.imgsLen = this.imgs.length;
 
@@ -669,24 +653,22 @@ function Slider( container, nav ) {
 
 Slider.prototype.transition = function( coords ) {
   this.container.animate({
-    'margin-left': coords || -( this.current * this.imgWidth )
+    &#39;margin-left&#39;: coords || -( this.current * this.imgWidth )
   });
 };
 
 Slider.prototype.setCurrent = function( dir ) {
   var pos = this.current;
 
-  pos += ( ~~( dir === 'next' ) || -1 );
+  pos += ( ~~( dir === &#39;next&#39; ) || -1 );
   this.current = ( pos &lt; 0 ) ? this.imgsLen - 1 : pos % this.imgsLen;
 
   return pos;
 };
-</code></pre>
+</code></pre></div>
+<h3>3.9 Your Questions Answered</h3>
 
-<h3 id="your-questions-answered">3.9 Your Questions Answered</h3>
-<p>No code for this one.
-—</p>
-
+<h2>No code for this one.</h2>
 
   </article>
 

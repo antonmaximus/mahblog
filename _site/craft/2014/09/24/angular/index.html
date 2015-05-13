@@ -62,61 +62,57 @@
   </header>
 
   <article class="post-content">
-  <h2 id="example-of-minimum-set-up-for-angular">Example of minimum set-up for Angular</h2>
+  <h2>Example of minimum set-up for Angular</h2>
 
 <p>index.html.haml</p>
-
-<pre><code>!!! 5
-%html{"ng-app"=&gt;"gemStore"}
+<div class="highlight"><pre><code class="language-text" data-lang="text">!!! 5
+%html{&quot;ng-app&quot;=&gt;&quot;gemStore&quot;}
   %head
     / $BOOTSTRAP  CSS CDN 
-    %link(rel="stylesheet"  href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+    %link(rel=&quot;stylesheet&quot;  href=&#39;//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css&#39;)
 
     / Stylesheets
-    = stylesheet_link_tag 'custom'
+    = stylesheet_link_tag &#39;custom&#39;
 
-  %body{"ng-controller"=&gt;"StoreController as store"}
+  %body{&quot;ng-controller&quot;=&gt;&quot;StoreController as store&quot;}
     .container
-      .product.row{"ng-hide" =&gt; "store.product.soldOut"}
+      .product.row{&quot;ng-hide&quot; =&gt; &quot;store.product.soldOut&quot;}
         %h3
           {{store.product.name}}
           %em.pull-right ${{store.product.price}}
-        %button{"ng-show" =&gt; "store.product.canPurchase"} Add to Cart
+        %button{&quot;ng-show&quot; =&gt; &quot;store.product.canPurchase&quot;} Add to Cart
 
 
     / JQUERY CDN
-    = javascript_include_tag  "//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"
+    = javascript_include_tag  &quot;//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js&quot;
 
     / AngularJS
-    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"
+    = javascript_include_tag &quot;//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js&quot;
 
     / Javascripts
-    = javascript_include_tag "app.js"
-</code></pre>
-
+    = javascript_include_tag &quot;app.js&quot;
+</code></pre></div>
 <p>app.js</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">(function() {
+  var app = angular.module(&#39;gemStore&#39;, []);
 
-<pre><code>(function() {
-  var app = angular.module('gemStore', []);
-
-  app.controller('StoreController', function(){
+  app.controller(&#39;StoreController&#39;, function(){
     this.product = gem;
   });
 
   var gem = {
-    name: 'Azurite',
+    name: &#39;Azurite&#39;,
     price: 110.50,
     canPurchase: true,
     soldOut: false
   };
 })();
-</code></pre>
-
-<h2 id="module">Module</h2>
+</code></pre></div>
+<h2>Module</h2>
 
 <p><a href="https://docs.angularjs.org/guide/module">You can think of a module as a container for the different parts of your app – controllers, services, filters, directives, etc.</a></p>
 
-<hr />
+<hr>
 
   </article>
 

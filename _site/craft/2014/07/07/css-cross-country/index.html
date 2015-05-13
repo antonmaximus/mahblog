@@ -62,51 +62,53 @@
   </header>
 
   <article class="post-content">
-  <h3 id="primary-dom-selectors">Primary DOM Selectors</h3>
+  <h3>Primary DOM Selectors</h3>
 
 <ul>
-  <li>Element Selector</li>
-  <li>Class Selector</li>
-  <li>ID Selector</li>
+<li>Element Selector</li>
+<li>Class Selector</li>
+<li>ID Selector</li>
 </ul>
 
-<h3 id="cascade-order-priority">Cascade Order Priority</h3>
+<h3>Cascade Order Priority</h3>
 
 <ul>
-  <li>Using <code>!important</code> – (Highest Priority)</li>
-  <li>Inline style attribute</li>
-  <li><code>&lt;head&gt;</code> definition</li>
-  <li>External <code>&lt;link&gt;</code> – (Lowest Priority)</li>
+<li>Using <code>!important</code> -- (Highest Priority)</li>
+<li>Inline style attribute</li>
+<li><code>&lt;head&gt;</code> definition</li>
+<li>External <code>&lt;link&gt;</code> -- (Lowest Priority)</li>
 </ul>
 
-<h3 id="combinator-selectors">Combinator Selectors</h3>
-<p>Combinator – shows relationship</p>
+<h3>Combinator Selectors</h3>
+
+<p>Combinator -- shows relationship</p>
 
 <ul>
-  <li>Descendant Selector  – elements that are descendants 
-    <ul>
-      <li><code>div p { background-color: yellow; }</code></li>
-    </ul>
-  </li>
-  <li>Child Selector – elements that are immediate children
-    <ul>
-      <li><code>div &gt; p { background-color: yellow; }</code></li>
-    </ul>
-  </li>
-  <li>Adjacent Sibling Selector – ‘p’ that are placed immediately after ‘div’ in 
+<li>Descendant Selector  -- elements that are descendants 
+
+<ul>
+<li><code>div p { background-color: yellow; }</code></li>
+</ul></li>
+<li>Child Selector -- elements that are immediate children
+
+<ul>
+<li><code>div &gt; p { background-color: yellow; }</code></li>
+</ul></li>
+<li>Adjacent Sibling Selector -- &#39;p&#39; that are placed immediately after &#39;div&#39; in 
 example below: 
-    <ul>
-      <li><code>div + p { background-color: yellow; }</code></li>
-    </ul>
-  </li>
-  <li>General Sibling Selector – all ‘p’ that are siblings of ‘div’ in example below:
-    <ul>
-      <li><code>div ~ p { background-color: yellow; }</code></li>
-    </ul>
-  </li>
+
+<ul>
+<li><code>div + p { background-color: yellow; }</code></li>
+</ul></li>
+<li>General Sibling Selector -- all &#39;p&#39; that are siblings of &#39;div&#39; in example below:
+
+<ul>
+<li><code>div ~ p { background-color: yellow; }</code></li>
+</ul></li>
 </ul>
 
-<h3 id="clearing-floats-the-clearfix">Clearing Floats: The Clearfix</h3>
+<h3>Clearing Floats: The Clearfix</h3>
+
 <p>A clean technique to clear floats.  When used on the parent, the children will 
 be self-cleared.</p>
 
@@ -114,37 +116,39 @@ be self-cleared.</p>
 <span class="o">.</span><span class="n">group</span><span class="ss">:after</span> <span class="p">{</span> <span class="ss">clear</span><span class="p">:</span> <span class="n">both</span><span class="p">;</span> <span class="p">}</span>
 <span class="o">.</span><span class="n">group</span> <span class="p">{</span> <span class="ss">zoom</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="sr">/* IE6&amp;7 */</span> <span class="p">}</span></code></pre></div>
 
-<h3 id="specificity">Specificity</h3>
+<h3>Specificity</h3>
+
 <p>Priority of a Selector follows this order: <strong>A, B, C, D, E</strong></p>
 
 <ul>
-  <li>A – any inline style? (Highest priority)</li>
-  <li>B – # of ID Selectors</li>
-  <li>C – # of Class Selectors</li>
-  <li>D – # of Element Selectors </li>
-  <li>E – any inherited style? (Lowest priority)</li>
+<li>A -- any inline style? (Highest priority)</li>
+<li>B -- # of ID Selectors</li>
+<li>C -- # of Class Selectors</li>
+<li>D -- # of Element Selectors </li>
+<li>E -- any inherited style? (Lowest priority)</li>
 </ul>
 
-<h3 id="collapsing-margins">Collapsing Margins</h3>
+<h3>Collapsing Margins</h3>
+
 <p>Happens when the margins of two block elements collapse to the larger one
 instead of adding the two. <a href="http://www.w3.org/TR/CSS2/box.html#collapsing-margins">Source.</a></p>
 
-<p><img src="http://i.imgur.com/KXipDH8.png" alt="" /></p>
+<p><img src="http://i.imgur.com/KXipDH8.png" alt=""></p>
 
 <p>Collapsing margins will not occur when one or more block element has:</p>
 
 <ul>
-  <li>padding or border</li>
-  <li>relative or absolute positioning</li>
-  <li>a float left or right</li>
+<li>padding or border</li>
+<li>relative or absolute positioning</li>
+<li>a float left or right</li>
 </ul>
 
-<h3 id="image-use">Image Use</h3>
+<h3>Image Use</h3>
 
 <ul>
-  <li>Always ask: Content or Layout?</li>
-  <li>Resize images server-side when possible</li>
-  <li>Use overflow hidden when necessary</li>
+<li>Always ask: Content or Layout?</li>
+<li>Resize images server-side when possible</li>
+<li>Use overflow hidden when necessary</li>
 </ul>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="n">h4</span><span class="o">&gt;</span><span class="no">Rental</span> <span class="no">Products</span><span class="o">&lt;</span><span class="sr">/h4&gt;</span>
@@ -164,38 +168,40 @@ instead of adding the two. <a href="http://www.w3.org/TR/CSS2/box.html#collapsin
   <span class="ss">width</span><span class="p">:</span> <span class="mi">400</span><span class="n">px</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
-<h3 id="logoimage-replacement">Logo/Image Replacement</h3>
+<h3>Logo/Image Replacement</h3>
 
 <p>Add descriptive text to image-replaced elements for best-practice especially
 on screen-readers.  Then, use <code>text-indent: -9999px</code> in CSS to hide the 
 placeholder text.</p>
 
-<h3 id="sprites">Sprites</h3>
+<h3>Sprites</h3>
 
 <p>Use sprites when swapping backgroud images to prevent issues such as:</p>
 
 <ul>
-  <li>The need to preload an image</li>
-  <li>Adding an extra HTTP request</li>
+<li>The need to preload an image</li>
+<li>Adding an extra HTTP request</li>
 </ul>
 
-<h3 id="pseudo-classes">Pseudo Classes</h3>
+<h3>Pseudo Classes</h3>
+
 <p>Allow you to conditionally select an element based on state or position.  Below 
 are the most useful selectors:</p>
 
 <ul>
-  <li>:hover / :focus / :active / :visited</li>
-  <li>:first-child / :last-child / :only-child</li>
-  <li>:nth-child(odd/even/an+b) / :nth-of-type()  </li>
+<li>:hover / :focus / :active / :visited</li>
+<li>:first-child / :last-child / :only-child</li>
+<li>:nth-child(odd/even/an+b) / :nth-of-type()<br></li>
 </ul>
 
-<h3 id="pseudo-element">Pseudo Element</h3>
-<p>Allows you to modify an element’s content for styling.  Below are the most 
+<h3>Pseudo Element</h3>
+
+<p>Allows you to modify an element&#39;s content for styling.  Below are the most 
 utilized pseudo elements:</p>
 
 <ul>
-  <li>:before / :after – needs <code>content</code> property to be used.</li>
-  <li>:first-letter / :first-line  – doesn’t need <code>content</code> property to be used.
+<li>:before / :after -- needs <code>content</code> property to be used.</li>
+<li>:first-letter / :first-line  -- doesn&#39;t need <code>content</code> property to be used.
 ￼</li>
 </ul>
 

@@ -5,9 +5,68 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/mahblog/</link>
     <atom:link href="www.anton23.com/mahblog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 11 May 2015 17:08:50 -0700</pubDate>
-    <lastBuildDate>Mon, 11 May 2015 17:08:50 -0700</lastBuildDate>
+    <pubDate>Thu, 28 May 2015 16:48:28 -0700</pubDate>
+    <lastBuildDate>Thu, 28 May 2015 16:48:28 -0700</lastBuildDate>
     <generator>Jekyll v2.5.2</generator>
+    
+      <item>
+        <title>How To Improve Daily Decision Making by Avoiding 4 Cognitive Biases</title>
+        <description>&lt;p&gt;Study shows that there are many biases in our decision-making process. Below are the top four biases that cloud judgment.&lt;/p&gt;
+
+&lt;h2&gt;1. Self-serving bias.&lt;/h2&gt;
+
+&lt;p&gt;People attribute sucesses to moslty themselves and that all failures are due to others&amp;#39; shortcomings. &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pros: Protects self-esteem (and lessens depression)&lt;/li&gt;
+&lt;li&gt;Cons: Can&amp;#39;t learn from mistakes and improve (because one doesn&amp;#39;t take responsibility for failures)&lt;/li&gt;
+&lt;li&gt;How to Overcome: Be with close friends who can call you out and keep you grounded. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;2. Cognitive Fluency.&lt;/h2&gt;
+
+&lt;p&gt;It&amp;#39;s how easy an idea is to process and understand; the more fluent the idea, the more we unconsciously trust it.   &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pros: Can be used to influence other people.&lt;/li&gt;
+&lt;li&gt;Cons: Whether something is easy has nothing to do with truth -- which lead to an &lt;strong&gt;illusion of truth&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;How to Overcome: If something sounds too good, question it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;3. Sunk-cost Fallacy.&lt;/h2&gt;
+
+&lt;p&gt;The idea that people are more likely to endure something that already sucks if they&amp;#39;ve already invested so much into it. As opposed to cutting loses and moving on.  &lt;/p&gt;
+
+&lt;p&gt;This fallacy stems from our intense aversion to loss.  The thought that we wasted resources motivates us to carry on, even if it&amp;#39;s clearly a loss cause.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How to Overcome: Focus on future cost and benefits &lt;strong&gt;not&lt;/strong&gt; past losses. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;4. Confirmation Bias.&lt;/h2&gt;
+
+&lt;p&gt;You only search for evidence that confirms your beliefs.  This explains why so many people stick to many unscientific beliefs.&lt;/p&gt;
+
+&lt;p&gt;Another consequence is that the framing of question is vital.  &lt;em&gt;Are you happy with your life?&lt;/em&gt; vs. &lt;em&gt;Are you unhappy with your life?&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How to Overcome: Search for &lt;strong&gt;contradictory&lt;/strong&gt; evidence.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot;  allowfullscreen=&quot;&quot; class=&quot;youtube-player&quot; src=&quot;//www.youtube.com/embed/3Ux3pm6UfCo?wmode=transparent&amp;amp;amp;autoplay=0&amp;amp;amp;rel=0&amp;amp;amp;showinfo=0&amp;amp;amp;autohide=1&amp;amp;amp;color=white&amp;amp;amp;&quot; type=&quot;text/html&quot;&gt;&lt;/iframe&gt;
+  &lt;figcaption&gt;2014 September Squatz (245x3)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;hr&gt;
+</description>
+        <pubDate>Thu, 28 May 2015 07:00:00 -0700</pubDate>
+        <link>www.anton23.com/mahblog/meditate/2015/05/28/four-cognitive-biases/</link>
+        <guid isPermaLink="true">www.anton23.com/mahblog/meditate/2015/05/28/four-cognitive-biases/</guid>
+        
+        
+        <category>meditate</category>
+        
+      </item>
     
       <item>
         <title>Angular</title>
@@ -1775,42 +1834,6 @@ still go with someone who&amp;#39;s done it better than you did (so it may not b
         <pubDate>Wed, 22 Oct 2014 07:44:58 -0700</pubDate>
         <link>www.anton23.com/mahblog/craft/2014/10/22/interview/</link>
         <guid isPermaLink="true">www.anton23.com/mahblog/craft/2014/10/22/interview/</guid>
-        
-        
-        <category>craft</category>
-        
-      </item>
-    
-      <item>
-        <title>JavaScript: Mail of Modularity</title>
-        <description>&lt;h2&gt;Namespacing Basics&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The key to creating a namespace is a single global Object, commonly called the “wrapper” for the space.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Now that the function and all the necessary variables are “encapsulated” within the namespace, we’ll need to call that namespace in order to access any of them.&lt;/p&gt;
-
-&lt;p&gt;var ARMORY = (function( war ){
-    var weaponList = [ &lt;em&gt;list of weapon Objects&lt;/em&gt; ]; 
-    var armorList = [ &lt;em&gt;list of armor Objects&lt;/em&gt; ]; 
-    var removeWeapon = function(...){};
-    var replaceWeapon = function(...){};
-    var removeArmor = function(...){};
-    var replaceArmor = function(...){};&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  return {
-    makeWeaponRequest: function(...){
-      if(war) //let civilians have weaponry
-     },
-    makeArmorRequest: function(...){}
-  };
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;})(wartime);&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-</description>
-        <pubDate>Sat, 11 Oct 2014 07:44:58 -0700</pubDate>
-        <link>www.anton23.com/mahblog/craft/2014/10/11/javascript-mail-of-modularity/</link>
-        <guid isPermaLink="true">www.anton23.com/mahblog/craft/2014/10/11/javascript-mail-of-modularity/</guid>
         
         
         <category>craft</category>

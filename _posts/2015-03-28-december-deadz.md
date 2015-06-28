@@ -6,7 +6,7 @@ categories: exercise
 ---
 
 
-I originally planned to write this in December... but alas, laziness and procrastination got in the  and now it's March.  Nonetheless, better late than never. 
+I originally planned to write this in December... but alas, laziness and procrastination got in the way and now it's March.  Nonetheless, better late than never. 
 
 As of early December, I'm pulling 305 lbs in 6 reps (for my first set).  To keep thing simple, I'll keep track of the first set only throughout my progression. Keep in mind that this usually done after a good set of squats.  In the video below, I'm highly certain that I did it after squats.  I'll explicitly make a note for it next time.
 

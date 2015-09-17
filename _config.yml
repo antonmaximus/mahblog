@@ -2,7 +2,8 @@
 title: anton
 #email: your-email@domain.com
 description: "A small growth today makes progression happen..."
-baseurl: "/mahblog"
+baseurl: "/"
+# baseurl: "/mahblog"
 url: "www.anton23.com"
 twitter_username: antonmaximus
 github_username:  antonmaximus

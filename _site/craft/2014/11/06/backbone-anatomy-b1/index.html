@@ -2,43 +2,44 @@
 <html>
 
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Anatomy of Backbone B1</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="A small growth today makes progression happen...">
-    <link rel="canonical" href="www.anton23.com/craft/2014/11/06/backbone-anatomy-b1/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/custom.css">
+  <title>Anatomy of Backbone B1</title>
+  <meta name="description" content="1. More Models">
 
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="canonical" href="www.anton23.com/craft/2014/11/06/backbone-anatomy-b1/">
+  <link rel="alternate" type="application/rss+xml" title="anton" href="www.anton23.com/feed.xml">
 </head>
 
 
-    <body>
+  <body>
 
     <header class="site-header">
 
-  <div class="wrap">
+  <div class="wrapper">
 
     <a class="site-title" href="/">anton</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
-          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
-            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
-            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
-            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
         </svg>
       </a>
+
       <div class="trigger">
         
+          
           <a class="page-link" href="/about/">About</a>
+          
+        
+          
         
           
         
@@ -53,42 +54,52 @@
 
 
     <div class="page-content">
-      <div class="wrap">
-      <div class="post">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1>Anatomy of Backbone B1</h1>
-    <p class="meta">Nov 6, 2014</p>
+    <h1 class="post-title" itemprop="name headline">Anatomy of Backbone B1</h1>
+    <p class="post-meta"><time datetime="2014-11-06T06:00:00-08:00" itemprop="datePublished">Nov 6, 2014</time></p>
   </header>
 
-  <article class="post-content">
-  <h2>1. More Models</h2>
+  <div class="post-content" itemprop="articleBody">
+    <h2 id="more-models">1. More Models</h2>
 
-<h3>Parsing non-standard JSON into your Models</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">// Response from Server
-{todo:{id: 1, description: &#39;Pick up milk&#39;, status: &#39;incomplete&#39; }}
-</code></pre></div>
+<h3 id="parsing-non-standard-json-into-your-models">Parsing non-standard JSON into your Models</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// Response from Server
+{todo:{id: 1, description: 'Pick up milk', status: 'incomplete' }}
+</code></pre>
+</div>
+
 <!-- tsk -->
+<p>Defaul Backbone <code class="highlighter-rouge">parse</code> just returns response, so we edit it like so…</p>
 
-<p>Defaul Backbone <code>parse</code> just returns response, so we edit it like so...</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoItem = Backbone.Model.extend({
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoItem = Backbone.Model.extend({
   parse: function(response){
 return response.todo; }
 });
-</code></pre></div>
-<!-- tsk -->
+</code></pre>
+</div>
 
-<p>Instantiating Models, doesn&#39;t call parse by default. So we call it with <code>parse: true</code></p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var todoItem = new TodoItem({
-  todo:{id: 1, description: &#39;Pick up milk&#39;, status: &#39;incomplete&#39;}
-}, { parse: true });
-</code></pre></div>
-<h3>Changing Attribute Names</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">// Response from Server
-{todo:{id: 1, desc: &#39;Pick up milk&#39;, status: &#39;incomplete&#39;}}
-</code></pre></div>
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoItem = Backbone.Model.extend({
+<p>Instantiating Models, doesn’t call parse by default. So we call it with <code class="highlighter-rouge">parse: true</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var todoItem = new TodoItem({
+  todo:{id: 1, description: 'Pick up milk', status: 'incomplete'}
+}, { parse: true });
+</code></pre>
+</div>
+
+<h3 id="changing-attribute-names">Changing Attribute Names</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// Response from Server
+{todo:{id: 1, desc: 'Pick up milk', status: 'incomplete'}}
+</code></pre>
+</div>
+
+<!-- tsk -->
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoItem = Backbone.Model.extend({
   parse: function(response){
     response = response.todo;
     response.description = response.desc;
@@ -96,98 +107,139 @@ return response.todo; }
     return response;
   }
 });
-</code></pre></div>
-<h3>Sending JSON back to the Server</h3>
+</code></pre>
+</div>
 
-<p>Defaut Backbone <code>toJSON()</code> </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoItem = Backbone.Model.extend({
+<h3 id="sending-json-back-to-the-server">Sending JSON back to the Server</h3>
+
+<p>Defaut Backbone <code class="highlighter-rouge">toJSON()</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoItem = Backbone.Model.extend({
   toJSON: function(){
     return _.clone(this.attributes);
   }
 });
-</code></pre></div>
-<p>Overridng the <code>toJSON()</code> function like so...</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoItem = Backbone.Model.extend({
+</code></pre>
+</div>
+
+<p>Overridng the <code class="highlighter-rouge">toJSON()</code> function like so…</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoItem = Backbone.Model.extend({
   toJSON: function(){
     var attrs = _.clone(this.attributes);
     attrs.desc = attrs.description;
-    attrs = _.pick(attrs, &#39;desc&#39;, &#39;status&#39;);  //returns an object with desc &amp; status properties
+    attrs = _.pick(attrs, 'desc', 'status');  //returns an object with desc &amp; status properties
     return { todo: attrs };
 } });
-</code></pre></div>
-<p>Then, replace Render View attributes from <code>toJSON()</code> to <code>attributes</code></p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoView = Backbone.View.extend({
+</code></pre>
+</div>
+
+<p>Then, replace Render View attributes from <code class="highlighter-rouge">toJSON()</code> to <code class="highlighter-rouge">attributes</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoView = Backbone.View.extend({
   render: function(){
     this.$el.html(this.template(this.model.attributes));  // this used to be .toJSON()
     return this;
   }
 });
-</code></pre></div>
-<h3>Unconventional ID Attribute</h3>
+</code></pre>
+</div>
+
+<h3 id="unconventional-id-attribute">Unconventional ID Attribute</h3>
 
 <p>Common way:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var todoItem = new TodoItem({id: 1})
-</code></pre></div>
-<p>Workaround:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoItem = Backbone.Model.extend({
-  idAttribute: &#39;_id&#39;
-});
-</code></pre></div>
-<h2>2. Customizing Collections</h2>
 
-<h3>Review Fetching Data from the Server</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">// URL to get JSON data from
-var TodoItems = Backbone.Collection.extend({
-  url: &#39;/todos&#39;
+<div class="highlighter-rouge"><pre class="highlight"><code>var todoItem = new TodoItem({id: 1})
+</code></pre>
+</div>
+
+<p>Workaround:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoItem = Backbone.Model.extend({
+  idAttribute: '_id'
 });
-</code></pre></div>
+</code></pre>
+</div>
+
+<h2 id="customizing-collections">2. Customizing Collections</h2>
+
+<h3 id="review-fetching-data-from-the-server">Review Fetching Data from the Server</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// URL to get JSON data from
+var TodoItems = Backbone.Collection.extend({
+  url: '/todos'
+});
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">// Populate collection from server
+<div class="highlighter-rouge"><pre class="highlight"><code>// Populate collection from server
 todoItems.fetch();
-</code></pre></div>
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">// Response from server after calling `fetch()`
+<div class="highlighter-rouge"><pre class="highlight"><code>// Response from server after calling `fetch()`
 [
-  {description: &#39;Pick up milk.&#39;, status: &#39;incomplete&#39;, id: 1},
-  {description: &#39;Get a car wash.&#39;, status: &#39;incomplete&#39;, id: 2}
+  {description: 'Pick up milk.', status: 'incomplete', id: 1},
+  {description: 'Get a car wash.', status: 'incomplete', id: 2}
 ]
-</code></pre></div>
-<h3>Handling non-standard Response from Server</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">todoItems.fetch()
-</code></pre></div>
+</code></pre>
+</div>
+
+<h3 id="handling-non-standard-response-from-server">Handling non-standard Response from Server</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>todoItems.fetch()
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">//Response from Server
+<div class="highlighter-rouge"><pre class="highlight"><code>//Response from Server
 {
-  &quot;total&quot;: 25, &quot;per_page&quot;: 10, &quot;page&quot;: 2,
-  &quot;todos&quot;: [ {&quot;id&quot;: 1, ... }, {&quot;id&quot;: 2, ... } ]
+  "total": 25, "per_page": 10, "page": 2,
+  "todos": [ {"id": 1, ... }, {"id": 2, ... } ]
 }   
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Common Way to parse:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoItems = Backbone.Collection.extend({
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoItems = Backbone.Collection.extend({
   parse: function(response){
     return response;
   }
 });
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>New Way to accommodate non-standard format:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoItems = Backbone.Collection.extend({
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoItems = Backbone.Collection.extend({
   parse: function(response){
     this.perPage = response.per_page;
     this.page = response.page;
     this.total = response.total; return response.todos;
   } 
 });
-</code></pre></div>
-<h3>Fetching with Extra Parameters</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">todoItems.fetch({data: { page: 6 }}); // GET /todos?page=6
-</code></pre></div>
+</code></pre>
+</div>
+
+<h3 id="fetching-with-extra-parameters">Fetching with Extra Parameters</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>todoItems.fetch({data: { page: 6 }}); // GET /todos?page=6
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">todoItems.fetch({data: {page: todoItems.page + 1}}); // GET /todos?page=2
-</code></pre></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>todoItems.fetch({data: {page: todoItems.page + 1}}); // GET /todos?page=2
+</code></pre>
+</div>
+
 <p>Review on Collection View</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodosView = Backbone.View.extend({
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodosView = Backbone.View.extend({
   initialize: function(){
-    this.collection.on(&#39;reset&#39;, this.render, this);
+    this.collection.on('reset', this.render, this);
   },
   render: function(){
     this.addAll();
@@ -202,13 +254,16 @@ todoItems.fetch();
     this.$el.append(todoView.render().el);
   }
 });
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Render the Next Link</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodosView = Backbone.View.extend({
-  template: _.template(&#39;&lt;a href=&quot;#/todos/p&lt;%= page %&gt;&quot;&gt;next page&lt;/a&gt;&#39;),  // !!! Add this line
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodosView = Backbone.View.extend({
+  template: _.template('&lt;a href="#/todos/p&lt;%= page %&gt;"&gt;next page&lt;/a&gt;'),  // !!! Add this line
 
   initialize: function(){
-    this.collection.on(&#39;reset&#39;, this.render, this);
+    this.collection.on('reset', this.render, this);
   },
 
   render: function(){
@@ -218,28 +273,34 @@ todoItems.fetch();
   },
   ... 
 });
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Review our Router</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoApp = new (Backbone.Router.extend({
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoApp = new (Backbone.Router.extend({
   routes: {
-    &quot;&quot;: &quot;index&quot;
+    "": "index"
   },
   initialize: function(){
     this.todoItems = new TodoItems();
     this.todosView = new TodosView({collection: this.todoItems});
     this.todosView.render();
-    $(&#39;#app&#39;).append(this.todosView.el);
+    $('#app').append(this.todosView.el);
   },
   index: function(){
     this.todoItems.fetch();
   }
 });
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Implementing the Base Route</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoApp = new (Backbone.Router.extend({
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoApp = new (Backbone.Router.extend({
   routes: {
-    &quot;todos/p:page&quot;: &quot;page&quot;,  // !!! Add this line
-      &quot;&quot;: &quot;index&quot;
+    "todos/p:page": "page",  // !!! Add this line
+      "": "index"
   },
 
   page: function(page){  // !!! Add this function too
@@ -250,55 +311,71 @@ todoItems.fetch();
     this.todoItems = new TodoItems();
     this.todosView = new TodosView({collection: this.todoItems});
     this.todosView.render();
-    $(&#39;#app&#39;).append(this.todosView.el);
+    $('#app').append(this.todosView.el);
   },
 
   index: function(){
     this.todoItems.fetch();
   }
 });
-</code></pre></div>
-<h3>Sorting Collections</h3>
+</code></pre>
+</div>
 
-<p>Sort by Comparator <code>status</code></p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoItems = Backbone.Collection.extend({
-  comparator: &#39;status&#39;;
+<h3 id="sorting-collections">Sorting Collections</h3>
+
+<p>Sort by Comparator <code class="highlighter-rouge">status</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoItems = Backbone.Collection.extend({
+  comparator: 'status';
 });
-</code></pre></div>
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">todoItems.fetch(); // When this is called, the collection gets sorted by status
-</code></pre></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>todoItems.fetch(); // When this is called, the collection gets sorted by status
+</code></pre>
+</div>
+
 <p>Sort by Function</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoItems = Backbone.Collection.extend({
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoItems = Backbone.Collection.extend({
   comparator: function(todo1, todo2) {
-    return todo1.get(&#39;status&#39;) &lt; todo2.get(&#39;status&#39;)
+    return todo1.get('status') &lt; todo2.get('status')
   }
 });
-</code></pre></div>
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">// When this is called, the collection gets sorted by status in reverse order
+<div class="highlighter-rouge"><pre class="highlight"><code>// When this is called, the collection gets sorted by status in reverse order
 todoItems.fetch(); 
-</code></pre></div>
-<h3>Aggregate Values</h3>
+</code></pre>
+</div>
+
+<h3 id="aggregate-values">Aggregate Values</h3>
 
 <p>Display amount of completed todo items</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoItems = Backbone.Collection.extend({
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoItems = Backbone.Collection.extend({
   completedCount: function() {
-    return this.where({status: &#39;complete&#39;}).length;
+    return this.where({status: 'complete'}).length;
   }
 });
 
 todoItems.completedCount(); // This returns 1
-</code></pre></div>
-<h2>3. Real Routes</h2>
+</code></pre>
+</div>
 
-<h3>Optional Routes</h3>
+<h2 id="real-routes">3. Real Routes</h2>
 
-<p>Use parentheses for optional parts like so: <code>(/p:page)</code>.<br>
-Optional Trailing Slash at the end of the URI can be accommodated by adding <code>(/)</code></p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoRouter = new (Backbone.Router.extend({ 
+<h3 id="optional-routes">Optional Routes</h3>
+
+<p>Use parentheses for optional parts like so: <code class="highlighter-rouge">(/p:page)</code>.  <br />
+Optional Trailing Slash at the end of the URI can be accommodated by adding <code class="highlighter-rouge">(/)</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoRouter = new (Backbone.Router.extend({ 
   routes: {
-    &#39;search/:query(/p:page)(/)&#39;: &#39;search&#39;,
+    'search/:query(/p:page)(/)': 'search',
   },
   search: function(query, page) {
     page = page || 0;
@@ -306,24 +383,33 @@ Optional Trailing Slash at the end of the URI can be accommodated by adding <cod
     console.log(page);
   } 
 }));
-</code></pre></div>
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">// Calling the above would yield...
-TodoRouter.navigate(&#39;search/milk&#39;, {trigger: true});  // ==&gt; &quot;milk&quot;, 0
-</code></pre></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>// Calling the above would yield...
+TodoRouter.navigate('search/milk', {trigger: true});  // ==&gt; "milk", 0
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">TodoRouter.navigate(&#39;search/milk/p2&#39;, {trigger: true}); // ==&gt; &quot;milk&quot;, 2
-</code></pre></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>TodoRouter.navigate('search/milk/p2', {trigger: true}); // ==&gt; "milk", 2
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">// For the trailing slash
-TodoRouter.navigate(&#39;search/milk/p2/&#39;, {trigger: true}) ; // ==&gt; &quot;milk&quot;, 2
-</code></pre></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>// For the trailing slash
+TodoRouter.navigate('search/milk/p2/', {trigger: true}) ; // ==&gt; "milk", 2
+</code></pre>
+</div>
+
 <p>URI with Spaces Gotcha</p>
 
-<p>Use <code>decodeURIComponent</code> like so...</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoRouter = new (Backbone.Router.extend({
+<p>Use <code class="highlighter-rouge">decodeURIComponent</code> like so…</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoRouter = new (Backbone.Router.extend({
   routes: {
-    &#39;search/:query(/p:page)(/)&#39;: &#39;search&#39;,
+    'search/:query(/p:page)(/)': 'search',
   },
   search: function(query, page) {
     page = page || 0;
@@ -332,265 +418,353 @@ TodoRouter.navigate(&#39;search/milk/p2/&#39;, {trigger: true}) ; // ==&gt; &quo
     console.log(page);
   }
 }));
-</code></pre></div>
-<!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">// Encoded input ==&gt; Decoded output
-TodoRouter.navigate(&#39;search/Hello%20World/p2&#39;, {trigger: true})  // ==&gt; &quot;Hello World&quot;, 2
-</code></pre></div>
-<h3>Regex in Routes</h3>
+</code></pre>
+</div>
 
-<p>To handle regex, we use <code>Router.route</code> format...</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoRouter = new (Backbone.Router.extend({
+<!-- tsk -->
+<div class="highlighter-rouge"><pre class="highlight"><code>// Encoded input ==&gt; Decoded output
+TodoRouter.navigate('search/Hello%20World/p2', {trigger: true})  // ==&gt; "Hello World", 2
+</code></pre>
+</div>
+
+<h3 id="regex-in-routes">Regex in Routes</h3>
+
+<p>To handle regex, we use <code class="highlighter-rouge">Router.route</code> format…</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoRouter = new (Backbone.Router.extend({
   initialize: function(){ 
-    this.route(/^todos\/(\d+)$/, &#39;show&#39;);
+    this.route(/^todos\/(\d+)$/, 'show');
   },
 
   show: function(id) {
-    console.log(&quot;id = &quot; + id);
+    console.log("id = " + id);
   } 
 }));
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>!!! Needs more data</p>
 
-<h3>Catch-all Routes</h3>
+<h3 id="catch-all-routes">Catch-all Routes</h3>
 
 <p>Alert user when no route matches</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoRouter = Backbone.Router.extend({
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoRouter = Backbone.Router.extend({
   routes: {
-    &#39;*path&#39;: &#39;notFound&#39;
+    '*path': 'notFound'
   },
   notFound: function(path) {
-    alert(&#39;Sorry!  There is no content here.&#39;);
+    alert('Sorry!  There is no content here.');
 } });
-</code></pre></div>
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">TodoRouter.navigate(&#39;nothinghere&#39;, {trigger: true});
-</code></pre></div>
-<h3>File Path Route</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>TodoRouter.navigate('nothinghere', {trigger: true});
+</code></pre>
+</div>
+
+<h3 id="file-path-route">File Path Route</h3>
 
 <p>Accept a file path and get its parts</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoRouter = new (Backbone.Router.extend({
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoRouter = new (Backbone.Router.extend({
   routes: {
-    &#39;file/*path&#39;: &#39;file&#39;
+    'file/*path': 'file'
   },
     file: function(path) {
-    var parts = path.split(&quot;/&quot;);
+    var parts = path.split("/");
     console.log(parts);
   } 
 }));
-</code></pre></div>
-<!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">TodoRouter.navigate(&quot;file/this/is/a/file.txt&quot;, {trigger: true});
-// ==&gt; [&quot;this&quot;, &quot;is&quot;, &quot;a&quot;, &quot;file.txt&quot;]
-￼￼
-</code></pre></div>
-<h2>4. Varying Views</h2>
+</code></pre>
+</div>
 
-<h3>View Initialization Options Review</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">//Pass in the Model
+<!-- tsk -->
+<div class="highlighter-rouge"><pre class="highlight"><code>TodoRouter.navigate("file/this/is/a/file.txt", {trigger: true});
+// ==&gt; ["this", "is", "a", "file.txt"]
+￼￼
+</code></pre>
+</div>
+
+<h2 id="varying-views">4. Varying Views</h2>
+
+<h3 id="view-initialization-options-review">View Initialization Options Review</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//Pass in the Model
 var todoView = new TodoView({
   model: todoItem
 });
-</code></pre></div>
-<!-- tsk -->
+</code></pre>
+</div>
 
-<p>//Pass in the Collection
-var todoView = new TodoView({
-  collection: todoItems
+<!-- tsk -->
+<p>//Pass in the Collection<br />
+var todoView = new TodoView({<br />
+  collection: todoItems<br />
 });</p>
 
-<h3>Using Existing DOM Elements as a parameter</h3>
+<h3 id="using-existing-dom-elements-as-a-parameter">Using Existing DOM Elements as a parameter</h3>
 
-<p>You can use the existing <code>div</code>  (or any element) in the DOM instead of 
+<p>You can use the existing <code class="highlighter-rouge">div</code>  (or any element) in the DOM instead of <br />
 having the view instance to create a new one.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">//HTML
-&lt;div class=&quot;todo&quot;&gt;&lt;/div&gt;
-</code></pre></div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//HTML
+&lt;div class="todo"&gt;&lt;/div&gt;
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoView = Backbone.View.extend({
-  template: _.template(&quot;&lt;%= description %&gt;&quot;),
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoView = Backbone.View.extend({
+  template: _.template("&lt;%= description %&gt;"),
   render: function(){
     this.$el.html(this.template(this.model.attributes));
     return this;
   }
 });
-</code></pre></div>
-<!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">// !!! Take note of the `el` option
-var todoView = new TodoView({model: todoItem, el: $(&#39;.todo&#39;)});  
-</code></pre></div>
-<!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">todoView.render(); // ==&gt; &lt;div class=&quot;todo&quot;&gt;Pickup Milk.&lt;/div&gt;
-</code></pre></div>
-<h3>Custom Initialization Options</h3>
+</code></pre>
+</div>
 
-<p>Pass in an extra option. </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var todoView = new TodoView({
+<!-- tsk -->
+<div class="highlighter-rouge"><pre class="highlight"><code>// !!! Take note of the `el` option
+var todoView = new TodoView({model: todoItem, el: $('.todo')});  
+</code></pre>
+</div>
+
+<!-- tsk -->
+<div class="highlighter-rouge"><pre class="highlight"><code>todoView.render(); // ==&gt; &lt;div class="todo"&gt;Pickup Milk.&lt;/div&gt;
+</code></pre>
+</div>
+
+<h3 id="custom-initialization-options">Custom Initialization Options</h3>
+
+<p>Pass in an extra option.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var todoView = new TodoView({
   model: todoItem,
   user: currentUser
 });
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Access extra options in initialize</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoView = Backbone.View.extend({
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoView = Backbone.View.extend({
   initialize: function(options){
     this.user = options.user;
   }
 });
-</code></pre></div>
-<h3>Escaping User Content</h3>
+</code></pre>
+</div>
 
-<p>Rendering user supplied strings can lead to XSS attack.  You can use </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoView = Backbone.View.extend({
-template: _.template(&#39;&lt;%= model.escape(&quot;description&quot;) %&gt;&#39;),
+<h3 id="escaping-user-content">Escaping User Content</h3>
+
+<p>Rendering user supplied strings can lead to XSS attack.  You can use</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoView = Backbone.View.extend({
+template: _.template('&lt;%= model.escape("description") %&gt;'),
 render: function(){
 this.$el.html(this.template({model: this.model}));
     return this;
   }
 });
-</code></pre></div>
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">var todoView = new TodoView({model: todoItem});
-</code></pre></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>var todoView = new TodoView({model: todoItem});
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">todoItem.set(&#39;description&#39;, &quot;&lt;script src=&#39;attack.js&#39; /&gt;&quot;)
-</code></pre></div>
-<p>When, <code>todoView.render().el</code> is called, this outputs:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">todoView.render().el; // ==&gt; &lt;div&gt;&amp;lt;script src=&amp;#x27;attack.js&amp;#x27; /&amp;gt;&lt;/div&gt;
-</code></pre></div>
-<h3>Passing Extra Options to Event Handlers</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">￼
+<div class="highlighter-rouge"><pre class="highlight"><code>todoItem.set('description', "&lt;script src='attack.js' /&gt;")
+</code></pre>
+</div>
+
+<p>When, <code class="highlighter-rouge">todoView.render().el</code> is called, this outputs:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>todoView.render().el; // ==&gt; &lt;div&gt;&amp;lt;script src=&amp;#x27;attack.js&amp;#x27; /&amp;gt;&lt;/div&gt;
+</code></pre>
+</div>
+
+<h3 id="passing-extra-options-to-event-handlers">Passing Extra Options to Event Handlers</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>￼
 var TodoView = Backbone.View.extend({
-  template: _.template(&#39;&lt;span&gt;&lt;%= description %&gt;&lt;/span&gt;&#39;),
+  template: _.template('&lt;span&gt;&lt;%= description %&gt;&lt;/span&gt;'),
   initialize: function(){
-    this.model.on(&#39;change:description&#39;, this.change, this);
+    this.model.on('change:description', this.change, this);
   },
   render: function(){
     this.$el.html(this.template(this.model.attributes));
   },
   change: function(model, value, options){
-      this.$(&#39;span&#39;).html(value);
+      this.$('span').html(value);
     if (options.highlight !== false){
-      this.$el.effect(&quot;highlight&quot;, {}, 1000);
+      this.$el.effect("highlight", {}, 1000);
     }
   }, 
 
 });
-</code></pre></div>
-<p>To make change without firing off events, pass <code>silent: true</code></p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">todoItem.set({description: &quot;Pickup Kids&quot;}, {silent: true});
-</code></pre></div>
-<p>To stop specific action (e.g., highlighting), edit the function above to accommodate
-an <code>if</code> check, then pass that option</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">todoItem.set({description: &quot;Pickup Kids&quot;}, {highlight: false});
-</code></pre></div>
-<h3>View Event Cleanup</h3>
+</code></pre>
+</div>
 
-<p><strong>Old Approach:</strong> Using model to notify the view.  </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoView = Backbone.View.extend({
+<p>To make change without firing off events, pass <code class="highlighter-rouge">silent: true</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>todoItem.set({description: "Pickup Kids"}, {silent: true});
+</code></pre>
+</div>
+
+<p>To stop specific action (e.g., highlighting), edit the function above to accommodate<br />
+an <code class="highlighter-rouge">if</code> check, then pass that option</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>todoItem.set({description: "Pickup Kids"}, {highlight: false});
+</code></pre>
+</div>
+
+<h3 id="view-event-cleanup">View Event Cleanup</h3>
+
+<p><strong>Old Approach:</strong> Using model to notify the view.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoView = Backbone.View.extend({
   initialize: function() {
-    this.model.on(&#39;change&#39;, this.render, this);
+    this.model.on('change', this.render, this);
   }
 });
-</code></pre></div>
-<p>When the view instance is removed using <code>todoView.remove()</code>, this breaks
+</code></pre>
+</div>
+
+<p>When the view instance is removed using <code class="highlighter-rouge">todoView.remove()</code>, this breaks<br />
 because Model still holds reference to the view.</p>
 
-<p><strong>New Approach:</strong> Use view to &quot;listen to&quot; model.  Added in Backbone 0.9.9</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoView = Backbone.View.extend({
+<p><strong>New Approach:</strong> Use view to “listen to” model.  Added in Backbone 0.9.9</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoView = Backbone.View.extend({
   initialize: function() {
-    this.listenTo(this.model, &#39;change&#39;, this.render);
+    this.listenTo(this.model, 'change', this.render);
   }
 });
-</code></pre></div>
-<!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">todoView.stopListening(); // Stops all listeners for this view instance
-</code></pre></div>
-<!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">todoView.remove(); //Automatically calls stopListening()
-</code></pre></div>
-<h2>5. Working with Forms</h2>
+</code></pre>
+</div>
 
-<h3>The Plain (no Backbone) Way</h3>
+<!-- tsk -->
+<div class="highlighter-rouge"><pre class="highlight"><code>todoView.stopListening(); // Stops all listeners for this view instance
+</code></pre>
+</div>
+
+<!-- tsk -->
+<div class="highlighter-rouge"><pre class="highlight"><code>todoView.remove(); //Automatically calls stopListening()
+</code></pre>
+</div>
+
+<h2 id="working-with-forms">5. Working with Forms</h2>
+
+<h3 id="the-plain-no-backbone-way">The Plain (no Backbone) Way</h3>
 
 <p>Create an Ajax form for creating new Todos</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;form action=&quot;/todos&quot; method=&quot;POST&quot;&gt;
-    &lt;input name=description value=&quot;What do you need to do?&quot; /&gt; 
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;form action="/todos" method="POST"&gt;
+    &lt;input name=description value="What do you need to do?" /&gt; 
     &lt;button&gt;Save&lt;/button&gt;
 &lt;/form&gt;
-</code></pre></div>
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">// Plain jQuery
-$(&#39;button&#39;).click(function(e){
+<div class="highlighter-rouge"><pre class="highlight"><code>// Plain jQuery
+$('button').click(function(e){
   e.preventDefault();
-  var uri = $(&#39;form&#39;).attr(&#39;action&#39;);
-  var description = $(&#39;input[name=description]&#39;).val();
+  var uri = $('form').attr('action');
+  var description = $('input[name=description]').val();
   $.post(uri, {description: description});
 });
-</code></pre></div>
-<h3>The Backbone Way</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoItem = Backbone.Model.extend({
-  urlRoot: &quot;/todos&quot;
+</code></pre>
+</div>
+
+<h3 id="the-backbone-way">The Backbone Way</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoItem = Backbone.Model.extend({
+  urlRoot: "/todos"
 });
-</code></pre></div>
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">var todoItem = new TodoItem({description: &quot;What do you need to do?&quot;}); 
-todoItem.save({description: &#39;Pickup Kids.&#39;});
-</code></pre></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>var todoItem = new TodoItem({description: "What do you need to do?"}); 
+todoItem.save({description: 'Pickup Kids.'});
+</code></pre>
+</div>
+
 <p>Build the Form with Backbone View</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoForm = Backbone.View.extend({
-  template: _.template(&#39;&lt;form&gt;&#39; +
-    &#39;&lt;input name=description value=&quot;&lt;%= description %&gt;&quot; /&gt;&#39; +
-    &#39;&lt;button&gt;Save&lt;/button&gt;&lt;/form&gt;&#39;),
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoForm = Backbone.View.extend({
+  template: _.template('&lt;form&gt;' +
+    '&lt;input name=description value="&lt;%= description %&gt;" /&gt;' +
+    '&lt;button&gt;Save&lt;/button&gt;&lt;/form&gt;'),
   render: function(){
     this.$el.html(this.template(this.model.attributes));
     return this;
   } 
 });
-</code></pre></div>
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">var todoItem = new TodoItem({description: &quot;What do you need to do?&quot;});
+<div class="highlighter-rouge"><pre class="highlight"><code>var todoItem = new TodoItem({description: "What do you need to do?"});
 var todoForm = new TodoForm({model: todoItem});
-$(&#39;#app&#39;).html(todoForm.render().el);
-</code></pre></div>
-<p>This outputs:
-    <form><input name=description value="What do you need to do?" />
-    <button>Save</button></form></p>
+$('#app').html(todoForm.render().el);
+</code></pre>
+</div>
 
-<h3>Capture Button Click and Return Key to Save Model</h3>
+<p>This outputs:<br />
+    &lt;form&gt;&lt;input name=description value=”What do you need to do?” /&gt;<br />
+    <button>Save</button>&lt;/form&gt;</p>
 
-<p>Using <code>submit</code> allows processing on either click or pressing enter.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoForm = Backbone.View.extend({
-  template: _.template(&#39;&lt;form&gt;&#39; +
-    &#39;&lt;input name=description value=&quot;&lt;%= description %&gt;&quot; /&gt;&#39; +
-    &#39;&lt;button&gt;Save&lt;/button&gt;&lt;/form&gt;&#39;),
+<h3 id="capture-button-click-and-return-key-to-save-model">Capture Button Click and Return Key to Save Model</h3>
+
+<p>Using <code class="highlighter-rouge">submit</code> allows processing on either click or pressing enter.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoForm = Backbone.View.extend({
+  template: _.template('&lt;form&gt;' +
+    '&lt;input name=description value="&lt;%= description %&gt;" /&gt;' +
+    '&lt;button&gt;Save&lt;/button&gt;&lt;/form&gt;'),
   events: {
-    submit: &#39;save&#39;  // !!! You can also use &#39;click&#39; to use just &#39;click&#39;
+    submit: 'save'  // !!! You can also use 'click' to use just 'click'
   },
   save: function(e) {
     e.preventDefault();
-    var newDescription = this.$(&#39;input[name=description]&#39;).val();
+    var newDescription = this.$('input[name=description]').val();
     this.model.save({description: newDescription});
   } 
 });
-</code></pre></div>
-<h3>Reusing Form to Edit existing TodoItem</h3>
+</code></pre>
+</div>
+
+<h3 id="reusing-form-to-edit-existing-todoitem">Reusing Form to Edit existing TodoItem</h3>
 
 <p>Get existing TodoItem from already fetched collection</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var todoItem = todoItems.get(1); 
-</code></pre></div>
-<p>Pass in existing model</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var editTodoForm = new TodoForm({model: todoItem}); 
-</code></pre></div>
-<p>Replace &#39;#app&#39; with the HTML of the form</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$(&#39;#app&#39;).html(editTodoForm.render().el);
-</code></pre></div>
-<p>￼</p>
 
-<h3>Review of our App’s Router</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">￼
+<div class="highlighter-rouge"><pre class="highlight"><code>var todoItem = todoItems.get(1); 
+</code></pre>
+</div>
+
+<p>Pass in existing model</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var editTodoForm = new TodoForm({model: todoItem}); 
+</code></pre>
+</div>
+
+<p>Replace ‘#app’ with the HTML of the form</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$('#app').html(editTodoForm.render().el); ￼
+</code></pre>
+</div>
+
+<h3 id="review-of-our-apps-router">Review of our App’s Router</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>￼
 var TodoApp = new (Backbone.Router.extend({
   routes: {
-    &quot;&quot;: &quot;index&quot;
+    "": "index"
   },
   initialize: function(){
     this.todoItems = new TodoItems();
@@ -598,15 +772,18 @@ var TodoApp = new (Backbone.Router.extend({
   },
   index: function(){
     this.todoItems.fetch();
-    $(&#39;#app&#39;).html(this.todosView.render().el);
+    $('#app').html(this.todosView.render().el);
   }
 }));
-</code></pre></div>
-<h3>Add Route to render Edit Form</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoApp = new (Backbone.Router.extend({
+</code></pre>
+</div>
+
+<h3 id="add-route-to-render-edit-form">Add Route to render Edit Form</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoApp = new (Backbone.Router.extend({
   routes: {
-    &quot;&quot;: &quot;index&quot;,
-    &quot;todos/:id/edit&quot;: &quot;edit&quot; // !!! Add this line
+    "": "index",
+    "todos/:id/edit": "edit" // !!! Add this line
   },
 
   initialize: function(){
@@ -616,130 +793,159 @@ var TodoApp = new (Backbone.Router.extend({
 
   index: function(){
     this.todoItems.fetch();
-    $(&#39;#app&#39;).html(this.todosView.render().el);
+    $('#app').html(this.todosView.render().el);
   }
   ￼￼
   edit: function(id){ // !!! Add this function
     var todoForm = new TodoForm({model: this.todoItems.get(id) });
-    $(&#39;#app&#39;).html(todoForm.render().el);
+    $('#app').html(todoForm.render().el);
   }
 }));
-</code></pre></div>
-<h3>Add Route to render New Form</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoApp = new (Backbone.Router.extend({
+</code></pre>
+</div>
+
+<h3 id="add-route-to-render-new-form">Add Route to render New Form</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoApp = new (Backbone.Router.extend({
   routes: {
-    &quot;&quot;: &quot;index&quot;, 
-    &quot;todos/:id/edit&quot;: &quot;edit&quot;,
-    &quot;todos/new&quot;: &quot;newTodo&quot;
+    "": "index", 
+    "todos/:id/edit": "edit",
+    "todos/new": "newTodo"
   },
 
   ...
 
   newTodo: function(){
-    var todoItem = new TodoItem({description: &quot;What do you have to do?&quot;});
+    var todoItem = new TodoItem({description: "What do you have to do?"});
     var todoForm = new TodoForm({model: todoItem});
-    $(&#39;#app&#39;).append(todoForm.render().el);
+    $('#app').append(todoForm.render().el);
   },
 ￼￼
   edit: function(id){
     var todoForm = new TodoForm({model: this.todoItems.get(id) });
-    $(&#39;#app&#39;).html(todoForm.render().el);
+    $('#app').html(todoForm.render().el);
   }
 }));
-</code></pre></div>
-<h3>Get Back to the List after saving <strong>success</strong> or <strong>error</strong></h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoForm = Backbone.View.extend({
+</code></pre>
+</div>
+
+<h3 id="get-back-to-the-list-after-saving-success-or-error">Get Back to the List after saving <strong>success</strong> or <strong>error</strong></h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoForm = Backbone.View.extend({
   ...
   save: function(e) {
     e.preventDefault();
-    var newDescription = this.$(&#39;input[name=description]&#39;).val(); 
+    var newDescription = this.$('input[name=description]').val(); 
     this.model.save({description: newDescription}, {
       success: function(model, response, options) {
-        Backbone.history.navigate(&#39;&#39;, { trigger: true });
+        Backbone.history.navigate('', { trigger: true });
       }, 
       error: function(model, xhr, options){
         var errors = JSON.parse(xhr.responseText).errors;
-        alert(&#39;Oops, something went wrong with saving the TodoItem: &#39; + errors);
+        alert('Oops, something went wrong with saving the TodoItem: ' + errors);
       }
     });
   }
 }); 
-</code></pre></div>
-<h2>6. App Organization</h2>
+</code></pre>
+</div>
 
-<h3>Class Naming</h3>
+<h2 id="app-organization">6. App Organization</h2>
+
+<h3 id="class-naming">Class Naming</h3>
 
 <p>Before, everything is placed in the Global Scope, and this provides drawbacks:</p>
 
 <ul>
-<li>Leads to naming collisions</li>
-<li>Need to put “what kind of object” it is in the name e.g. “TodoItemView”</li>
-<li>Maintainability doesn’t scale with large applications</li>
+  <li>Leads to naming collisions</li>
+  <li>Need to put “what kind of object” it is in the name e.g. “TodoItemView”</li>
+  <li>Maintainability doesn’t scale with large applications</li>
 </ul>
 
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoItem = Backbone.Model.extend({});
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoItem = Backbone.Model.extend({});
 var TodoItemView = Backbone.View.extend({}); 
 var TodoItems = Backbone.Collection.extend({}); 
 var TodoItemsView = Backbone.View.extend({});
 var TodoRouter = Backbone.Router.extend({});
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Use a Global Object for Namespace.  Create a single global object where everything is stored:</p>
 
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">var App = {
+<div class="highlighter-rouge"><pre class="highlight"><code>var App = {
   Models: {},
   Views: {},
   Collections: {}
 }
-</code></pre></div>
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">App.Models.TodoItem = Backbone.Model.extend({}); 
+<div class="highlighter-rouge"><pre class="highlight"><code>App.Models.TodoItem = Backbone.Model.extend({}); 
 App.Views.TodoItem = Backbone.View.extend({});
 App.Collections.TodoItems = Backbone.Collection.extend({}); 
 App.Views.TodoItems = Backbone.View.extend({});
 App.TodoRouter = Backbone.Router.extend({});  //Store one-off objects on App
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Reference classes with the namespace</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var todoItem = new App.Models.TodoItem({...})
-</code></pre></div>
-<h3>Handle Links Outside of Backbone Views</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var todoItem = new App.Models.TodoItem({...})
+</code></pre>
+</div>
+
+<h3 id="handle-links-outside-of-backbone-views">Handle Links Outside of Backbone Views</h3>
 
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/completed&quot;&gt;Show Completed&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/support&quot;&gt;Support&lt;/a&gt;&lt;/li&gt;
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ul&gt;
+  &lt;li&gt;&lt;a href="/completed"&gt;Show Completed&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/support"&gt;Support&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Solution A: Using Plain jQuery</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$(&#39;a&#39;).click(function(e){
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$('a').click(function(e){
   e.preventDefault();
   Backbone.history.navigate(e.target.pathname, {trigger: true});
 });
-</code></pre></div>
-<p>Solution B: Move jQuery inside of the App Object and call <code>App.start()</code>.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var App = {
+</code></pre>
+</div>
+
+<p>Solution B: Move jQuery inside of the App Object and call <code class="highlighter-rouge">App.start()</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var App = {
 Models: {}, Views: {}, Collections: {}, start: function(){
-    $(&#39;a&#39;).click(function(e){
+    $('a').click(function(e){
       e.preventDefault();
       Backbone.history.navigate(e.target.pathname, {trigger: true});
     });
     Backbone.history.start({pushState: true});
   }
 }
-</code></pre></div>
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">$(function(){ App.start(); });
-</code></pre></div>
-<p>Solution C: Make the App a Backbone View, so you can use event handler instead
+<div class="highlighter-rouge"><pre class="highlight"><code>$(function(){ App.start(); });
+</code></pre>
+</div>
+
+<p>Solution C: Make the App a Backbone View, so you can use event handler instead<br />
 when a link is clicked.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var App = Backbone.View.extend({ // !!! App now is a View Class
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var App = Backbone.View.extend({ // !!! App now is a View Class
   Models: {},
   Views: {},
   Collections: {},
 
   events: { // !!! Use View event to handle clicks
-    &#39;click a&#39;: function(e){
+    'click a': function(e){
       e.preventDefault();
       Backbone.history.navigate(e.target.pathname, {trigger: true});
     }
@@ -749,74 +955,91 @@ when a link is clicked.</p>
     Backbone.history.start({pushState: true});
   } 
 })
-</code></pre></div>
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">var app = new App({el: document.body}); // Using body will capture everything
-</code></pre></div>
-<p>Clean-up Solution C further by creating 
+<div class="highlighter-rouge"><pre class="highlight"><code>var app = new App({el: document.body}); // Using body will capture everything
+</code></pre>
+</div>
+
+<p>Clean-up Solution C further by creating <br />
 instance without creating a class</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var App = new (Backbone.View.extend({  // !!! `new` here!
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var App = new (Backbone.View.extend({  // !!! `new` here!
   ...
 }))({el: document.body});
-</code></pre></div>
-<!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">$(function(){ App.start(); });
-</code></pre></div>
-<p>￼</p>
+</code></pre>
+</div>
 
-<h3>Skip Links</h3>
+<!-- tsk -->
+<div class="highlighter-rouge"><pre class="highlight"><code>$(function(){ App.start(); }); ￼
+</code></pre>
+</div>
+
+<h3 id="skip-links">Skip Links</h3>
 
 <p>Handle specific links by adding specificity</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/completed&quot; data-internal=&quot;true&quot;&gt;Show Completed&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/support&quot;&gt;Support&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre></div>
-<!-- tsk -->
 
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ul&gt;
+  &lt;li&gt;&lt;a href="/completed" data-internal="true"&gt;Show Completed&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/support"&gt;Support&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+</div>
+
+<!-- tsk -->
 <p>Event Handler</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">...
+
+<div class="highlighter-rouge"><pre class="highlight"><code>...
 events: {
-  &#39;click a[data-internal]&#39;: function(e){
+  'click a[data-internal]': function(e){
     e.preventDefault();
     Backbone.history.navigate(e.target.pathname, {trigger: true});
   }
 }
 ...
-</code></pre></div>
-<h3>Build Initial HTML</h3>
+</code></pre>
+</div>
 
-<p>Since we now have a View that encompasses the entire document body, 
-if we want we can put some template code in the App view which has some of the 
-initial HTML.<br>
-￼
-    var App = new (Backbone.View.extend({
-      ...
-      template: _.template(&#39;<h1>ToDo List!</h1>&#39; + &#39;<div id="app"></div>&#39;),
-      render: function(){
-        this.$el.html(this.template());
-      }
+<h3 id="build-initial-html">Build Initial HTML</h3>
+
+<p>Since we now have a View that encompasses the entire document body, <br />
+if we want we can put some template code in the App view which has some of the <br />
+initial HTML.  <br />
+￼<br />
+    var App = new (Backbone.View.extend({<br />
+      …<br />
+      template: _.template(‘&lt;h1&gt;ToDo List!&lt;/h1&gt;’ + ‘&lt;div id="app"&gt;&lt;/div&gt;’),<br />
+      render: function(){<br />
+        this.$el.html(this.template());<br />
+      }<br />
     }))({el: document.body});</p>
 
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">$(function(){
+<div class="highlighter-rouge"><pre class="highlight"><code>$(function(){
   App.render();
   App.start();
 })
-</code></pre></div>
-<p>This results in...</p>
+</code></pre>
+</div>
+
+<p>This results in…</p>
 
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;body&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;body&gt;
   &lt;h1&gt;ToDo List!&lt;/h1&gt;
-  &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+  &lt;div id="app"&gt;&lt;/div&gt;
 &lt;/body&gt;
-</code></pre></div>
-<h3>Object Initialization</h3>
+</code></pre>
+</div>
 
-<p>Inside the <code>start</code> method is also a good place to instantiate our collections, our views,
+<h3 id="object-initialization">Object Initialization</h3>
+
+<p>Inside the <code class="highlighter-rouge">start</code> method is also a good place to instantiate our collections, our views,<br />
 rendering out the views, and fetching the todo items.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var App = new (Backbone.View.extend({
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var App = new (Backbone.View.extend({
   ...
   start: function(){
     var todos = new App.Collections.TodoItems();
@@ -825,199 +1048,204 @@ rendering out the views, and fetching the todo items.</p>
     todos.fetch();
   } 
 }))({el: document.body});
-</code></pre></div>
-<!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">$(function(){ App.start(); })
-</code></pre></div>
-<p>...However, we can save an AJAX call that is used on <code>fetch</code> in the initial load by
-boostrapping the HTML data which will be called on <code>append</code> anyways...</p>
-
-<h3>Bootstrap Model Data</h3>
+</code></pre>
+</div>
 
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">var App = new (Backbone.View.extend({ 
+<div class="highlighter-rouge"><pre class="highlight"><code>$(function(){ App.start(); })
+</code></pre>
+</div>
+
+<p>…However, we can save an AJAX call that is used on <code class="highlighter-rouge">fetch</code> in the initial load by<br />
+boostrapping the HTML data which will be called on <code class="highlighter-rouge">append</code> anyways…</p>
+
+<h3 id="bootstrap-model-data">Bootstrap Model Data</h3>
+
+<!-- tsk -->
+<div class="highlighter-rouge"><pre class="highlight"><code>var App = new (Backbone.View.extend({ 
   start: function(bootstrap){
     var todos = new App.Collections.TodoItems(bootstrap.todos); 
     var todosView = new App.Views.TodoItems({collection: todos});
     this.$el.append(todosView.render().el);
   }
 }))({el: document.body});
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Bootstrap data comes from rendered HTML page</p>
 
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">var bootstrap = {
+<div class="highlighter-rouge"><pre class="highlight"><code>var bootstrap = {
   todos: [
-    {id: 1, description: &quot;Pickup Milk.&quot;, status: &quot;complete&quot;},
-    {id: 2, description: &quot;Pickup Kids.&quot;, status: &quot;incomplete&quot;},
+    {id: 1, description: "Pickup Milk.", status: "complete"},
+    {id: 2, description: "Pickup Kids.", status: "incomplete"},
   ]
 }
-</code></pre></div>
-<p>Pass in data to start</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$(function(){ App.start(bootstrap); });
-</code></pre></div>
-<h2>7. Customizing Backbone</h2>
+</code></pre>
+</div>
 
-<h3>Using Other Templates</h3>
+<p>Pass in data to start</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$(function(){ App.start(bootstrap); });
+</code></pre>
+</div>
+
+<h2 id="customizing-backbone">7. Customizing Backbone</h2>
+
+<h3 id="using-other-templates">Using Other Templates</h3>
 
 <p>￼Underscore template:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">_.template(&quot;&lt;span&gt;&lt;%= description %&gt;&lt;/span&quot; +
-  &quot;&lt;em&gt;&lt;%= assigned_to %&gt;&lt;/em&gt;&quot;)
-</code></pre></div>
-<p>: </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">Mustache.compile(&quot;&lt;span&gt;&lt;/span&quot; +
-  &quot;&lt;em&gt;&lt;/em&gt;&quot;)
-</code></pre></div>
-<p>NOTE: Mustache doesn&#39;t allow arbitrary js, but Underscore does.  Underscore could be strange
+
+<div class="highlighter-rouge"><pre class="highlight"><code>_.template("&lt;span&gt;&lt;%= description %&gt;&lt;/span" +
+  "&lt;em&gt;&lt;%= assigned_to %&gt;&lt;/em&gt;")
+</code></pre>
+</div>
+
+<p>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Mustache.compile("&lt;span&gt;&lt;/span" +
+  "&lt;em&gt;&lt;/em&gt;")
+</code></pre>
+</div>
+
+<p>NOTE: Mustache doesn’t allow arbitrary js, but Underscore does.  Underscore could be strange<br />
 and verbose, and Mustache is cleaner.</p>
 
-<h3>Default RESTful Persistence Strategy</h3>
+<h3 id="default-restful-persistence-strategy">Default RESTful Persistence Strategy</h3>
 
-<p>var todoItem = new TodoItem({id: 1}) </p>
+<p>var todoItem = new TodoItem({id: 1})</p>
 
-<p>C.R.U.D.: 
-    ￼￼￼
-    // Read￼
+<p>C.R.U.D.: <br />
+    ￼￼￼<br />
+    // Read￼<br />
     todoItem.fetch(); // ==&gt; GET /todos/1</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">// Update
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// Update
 todoItem.save(): // ==&gt; PUT /todos/1
 
 // Delete
 todoItem.delete(); // ==&gt; DELETE /todos/1
 
 // Create
-(new TodoItem({description: &quot;Pickup Kids&quot;})).save(); // ==&gt; POST /todos
-</code></pre></div>
-<h3>Make Read-only Model</h3>
+(new TodoItem({description: "Pickup Kids"})).save(); // ==&gt; POST /todos
+</code></pre>
+</div>
 
-<p>Override the sync function.  <code>method</code> below is either &#39;create&#39;, &#39;read&#39;, &#39;update&#39;,
-or &#39;delete&#39;.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var TodoItem = Backbone.Model.extend({
+<h3 id="make-read-only-model">Make Read-only Model</h3>
+
+<p>Override the sync function.  <code class="highlighter-rouge">method</code> below is either ‘create’, ‘read’, ‘update’,<br />
+or ‘delete’.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var TodoItem = Backbone.Model.extend({
   sync: function(method, model, options){
-    if (method === &quot;read&quot;){
+    if (method === "read"){
       Backbone.sync(method, model, options);
     }else{
-      console.error(&quot;You can not &quot; + method + &quot; the TodoItem model&quot;);
+      console.error("You can not " + method + " the TodoItem model");
     }
   }
 });
-</code></pre></div>
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">todoItem.fetch(); // This works
-</code></pre></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>todoItem.fetch(); // This works
+</code></pre>
+</div>
+
 <!-- tsk -->
-<div class="highlight"><pre><code class="language-text" data-lang="text">todoItem.save();  // ==&gt; &quot;You can not update the TodoItem model&quot;
-</code></pre></div>
-<h3>Completely Replace Persistence Strategy</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">￼
+<div class="highlighter-rouge"><pre class="highlight"><code>todoItem.save();  // ==&gt; "You can not update the TodoItem model"
+</code></pre>
+</div>
+
+<h3 id="completely-replace-persistence-strategy">Completely Replace Persistence Strategy</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>￼
 var TodoItem = Backbone.Model.extend({
   sync: function(method, model, options){
     options || (options = {});
 
     switch(method){
-      case &#39;create&#39;:
-        var key = &quot;TodoItem-&quot; + model.id;
+      case 'create':
+        var key = "TodoItem-" + model.id;
         localStorage.setItem(key, JSON.stringify(model));
       break;
 
-      case &#39;read&#39;:
-        var key = &quot;TodoItem-&quot; + model.id;
+      case 'read':
+        var key = "TodoItem-" + model.id;
         var result = localStorage.getItem(key);
         if (result){
           result = JSON.parse(result);
           options.success &amp;&amp; options.success(result);
         }else if (options.error){
-          options.error(&quot;Couldn&#39;t find TodoItem id=&quot; + model.id);
+          options.error("Couldn't find TodoItem id=" + model.id);
         } 
       break;
 
 
-      case &#39;update&#39;:
+      case 'update':
       break;
 
-      case &#39;delete&#39;:
+      case 'delete':
       break;
 } }
 });
-</code></pre></div>
-<hr>
-
-  </article>
-
+</code></pre>
 </div>
+
+<hr />
+
+  </div>
+
+</article>
+
       </div>
     </div>
 
     <footer class="site-footer">
 
-  <div class="wrap">
+  <div class="wrapper">
 
-    <!-- <h2 class="footer-heading">anton</h2> -->
+    <h2 class="footer-heading">anton</h2>
 
-    <div class="footer-col-1 column">
-      <ul>
-        <li>
-        
-          <a href="https://github.com/antonmaximus">
-            <span class="icon github">
-              <svg version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
-                <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
-                c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
-                c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472
-                c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037
-                C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65
-                c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261
-                c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082
-                c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129
-                c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
-              </svg>
-            </span>
-            <span class="username">antonmaximus</span></a>
-        
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        
-          <a href="https://twitter.com/antonmaximus">
-            <span class="icon twitter">
-              <svg version="1.1" class="twitter-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
-                <path fill="#C2C2C2" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
-                c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27
-                c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767
-                c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206
-                C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271
-                c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469
-                c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
-              </svg>
-            </span>
-            <span class="username">antonmaximus</span>
-          </a>
-        </li>
+    <div class="footer-col-wrapper">
+<!--       <div class="footer-col footer-col-2">
+        <ul class="contact-list">
+          <li>anton</li>
+          <li><a href="mailto:anton23@gmail.com">anton23@gmail.com</a></li>
+        </ul>
+      </div> -->
 
-      </ul>
-    </div>
+      <div class="footer-col footer-col-1">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/antonmaximus"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">antonmaximus</span></a>
 
+          </li>
+          
 
-    <div class="footer-col-3 column">
-      <p class="text">A small growth today makes progression happen...</p>
+          
+          <li>
+            <a href="https://twitter.com/antonmaximus"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">antonmaximus</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>A small growth today makes progression happen...</p>
+      </div>
     </div>
 
   </div>
 
 </footer>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-55984721-1', 'auto');
-  ga('send', 'pageview');
+  </body>
 
-</script>
-
-
-
-    </body>
 </html>

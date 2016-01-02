@@ -5,8 +5,8 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 Jan 2016 15:57:19 -0800</pubDate>
-    <lastBuildDate>Fri, 01 Jan 2016 15:57:19 -0800</lastBuildDate>
+    <pubDate>Fri, 01 Jan 2016 16:10:23 -0800</pubDate>
+    <lastBuildDate>Fri, 01 Jan 2016 16:10:23 -0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -37,34 +37,6 @@
         
         
         <category>exercise</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 31 Dec 2015 13:40:03 -0800</pubDate>
-        <link>www.anton23.com/jekyll/update/2015/12/31/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">www.anton23.com/jekyll/update/2015/12/31/welcome-to-jekyll/</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
         
       </item>
     
@@ -1568,6 +1540,415 @@ var TodoItem = Backbone.Model.extend({
         <pubDate>Thu, 06 Nov 2014 06:00:00 -0800</pubDate>
         <link>www.anton23.com/craft/2014/11/06/backbone-anatomy-b1/</link>
         <guid isPermaLink="true">www.anton23.com/craft/2014/11/06/backbone-anatomy-b1/</guid>
+        
+        
+        <category>craft</category>
+        
+      </item>
+    
+      <item>
+        <title>Anatomy of Backbone A2</title>
+        <description>&lt;h2 id=&quot;collections&quot;&gt;5. Collections&lt;/h2&gt;
+
+&lt;p&gt;Set of Models&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoList = Backbone.Collection.extend({
+  model: TodoItem
+});
+var todoList = new TodoList();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Add/remove/get&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoList.length; //# of models
+todoList.add(todoItem1); // add model instance
+todoList.at(0); //get model instance at index 0
+todoList.get(1); // get by id
+todoList.remove(todoItem1); //remove model instance
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Bulk Population&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var todos = [
+  {description: &#39;Pick up milk.&#39;, status: &#39;incomplete&#39;},
+  {description: &#39;Get a car wash&#39;, status: &#39;incomplete&#39;},
+  {description: &#39;Learn Backbone&#39;, status: &#39;incomplete&#39;}
+];
+todoList.reset(todos);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;fetching-data-from-the-server&quot;&gt;Fetching Data from the Server&lt;/h3&gt;
+
+&lt;p&gt;URL to get JSON data from&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoList = Backbone.Collection.extend({
+  url: &#39;/todos&#39;
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Populate collection from server&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoList.fetch();  // =&amp;gt; GET /todos
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;collections-can-have-events&quot;&gt;Collections can have Events&lt;/h3&gt;
+
+&lt;p&gt;To listen for an event on a collection, and run an event: (works just like models)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoListon(&#39;event-name&#39;, function(){
+  alert(&#39;event-name happened!&#39;);
+});
+todoList.trigger(&#39;event-name&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;special-events&quot;&gt;Special Events&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//Listen for events
+todoList.on(&#39;reset&#39;, doThing);  
+
+// Event Triggered on reset and fetch
+todoList.fetch();
+todoList.reset();
+
+// Event triggered without notification
+todoList.fetch({silent: true});
+todoList.reset({silent: true});
+
+// Remove event listener
+todoList.off(&#39;reset&#39;, doThing);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Syntax&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoList.on(&amp;lt;event&amp;gt;, &amp;lt;function&amp;gt;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Built-in Events.&lt;/p&gt;
+&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;add&lt;/td&gt;&lt;td&gt;When a model is added&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;removed&lt;/td&gt;&lt;td&gt;When a model is removed&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;reset&lt;/td&gt;&lt;td&gt;When reset or fetched&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Models in collection.  Events triggered on a model in a collection will also be triggered on the collection.&lt;/p&gt;
+&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;change&lt;/td&gt;&lt;td&gt;When an attribute is modified&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;change:&amp;lt;attr&amp;gt;&lt;/td&gt;&lt;td&gt;When &amp;lt;attr&amp;gt; is modified&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;destroy&lt;/td&gt;&lt;td&gt;When a model is destroyed&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;sync&lt;/td&gt;&lt;td&gt;Whenever successfully synced&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;error&lt;/td&gt;&lt;td&gt;When model save or validation fails&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;all&lt;/td&gt;&lt;td&gt;Any triggered event&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;iteration&quot;&gt;Iteration&lt;/h3&gt;
+
+&lt;p&gt;Example collection&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoList.reset([
+  {description: &#39;Pick up milk.&#39;, status: &#39;incomplete&#39;, id: 1},
+  {description: &#39;Get a car wash.&#39;, status: &#39;complete&#39;, id: 2}
+]);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Alert each model’s description&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoList.forEach(function(todoItem){
+  alert(todoItem.get(&#39;description&#39;));
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Build an array of description&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoList.map(function(todoItem){
+  return todoItem.get(&#39;description&#39;);
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Filter models of some criteria&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoList.filter(function(todoItem){
+  return todoItem.get(&#39;status&#39;) === &quot;incomplete&quot;;
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Other Iteration Functions&lt;/p&gt;
+&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;forEach&lt;/td&gt;&lt;td&gt;reduce&lt;/td&gt;&lt;td&gt;reduceRight&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;find&lt;/td&gt;&lt;td&gt;filter&lt;/td&gt;&lt;td&gt;reject&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;every&lt;/td&gt;&lt;td&gt;all&lt;/td&gt;&lt;td&gt;some&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;include&lt;/td&gt;&lt;td&gt;invoke&lt;/td&gt;&lt;td&gt;max&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;min&lt;/td&gt;&lt;td&gt;sortBy&lt;/td&gt;&lt;td&gt;groupBy&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;sortedIndex&lt;/td&gt;&lt;td&gt;shuffle&lt;/td&gt;&lt;td&gt;toArray&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;size&lt;/td&gt;&lt;td&gt;first&lt;/td&gt;&lt;td&gt;initial&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;rest&lt;/td&gt;&lt;td&gt;last&lt;/td&gt;&lt;td&gt;without&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;indexOf&lt;/td&gt;&lt;td&gt;lastIndexOf&lt;/td&gt;&lt;td&gt;isEmpty&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;chain&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://documentcloud.github.io/backbone/#Collection-Underscore-Methods&quot;&gt;Link to Functions&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;collections--views&quot;&gt;6. Collections &amp;amp; Views&lt;/h2&gt;
+
+&lt;p&gt;Collection + View == Collection View!&lt;/p&gt;
+
+&lt;p&gt;Review our Model View&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoView = Backbone.View.extend({
+  render: function(){
+    this.$el.html(this.template(this.model.toJSON()));
+    return this;
+  }
+... });
+var todoItem = new TodoItem();
+var todoView = new TodoView({model: todoItem});
+console.log(todoView.render().el);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;define-and-render&quot;&gt;Define and Render&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoListView = Backbone.View.extend({});
+var todoListView = new TodoListView({collection: todoList});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;First Crack at Render&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;render: function(){
+  this.collection.forEach(function(todoItem){
+    var todoView = new TodoView({model: todoItem});
+    this.$el.append(todoView.render().el);  // !!! `this` changes context in forEach
+}); }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Use addOne (2nd Crack at Render)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;render: function(){ this.collection.forEach(this.addOne, this);  // !!! 2nd param saves context
+}
+addOne: function(todoItem){
+  var todoView = new TodoView({model: todoItem});
+  this.$el.append(todoView.render().el);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To finish off…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var todoListView = new TodoListView({collection: todoList});
+todoListView.render();
+console.log(todoListView.el);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;adding-new-models&quot;&gt;Adding new Models&lt;/h3&gt;
+
+&lt;p&gt;Since this is a collection, you must listen to the &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt; event in the initalize function&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoListView = Backbone.View.extend({
+  initialize: function(){
+    this.collection.on(&#39;add&#39;, this.addOne, this);
+},
+  addOne: function(todoItem){
+    var todoView = new TodoView({model: todoItem});
+    this.$el.append(todoView.render().el);
+  },
+  render: function(){
+    this.collection.forEach(this.addOne, this);
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var newTodoItem = new TodoItem({
+  description: &#39;Take out trash.&#39;,
+  status: &#39;incomplete&#39;
+});
+todoList.add(newTodoItem);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;reset-event&quot;&gt;Reset Event&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoListView = Backbone.View.extend({
+  initialize: function(){
+    this.collection.on(&#39;add&#39;, this.addOne, this);
+    this.collection.on(&#39;reset&#39;, this.addAll, this);
+  },
+  addOne: function(todoItem){
+    var todoView = new TodoView({model: todoItem});
+    this.$el.append(todoView.render().el);
+  },
+  addAll: function(){
+    this.collection.forEach(this.addOne, this);
+￼  },
+  render: function(){
+    this.addAll();
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var todoList = new TodoList();
+var todoListView = new TodoListView({
+  collection: todoList
+});
+todoList.fetch();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;fixing-remove-with-custom-events&quot;&gt;Fixing remove with custom events&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoList.remove(todoItem);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;TodoList Collection&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;initialize: function(){
+  this.on(&#39;remove&#39;, this.hideModel);
+},
+hideModel: function(model){
+  model.trigger(&#39;hide&#39;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;TodoItem View&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;initialize: function(){
+  this.model.on(&#39;hide&#39;, this.remove, this);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;router--history&quot;&gt;7. Router &amp;amp; History&lt;/h2&gt;
+
+&lt;h3 id=&quot;the-router&quot;&gt;The Router&lt;/h3&gt;
+
+&lt;p&gt;Routers map URLs to actions&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Index Action
+var router = new Backbone.Router({
+  routes: { &quot;todos&quot;: &#39;index&#39; },
+  index: function(){
+    ...
+} });
+
+// OR Show Action
+var router = new Backbone.Router({
+  routes: { &quot;todos/:id&quot;: &#39;show&#39; }
+  show: function(id){ ... }
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;triggering-routes&quot;&gt;Triggering Routes&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;router.navigate(&quot;todos/1&quot;, {
+  trigger: true
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Backbone History&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Backbone.history.start({pushState: true});  // !!! pushState on!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;router.navigate(&quot;todos/1&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;show-action&quot;&gt;Show Action&lt;/h3&gt;
+
+&lt;p&gt;Define Router Class&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoRouter = Backbone.Router.extend({
+  routes: { &quot;todos/:id&quot;: &quot;show&quot; },
+  show: function(id){
+    this.todoList.focusOnTodoItem(id);
+  },
+  initialize: function(options){
+    this.todoList = options.todoList;
+  } 
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Instantiate router instance&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var todoList = new TodoList();
+var TodoApp = new TodoRouter({todoList: todoList});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;index-action&quot;&gt;Index Action&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoRouter = Backbone.Router.extend({ routes: { &quot;&quot;: &quot;index&quot;,
+            &quot;todos/:id&quot;: &quot;show&quot; },
+  index: function(){
+    this.todoList.fetch();
+},
+  show: function(id){
+    this.todoList.focusOnTodoItem(id);
+},
+  initialize: function(options){
+    this.todoList = options.todoList;
+} });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;app-organization&quot;&gt;App Organization&lt;/h3&gt;
+
+&lt;p&gt;Since there’s only one router&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoApp = new (Backbone.Router.extend({
+  routes: { &quot;&quot;: &quot;index&quot;, &quot;todos/:id&quot;: &quot;show&quot; },
+  initialize: function(){
+    this.todoList = new TodoList();
+    this.todosView = new TodoListView({collection: this.todoList});
+    $(&#39;#app&#39;).append(this.todosView.el);
+  },
+  start: function(){
+    Backbone.history.start({pushState: true});
+  },
+  index: function(){
+    this.todoList.fetch();
+  },
+  show: function(id){
+    this.todoList.focusOnTodoItem(id);
+  }
+}));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(function(){ TodoApp.start() });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Wed, 05 Nov 2014 06:00:01 -0800</pubDate>
+        <link>www.anton23.com/craft/2014/11/05/backbone-anatomy-a2/</link>
+        <guid isPermaLink="true">www.anton23.com/craft/2014/11/05/backbone-anatomy-a2/</guid>
         
         
         <category>craft</category>

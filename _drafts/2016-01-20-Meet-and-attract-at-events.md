@@ -3,23 +3,447 @@ layout: post
 title:  "Meet & Attract at Events"
 date:   2016-01-20 13:40:03 -0800
 categories: connection
+<!-- published: false -->
+<!-- visible: false -->
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
-Jekyll also offers powerful support for code snippets:
+#### I. Intro
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+The point of *Kickassery* (self-development) is to become a solid person -- embodying self-respect.  Two rules:
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+1. Don't lie -- It shoots down your self-esteem.
 
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+2. Leave people better than you found them -- Is this person have become better for having known you?
+
+
+------
+<br>
+
+#### II. Why Go To Clubs/Events in the First Place? 
+
+Advantages:
+
+ * Rooms full of stunningly beautiful women. 
+ * Leads to getting connected elsewhere: 
+  * actors, dancers, doctors -- people outside your common social bubble.
+
+
+Disadvantages:
+
+ * Pain in the ass to get in (if you don't know how)
+ * Being a typical dude won't fly with the girls
+
+How Clubs Really Make Money
+
+ * Clubs charge a few guys a ton of $
+ * Guys are the customers: They pay mad covers or buy tables.
+ * Hot girls are the reason the guys come. Clubs pay promoters to get girls there.
+ * There is fluidity in case of genders: Cool gudes get in free.
+
+ * To exploit the business model, you cannot act like a customer.  You must be an insider. 
+ * The guys that have tables & are like celebrities are the promoters.  They are not paying any money.
+ * Don't act as a customer, act like an insider/product. 
+
+How to Get into Clubs for Free
+
+  * The Doorman
+    * He's the Gatekeeper
+    * Know his goal: That is to make an awesome party and be profitable.
+    * Know what he wants. He's gonna "thin slice" you.
+ 
+  * To Get in, show the doorman that you are low-cost, a G, and a human.
+    * The first time(s)
+      * Go early or on off-nights -- this makes you low-cost. 
+      * Bring 4 people max, with at least 2 cute girls.
+      * Dress the part: No suits, no plaid
+      * On your way out, shake hands and get his name.
+    * Every other time
+      * cut the line
+      * **Smile, no nervous energy** (Take it to them!)-- if nervous, delve into it. It's internal discomfort.
+      * Walk straight up, say "What's up man?"
+      * Give members of your group names.
+    * The doorman is to get in for the first couple of times, the promoter guarantees access.
+
+  * Meet promoters by bringing in value
+    * Once in, find the promoters.
+      * Introduce yourself, introduce your girls.
+    * Bring Value
+      * Make everyone have fun, introduce people.
+      * Bring girls until you are friends with the promoter.
+      * Promoters get paid by how many girls they bring, how hot the girls are, and how fun the girls/tables are having.
+    * Speak his language ($)
+
+
+
+------
+<br>
+
+#### III. Body Language, Eye Contact, Vibe
+
+Treat your Wingman like He is You
+
+  * Give him your full attention
+    * Explosive High Five when seeing for the first time
+  * Rules
+    * If you're the first person to talk to the group, that is your group.
+    * Elevate each other. Exaggeration helps a lot.
+  * Have his best interest in mind
+  * Communicate: Shaq
+    * Kobe -- I got this. Steve Nash -- I need an assist. Shawn Bradley -- Do whatever you want
+  * How do you Help your Friend?
+    * The Best Way: over-the-top compliments that get everyone laughing
+      * "He's taller. He's good-looking. He's got a charming accent. And he's got a bigger dick."
+      * "He's Thor." (Then, place the girl's hand on your friend's abs as if forcing her to molest him.)
+      * "Charlie is the best gringo salsa dancer you've ever seen.  Trust me, I'll be saying \'I told you so\' on your wedding day."
+
+
+The Most Important Thing you can do is have **ENERGY**
+
+  * You're not paying, you're not a hot chick. The value you bring is **awesomeness**.
+    * No Texting. Bring the party! Be fun, funny, witty!
+  * Don't get drunk.
+  * **Motion creates emotion**
+    * Open up your body.
+    * Smile when not happy, dance when not dance-y
+    * Fire yourself up!
+      * Bite a pencil if you have to.
+  * Get a friend who knows how to lock eyes with you.
+    * The coolest spot in the bar is half the distance between you & your wing!
+    * No one wants to join a loitering shark.
+
+The 2nd Most Important Thing is **Non-verbal Communication**
+
+  * Eye Contact
+    * Most important when you're speaking to them. **Look them in the eye as you speak.**
+    * Take a mental note of their eyes
+  * Make the body language feel like she is hitting on you.
+    * From a 3rd party's perspective, position yourselves as if she's hitting on you.
+    * Avoid leaning on them as that can make them feel trapped.
+    * Switch seats if you have to.  Spin!
+  * **Escalate physically** throughout the interaction
+    * The place you wanna be is you're leaned back and she's leaning on to you.
+    * Touch more: "You're from Minnesota?! Fuck Yea! I love girls from Minnesota!" (Then, high five!)
+
+
+------
+<br>
+
+#### IV. In The Club
+
+Speak to groups in one of 3 ways:
+
+  * When she is staring at you: "You can't look at me like that and not say, \'Hi\'."
+  * When she can see you but is not staring: Wave like a crazy little kid.
+    * Commitment is the essence of comedy.
+  * When she doesn't have a line of sight: "I don't think I've met you yet. I'm..."
+
+Be Different -- instead of trying to build rapport, **tease her**.
+
+  * "Can I buy you a drink" & **"Where are you from" do not work.**
+  * Push/Pull works
+    * Teasing her or breaking rapport, while sporadically giving her your approval.
+    * Push-pull ratio is different for every girl.
+  * Conversation is a topic for another day as it's too broad for here.
+
+What **Friends do is they tease** & break rapport.
+
+  * Must be playful.
+  * Be aware if you're getting a laugh; otherwise, you're hurting them.
+  * Tease the 2nd layer
+    * If she's says she's from SF, imagine you google image SF and see what images would come up (e.g., hippies)
+    * "Oh god, are you gonna start a drum circle here tonight?"
+    * Avoid teasing permanent identity (e.g., religion)
+  * Calibrate push-pull.
+
+The best frame to set is one of "She's hitting on you." 
+
+  * For now focus on adding one push/pull theme: she's hitting on you role plays.
+    * "My eyes are up here."
+    * "My mom warned me about girls like you. You're just gonna break my heart after you sleep with me. You won't even cuddle after sex."
+    * "I'm not that easy. You need to take me out to dinner first."
+
+**Have Standards** & Screen for them.  **Have self-respect**.
+
+  * Come-up with 3 non-physical traits girls must have:
+    * Affectionate
+    * Fun/Positive
+    * Takes care of her body
+    * Values Time
+  * Develop ways to Test
+    * Cuddle Test
+    * Sexually Open: Talking openly about sex & non-judgmentalness
+    * Non-Flaky: Discussing how you hate flakes
+  * Sleeping with a girl can be destructive
+    * I sleep with girls that I don't plan to see again in 2.5 weeks.
+
+How to Test for Standards
+
+  * Look for trigger (e.g., someone saying flakiness)
+  * Say it as a Monologue/Statement
+    * "I can't fucking stand flakiness." (Statement)
+    * Describe a story... (Describe something that negative happened)
+    * "I love people who ahve the courtesty to say what they mean to do..." (Make it a good thing)
+
+
+Set Boundaries for Bad Behavior
+
+  * Girls in clubs sometimes act like bitches because no one demands anything of them.
+  * If she does something that is actually bad human behavior, call her out on her shit.
+  * It has to be real.  You have to be **willing to walk away**.
+  * Example
+    * Her: "I don't like that promoter. He makes us pour our drinks."
+    * You: "You have to fucking kidding me.  Do you want him to wipe your ass too?"
+
+The Kiss
+
+  * The kiss is just **an extension of physical escalation.**
+  * Wait until she is staying close to your face, hanging out wihtin 6 inches. (Splash zone)
+  * Say, "If you keep looking at me like that, I'm going to kiss you."
+    * If she does anything but run away, kiss her.
+  * Pull-off first, and accuse her of seducing you.
+  * Missing isn't game over. You can always try again (unless if she already ran away).
+
+
+
+------
+
+------
+<br>
+
+#### V. Mission 1: Initiating Conversations
+
+Adopt a beginner's mindset & don't get drunk. **You're gonna screw up. That's how you learn.**
+
+Initiate A Conversation
+
+  * Wave like a kid.
+  * "You cannot look at me like that and not say 'hi'."
+  * "I don't think I've met you yet. I'm...."
+
+
+Inner Game
+
+  * What is your ritual? -- pregaming, talking to buddies, and **not approaching?**
+    * Your ritual translates into your destiny for tonight.
+  * If that ritual continues, say this time next year, where will you be?
+    * Are you gonna be with a girl that you really like?
+    * Is that the type of guy you want to be in a year?
+    * Are you likely going to these bars all the time pretending that you have something important to talk about, when you actually wanna do is talk to women?
+    * Guys let fear dictate their action and avoid talking to women by saying *she's a bitch, not hot enough, or not into them.*  All of these excuses are **fear in disguise.**
+    * Are you gonna set strong boundaries for your friends & your family, and tell them what you need from them in terms of love & support? OR are they gonna push you around?
+  * Answer me from 1 to 10:
+    * What does your life look like if it's controlled by the current rituals that control you now when you go out in any social situation? -- after the Richard Greg'ry incident, it's 2/10
+    * What if you went out, you let courage control your actions.
+      * You got yourself exercising your courage. -- 9/10
+      * It's worth it to go out to practice the action of exercising courage.
+
+Practice:
+
+  * Exercise courage.  Be self-aware when you have excuses and see if they're fear in disguis. Shyness & embarassment are all connected to fear.  The opposite of fear is **courage.**  
+
+
+------
+<br>
+
+#### VI. Mission 2: Body Language
+
+Non-verbals:
+
+  1. Inflection -- tonality or tone of voice.
+  2. Conviction on how to say things
+      * Finish your sentence. 
+      * If you allow yourself to be cutoff, it's a subtle admission that what you're saying is not important.
+  3. Speak loudly.
+
+
+Non-verbals Moar:
+
+  1. Eye Contact -- most important when you are speaking to another
+      * relax/looseness in the eye area
+  2. **Any shift** in the environment, **SMILE**!
+      * Toothy smile!
+      * James Dean coolness are only in movies.
+      * Cues: Entering a room/environment, meeting someone, etc.
+
+Inner Game
+
+  * **Emotional state and body language feeds off of each other.** Hence, you influence your emotions in order to influence your body language.
+
+Steps for a **state building routine**: 
+
+  1. Figure out where you wanna go. What are your ideal emotional states for going out? 
+      * Do you want to feel funny & free? Playful & confident?
+  2. Think of a time in your life when you felt like that (or a movie or a friend).  
+  3. Adopt the body language of that person.
+      * smile, tonality, looseness in expression
+      * Act it out the best you can.
+  4. Now that you feel like this guy, how does this guy feel about the world? What's this guy's one sentence summary of how he feels about himself & the world?
+      * Funny: Life is awesome & I am hilarious.
+        * Modulate the tonality (while chanting) to reflect the statement. Conviction.  Commit.
+        * By saying the statement with conviction, you're blazing a neural pathway to your brain. 
+      * How do you personally feel about life? about yourself?
+        * Life is awesome, growth, & fun.
+
+Practice:
+
+  * Put your emotional state in **neutral**, then fire that anger/state-building routine.  You should feel the emotional state. 
+
+
+
+------
+<br>
+
+#### VII. Mission 3: Conversation & Role-plays
+
+Intro
+
+  * Conversation Habits are really helpful for keeping things fun, interesting, on-track, and that things are going somewhere.  
+  * A lot of guys flounder around with "Where they work" & "Where they're from" -- but these are not interesting. We use role-play instead!
+
+Role-play Steps:
+
+  1. Give her a role that she wants to play. If she's not participating, it's not going to go anywhere. 
+      * Fun roles: Princess, ex-wife, or somebody you show affection to.  (Not: stable/poor girl)
+  2. Even though she has a really cool role to play, she is pursuing you.  Pick a subtext where she's pursuing you. 
+      * Right: If ex-husband & ex-wife, she's madly in love with you.
+      * Wrong: "Remember in high school, you were so cool and I was such a loser, and you ignored me?"
+  3. Keep it detail-rich.  Practice getting 4-6 beats in there because that's where acceptance, laughter, & fun come in.
+      * "We're gonna get married. We're gonna pack you up in a bag, we'll fly to Vegas by Southwest. ONce we get there, we'll have the best shotgun wedding."
+  4. Add elements of push/pull. 
+      * Too much pull is rapport-seeking
+        * "I love you, we're gonna get married, we're just gonna be in love forever."
+      * Too much push is really harsh & mean
+        * "Oh my god, we're gonna get a divorce, you fucking suck, game over."
+      * Incorporate both
+        * "I love you, we're gonna get married.  But you better be able to cook or else I'm gonna dump you."
+  5. Commit
+      * Finish your thought & what you're saying.
+      * Don't just stop after one beat
+  6. There has to be a sexual undertone.
+
+Inner Game
+
+  * We're all a bunch of social accidents growing up. But now, you have the chance to become the person you want to interact with others today.
+  * How can one be true to themselves while actively changing their mode of interaction?
+    * Who he is today **is a choice**.  He doesn't have to be shy or bashful.
+    * I don't deny who I was, but that doesn't ahve to define who I am today & going forward.
+    * It's your responsibility how you want to behave & what you want to become. 
+
+
+Practice:
+
+  * At home: 
+    * Design a role-play from your own or from a list (see book). 
+    * Record yourself.
+    * Practice at least 5 times.  Keep in mind the 6 Role-play steps --  don't forget being sexual. 
+  * **Who you are today is a choice.**
+
+
+
+
+------
+<br>
+
+#### VIII. Mission 4: Have Standards
+
+Importance of Having Standards:
+  
+  * Filter crappy people out of your life.
+  * Nobody like to be with someone that they feel they've used them as an object.  They want you to have a bar that they need to live up to.
+
+Think About It...
+
+  * What does this girl have to do or to not do for you to say, "Holy cow, I can't deal with that."  And hone in to that type of behavior.
+    * It might be difficult to come up with behaviors right now, but you start to see as you go out there are behaviors that totally turn you off.
+    * Personally: Treating me like crap, treating anyone like crap, mean, a bitch
+  * What matters to you the most?
+    * Personally: Affectionate, not a flake & dependable, passionate, positive/fun, has a Northstar
+
+
+How To Monologue... (You segue to it when you see a trigger)
+
+  1. Statement of Standard
+      * (When you see someone affectionate...)  I absolutely need people who are affectionate.
+  2. Description of failing/violation
+      * There are types of girls that can't statnd to be touched.  And I don't care how hot you are, but if you don't to cuddle after sex or you can't stand to be hugged in public, I don't want to be with you.
+  3. Descripton of what you like
+      * I want someone that generally likes to hug, gives a back rub, & who likes to cuddle with me after sex.  Affection is freaking important to me.
+  4. Why? (Ties everything together...)
+      * And it's because that's the type of person I am.  I am a physical person. I express how I care physically, and if someone is not how interacts, I'm done.
+
+Inner Game
+  
+  * Northstar -- we wanna know where you're headed.
+  * Set in your head, what kind of relationship you want.
+    * This is fluid & will change overtime, so don't get too locked up.
+  * What do you want to do in a relationship?
+    * Do you want to be monogamous?
+    * Are you looking to date for a while, then eventually settle?
+    * Are you looking to be single or have open relationships?
+  * If I was John Mayer, what relationship scenario appeals the most?
+  * Define what you want and not settle.
+    * Don't let society tells you what you want.
+    * The definition fluctuates overtime, but you **don't compromise your fundamentals** in the **heat of the moment.**
+
+
+
+Practice:
+
+  * At home: 
+    * Record yourself.
+    * Practice at least 5 times.  Keep in mind the conviction. Commit
+  * **What's your Northstar?** What are your **Standards?** Your **fundamentals?**
+
+
+
+
+------
+<br>
+
+#### IX. Mission 5: Kissing
+
+Think About It...
+  
+  * When you go out, go to this point at least once. 
+
+What Leads to the Kiss?
+
+  * Lean against a wall or a bar, and have her lean into you. This reinforces that she's into you.
+  * The kiss is just **an extension of physical escalation** and you've **broken down physical barriers**:
+    * You've high-fived her, given her a hug, etc.
+    * A playful push/pull
+    * You two are comfortable touching one another
+
+Two ways to go for a kiss...
+
+  * Let conversation slow-down like in movies. Then, let it linger (sound of peaceful silence).  Then, look her in the eye, smirk, and lean in.  Not a lot needs to be said.
+  * Once she's in the Splash Zone say, "If you keep looking at me like that, I'm going to kiss you."
+    * If she does anything but run away, kiss her.
+  * Pull-off first, and **accuse her of seducing you** -- it keeps things fun.
+  
+
+Inner Game
+
+
+  * Be Honest to yourself: Either Friendzone her OR Demonstrate Interest.
+      * If you've been dishonest and have been friends with a girl for a long time AND you suddenly go for the kiss, that throws the every interaction you had with her into a doubt -- were you playing her the whole time?
+      * Don't be that guy that befriend girls and surprise kiss them.  Be the guy who is comfortable admitting "I'm interested in you".
+  * Handle Rejection.
+    * If you let yourself feel like shit after a rejection, you essentially put your self-worth in the hands of others.  
+      * If you're doing this with girls, I bet you're doing this in other areas of your life, so **You need to stop.**
+    * Be aware of Pavlov's Dog, and you never let this be the association:
+      * Going for the kiss => Rejected => Feeling like shit (hence, Going for the Kiss == Feeling like like shit)
+  * Here's how you feel good about yourself:
+    * You feel that the person you are today is living up to the values that you have.  You're becoming the man that you want to be, and you feel that you're growing every single day.  That's what's gonna make you feel good and not making any basket in a basketball court or any girl kissing you -- that is fleeting. The process of becoming the person you want to be and living up to your values -- that is continuous.  
+    * If external validation is your source of happiness, you'll ultimately be miserable as soon as that gets taken away from you.
+    * If you keep your internal validation as the source of your happiness, you're going to be much, much better.
+    * When you go for the kiss, it's important to realize you're extending yourself.  You're growing. You're stepping out of your comfort zone, you're putting yourself in a new situation, and you don't know how it's gonna workout. That is growth and you should feel good about that no matter how the kiss goes.
+
+    * As long as you're living up to your values and as long as you're on track to become the guy you want to be, you have nothing to be embarass about.  I don't care if you suck at kissing, having sex, or at your job -- that is all fleeting, fleeting shit. If you're becoming the man you want to be every single day, you're being honest, and you're leaving people better than you found them be proud and be happy of where you are and where you're going.
+
+
+
+
+
+

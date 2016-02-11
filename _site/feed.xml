@@ -5,9 +5,9 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 Jan 2016 12:15:12 -0800</pubDate>
-    <lastBuildDate>Tue, 26 Jan 2016 12:15:12 -0800</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+    <pubDate>Thu, 11 Feb 2016 10:48:05 -0800</pubDate>
+    <lastBuildDate>Thu, 11 Feb 2016 10:48:05 -0800</lastBuildDate>
+    <generator>Jekyll v3.1.1</generator>
     
       <item>
         <title>Meet &amp; Attract at Events</title>
@@ -702,8 +702,8 @@
 
 </description>
         <pubDate>Wed, 20 Jan 2016 13:40:03 -0800</pubDate>
-        <link>www.anton23.com/connection/2016/01/20/Meet-and-attract-at-events/</link>
-        <guid isPermaLink="true">www.anton23.com/connection/2016/01/20/Meet-and-attract-at-events/</guid>
+        <link>www.anton23.com/kickass0</link>
+        <guid isPermaLink="true">www.anton23.com/kickass0</guid>
         
         
         <category>connection</category>
@@ -722,101 +722,22 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/deadz_2015.png&quot; width=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;figure&gt;&lt;iframe width=&quot;360&quot; height=&quot;480&quot; allowfullscreen=&quot;&quot; class=&quot;youtube-player&quot; src=&quot;//www.youtube.com/embed/lUAkYkW0_h8?wmode=transparent&amp;amp;amp;autoplay=0&amp;amp;amp;rel=0&amp;amp;amp;showinfo=0&amp;amp;amp;autohide=1&amp;amp;amp;color=white&amp;amp;amp;&quot; type=&quot;text/html&quot;&gt;&lt;/iframe&gt;
-  &lt;figcaption&gt;2015 December Deadz (275x4)&lt;/figcaption&gt;
+&lt;figure style=&quot;display: inline-block;&quot;&gt;&lt;iframe width=&quot;360&quot; height=&quot;480&quot; allowfullscreen=&quot;&quot; class=&quot;youtube-player&quot; src=&quot;//www.youtube.com/embed/VdZn_FRxY7k?wmode=transparent&amp;amp;amp;autoplay=0&amp;amp;amp;rel=0&amp;amp;amp;showinfo=0&amp;amp;amp;autohide=1&amp;amp;amp;color=white&amp;amp;amp;&quot; type=&quot;text/html&quot;&gt;&lt;/iframe&gt;
+  &lt;figcaption&gt;2014 December Deadz (305x6)&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;figure&gt;&lt;iframe width=&quot;360&quot; height=&quot;480&quot; allowfullscreen=&quot;&quot; class=&quot;youtube-player&quot; src=&quot;//www.youtube.com/embed/VdZn_FRxY7k?wmode=transparent&amp;amp;amp;autoplay=0&amp;amp;amp;rel=0&amp;amp;amp;showinfo=0&amp;amp;amp;autohide=1&amp;amp;amp;color=white&amp;amp;amp;&quot; type=&quot;text/html&quot;&gt;&lt;/iframe&gt;
-  &lt;figcaption&gt;2014 December Deadz (305x6)&lt;/figcaption&gt;
+&lt;figure style=&quot;display: inline-block;&quot;&gt;&lt;iframe width=&quot;360&quot; height=&quot;480&quot; allowfullscreen=&quot;&quot; class=&quot;youtube-player&quot; src=&quot;//www.youtube.com/embed/lUAkYkW0_h8?wmode=transparent&amp;amp;amp;autoplay=0&amp;amp;amp;rel=0&amp;amp;amp;showinfo=0&amp;amp;amp;autohide=1&amp;amp;amp;color=white&amp;amp;amp;&quot; type=&quot;text/html&quot;&gt;&lt;/iframe&gt;
+  &lt;figcaption&gt;2015 December Deadz (275x4)&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;hr /&gt;
 </description>
         <pubDate>Thu, 31 Dec 2015 14:00:00 -0800</pubDate>
-        <link>www.anton23.com/exercise/2015/12/31/december-deadz-2015/</link>
-        <guid isPermaLink="true">www.anton23.com/exercise/2015/12/31/december-deadz-2015/</guid>
+        <link>www.anton23.com/december-deadz-2015</link>
+        <guid isPermaLink="true">www.anton23.com/december-deadz-2015</guid>
         
         
         <category>exercise</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 31 Dec 2015 13:40:03 -0800</pubDate>
-        <link>www.anton23.com/jekyll/update/2015/12/31/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">www.anton23.com/jekyll/update/2015/12/31/welcome-to-jekyll/</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>Day Dates</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 15 Dec 2015 13:40:03 -0800</pubDate>
-        <link>www.anton23.com/connection/2015/12/15/day-dates/</link>
-        <guid isPermaLink="true">www.anton23.com/connection/2015/12/15/day-dates/</guid>
-        
-        
-        <category>connection</category>
-        
-      </item>
-    
-      <item>
-        <title>Good Impressions</title>
-        <description>&lt;p&gt;The scope of this post is for both good impressions and first impressions.&lt;/p&gt;
-
-&lt;h2 id=&quot;mindset&quot;&gt;Mindset&lt;/h2&gt;
-
-&lt;p&gt;Wrong Mindset: &lt;br /&gt;
- * &lt;em&gt;How can I impress this person?&lt;/em&gt;  OR &lt;em&gt;How can I make them like me?&lt;/em&gt; – name dropper, or trying to cram all cool things.&lt;br /&gt;
- * The &lt;strong&gt;unworthy mindset&lt;/strong&gt; – Feeling inferior when interacting with someone they perceive of high status. This leads to “locking-up” one’s self.&lt;/p&gt;
-
-&lt;h1 id=&quot;if-its-not-about-being-impressive-what-is-it-all-about&quot;&gt;If it’s not about being impressive, what is it all about?&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;To &lt;strong&gt;evoke&lt;/strong&gt; a certain emotional response in that person, and have them &lt;strong&gt;tie those emotions&lt;/strong&gt; to you.&lt;/li&gt;
-  &lt;li&gt;People are going to decide to date you, be friends with you, work with you based on &lt;strong&gt;how you make them feel&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 01 Dec 2015 13:40:03 -0800</pubDate>
-        <link>www.anton23.com/connection/2015/12/01/good-impressions/</link>
-        <guid isPermaLink="true">www.anton23.com/connection/2015/12/01/good-impressions/</guid>
-        
-        
-        <category>connection</category>
         
       </item>
     
@@ -842,8 +763,8 @@
 
 </description>
         <pubDate>Sun, 22 Nov 2015 06:43:59 -0800</pubDate>
-        <link>www.anton23.com/style/2015/11/22/man-shoes/</link>
-        <guid isPermaLink="true">www.anton23.com/style/2015/11/22/man-shoes/</guid>
+        <link>www.anton23.com/man-shoes</link>
+        <guid isPermaLink="true">www.anton23.com/man-shoes</guid>
         
         
         <category>style</category>
@@ -898,37 +819,11 @@
 
 </description>
         <pubDate>Fri, 30 Oct 2015 07:43:59 -0700</pubDate>
-        <link>www.anton23.com/frugal/2015/10/30/tmobile-cellphone/</link>
-        <guid isPermaLink="true">www.anton23.com/frugal/2015/10/30/tmobile-cellphone/</guid>
+        <link>www.anton23.com/tmobile</link>
+        <guid isPermaLink="true">www.anton23.com/tmobile</guid>
         
         
         <category>frugal</category>
-        
-      </item>
-    
-      <item>
-        <title>Food and Nutrition</title>
-        <description>&lt;h2 id=&quot;what-worked-for-me&quot;&gt;What Worked for Me&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Am I wanting to bulk up or lean down in a period of time? Maintaining can be an option but is more of a short-term goal.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Figure out protein, fats, and carbs.  In that order.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-</description>
-        <pubDate>Sun, 28 Jun 2015 07:00:00 -0700</pubDate>
-        <link>www.anton23.com/food/2015/06/28/food-and-nutrition/</link>
-        <guid isPermaLink="true">www.anton23.com/food/2015/06/28/food-and-nutrition/</guid>
-        
-        
-        <category>food</category>
         
       </item>
     
@@ -983,8 +878,8 @@
 &lt;hr /&gt;
 </description>
         <pubDate>Thu, 28 May 2015 07:00:00 -0700</pubDate>
-        <link>www.anton23.com/meditate/2015/05/28/four-cognitive-biases/</link>
-        <guid isPermaLink="true">www.anton23.com/meditate/2015/05/28/four-cognitive-biases/</guid>
+        <link>www.anton23.com/four-cognitive-biases</link>
+        <guid isPermaLink="true">www.anton23.com/four-cognitive-biases</guid>
         
         
         <category>meditate</category>
@@ -1017,14 +912,14 @@
 &lt;ul&gt;
   &lt;li&gt;Where we write pieces of our Angular application, and keep our code encapsulated.&lt;/li&gt;
   &lt;li&gt;Makes our code more maintainable, testable, and readable.&lt;/li&gt;
-  &lt;li&gt;Where we define dependencies for our app.&lt;br /&gt;
-&lt;img src=&quot;http://i.imgur.com/m08hpjY.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+  &lt;li&gt;Where we define dependencies for our app.
+&lt;img src=&quot;http://i.imgur.com/m08hpjY.png&quot; alt=&quot;&quot; /&gt;
 &lt;img src=&quot;http://i.imgur.com/oFQopox.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Expressions&lt;/strong&gt; allow you to insert dynamic values into your HTML. ``&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Controllers&lt;/strong&gt; are where we define our app’s behavior by defining functions and values. The scope of the controller is inside the DOM element it’s attached to.&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Controllers&lt;/strong&gt; are where we define our app’s behavior by defining functions and values. The scope of the controller is inside the DOM element it’s attached to.
 &lt;img src=&quot;http://i.imgur.com/QNLkJR8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- tsk --&gt;
@@ -1039,11 +934,1316 @@
 &lt;hr /&gt;
 </description>
         <pubDate>Mon, 11 May 2015 07:00:00 -0700</pubDate>
-        <link>www.anton23.com/career/2015/05/11/angular/</link>
-        <guid isPermaLink="true">www.anton23.com/career/2015/05/11/angular/</guid>
+        <link>www.anton23.com/angular</link>
+        <guid isPermaLink="true">www.anton23.com/angular</guid>
         
         
         <category>career</category>
+        
+      </item>
+    
+      <item>
+        <title>The steaks are high</title>
+        <description>&lt;p&gt;Since I’ve started living the “simple life” back in 2013, the majority of my diet consists of eggs, steamed fish, steamed chicken, and steamed vegetables.  As anyone could imagine, steamed anything doesn’t really taste too well because you lose all of the flavors – which I was fine with because the food is clean, food cooks fast, and cleaning is a breeze.&lt;/p&gt;
+
+&lt;p&gt;However, recently I started to feel that I need to add diversity into my diet while still keeping it clean (i.e., no processed foods).  So occasionally, I’d go and order some piece of steak at a restaurant.  However, this left me unsatisfied for the following reasons: 1.) The portions are too small and overpriced for their size, and 2.) I would need to spend time to drive out, order, and wait for it to be ready.   Needless to say, the ROI is not worth it.&lt;/p&gt;
+
+&lt;p&gt;So I thought, why not learn how to cook steaks properly.  After searching through some reddit posts on how to cook steaks, I was brought to &lt;a href=&quot;http://www.seriouseats.com/2012/12/the-food-lab-complete-guide-to-pan-seared-steaks.html&quot;&gt;this site&lt;/a&gt;.  What I like about it that it’s simple: pan-seared steak. No oven necessary. And below is my take away…&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. The tools.&lt;/strong&gt;  I plan to learn the ways of the cast-iron skillet (I got it from Amazon).  Also, I’ll be using a thermometer.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. The Cut.&lt;/strong&gt; Ribeye, New York Strip, Tenderloin, and T-bone.  In that order.  T-bone is ought to be avoided (if possible) because it requires a more advanced technique of cooking due to the bone.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. The Grade.&lt;/strong&gt; All beef that’s sold in the U.S. is graded by the United States Department of Agriculture on a scale according to its tenderness and degree of marbling. The grades are: Prime, Choice, Select, and Canner.  Only about 2% of the beef sold in the US is Prime.  Choice and Select are what you find supermarkets. Canner is at school lunches and dog food.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. The Thickness.&lt;/strong&gt; Try to go for at least 1.5 inch in thickness.  &lt;em&gt;“Without an adequately thick steak, it’s very difficult to get that contrast between exterior and interior that is so desirable. Thin, thin steaks will tend to overcook before they can finish developing a nice crust.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. Aging.&lt;/strong&gt; This is more advanced for the basic cook (so I’ll leave this out for now). In fact, it is pretty much impossible to dry age properly at home.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. Bone-in, Bone-out.&lt;/strong&gt;  This is pretty minor.   A bone accomplishes two things: It prevent some moisture loss by reducing the surface area of a steak, and it keeps that section of the steak from overcooking by acting as an insulator.  Sure there’s that extra moist, but you’ll have to learn the ways of basting to ensure the meat in the bone area gets cooked properly.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6. The Salt.&lt;/strong&gt; USE KOSHER SALT, not regular table salt.  Season it at least overnight.  A couple of days or more if possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;7. Cook with Oil. Add butter later.&lt;/strong&gt;  Milk proteins in butter get burn when too hot.  Butter is best added to the pan a few minutes before it’s done cooking.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;8. The Flipping.&lt;/strong&gt; It’s actually slightly better to flip often.  Nonetheless, this is minutiae.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;9. The Baste.&lt;/strong&gt; This is basically spooning hot fat over your meat.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;10. Add Aromatics.&lt;/strong&gt; After the butter is melted, add a handful of herbs such as thyme or rosemary, along with some sweet alliums like shallots or garlic. They pop and sputter, releasing their aromas and rapidly infusing the fat with their flavor. When you baste, you’re adding that aroma with each spoonful.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;11. Let it Rest.&lt;/strong&gt; &lt;em&gt;“If you cut the steak open as soon as it comes off the grill, the juice has only one place to go — onto your plate. On the other hand, allow the steak to rest until its temperature has normalized, and the juices will distribute themselves more evenly throughout its interior.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Sat, 28 Mar 2015 07:00:01 -0700</pubDate>
+        <link>www.anton23.com/steaks-are-high</link>
+        <guid isPermaLink="true">www.anton23.com/steaks-are-high</guid>
+        
+        
+        <category>food</category>
+        
+      </item>
+    
+      <item>
+        <title>December Deadz</title>
+        <description>&lt;p&gt;I originally planned to write this in December… but alas, laziness and procrastination got in the way and now it’s March.  Nonetheless, better late than never.&lt;/p&gt;
+
+&lt;p&gt;As of early December, I’m pulling 305 lbs in 6 reps (for my first set).  To keep thing simple, I’ll keep track of the first set only throughout my progression. Keep in mind that this usually done after a good set of squats.  In the video below, I’m highly certain that I did it after squats.  I’ll explicitly make a note for it next time.&lt;/p&gt;
+
+&lt;p&gt;For next December (the one in 2015), I’d like to hit 4 plates for 1 – this is about 405 lbs total.  Though, this might sound too ambitious, I think I might be able to come close.  I’m basing this judgment from the graph of my previous numbers (which have been converted to 1 rep max).  Peace.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/eAAPnBF.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;figure&gt;&lt;iframe width=&quot;360&quot; height=&quot;480&quot; allowfullscreen=&quot;&quot; class=&quot;youtube-player&quot; src=&quot;//www.youtube.com/embed/VdZn_FRxY7k?wmode=transparent&amp;amp;amp;autoplay=0&amp;amp;amp;rel=0&amp;amp;amp;showinfo=0&amp;amp;amp;autohide=1&amp;amp;amp;color=white&amp;amp;amp;&quot; type=&quot;text/html&quot;&gt;&lt;/iframe&gt;
+  &lt;figcaption&gt;2014 December Deadz (305x6)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Sat, 28 Mar 2015 07:00:00 -0700</pubDate>
+        <link>www.anton23.com/december-deadz</link>
+        <guid isPermaLink="true">www.anton23.com/december-deadz</guid>
+        
+        
+        <category>exercise</category>
+        
+      </item>
+    
+      <item>
+        <title>Investing... Here we go again.</title>
+        <description>&lt;h2 id=&quot;july-note&quot;&gt;July Note…&lt;/h2&gt;
+
+&lt;p&gt;I’ve looked into investing pretty heavily about 5 years ago.  I wish I made notes of the terms that ought to be remembered and the approach I followed.  Oh well, it’s not too late to refresh my memory and make notes.  So here goes…&lt;/p&gt;
+
+&lt;p&gt;It’s 2014.  The approach I’ll be using is making my portfolio.&lt;/p&gt;
+
+&lt;p&gt;First off, reading…&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;I Will Teach You To Be Rich – as far as investing is concerned, you cannot beat the market and you’re better off investing in index funds because of the low fees.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The Boglehead’s Guide to Investing&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A Random Walk Down Wall Street&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;november-note&quot;&gt;November Note…&lt;/h2&gt;
+&lt;p&gt;Since I’ve been procrastinating  reading those fun reads mentioned above, I just went straight to the meat and bones.
+The first resource I went to was &lt;a href=&quot;https://www.reddit.com/r/personalfinance/wiki/commontopics&quot;&gt;reddit’s /r/personalfinance sub&lt;/a&gt;.
+Here’s the plan of action:&lt;/p&gt;
+
+&lt;h3 id=&quot;a-emergency-fund&quot;&gt;1a. Emergency Fund&lt;/h3&gt;
+&lt;p&gt;This is typically the basic Savings Account.  It’s a fund where you can easily take money from
+ for the unexpecteds: job loss, appliance replacement,
+medical procedures, unexpected travel, and more.  Since it’s easy to have access to
+the money, its downside is that the interest you earn won’t be high.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What’s the ideal size for an emergency fund?&lt;/strong&gt; If you’re already an expert in your career (i.e., you’re
+sought-after), a fund for 6-months of expenses will work.  However, if you feel you’re
+in the early stages of your career (i.e., a lot of uncertainties), a fund for 12 months of expenses
+is a good bet.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What kinds of accounts should an emergency fund in be?&lt;/strong&gt;  Emergency funds should be held in safe investments
+that can be liquidated in a hurry – Savings &amp;amp; Checking account, CDs (Certificate of Deposits), and I-bonds.&lt;/p&gt;
+
+&lt;p&gt;Another good way letting your money work for you is to have the E-Fund in tiers as seen below, 
+so you can take advantage of the higher interest rates that some accounts offer.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tier 1: Checking account – holds 2 month worth of expenses.&lt;/li&gt;
+  &lt;li&gt;Tier 2: Savings account – holds 4 month worth of expenses.&lt;/li&gt;
+  &lt;li&gt;Tier 3: CDs and I-bonds – holds 6-12 month worth of expenses.
+    &lt;ul&gt;
+      &lt;li&gt;The drawback of these accounts require a relatively longer investment time (e.g., 6 months)
+for it to yield interest.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;b-higher-education-expenses&quot;&gt;1b. Higher Education Expenses&lt;/h3&gt;
+
+&lt;h3 id=&quot;employer-sponsored-matching-funds&quot;&gt;2. Employer-sponsored matching funds&lt;/h3&gt;
+&lt;p&gt;You want to ensure you get the guaranteed free money to its full-extent.  That’s all there is to it.&lt;/p&gt;
+
+&lt;h3 id=&quot;pay-down-high-interest-debts&quot;&gt;3. Pay down high interest debts&lt;/h3&gt;
+&lt;p&gt;I’ve heard the rule of thumb that over 6% is &lt;strong&gt;high&lt;/strong&gt;, under 4% is low, and between that you trust your gut.
+In context, the average inflation rate is 3%  and the average stock market return is 7%. Hence,
+by paying those high interest rates, you’re ensuring yourself to not lose money by that much.&lt;/p&gt;
+
+&lt;h3 id=&quot;additional-savings-for-retirement-in-an-ira&quot;&gt;4. Additional savings for retirement in an IRA&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Why contribute to an IRA? Shouldn’t I go back to my 401k?&lt;/strong&gt; Choose IRAs, since they are opened by individuals with a provider of your choice, are generally better than 401k plans because you have more fund choices. Low cost providers like Vanguard, Fidelity, and Schwab all offer low expense ratio index funds to invest in. However, if you have an excellent 401k plan such as the U.S. Federal government’s Thrift Savings Plan or work for a large company that has negotiated institutional rates for the mutual funds in their 401k plan, you may want to “Maximize contributions to employer-sponsored plan” (i.e., 401k) first and return to your IRA contribution afterwards.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-maximize-contributions-to-employer-sponsored-plan&quot;&gt;5a. Maximize contributions to employer-sponsored plan&lt;/h3&gt;
+&lt;p&gt;After covering all bases, now is a good time to maximize the contributions to 401k.&lt;br /&gt;
+&lt;a href=&quot;https://www.reddit.com/r/personalfinance/wiki/401k&quot;&gt;Here’s a link to tips on how-to&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;b-save-for-non-retirement-goals&quot;&gt;5b. Save for non-retirement goals&lt;/h3&gt;
+&lt;p&gt;Well, this is a toss-up compared to 6, since both deals with paying yourself either way.
+Non-retirement goals include paying down a house sooner, vacations, vehicles, babies, 
+and the like.  Just keep in mind that (especially for a young person) the more time your money has to grow, the more powerful the effects of compounding will be on your retirement savings.&lt;/p&gt;
+
+&lt;h3 id=&quot;save-for-retirement-in-a-taxable-account&quot;&gt;6. Save for retirement in a taxable account&lt;/h3&gt;
+&lt;p&gt;If there’s still lump sump after covering all the bases, open a taxable brokerage account and invest according to your retirement asset allocation. You’ll want to have a decent grasp on &lt;a href=&quot;http://www.bogleheads.org/wiki/Asset_allocation_in_multiple_accounts&quot;&gt;asset allocation in multiple accounts&lt;/a&gt; and &lt;a href=&quot;http://www.bogleheads.org/wiki/Principles_of_tax-efficient_fund_placement&quot;&gt;tax-efficient fund placement.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;december-note&quot;&gt;December Note…&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;“Not All Income are Taxed the same.”&lt;/em&gt;  This is what I learned after watching &lt;a href=&quot;http://www.bogleheads.org/wiki/Video:Bogleheads%C2%AE_investment_philosophy&quot;&gt;Boglehead’s Investment Philosophy&lt;/a&gt; where the basic building blocks of investing is discussed.&lt;/p&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Sun, 16 Nov 2014 06:00:00 -0800</pubDate>
+        <link>www.anton23.com/investing-again</link>
+        <guid isPermaLink="true">www.anton23.com/investing-again</guid>
+        
+        
+        <category>investing</category>
+        
+      </item>
+    
+      <item>
+        <title>Anatomy of Backbone B1</title>
+        <description>&lt;h2 id=&quot;more-models&quot;&gt;1. More Models&lt;/h2&gt;
+
+&lt;h3 id=&quot;parsing-non-standard-json-into-your-models&quot;&gt;Parsing non-standard JSON into your Models&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Response from Server
+{todo:{id: 1, description: &#39;Pick up milk&#39;, status: &#39;incomplete&#39; }}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;p&gt;Defaul Backbone &lt;code class=&quot;highlighter-rouge&quot;&gt;parse&lt;/code&gt; just returns response, so we edit it like so…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoItem = Backbone.Model.extend({
+  parse: function(response){
+return response.todo; }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;p&gt;Instantiating Models, doesn’t call parse by default. So we call it with &lt;code class=&quot;highlighter-rouge&quot;&gt;parse: true&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var todoItem = new TodoItem({
+  todo:{id: 1, description: &#39;Pick up milk&#39;, status: &#39;incomplete&#39;}
+}, { parse: true });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;changing-attribute-names&quot;&gt;Changing Attribute Names&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Response from Server
+{todo:{id: 1, desc: &#39;Pick up milk&#39;, status: &#39;incomplete&#39;}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoItem = Backbone.Model.extend({
+  parse: function(response){
+    response = response.todo;
+    response.description = response.desc;
+    delete response.desc;
+    return response;
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;sending-json-back-to-the-server&quot;&gt;Sending JSON back to the Server&lt;/h3&gt;
+
+&lt;p&gt;Defaut Backbone &lt;code class=&quot;highlighter-rouge&quot;&gt;toJSON()&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoItem = Backbone.Model.extend({
+  toJSON: function(){
+    return _.clone(this.attributes);
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Overridng the &lt;code class=&quot;highlighter-rouge&quot;&gt;toJSON()&lt;/code&gt; function like so…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoItem = Backbone.Model.extend({
+  toJSON: function(){
+    var attrs = _.clone(this.attributes);
+    attrs.desc = attrs.description;
+    attrs = _.pick(attrs, &#39;desc&#39;, &#39;status&#39;);  //returns an object with desc &amp;amp; status properties
+    return { todo: attrs };
+} });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then, replace Render View attributes from &lt;code class=&quot;highlighter-rouge&quot;&gt;toJSON()&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;attributes&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoView = Backbone.View.extend({
+  render: function(){
+    this.$el.html(this.template(this.model.attributes));  // this used to be .toJSON()
+    return this;
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;unconventional-id-attribute&quot;&gt;Unconventional ID Attribute&lt;/h3&gt;
+
+&lt;p&gt;Common way:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var todoItem = new TodoItem({id: 1})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Workaround:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoItem = Backbone.Model.extend({
+  idAttribute: &#39;_id&#39;
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;customizing-collections&quot;&gt;2. Customizing Collections&lt;/h2&gt;
+
+&lt;h3 id=&quot;review-fetching-data-from-the-server&quot;&gt;Review Fetching Data from the Server&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// URL to get JSON data from
+var TodoItems = Backbone.Collection.extend({
+  url: &#39;/todos&#39;
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Populate collection from server
+todoItems.fetch();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Response from server after calling `fetch()`
+[
+  {description: &#39;Pick up milk.&#39;, status: &#39;incomplete&#39;, id: 1},
+  {description: &#39;Get a car wash.&#39;, status: &#39;incomplete&#39;, id: 2}
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;handling-non-standard-response-from-server&quot;&gt;Handling non-standard Response from Server&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoItems.fetch()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//Response from Server
+{
+  &quot;total&quot;: 25, &quot;per_page&quot;: 10, &quot;page&quot;: 2,
+  &quot;todos&quot;: [ {&quot;id&quot;: 1, ... }, {&quot;id&quot;: 2, ... } ]
+}   
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Common Way to parse:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoItems = Backbone.Collection.extend({
+  parse: function(response){
+    return response;
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;New Way to accommodate non-standard format:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoItems = Backbone.Collection.extend({
+  parse: function(response){
+    this.perPage = response.per_page;
+    this.page = response.page;
+    this.total = response.total; return response.todos;
+  } 
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;fetching-with-extra-parameters&quot;&gt;Fetching with Extra Parameters&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoItems.fetch({data: { page: 6 }}); // GET /todos?page=6
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoItems.fetch({data: {page: todoItems.page + 1}}); // GET /todos?page=2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Review on Collection View&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodosView = Backbone.View.extend({
+  initialize: function(){
+    this.collection.on(&#39;reset&#39;, this.render, this);
+  },
+  render: function(){
+    this.addAll();
+    return this;
+  },
+  addAll: function(){
+    this.$el.empty();
+    this.collection.forEach(this.addOne);
+  },
+  addOne: function(todoItem){
+    var todoView = new TodoView({model: todoItem});
+    this.$el.append(todoView.render().el);
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Render the Next Link&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodosView = Backbone.View.extend({
+  template: _.template(&#39;&amp;lt;a href=&quot;#/todos/p&amp;lt;%= page %&amp;gt;&quot;&amp;gt;next page&amp;lt;/a&amp;gt;&#39;),  // !!! Add this line
+
+  initialize: function(){
+    this.collection.on(&#39;reset&#39;, this.render, this);
+  },
+
+  render: function(){
+    this.addAll();
+    this.$el.append(this.template({page: this.collection.page + 1}); // !!! Add this line too
+    return this;
+  },
+  ... 
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Review our Router&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoApp = new (Backbone.Router.extend({
+  routes: {
+    &quot;&quot;: &quot;index&quot;
+  },
+  initialize: function(){
+    this.todoItems = new TodoItems();
+    this.todosView = new TodosView({collection: this.todoItems});
+    this.todosView.render();
+    $(&#39;#app&#39;).append(this.todosView.el);
+  },
+  index: function(){
+    this.todoItems.fetch();
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Implementing the Base Route&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoApp = new (Backbone.Router.extend({
+  routes: {
+    &quot;todos/p:page&quot;: &quot;page&quot;,  // !!! Add this line
+      &quot;&quot;: &quot;index&quot;
+  },
+
+  page: function(page){  // !!! Add this function too
+    this.todoItems.fetch({data: {page: page}});
+  },
+
+  initialize: function(){
+    this.todoItems = new TodoItems();
+    this.todosView = new TodosView({collection: this.todoItems});
+    this.todosView.render();
+    $(&#39;#app&#39;).append(this.todosView.el);
+  },
+
+  index: function(){
+    this.todoItems.fetch();
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;sorting-collections&quot;&gt;Sorting Collections&lt;/h3&gt;
+
+&lt;p&gt;Sort by Comparator &lt;code class=&quot;highlighter-rouge&quot;&gt;status&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoItems = Backbone.Collection.extend({
+  comparator: &#39;status&#39;;
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoItems.fetch(); // When this is called, the collection gets sorted by status
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Sort by Function&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoItems = Backbone.Collection.extend({
+  comparator: function(todo1, todo2) {
+    return todo1.get(&#39;status&#39;) &amp;lt; todo2.get(&#39;status&#39;)
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// When this is called, the collection gets sorted by status in reverse order
+todoItems.fetch(); 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;aggregate-values&quot;&gt;Aggregate Values&lt;/h3&gt;
+
+&lt;p&gt;Display amount of completed todo items&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoItems = Backbone.Collection.extend({
+  completedCount: function() {
+    return this.where({status: &#39;complete&#39;}).length;
+  }
+});
+
+todoItems.completedCount(); // This returns 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;real-routes&quot;&gt;3. Real Routes&lt;/h2&gt;
+
+&lt;h3 id=&quot;optional-routes&quot;&gt;Optional Routes&lt;/h3&gt;
+
+&lt;p&gt;Use parentheses for optional parts like so: &lt;code class=&quot;highlighter-rouge&quot;&gt;(/p:page)&lt;/code&gt;.&lt;br /&gt;
+Optional Trailing Slash at the end of the URI can be accommodated by adding &lt;code class=&quot;highlighter-rouge&quot;&gt;(/)&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoRouter = new (Backbone.Router.extend({ 
+  routes: {
+    &#39;search/:query(/p:page)(/)&#39;: &#39;search&#39;,
+  },
+  search: function(query, page) {
+    page = page || 0;
+    console.log(query);
+    console.log(page);
+  } 
+}));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Calling the above would yield...
+TodoRouter.navigate(&#39;search/milk&#39;, {trigger: true});  // ==&amp;gt; &quot;milk&quot;, 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TodoRouter.navigate(&#39;search/milk/p2&#39;, {trigger: true}); // ==&amp;gt; &quot;milk&quot;, 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// For the trailing slash
+TodoRouter.navigate(&#39;search/milk/p2/&#39;, {trigger: true}) ; // ==&amp;gt; &quot;milk&quot;, 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;URI with Spaces Gotcha&lt;/p&gt;
+
+&lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;decodeURIComponent&lt;/code&gt; like so…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoRouter = new (Backbone.Router.extend({
+  routes: {
+    &#39;search/:query(/p:page)(/)&#39;: &#39;search&#39;,
+  },
+  search: function(query, page) {
+    page = page || 0;
+    query = decodeURIComponent(query);
+    console.log(query);
+    console.log(page);
+  }
+}));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Encoded input ==&amp;gt; Decoded output
+TodoRouter.navigate(&#39;search/Hello%20World/p2&#39;, {trigger: true})  // ==&amp;gt; &quot;Hello World&quot;, 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;regex-in-routes&quot;&gt;Regex in Routes&lt;/h3&gt;
+
+&lt;p&gt;To handle regex, we use &lt;code class=&quot;highlighter-rouge&quot;&gt;Router.route&lt;/code&gt; format…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoRouter = new (Backbone.Router.extend({
+  initialize: function(){ 
+    this.route(/^todos\/(\d+)$/, &#39;show&#39;);
+  },
+
+  show: function(id) {
+    console.log(&quot;id = &quot; + id);
+  } 
+}));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;!!! Needs more data&lt;/p&gt;
+
+&lt;h3 id=&quot;catch-all-routes&quot;&gt;Catch-all Routes&lt;/h3&gt;
+
+&lt;p&gt;Alert user when no route matches&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoRouter = Backbone.Router.extend({
+  routes: {
+    &#39;*path&#39;: &#39;notFound&#39;
+  },
+  notFound: function(path) {
+    alert(&#39;Sorry!  There is no content here.&#39;);
+} });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TodoRouter.navigate(&#39;nothinghere&#39;, {trigger: true});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;file-path-route&quot;&gt;File Path Route&lt;/h3&gt;
+
+&lt;p&gt;Accept a file path and get its parts&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoRouter = new (Backbone.Router.extend({
+  routes: {
+    &#39;file/*path&#39;: &#39;file&#39;
+  },
+    file: function(path) {
+    var parts = path.split(&quot;/&quot;);
+    console.log(parts);
+  } 
+}));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TodoRouter.navigate(&quot;file/this/is/a/file.txt&quot;, {trigger: true});
+// ==&amp;gt; [&quot;this&quot;, &quot;is&quot;, &quot;a&quot;, &quot;file.txt&quot;]
+￼￼
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;varying-views&quot;&gt;4. Varying Views&lt;/h2&gt;
+
+&lt;h3 id=&quot;view-initialization-options-review&quot;&gt;View Initialization Options Review&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//Pass in the Model
+var todoView = new TodoView({
+  model: todoItem
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;p&gt;//Pass in the Collection
+var todoView = new TodoView({
+  collection: todoItems
+});&lt;/p&gt;
+
+&lt;h3 id=&quot;using-existing-dom-elements-as-a-parameter&quot;&gt;Using Existing DOM Elements as a parameter&lt;/h3&gt;
+
+&lt;p&gt;You can use the existing &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt;  (or any element) in the DOM instead of 
+having the view instance to create a new one.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//HTML
+&amp;lt;div class=&quot;todo&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoView = Backbone.View.extend({
+  template: _.template(&quot;&amp;lt;%= description %&amp;gt;&quot;),
+  render: function(){
+    this.$el.html(this.template(this.model.attributes));
+    return this;
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// !!! Take note of the `el` option
+var todoView = new TodoView({model: todoItem, el: $(&#39;.todo&#39;)});  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoView.render(); // ==&amp;gt; &amp;lt;div class=&quot;todo&quot;&amp;gt;Pickup Milk.&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;custom-initialization-options&quot;&gt;Custom Initialization Options&lt;/h3&gt;
+
+&lt;p&gt;Pass in an extra option.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var todoView = new TodoView({
+  model: todoItem,
+  user: currentUser
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Access extra options in initialize&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoView = Backbone.View.extend({
+  initialize: function(options){
+    this.user = options.user;
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;escaping-user-content&quot;&gt;Escaping User Content&lt;/h3&gt;
+
+&lt;p&gt;Rendering user supplied strings can lead to XSS attack.  You can use&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoView = Backbone.View.extend({
+template: _.template(&#39;&amp;lt;%= model.escape(&quot;description&quot;) %&amp;gt;&#39;),
+render: function(){
+this.$el.html(this.template({model: this.model}));
+    return this;
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var todoView = new TodoView({model: todoItem});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoItem.set(&#39;description&#39;, &quot;&amp;lt;script src=&#39;attack.js&#39; /&amp;gt;&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;When, &lt;code class=&quot;highlighter-rouge&quot;&gt;todoView.render().el&lt;/code&gt; is called, this outputs:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoView.render().el; // ==&amp;gt; &amp;lt;div&amp;gt;&amp;amp;lt;script src=&amp;amp;#x27;attack.js&amp;amp;#x27; /&amp;amp;gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;passing-extra-options-to-event-handlers&quot;&gt;Passing Extra Options to Event Handlers&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;￼
+var TodoView = Backbone.View.extend({
+  template: _.template(&#39;&amp;lt;span&amp;gt;&amp;lt;%= description %&amp;gt;&amp;lt;/span&amp;gt;&#39;),
+  initialize: function(){
+    this.model.on(&#39;change:description&#39;, this.change, this);
+  },
+  render: function(){
+    this.$el.html(this.template(this.model.attributes));
+  },
+  change: function(model, value, options){
+      this.$(&#39;span&#39;).html(value);
+    if (options.highlight !== false){
+      this.$el.effect(&quot;highlight&quot;, {}, 1000);
+    }
+  }, 
+
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To make change without firing off events, pass &lt;code class=&quot;highlighter-rouge&quot;&gt;silent: true&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoItem.set({description: &quot;Pickup Kids&quot;}, {silent: true});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To stop specific action (e.g., highlighting), edit the function above to accommodate
+an &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; check, then pass that option&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoItem.set({description: &quot;Pickup Kids&quot;}, {highlight: false});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;view-event-cleanup&quot;&gt;View Event Cleanup&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Old Approach:&lt;/strong&gt; Using model to notify the view.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoView = Backbone.View.extend({
+  initialize: function() {
+    this.model.on(&#39;change&#39;, this.render, this);
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;When the view instance is removed using &lt;code class=&quot;highlighter-rouge&quot;&gt;todoView.remove()&lt;/code&gt;, this breaks
+because Model still holds reference to the view.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;New Approach:&lt;/strong&gt; Use view to “listen to” model.  Added in Backbone 0.9.9&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoView = Backbone.View.extend({
+  initialize: function() {
+    this.listenTo(this.model, &#39;change&#39;, this.render);
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoView.stopListening(); // Stops all listeners for this view instance
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoView.remove(); //Automatically calls stopListening()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;working-with-forms&quot;&gt;5. Working with Forms&lt;/h2&gt;
+
+&lt;h3 id=&quot;the-plain-no-backbone-way&quot;&gt;The Plain (no Backbone) Way&lt;/h3&gt;
+
+&lt;p&gt;Create an Ajax form for creating new Todos&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;form action=&quot;/todos&quot; method=&quot;POST&quot;&amp;gt;
+    &amp;lt;input name=description value=&quot;What do you need to do?&quot; /&amp;gt; 
+    &amp;lt;button&amp;gt;Save&amp;lt;/button&amp;gt;
+&amp;lt;/form&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Plain jQuery
+$(&#39;button&#39;).click(function(e){
+  e.preventDefault();
+  var uri = $(&#39;form&#39;).attr(&#39;action&#39;);
+  var description = $(&#39;input[name=description]&#39;).val();
+  $.post(uri, {description: description});
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;the-backbone-way&quot;&gt;The Backbone Way&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoItem = Backbone.Model.extend({
+  urlRoot: &quot;/todos&quot;
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var todoItem = new TodoItem({description: &quot;What do you need to do?&quot;}); 
+todoItem.save({description: &#39;Pickup Kids.&#39;});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Build the Form with Backbone View&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoForm = Backbone.View.extend({
+  template: _.template(&#39;&amp;lt;form&amp;gt;&#39; +
+    &#39;&amp;lt;input name=description value=&quot;&amp;lt;%= description %&amp;gt;&quot; /&amp;gt;&#39; +
+    &#39;&amp;lt;button&amp;gt;Save&amp;lt;/button&amp;gt;&amp;lt;/form&amp;gt;&#39;),
+  render: function(){
+    this.$el.html(this.template(this.model.attributes));
+    return this;
+  } 
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var todoItem = new TodoItem({description: &quot;What do you need to do?&quot;});
+var todoForm = new TodoForm({model: todoItem});
+$(&#39;#app&#39;).html(todoForm.render().el);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This outputs:
+    &amp;lt;form&amp;gt;&amp;lt;input name=description value=”What do you need to do?” /&amp;gt;
+    &lt;button&gt;Save&lt;/button&gt;&amp;lt;/form&amp;gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;capture-button-click-and-return-key-to-save-model&quot;&gt;Capture Button Click and Return Key to Save Model&lt;/h3&gt;
+
+&lt;p&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;submit&lt;/code&gt; allows processing on either click or pressing enter.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoForm = Backbone.View.extend({
+  template: _.template(&#39;&amp;lt;form&amp;gt;&#39; +
+    &#39;&amp;lt;input name=description value=&quot;&amp;lt;%= description %&amp;gt;&quot; /&amp;gt;&#39; +
+    &#39;&amp;lt;button&amp;gt;Save&amp;lt;/button&amp;gt;&amp;lt;/form&amp;gt;&#39;),
+  events: {
+    submit: &#39;save&#39;  // !!! You can also use &#39;click&#39; to use just &#39;click&#39;
+  },
+  save: function(e) {
+    e.preventDefault();
+    var newDescription = this.$(&#39;input[name=description]&#39;).val();
+    this.model.save({description: newDescription});
+  } 
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;reusing-form-to-edit-existing-todoitem&quot;&gt;Reusing Form to Edit existing TodoItem&lt;/h3&gt;
+
+&lt;p&gt;Get existing TodoItem from already fetched collection&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var todoItem = todoItems.get(1); 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Pass in existing model&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var editTodoForm = new TodoForm({model: todoItem}); 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Replace ‘#app’ with the HTML of the form&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(&#39;#app&#39;).html(editTodoForm.render().el); ￼
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;review-of-our-apps-router&quot;&gt;Review of our App’s Router&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;￼
+var TodoApp = new (Backbone.Router.extend({
+  routes: {
+    &quot;&quot;: &quot;index&quot;
+  },
+  initialize: function(){
+    this.todoItems = new TodoItems();
+    this.todosView = new TodosView({collection: this.todoItems});
+  },
+  index: function(){
+    this.todoItems.fetch();
+    $(&#39;#app&#39;).html(this.todosView.render().el);
+  }
+}));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;add-route-to-render-edit-form&quot;&gt;Add Route to render Edit Form&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoApp = new (Backbone.Router.extend({
+  routes: {
+    &quot;&quot;: &quot;index&quot;,
+    &quot;todos/:id/edit&quot;: &quot;edit&quot; // !!! Add this line
+  },
+
+  initialize: function(){
+    this.todoItems = new TodoItems();
+    this.todosView = new TodosView({collection: this.todoItems});
+  },
+
+  index: function(){
+    this.todoItems.fetch();
+    $(&#39;#app&#39;).html(this.todosView.render().el);
+  }
+  ￼￼
+  edit: function(id){ // !!! Add this function
+    var todoForm = new TodoForm({model: this.todoItems.get(id) });
+    $(&#39;#app&#39;).html(todoForm.render().el);
+  }
+}));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;add-route-to-render-new-form&quot;&gt;Add Route to render New Form&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoApp = new (Backbone.Router.extend({
+  routes: {
+    &quot;&quot;: &quot;index&quot;, 
+    &quot;todos/:id/edit&quot;: &quot;edit&quot;,
+    &quot;todos/new&quot;: &quot;newTodo&quot;
+  },
+
+  ...
+
+  newTodo: function(){
+    var todoItem = new TodoItem({description: &quot;What do you have to do?&quot;});
+    var todoForm = new TodoForm({model: todoItem});
+    $(&#39;#app&#39;).append(todoForm.render().el);
+  },
+￼￼
+  edit: function(id){
+    var todoForm = new TodoForm({model: this.todoItems.get(id) });
+    $(&#39;#app&#39;).html(todoForm.render().el);
+  }
+}));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;get-back-to-the-list-after-saving-success-or-error&quot;&gt;Get Back to the List after saving &lt;strong&gt;success&lt;/strong&gt; or &lt;strong&gt;error&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoForm = Backbone.View.extend({
+  ...
+  save: function(e) {
+    e.preventDefault();
+    var newDescription = this.$(&#39;input[name=description]&#39;).val(); 
+    this.model.save({description: newDescription}, {
+      success: function(model, response, options) {
+        Backbone.history.navigate(&#39;&#39;, { trigger: true });
+      }, 
+      error: function(model, xhr, options){
+        var errors = JSON.parse(xhr.responseText).errors;
+        alert(&#39;Oops, something went wrong with saving the TodoItem: &#39; + errors);
+      }
+    });
+  }
+}); 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;app-organization&quot;&gt;6. App Organization&lt;/h2&gt;
+
+&lt;h3 id=&quot;class-naming&quot;&gt;Class Naming&lt;/h3&gt;
+
+&lt;p&gt;Before, everything is placed in the Global Scope, and this provides drawbacks:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Leads to naming collisions&lt;/li&gt;
+  &lt;li&gt;Need to put “what kind of object” it is in the name e.g. “TodoItemView”&lt;/li&gt;
+  &lt;li&gt;Maintainability doesn’t scale with large applications&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoItem = Backbone.Model.extend({});
+var TodoItemView = Backbone.View.extend({}); 
+var TodoItems = Backbone.Collection.extend({}); 
+var TodoItemsView = Backbone.View.extend({});
+var TodoRouter = Backbone.Router.extend({});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Use a Global Object for Namespace.  Create a single global object where everything is stored:&lt;/p&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var App = {
+  Models: {},
+  Views: {},
+  Collections: {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;App.Models.TodoItem = Backbone.Model.extend({}); 
+App.Views.TodoItem = Backbone.View.extend({});
+App.Collections.TodoItems = Backbone.Collection.extend({}); 
+App.Views.TodoItems = Backbone.View.extend({});
+App.TodoRouter = Backbone.Router.extend({});  //Store one-off objects on App
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Reference classes with the namespace&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var todoItem = new App.Models.TodoItem({...})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;handle-links-outside-of-backbone-views&quot;&gt;Handle Links Outside of Backbone Views&lt;/h3&gt;
+
+&lt;!-- tsk --&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&quot;/completed&quot;&amp;gt;Show Completed&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&quot;/support&quot;&amp;gt;Support&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Solution A: Using Plain jQuery&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(&#39;a&#39;).click(function(e){
+  e.preventDefault();
+  Backbone.history.navigate(e.target.pathname, {trigger: true});
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Solution B: Move jQuery inside of the App Object and call &lt;code class=&quot;highlighter-rouge&quot;&gt;App.start()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var App = {
+Models: {}, Views: {}, Collections: {}, start: function(){
+    $(&#39;a&#39;).click(function(e){
+      e.preventDefault();
+      Backbone.history.navigate(e.target.pathname, {trigger: true});
+    });
+    Backbone.history.start({pushState: true});
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(function(){ App.start(); });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Solution C: Make the App a Backbone View, so you can use event handler instead
+when a link is clicked.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var App = Backbone.View.extend({ // !!! App now is a View Class
+  Models: {},
+  Views: {},
+  Collections: {},
+
+  events: { // !!! Use View event to handle clicks
+    &#39;click a&#39;: function(e){
+      e.preventDefault();
+      Backbone.history.navigate(e.target.pathname, {trigger: true});
+    }
+  },
+
+  start: function(){
+    Backbone.history.start({pushState: true});
+  } 
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var app = new App({el: document.body}); // Using body will capture everything
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Clean-up Solution C further by creating 
+instance without creating a class&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var App = new (Backbone.View.extend({  // !!! `new` here!
+  ...
+}))({el: document.body});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(function(){ App.start(); }); ￼
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;skip-links&quot;&gt;Skip Links&lt;/h3&gt;
+
+&lt;p&gt;Handle specific links by adding specificity&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&quot;/completed&quot; data-internal=&quot;true&quot;&amp;gt;Show Completed&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&quot;/support&quot;&amp;gt;Support&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;p&gt;Event Handler&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+events: {
+  &#39;click a[data-internal]&#39;: function(e){
+    e.preventDefault();
+    Backbone.history.navigate(e.target.pathname, {trigger: true});
+  }
+}
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;build-initial-html&quot;&gt;Build Initial HTML&lt;/h3&gt;
+
+&lt;p&gt;Since we now have a View that encompasses the entire document body, 
+if we want we can put some template code in the App view which has some of the 
+initial HTML.&lt;br /&gt;
+￼
+    var App = new (Backbone.View.extend({
+      …
+      template: _.template(‘&amp;lt;h1&amp;gt;ToDo List!&amp;lt;/h1&amp;gt;’ + ‘&amp;lt;div id=&quot;app&quot;&amp;gt;&amp;lt;/div&amp;gt;’),
+      render: function(){
+        this.$el.html(this.template());
+      }
+    }))({el: document.body});&lt;/p&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(function(){
+  App.render();
+  App.start();
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This results in…&lt;/p&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;body&amp;gt;
+  &amp;lt;h1&amp;gt;ToDo List!&amp;lt;/h1&amp;gt;
+  &amp;lt;div id=&quot;app&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;object-initialization&quot;&gt;Object Initialization&lt;/h3&gt;
+
+&lt;p&gt;Inside the &lt;code class=&quot;highlighter-rouge&quot;&gt;start&lt;/code&gt; method is also a good place to instantiate our collections, our views,
+rendering out the views, and fetching the todo items.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var App = new (Backbone.View.extend({
+  ...
+  start: function(){
+    var todos = new App.Collections.TodoItems();
+    var todosView = new App.Views.TodoItems({collection: todos}); 
+    this.$el.append(todosView.render().el);
+    todos.fetch();
+  } 
+}))({el: document.body});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(function(){ App.start(); })
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;…However, we can save an AJAX call that is used on &lt;code class=&quot;highlighter-rouge&quot;&gt;fetch&lt;/code&gt; in the initial load by
+boostrapping the HTML data which will be called on &lt;code class=&quot;highlighter-rouge&quot;&gt;append&lt;/code&gt; anyways…&lt;/p&gt;
+
+&lt;h3 id=&quot;bootstrap-model-data&quot;&gt;Bootstrap Model Data&lt;/h3&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var App = new (Backbone.View.extend({ 
+  start: function(bootstrap){
+    var todos = new App.Collections.TodoItems(bootstrap.todos); 
+    var todosView = new App.Views.TodoItems({collection: todos});
+    this.$el.append(todosView.render().el);
+  }
+}))({el: document.body});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Bootstrap data comes from rendered HTML page&lt;/p&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var bootstrap = {
+  todos: [
+    {id: 1, description: &quot;Pickup Milk.&quot;, status: &quot;complete&quot;},
+    {id: 2, description: &quot;Pickup Kids.&quot;, status: &quot;incomplete&quot;},
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Pass in data to start&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(function(){ App.start(bootstrap); });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;customizing-backbone&quot;&gt;7. Customizing Backbone&lt;/h2&gt;
+
+&lt;h3 id=&quot;using-other-templates&quot;&gt;Using Other Templates&lt;/h3&gt;
+
+&lt;p&gt;￼Underscore template:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;_.template(&quot;&amp;lt;span&amp;gt;&amp;lt;%= description %&amp;gt;&amp;lt;/span&quot; +
+  &quot;&amp;lt;em&amp;gt;&amp;lt;%= assigned_to %&amp;gt;&amp;lt;/em&amp;gt;&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Mustache.compile(&quot;&amp;lt;span&amp;gt;&amp;lt;/span&quot; +
+  &quot;&amp;lt;em&amp;gt;&amp;lt;/em&amp;gt;&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;NOTE: Mustache doesn’t allow arbitrary js, but Underscore does.  Underscore could be strange
+and verbose, and Mustache is cleaner.&lt;/p&gt;
+
+&lt;h3 id=&quot;default-restful-persistence-strategy&quot;&gt;Default RESTful Persistence Strategy&lt;/h3&gt;
+
+&lt;p&gt;var todoItem = new TodoItem({id: 1})&lt;/p&gt;
+
+&lt;p&gt;C.R.U.D.: 
+    ￼￼￼
+    // Read￼
+    todoItem.fetch(); // ==&amp;gt; GET /todos/1&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Update
+todoItem.save(): // ==&amp;gt; PUT /todos/1
+
+// Delete
+todoItem.delete(); // ==&amp;gt; DELETE /todos/1
+
+// Create
+(new TodoItem({description: &quot;Pickup Kids&quot;})).save(); // ==&amp;gt; POST /todos
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;make-read-only-model&quot;&gt;Make Read-only Model&lt;/h3&gt;
+
+&lt;p&gt;Override the sync function.  &lt;code class=&quot;highlighter-rouge&quot;&gt;method&lt;/code&gt; below is either ‘create’, ‘read’, ‘update’,
+or ‘delete’.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var TodoItem = Backbone.Model.extend({
+  sync: function(method, model, options){
+    if (method === &quot;read&quot;){
+      Backbone.sync(method, model, options);
+    }else{
+      console.error(&quot;You can not &quot; + method + &quot; the TodoItem model&quot;);
+    }
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoItem.fetch(); // This works
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;!-- tsk --&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;todoItem.save();  // ==&amp;gt; &quot;You can not update the TodoItem model&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;completely-replace-persistence-strategy&quot;&gt;Completely Replace Persistence Strategy&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;￼
+var TodoItem = Backbone.Model.extend({
+  sync: function(method, model, options){
+    options || (options = {});
+
+    switch(method){
+      case &#39;create&#39;:
+        var key = &quot;TodoItem-&quot; + model.id;
+        localStorage.setItem(key, JSON.stringify(model));
+      break;
+
+      case &#39;read&#39;:
+        var key = &quot;TodoItem-&quot; + model.id;
+        var result = localStorage.getItem(key);
+        if (result){
+          result = JSON.parse(result);
+          options.success &amp;amp;&amp;amp; options.success(result);
+        }else if (options.error){
+          options.error(&quot;Couldn&#39;t find TodoItem id=&quot; + model.id);
+        } 
+      break;
+
+
+      case &#39;update&#39;:
+      break;
+
+      case &#39;delete&#39;:
+      break;
+} }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Thu, 06 Nov 2014 06:00:00 -0800</pubDate>
+        <link>www.anton23.com/backbone-anatomy-b1</link>
+        <guid isPermaLink="true">www.anton23.com/backbone-anatomy-b1</guid>
+        
+        
+        <category>craft</category>
         
       </item>
     

@@ -11,4 +11,4 @@ twitter_username: antonmaximus
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-permalink: pretty
+permalink: /:title 

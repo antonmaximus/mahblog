@@ -22,15 +22,15 @@ As for my deadlifting goal for next December, I'm looking to pull 3 plates (315 
 
 
 
-<figure><iframe width="360" height="480"  allowfullscreen="" class="youtube-player" src="//www.youtube.com/embed/lUAkYkW0_h8?wmode=transparent&amp;amp;autoplay=0&amp;amp;rel=0&amp;amp;showinfo=0&amp;amp;autohide=1&amp;amp;color=white&amp;amp;" type="text/html"></iframe>
-  <figcaption>2015 December Deadz (275x4)</figcaption>
-</figure>
 
 
-<figure><iframe width="360" height="480"  allowfullscreen="" class="youtube-player" src="//www.youtube.com/embed/VdZn_FRxY7k?wmode=transparent&amp;amp;autoplay=0&amp;amp;rel=0&amp;amp;showinfo=0&amp;amp;autohide=1&amp;amp;color=white&amp;amp;" type="text/html"></iframe>
+<figure style="display: inline-block;"><iframe width="360" height="480"  allowfullscreen="" class="youtube-player" src="//www.youtube.com/embed/VdZn_FRxY7k?wmode=transparent&amp;amp;autoplay=0&amp;amp;rel=0&amp;amp;showinfo=0&amp;amp;autohide=1&amp;amp;color=white&amp;amp;" type="text/html"></iframe>
   <figcaption>2014 December Deadz (305x6)</figcaption>
 </figure>
 
+<figure style="display: inline-block;"><iframe width="360" height="480"  allowfullscreen="" class="youtube-player" src="//www.youtube.com/embed/lUAkYkW0_h8?wmode=transparent&amp;amp;autoplay=0&amp;amp;rel=0&amp;amp;showinfo=0&amp;amp;autohide=1&amp;amp;color=white&amp;amp;" type="text/html"></iframe>
+  <figcaption>2015 December Deadz (275x4)</figcaption>
+</figure>
 
 
 ---

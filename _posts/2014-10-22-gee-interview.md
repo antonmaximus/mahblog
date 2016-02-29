@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "G Interviewing: What Worked and What Didn't"
+title:  "Gee Interviewing: What Worked and What Didn't"
 date:   2014-10-22 14:44:58
 categories: craft
 ---

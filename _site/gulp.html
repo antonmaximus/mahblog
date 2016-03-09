@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Beginning Gulp</title>
+  <meta name="description" content="Installing Gulp is as eas as 1, 2, 3…">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="canonical" href="www.anton23.com/gulp">
+  <link rel="alternate" type="application/rss+xml" title="anton" href="www.anton23.com/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">anton</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Beginning Gulp</h1>
+    <p class="post-meta"><time datetime="2016-03-08T11:00:00-08:00" itemprop="datePublished">Mar 8, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Installing Gulp is as eas as 1, 2, 3…</p>
+
+<h3 id="install-gulp-globally">1. Install Gulp Globally</h3>
+
+<p><code class="highlighter-rouge">sudo npm install gulp -g</code></p>
+
+<h3 id="install-gulp-to-the-local-project">2. Install Gulp to the local project</h3>
+
+<p>a. Have a <code class="highlighter-rouge">package.json</code>   by typing <code class="highlighter-rouge">npm init</code> or creating it manually.</p>
+
+<p>b.  <code class="highlighter-rouge">npm install --save-dev gulp</code>  – to install Gulp into the project locally.  The <code class="highlighter-rouge">--save-dev</code> keyword tells the computer to add <code class="highlighter-rouge">gulp</code> as a dev dependency in <code class="highlighter-rouge">package.json</code>.</p>
+
+<h3 id="create-a-gulpfilejs-file-and-write-your-gulp-tasks">3. Create a <code class="highlighter-rouge">gulpfile.js</code> file and write your Gulp Tasks!</h3>
+
+<p>The first step to using Gulp is to <code class="highlighter-rouge">require</code> it in the gulpfile.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var gulp = require('gulp'); 
+</code></pre>
+</div>
+
+<p>The require statement tells Node to look into the <code class="highlighter-rouge">node_modules</code> folder for a package named <code class="highlighter-rouge">gulp</code>. Once the package is found, we assign its contents to the variable <code class="highlighter-rouge">gulp</code>.</p>
+
+<p>We can now begin to write a gulp task with this <code class="highlighter-rouge">gulp</code> variable. The basic syntax of a gulp task is:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>gulp.task('hello', function() {
+  console.log('Hello Zell');
+});
+</code></pre>
+</div>
+
+<p>We can run this task with <code class="highlighter-rouge">gulp hello</code> in the command line.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ gulp hello
+</code></pre>
+</div>
+
+<h4 id="installing-other-plug-ins-to-your-project">Installing other plug-ins to your project…</h4>
+
+<p>We can compile Sass to CSS in Gulp with the help of a plugin called <code class="highlighter-rouge">gulp-sass</code>.  We install it by using <code class="highlighter-rouge">npm install</code>.  We’d also want to use the <code class="highlighter-rouge">--save-dev</code> flag to ensure that gulp-sass gets added to <code class="highlighter-rouge">devDependencies</code> in <code class="highlighter-rouge">package.json</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ npm install gulp-sass --save-dev
+</code></pre>
+</div>
+
+<hr />
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <!-- <h2 class="footer-heading">anton</h2> -->
+
+    <div class="footer-col-wrapper">
+<!--       <div class="footer-col footer-col-2">
+        <ul class="contact-list">
+          <li>anton</li>
+          <li><a href="mailto:anton23@gmail.com">anton23@gmail.com</a></li>
+        </ul>
+      </div> -->
+
+      <div class="footer-col footer-col-1">
+        <ul class="social-media-list">
+          
+
+          
+          <li>
+            <a href="https://twitter.com/antonmaximus"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">antonmaximus</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-5">
+        <p>A small growth today makes progression happen...</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

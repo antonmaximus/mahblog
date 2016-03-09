@@ -5,9 +5,66 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 28 Feb 2016 16:12:40 -0800</pubDate>
-    <lastBuildDate>Sun, 28 Feb 2016 16:12:40 -0800</lastBuildDate>
+    <pubDate>Wed, 09 Mar 2016 11:57:48 -0800</pubDate>
+    <lastBuildDate>Wed, 09 Mar 2016 11:57:48 -0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>Beginning Gulp</title>
+        <description>&lt;p&gt;Installing Gulp is as eas as 1, 2, 3…&lt;/p&gt;
+
+&lt;h3 id=&quot;install-gulp-globally&quot;&gt;1. Install Gulp Globally&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo npm install gulp -g&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;install-gulp-to-the-local-project&quot;&gt;2. Install Gulp to the local project&lt;/h3&gt;
+
+&lt;p&gt;a. Have a &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;   by typing &lt;code class=&quot;highlighter-rouge&quot;&gt;npm init&lt;/code&gt; or creating it manually.&lt;/p&gt;
+
+&lt;p&gt;b.  &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install --save-dev gulp&lt;/code&gt;  – to install Gulp into the project locally.  The &lt;code class=&quot;highlighter-rouge&quot;&gt;--save-dev&lt;/code&gt; keyword tells the computer to add &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp&lt;/code&gt; as a dev dependency in &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;create-a-gulpfilejs-file-and-write-your-gulp-tasks&quot;&gt;3. Create a &lt;code class=&quot;highlighter-rouge&quot;&gt;gulpfile.js&lt;/code&gt; file and write your Gulp Tasks!&lt;/h3&gt;
+
+&lt;p&gt;The first step to using Gulp is to &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt; it in the gulpfile.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var gulp = require(&#39;gulp&#39;); 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The require statement tells Node to look into the &lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt; folder for a package named &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp&lt;/code&gt;. Once the package is found, we assign its contents to the variable &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;We can now begin to write a gulp task with this &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp&lt;/code&gt; variable. The basic syntax of a gulp task is:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gulp.task(&#39;hello&#39;, function() {
+  console.log(&#39;Hello Zell&#39;);
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We can run this task with &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp hello&lt;/code&gt; in the command line.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gulp hello
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;installing-other-plug-ins-to-your-project&quot;&gt;Installing other plug-ins to your project…&lt;/h4&gt;
+
+&lt;p&gt;We can compile Sass to CSS in Gulp with the help of a plugin called &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp-sass&lt;/code&gt;.  We install it by using &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt;.  We’d also want to use the &lt;code class=&quot;highlighter-rouge&quot;&gt;--save-dev&lt;/code&gt; flag to ensure that gulp-sass gets added to &lt;code class=&quot;highlighter-rouge&quot;&gt;devDependencies&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ npm install gulp-sass --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Tue, 08 Mar 2016 11:00:00 -0800</pubDate>
+        <link>www.anton23.com/gulp</link>
+        <guid isPermaLink="true">www.anton23.com/gulp</guid>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
     
       <item>
         <title>Convo Mastery</title>
@@ -1059,31 +1116,6 @@
         
         
         <category>food</category>
-        
-      </item>
-    
-      <item>
-        <title>December Deadz</title>
-        <description>&lt;p&gt;I originally planned to write this in December… but alas, laziness and procrastination got in the way and now it’s March.  Nonetheless, better late than never.&lt;/p&gt;
-
-&lt;p&gt;As of early December, I’m pulling 305 lbs in 6 reps (for my first set).  To keep thing simple, I’ll keep track of the first set only throughout my progression. Keep in mind that this usually done after a good set of squats.  In the video below, I’m highly certain that I did it after squats.  I’ll explicitly make a note for it next time.&lt;/p&gt;
-
-&lt;p&gt;For next December (the one in 2015), I’d like to hit 4 plates for 1 – this is about 405 lbs total.  Though, this might sound too ambitious, I think I might be able to come close.  I’m basing this judgment from the graph of my previous numbers (which have been converted to 1 rep max).  Peace.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/eAAPnBF.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;figure&gt;&lt;iframe width=&quot;360&quot; height=&quot;480&quot; allowfullscreen=&quot;&quot; class=&quot;youtube-player&quot; src=&quot;//www.youtube.com/embed/VdZn_FRxY7k?wmode=transparent&amp;amp;amp;autoplay=0&amp;amp;amp;rel=0&amp;amp;amp;showinfo=0&amp;amp;amp;autohide=1&amp;amp;amp;color=white&amp;amp;amp;&quot; type=&quot;text/html&quot;&gt;&lt;/iframe&gt;
-  &lt;figcaption&gt;2014 December Deadz (305x6)&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;hr /&gt;
-</description>
-        <pubDate>Sat, 28 Mar 2015 07:00:00 -0700</pubDate>
-        <link>www.anton23.com/december-deadz</link>
-        <guid isPermaLink="true">www.anton23.com/december-deadz</guid>
-        
-        
-        <category>exercise</category>
         
       </item>
     

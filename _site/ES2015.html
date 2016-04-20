@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ES2015</title>
+  <meta name="description" content="let &amp; const">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="canonical" href="www.anton23.com/ES2015">
+  <link rel="alternate" type="application/rss+xml" title="anton" href="www.anton23.com/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">anton</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">ES2015</h1>
+    <p class="post-meta"><time datetime="2016-04-12T01:01:00-07:00" itemprop="datePublished">Apr 12, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h2 id="let--const">let &amp; const</h2>
+
+<p><code class="highlighter-rouge">let</code> variables are scoped to the nearest block (i.e., blocked-scoped) and are not hoisted.</p>
+
+<p>The <code class="highlighter-rouge">let</code> keyword solves the issue of “registered-but-not-executed” callbacks. In the example below, <code class="highlighter-rouge">i</code> is shared for each iteration.
+Once the event goes through on <code class="highlighter-rouge">click</code>, the now executed callback will be using the last value of <code class="highlighter-rouge">i</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  function loopUsingVar(){
+    var li = document.querySelectorAll('li')
+    for (var i=0; i &lt; li.length; i++) {
+      li[i].addEventListener('click', function() {
+        console.log(i, li[i]);
+      })
+    }
+  }
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">const</code> keyword creates <strong>read-only</strong> named constants. Variables declared with <code class="highlighter-rouge">const</code> must be assigned with an initial value. Behaves like <code class="highlighter-rouge">let</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>   const MAX_USERS = 3`
+</code></pre>
+</div>
+
+<hr />
+
+<h2 id="functions">Functions</h2>
+
+<p><strong>Default Parameter</strong> values help move default values from the function body to the function definition.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function exampleFunction(userNames = []){
+  let namesLength = userNames.length;
+  console.log(namesLength);
+}
+</code></pre>
+</div>
+
+<p><strong>Named Parameters</strong> are used for optional settings to make it easer to understand how a function should be invoked. 
+This also gets rid of the verbose boiler plate code, (e.g., <code class="highlighter-rouge">Object.popular</code>).</p>
+
+<p>The <code class="highlighter-rouge">= {}</code> sets the default value to an empty object, and allows the parameter to be omitted during function calls.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function exampleFunction(name, {popular, expires, activeClass} = {}){
+  console.log("Name: ", name);
+  console.log("Expires: ", expires);
+  console.log("Active: ", activeClass);
+}
+</code></pre>
+</div>
+
+<p>The new <strong>rest parameter</strong> syntax allows us to represent an indefinite number of arguments as an <strong>Array</strong>.<br />
+This way, changesl to function signature are less likely to break code. This works well for a <strong>variadic function</strong> which means it accepts individual arguments that can be multiple.</p>
+
+<p>Things to note: The 3 dots are part of the syntax, 
+the variable is an array, and it must always go last on the function parameter.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function displayTags(targetElement, ...tags){
+  let target = _findElement(targetElement);
+
+  for(i in tags) {
+    let tag  = tags[i];
+    console.log(target, tag);
+  }
+}
+</code></pre>
+</div>
+
+<p>The <strong>spread operator</strong> allows us to <strong>split an Array</strong> into <strong>individual elements</strong>.  It is used in a function invocation.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>getRequest('/topics/17/tags', function(data) {
+    let tags = data.tags;
+    displayTags(...tags);
+});
+</code></pre>
+</div>
+
+<p><strong>Arrow functions</strong> bind to the scope of where they are defined, not where they are used. This is known as <strong>lexical binding</strong>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>TagComponent.prototype.render = function() {
+  getRequest(this.urlPath, (data) =&gt; {
+    let tags = data.tags;
+
+    // "this" here refers to the scope outside of the `=&gt;` (arrow function)
+    displayTags(this.targetElement, ...tags); 
+  });
+}
+</code></pre>
+</div>
+
+<hr />
+
+<h2 id="objects--strings">Objects &amp; Strings</h2>
+
+<p><strong>Object Initializer Shorthand.</strong> We can remove duplicate variable names from object properties when those 
+properties have the same name as the variables assigned to them. (i.e., from variables to object properties)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function buildUser(first, last) {
+  let fullName = first + ' ' + last;
+
+  // Old Way
+  // return {first: first, last: last, fullName: fullName} 
+
+  // ES2015 Way
+  return { first, last, fullName };
+}
+
+
+function main() {
+  let name = 'Sam';
+  let age = 45;
+
+  let user = { name, age };  //ES2015 Way
+  console.log(user.name);
+  console.log(user.age);
+}
+</code></pre>
+</div>
+
+<p><strong>Object Destructuring</strong>.  We can use shorthand to assign properties to local variables with the same name. (i.e., from object properties to variables)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//Old Way
+let user = buildUser('Sam', 'Williams');
+let first = user.first;
+let last = user.last;
+let fullName = user.fullName;
+
+// ES2015 Way
+let {first, last, fullName} = buildUser("Sam", "Williams"); 
+console.log(first);
+console.log(last);
+
+// ES2015 Way
+let {fullName} = buildUser("Katy", "Perry"); // if we only want fullName property destructured.
+</code></pre>
+</div>
+
+<p><strong>Adding a Function to an Object</strong>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function buildUser(first, last) {
+  let fullName = first + ' ' + last;
+
+  // Old Way
+  /* return {
+        first: first, last: last, fullName: fullName,
+        isActive: function(){return true;}
+      } 
+  */
+
+
+  // ES2015 Way
+  return { first, last, fullName,
+    isActive(){ return true; } 
+  };
+}
+</code></pre>
+</div>
+
+<p><strong>Template Strings.</strong> Preserves white spaces.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let first = 'Sam';
+let userName = 'SamSmith';
+
+let veryLongText = `Hi ${first},
+
+this is a very 
+very
+
+looong
+text. 
+
+Regards,
+  ${userName}
+`;
+</code></pre>
+</div>
+
+<p>The <strong>Object.assign</strong> method copies properties from one or more source objects to a target object specified as the very first argument.
+In case of duplicates, the last object on the chain always prevails.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let defaults = {
+  name: 'Sam',
+  last: 'Williams'
+};
+
+let option1 = { name: 'Tim' };
+let option2 = { screenName: 'misterwilliams'};
+
+let settings = Object.assign({}, defaults, option1, option2);
+console.log(settings);  // Object {name: "Tim", last: "Williams", screenName: "misterwilliams"}
+</code></pre>
+</div>
+
+<hr />
+
+<h2 id="arrays">Arrays</h2>
+
+<p><strong>Array Destructuring</strong>.  We can use destructuring to assign multiple values from an array to local variables.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let users = ['Sam', 'Tyler', 'Brook'];
+let [a, b, c] = users;
+console.log(a, b, c); // Sam Tyler Brook 
+
+// Values can be discarded
+let [a, , b] = users;
+console.log(a, b); // Sam Brook
+
+
+// Combine Destructuring with Rest Parameter
+let users = ['Sam', 'Tyler', 'Brook'];
+let [first, ...rest] = users;
+console.log(first, rest); // Sam ["Tyler", "Brook"]
+</code></pre>
+</div>
+
+<p>The <strong>For…of</strong> statement itereates over <strong>propety values</strong>, and it’s a better way to loop over arrays and other <strong>iterable objects</strong>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>for(let name of names) {
+  console.log(name);
+}
+</code></pre>
+</div>
+
+<p><strong>Array.find</strong> returns the first element in the array that satisfies a provided testing function.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let users = [
+  {login: "Sam",    admin: false},
+  {login: "Brook",  admin: true},
+  {login: "Tyler",  admin: true}
+];
+
+let admin = user.find( user =&gt; {return user.admin; });
+// let admin = user.find( user =&gt; user.admin);  // Even shorter way
+
+console.log(admin); // {"login": "Brook", "admin": true}
+</code></pre>
+</div>
+
+<h2 id="maps">Maps</h2>
+
+<p>The <strong>Map</strong> object is a simple <strong>key/value</strong> data structure. <strong>Any value</strong> may be used as either a key or a value, and objects
+are <strong>not converted</strong> to strings.</p>
+
+<p>When to use Maps:</p>
+
+<ul>
+  <li>When keys are unknown until runtime.  (When using predefined settings, it’s okay to use an object.)</li>
+  <li>When all keys are the same type and all values are the same type. (If values are different types, object is a better choice.)</li>
+  <li>When you need to iterate because Maps are iterable using <code class="highlighter-rouge">for...of</code>.</li>
+</ul>
+
+<p> </p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let mapSettings = new Map();
+
+mapSettings.set("user", "Sam");
+mapSettings.set("topic", "ES2015");
+mapSettings.set("replies", ["Can't wait!", "So Cool!"]);
+
+for(let [key, value] of mapSettings) {
+  console.log(`${key} = ${value}`);
+}
+</code></pre>
+</div>
+
+<p><strong>Weakmap</strong> is a type of <em>Map</em> where <strong>only objects</strong> can be passed as keys.  Primitive data types – such as strings, numbers, booleans, etc. – are <strong>not allowed</strong>.  All available methods on a <em>WeakMap</em> require access to an <strong>object used as a key</strong>.<br />
+Also, <em>WeakMaps</em> are <strong>no interable.</strong></p>
+
+<p>Why use <em>WeakMaps</em>? Because they are better with memory.  Individual entries in a <em>WeakMap</em> can be <strong>garbage collected</strong> 
+while the <em>WeakMap</em> still exists. <em>WeakMaps</em> allows keys that are no longer referenced to be garbage collected.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let user = {};
+let comment = {};
+
+let mapSettings2 = new WeakMap();
+mapSettings2.set(user, "user");
+mapSettings2.set(comment, "comment");
+
+console.log(mapSettings2.get(user));
+</code></pre>
+</div>
+
+<h2 id="sets">Sets</h2>
+
+<p>The <em>Set</em> object stores <strong>unique</strong> values of any type, whether primitive values or object references.  <em>Set</em> objects are 
+iterable, which means they can be used with <em>for…of</em> and destructuring.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let tags = new Set();
+tags.add("JavaScript");
+tags.add({version: "2015"});
+tags.add("web");
+tags.add("web"); // This will be ignored since web is already in the Set.
+
+for(let tag of tags) {
+  console.log(tag);
+}
+
+let [a, b, c, d] = tags; //destructuring
+console.log(a, b, c, d)
+</code></pre>
+</div>
+
+<p>The <strong>WeakSet</strong> is a type of <em>Set</em> where <strong>only objects</strong> are allowed to be stored.  A <em>WeakSet</em> gives us 2 more methods
+to use: <code class="highlighter-rouge">has</code> and <code class="highlighter-rouge">delete</code> (both return a boolean).</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let weakTags = new WeakSet();
+weakTags.add("JavaScript"); // TypeError: Invalid value use in weak set
+weakTags.add({name: "JavaScript"});
+
+let iOS = {name: "iOS"};
+weakTags.add(iOS);
+
+weakTags.has(iOS);
+weakTags.delete(iOS);
+</code></pre>
+</div>
+
+<p><em>WeakSets</em> cannot be used with <em>for…of</em> and they offer no methods for reading valuse from it. Since we can’t read
+values from a <em>WeakSet</em>, when should we use it?  We can use <em>WeakSets</em> to create special groups from existing objects
+without mutating them.  Favoring immutable objects allow for much simpler code with no unexpected side effects.</p>
+
+<hr />
+
+<h2 id="classes">Classes</h2>
+
+<p>New Class Syntax.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class SponsorWidget {
+
+  // Constructor. Runs every time a new instance is created with `new` operator
+  constructor(name, description, url) {
+    this.name = name;
+    this.description = description;
+    this.url = url;
+  }
+
+  // Method
+  render() {
+    let link = this._buildLink(this.url); // Use `this` to access instance variables within the class
+  }
+}
+</code></pre>
+</div>
+
+<p>Currently, there are no access modifiers (e.g., private, protected), so prefixing a method with an underscore is a
+popular convention that a method should not be called from the public API.</p>
+
+<h2 id="class-inheritance">Class Inheritance</h2>
+
+<p>The <strong>extends</strong> keyword is used to create a class that <em>inherits methods and properties</em> from another class.  The <strong>super</strong> 
+method runs the constructor function from the parent class.</p>
+
+<p>Furthemore, The <strong>super object</strong> can be used by a child class to invoke methods from a parent class</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class Widget {
+  constructor(name, description, url) {
+    this.baseCSS = "ste-widget";
+  }
+
+  parse(value) {
+    // ...
+  }
+}
+
+
+class SponsorWidgent extends Widget {
+  constructor(name, description, url) {
+    super();  // WE ALMOST ALWAYS WANT THIS TO HAPPEN! This is a method
+    // ...
+  }
+
+  render(){
+    let parsedName = this.parse(this.name); // `this.parse` is an inherited method
+    let css = this._buildCSS(this.baseCSS); // `this.baseCSS` is an inherited property
+  }
+
+  newParse(){
+    let parsedName = super.parse(this.name); // Calls the parent version of the parse() method.
+    return `Sponsor: ${parsedName}`;
+  }
+}
+</code></pre>
+</div>
+
+<h2 id="modules-i">Modules I</h2>
+
+<p>The <em>export</em> keyword exposes the function.  The <em>default</em> type export is the simplest way to export a function.</p>
+
+<p>// flash-message.js</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>export default function(message) {
+  alert(message);
+}
+</code></pre>
+</div>
+
+<p>To import modules we use the <em>import</em> keyword, specify a new local variable to hold its content,
+and use the <em>from</em> keyword to tell the JavaScript engine where the module can be found.  The <code class="highlighter-rouge">flashMessage</code> variable
+could have been named anything because the flash-message module is using a <code class="highlighter-rouge">default</code> type export.</p>
+
+<p>//app.js</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>import flashMessage from './flash-message';
+flashMessage("Hello");
+</code></pre>
+</div>
+
+<p><strong>Importing Named Exports</strong> can be done by assigning the <em>same names</em> for both export and import.</p>
+
+<p>// flash-message.js</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>export function alertMessage(message) {
+  alert(message);
+}
+
+export function logMessage(message) {
+  console.log(message);
+}
+</code></pre>
+</div>
+
+<p>// app.js</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>import { alertMessage, logMessage } from './flash-message';
+alertMessage("Hello Alert");
+logMessage("Hello Log");
+</code></pre>
+</div>
+
+<p><strong>Importing a Module as an Object</strong></p>
+
+<p>// flash-message.js</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>export function alertMessage(message) { alert(message);}
+export function logMessage(message) { console.log(message);}
+</code></pre>
+</div>
+
+<p>// app.js</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>import * as flash from './flash-message';
+flash.alertMessage("Hello Alert");
+flash.logMessage("Hello Log");
+</code></pre>
+</div>
+
+<p><strong>Exporting Multiple Functions at Once</strong></p>
+
+<p>// flash-message.js</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function alertMessage(message) { alert(message);}
+function logMessage(message) { console.log(message);}
+
+export {alertMessage, logMessage}
+</code></pre>
+</div>
+
+<h2 id="modules-ii">Modules II</h2>
+
+<p><strong>Exporting Constants</strong></p>
+
+<p>// constants.js</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>const MAX_USERS = 3;
+const MAX_REPLIES = 3;
+
+export {MAX_USERS, MAX_REPLIES}
+</code></pre>
+</div>
+
+<p><strong>Exporting a Class</strong></p>
+
+<p>// flash-message.js</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class FlashMessage {
+  constructor(message){ this.message = message; }
+
+  renderAlert(){ alert(`${this.message}` from Alert); }
+  renderLog(){ console.log(`${this.message}` from Log); }
+}
+
+export { FlashMessage }
+</code></pre>
+</div>
+
+<p>// app.js</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>import {FlashMessage} from './flash-message';
+
+let flash = new FlashMessage("Hello");
+flash.renderAlert();
+flash.renderLog();
+</code></pre>
+</div>
+
+<hr />
+
+<h2 id="promises">Promises</h2>
+
+<p>Before ES2015, <em>continuation-passing style</em> (CPS) async programming is used, wherein we tell a function how to 
+continue execution by passing callbacks – which can grow to a <em>complicated nested code</em>.  A <strong>Promise</strong> is a new
+abstraction that allows us to write async code in an easier way.</p>
+
+<hr />
+
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <!-- <h2 class="footer-heading">anton</h2> -->
+
+    <div class="footer-col-wrapper">
+<!--       <div class="footer-col footer-col-2">
+        <ul class="contact-list">
+          <li>anton</li>
+          <li><a href="mailto:anton23@gmail.com">anton23@gmail.com</a></li>
+        </ul>
+      </div> -->
+
+      <div class="footer-col footer-col-1">
+        <ul class="social-media-list">
+          
+
+          
+          <li>
+            <a href="https://twitter.com/antonmaximus"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">antonmaximus</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-5">
+        <p>A small growth today makes progression happen...</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

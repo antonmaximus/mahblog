@@ -229,7 +229,55 @@ console.log(myCounter2()); // outputs "2"
 </code></pre>
 </div>
 
-<hr />
+<p><strong>Create a Power Function (i.e., base<sup>exponent</sup>)</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function power(base, exponent) {
+    let result = 1;
+    for(let i=0; i&lt;exponent; i++) {
+        result = result * base;
+    }
+    return result; 
+}
+
+function powerTwiceTheSpeed(base, exponent) {
+    let result = 1;
+    let newExponent = Math.floor(exponent/2);
+    
+    for(let i=0; i&lt;newExponent; i++) {
+        result = result * base;
+    }
+    
+    result = result * result;
+
+    // If the exponent was an odd number
+    result = (exponent % 2 == 1) ? result * base : result;
+    
+    return result;
+}
+
+function powerRecursive(base, exponent) {
+    if(exponent === 0) {
+        return 1;
+    } else if (exponent === 1) {
+        return base;
+    }
+    
+    let newExponent = Math.floor(exponent/2);
+    
+    let result = recursivePower(base, newExponent);
+    result = result * result;
+    
+    // If the exponent was an odd number
+    result = (exponent % 2 == 1) ? result * base : result;
+    
+    return result;
+}
+
+
+//Call Function
+powerRecursive(2, 4);
+</code></pre>
+</div>
 
 
   </div>

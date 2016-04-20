@@ -151,14 +151,122 @@ Closure Example
     var myCounter = Counter();
     console.log(myCounter()); // outputs "1"
     console.log(myCounter()); // outputs "2"
-    
+
     var myCounter2 = Counter();
     console.log(myCounter2()); // outputs "1"
     console.log(myCounter()); // outputs "3"
     console.log(myCounter2()); // outputs "2"
 
 
----
+Another Closure Example
+
+  function retainVal(i) {
+    setTimeout(function () {
+        console.log(i)
+      }, 1);
+  }
+
+  for (var i = 0; i < 5; i++) {
+    var a = retainVal(i)
+  }
+
+
+**Create a Power Function (i.e., base<sup>exponent</sup>)**
+
+
+    function power(base, exponent) {
+        let result = 1;
+        for(let i=0; i<exponent; i++) {
+            result = result * base;
+        }
+        return result; 
+    }
+
+    function powerTwiceTheSpeed(base, exponent) {
+        let result = 1;
+        let newExponent = Math.floor(exponent/2);
+        
+        for(let i=0; i<newExponent; i++) {
+            result = result * base;
+        }
+        
+        result = result * result;
+
+        // If the exponent was an odd number
+        result = (exponent % 2 == 1) ? result * base : result;
+        
+        return result;
+    }
+
+    function powerRecursive(base, exponent) {
+        if(exponent === 0) {
+            return 1;
+        } else if (exponent === 1) {
+            return base;
+        }
+        
+        let newExponent = Math.floor(exponent/2);
+        
+        let result = recursivePower(base, newExponent);
+        result = result * result;
+        
+        // If the exponent was an odd number
+        result = (exponent % 2 == 1) ? result * base : result;
+        
+        return result;
+    }
+
+
+    //Call Function
+    powerRecursive(2, 4);
+
+
+
+
+How to find minimum value in a rotated sorted array?
+Actual array - [1,2,3,4,6,7,8,9,10]
+Ex Input :- [6,7,8,9,10,1,2,3,4]
+Output - 1
+
+
+    function getMin(array) {
+
+      if(array.length === 2) {
+        return (array[0] < array[1]) ? array[0] : array[1];
+      } else if(array.length === 1) {
+        return array[0];
+      } else if (array[0] < array[array.length - 1]) { //Special Case
+        return array[0];
+      }
+      
+     let r = Math.floor(array.length/2);
+      
+
+      if(array[0] > array[r]) {
+        return getMin(array.slice(0, r+1));
+      } else {
+        return getMin(array.slice(r+1));
+      }
+    }
+
+    console.log('====');
+    var y = [7, 8, 9, 10, 1, 2, 3];
+    console.log(getMin(y));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

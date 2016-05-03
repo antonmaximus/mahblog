@@ -5,9 +5,119 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Apr 2016 12:25:49 -0700</pubDate>
-    <lastBuildDate>Tue, 19 Apr 2016 12:25:49 -0700</lastBuildDate>
+    <pubDate>Tue, 03 May 2016 14:44:59 -0700</pubDate>
+    <lastBuildDate>Tue, 03 May 2016 14:44:59 -0700</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>JavaScript Objects</title>
+        <description>&lt;h2 id=&quot;classes&quot;&gt;Classes&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Rabbit {
+  // Constructor. Runs every time a new instance is created with `new` operator
+  constructor(type) {
+    this.type = type;
+  }
+
+  // Method
+  render() {
+    console.log(this.type);
+  }
+}
+let whiteRabbit = new Rabbit(&#39;white&#39;);
+
+console.log(&quot;=========&quot;)
+console.log(Object.getPrototypeOf(whiteRabbit));
+console.log(Object.getPrototypeOf(Rabbit));
+
+whiteRabbit.render();
+whiteRabbit.type = &#39;light&#39;;
+whiteRabbit.render();
+
+let lightRabbit = Object.create(whiteRabbit);
+lightRabbit.render();
+
+
+console.log(&quot;=====================&quot;)
+console.log(Object.prototype.toString.call([1, 2]));
+console.log(Array.prototype.toString.call([1, 2]));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;enumerable-vs-nonenumerable-properties&quot;&gt;Enumerable vs Nonenumerable properties&lt;/h2&gt;
+
+&lt;p&gt;All properties that we create by simply assigning to them are enumerable. The standard properties in &lt;code class=&quot;highlighter-rouge&quot;&gt;Object.prototype&lt;/code&gt; are all nonenumerable, which is why they do not show up in such a for/in loop.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var map = {};
+function storePhi(event, phi) {
+  map[event] = phi;
+}
+
+storePhi(&quot;pizza&quot;, 0.069);
+storePhi(&quot;touched tree&quot;, -0.081);
+
+Object.prototype.nonsense = &quot;hi&quot;;
+for (var name in map)
+  console.log(name);
+// → pizza
+// → touched tree
+// → nonsense
+console.log(&quot;nonsense&quot; in map);
+// → true
+console.log(&quot;toString&quot; in map);
+// → true
+
+// Delete the problematic property again
+delete Object.prototype.nonsense;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It is possible to define our own nonenumerable properties by using the &lt;code class=&quot;highlighter-rouge&quot;&gt;Object.defineProperty&lt;/code&gt; function, which allows us to control the type of property we are creating.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Object.defineProperty(Object.prototype, &quot;hiddenNonsense&quot;,
+                      {enumerable: false, value: &quot;hi&quot;});
+for (var name in map)
+  console.log(name);
+// → pizza
+// → touched tree
+console.log(map.hiddenNonsense);
+// → hi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;But we still have the problem with the regular in operator claiming that the &lt;code class=&quot;highlighter-rouge&quot;&gt;Object.prototype&lt;/code&gt; properties exist in our object. For that, we can use the object’s &lt;code class=&quot;highlighter-rouge&quot;&gt;hasOwnProperty&lt;/code&gt; method.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for (var name in map) {
+  if (map.hasOwnProperty(name)) {
+    console.log(name);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Prototype-less objects&lt;/strong&gt;.  You are allowed to pass null as the prototype to create a fresh object with no prototype.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var map = Object.create(null);
+map[&quot;pizza&quot;] = 0.069;
+console.log(&quot;toString&quot; in map);
+// → false
+console.log(&quot;pizza&quot; in map);
+// → true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;polymorphism&quot;&gt;Polymorphism&lt;/h2&gt;
+&lt;hr /&gt;
+
+</description>
+        <pubDate>Tue, 12 Apr 2016 01:01:00 -0700</pubDate>
+        <link>www.anton23.com/js-objects</link>
+        <guid isPermaLink="true">www.anton23.com/js-objects</guid>
+        
+        
+        <category>craft</category>
+        
+      </item>
     
       <item>
         <title>ES2015</title>
@@ -513,6 +623,166 @@ flash.renderLog();
 continue execution by passing callbacks – which can grow to a &lt;em&gt;complicated nested code&lt;/em&gt;.  A &lt;strong&gt;Promise&lt;/strong&gt; is a new
 abstraction that allows us to write async code in an easier way.&lt;/p&gt;
 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;getPollResultsFromServer(&quot;Sass vs Less&quot;)
+  .then(ui.renderSidebar)
+  .then(sendNotificationToServer)
+  .then(doSomethingElseNonBlocking)
+  .catch(function(error){
+    console.log(&quot;Error: &quot;, error);
+    });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The Promise constructor function takes an anonymous function with 2 callback arguments known as handlers – responsible for &lt;em&gt;resolving&lt;/em&gt;
+or &lt;em&gt;rejecting&lt;/em&gt; the Promise.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function getPollResultsFromServer(pollName){
+  return new Promise(function(resolve, reject) {
+    //...
+    request.onload = function(){
+      if(request.status &amp;gt;= 200 &amp;amp;&amp;amp; request.status &amp;lt; 400)
+        resolve(request.response);
+      else 
+        reject(new Error(request.status));
+    }
+    request.onerror = function(){
+      reject(new Error(&quot;Error Fetching Results&quot;));
+    });
+    //...
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Resolving&lt;/strong&gt; a Promise is handled by &lt;code class=&quot;highlighter-rouge&quot;&gt;then()&lt;/code&gt; functions.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;getPollResultsFromServer(&quot;Sass vs Less&quot;)
+  .then(function(results){
+    return results.filter((result) =&amp;gt; result.city == &quot;Orlando&quot;); // returns only those that match filter.
+    })
+  .then(function(resultsFromOrlando){ // The return value from the first then becomes the argument here
+    ui.renderSidebar(resultsFromOrlando);
+    })
+  .catch(function(error){
+    console.log(&quot;Error: &quot;, error);
+    })
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Rejecting&lt;/strong&gt; a Promise is handled above by the &lt;code class=&quot;highlighter-rouge&quot;&gt;.catch&lt;/code&gt; function. We’ll call the &lt;em&gt;reject()&lt;/em&gt; handler for &lt;strong&gt;unsuccessful status codes&lt;/strong&gt; and also when the  &lt;em&gt;onerror&lt;/em&gt; event is triggered on our request object.  Both move the Promise to a rejected stated. Once an error occurs, execution moves immediately  to the &lt;code class=&quot;highlighter-rouge&quot;&gt;catch()&lt;/code&gt; function.&lt;/p&gt;
+
+&lt;p&gt;Shorthand and succinct version can be done by passing function arguments to &lt;code class=&quot;highlighter-rouge&quot;&gt;then&lt;/code&gt; instead of using anonymous functions.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function filterResults(results) { //.. }
+
+let ui  = { 
+  renderSidebar(filteredResuls) { //.. }
+}
+
+getPollResultsFromServer(&quot;Sass vs Less&quot;)
+  .then(filteredResults)
+  .then(ui.renderSidebar)
+  .catch(function(error){
+    console.log(&quot;Error: &quot;, error);
+    });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;iterators&quot;&gt;Iterators&lt;/h2&gt;
+
+&lt;p&gt;Arrays are &lt;strong&gt;iterable&lt;/strong&gt; objects, which means we can use them with &lt;code class=&quot;highlighter-rouge&quot;&gt;for...of&lt;/code&gt;.   Iterables return an &lt;strong&gt;iterator&lt;/strong&gt; object, which knows
+how to access items from a collection one-at-a-time, while keeping track of its current position within the sequence.&lt;/p&gt;
+
+&lt;p&gt;Below is an example of making a &lt;strong&gt;manual iterator&lt;/strong&gt; that iterates through an &lt;code class=&quot;highlighter-rouge&quot;&gt;object&lt;/code&gt; (which is non-iterable by default). 
+Objects that are now iteraable can use the &lt;em&gt;spread operator&lt;/em&gt; and the &lt;em&gt;destructuring assignment&lt;/em&gt; as well.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let post = {
+  title: &quot;New Festures&quot;,
+  replies: 19
+};
+
+post[Symbol.iterator] = function(){
+  let properties = Object.keys(this);
+  let count = 0;
+  let isDone = false;
+
+  let next = () =&amp;gt; {
+    if(count &amp;gt;= properties.length) {
+      isDone = true;
+    }
+    return { done: isDone, value: this[properties[count++]] };
+  }
+  
+  return {next};
+}
+
+post.dog = &#39;mmk&#39;;
+
+console.log(&quot;====&quot;);
+for(let p of post) { // p refers to property values
+  console.log(p);
+}
+
+console.log(&quot;+++++++&quot;);
+Object.getPrototypeOf(post)[&#39;cat&#39;] = &#39;meow&#39;;
+//`for...in` iterates through all properties including those in prototype
+for(let p in post) {  // p refers to property keys. 
+  if(post.hasOwnProperty(p)) // limits to own property only
+    console.log(post[p]);
+}
+
+let spreadOperated = [...post];
+console.log(spreadOperated);
+
+let [title, ,replies] = post;
+console.log(title, replies);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;generators&quot;&gt;Generators&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;function *&lt;/code&gt; declaration defines &lt;em&gt;generator functions&lt;/em&gt;.  These are special functions from which we can use the &lt;em&gt;yield&lt;/em&gt; keyword
+to return &lt;strong&gt;iterator&lt;/strong&gt; objects.  Generator functions return objects that provide the same &lt;em&gt;next&lt;/em&gt; method expected by &lt;code class=&quot;highlighter-rouge&quot;&gt;for...of&lt;/code&gt;,
+the &lt;em&gt;spread operator&lt;/em&gt;, and the &lt;em&gt;destructuring assignment&lt;/em&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function *nameList() {
+  yield &quot;Sam&quot;;  // {done: false, value: &quot;Sam&quot;}
+  yield &quot;Tyler&quot;; // {done: false, value: &quot;Tyler&quot;}
+
+}
+
+for(let name of nameList()) {
+  console.log( name ); // prints out Sam and Tyler in each line.
+}
+
+let spreadOperated = [...nameList()];
+console.log(spreadOperated);  // [&quot;Sam&quot;, &quot;Tyler&quot;]
+
+let [title, ,replies] = nameList();
+console.log(title, replies);
+
+let [first, second] = nameList();
+console.log(first, second);  // Sam, Tyler
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Let’s replace our &lt;strong&gt;manual iterator&lt;/strong&gt; in the previous section using a &lt;strong&gt;generator function&lt;/strong&gt;.  Each time &lt;em&gt;yield&lt;/em&gt; is called, our function returns a &lt;strong&gt;new iterator&lt;/strong&gt; object adn then &lt;strong&gt;pauses&lt;/strong&gt; until it’s called again.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let post = { title: &quot;New Features&quot;, replies: 19};
+
+post[Symbol.iterator] = function *(){
+  let properties = Object.keys(this);
+  for(let p of properties) {
+    yield this[p];
+  }
+}
+
+console.log(&quot;====&quot;);
+for(let p of post) { // p refers to property values
+  console.log(p);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;hr /&gt;
 
 </description>
@@ -709,6 +979,18 @@ console.log(myCounter2()); // outputs &quot;2&quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
+&lt;p&gt;Another Closure Example&lt;/p&gt;
+
+&lt;p&gt;function retainVal(i) {
+    setTimeout(function () {
+        console.log(i)
+      }, 1);
+  }&lt;/p&gt;
+
+&lt;p&gt;for (var i = 0; i &amp;lt; 5; i++) {
+    var a = retainVal(i)
+  }&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;Create a Power Function (i.e., base&lt;sup&gt;exponent&lt;/sup&gt;)&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function power(base, exponent) {
@@ -756,6 +1038,37 @@ function powerRecursive(base, exponent) {
 
 //Call Function
 powerRecursive(2, 4);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;How to find minimum value in a rotated sorted array?
+Actual array - [1,2,3,4,6,7,8,9,10]
+Ex Input :- [6,7,8,9,10,1,2,3,4]
+Output - 1&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function getMin(array) {
+
+  if(array.length === 2) {
+    return (array[0] &amp;lt; array[1]) ? array[0] : array[1];
+  } else if(array.length === 1) {
+    return array[0];
+  } else if (array[0] &amp;lt; array[array.length - 1]) { //Special Case
+    return array[0];
+  }
+  
+ let r = Math.floor(array.length/2);
+  
+
+  if(array[0] &amp;gt; array[r]) {
+    return getMin(array.slice(0, r+1));
+  } else {
+    return getMin(array.slice(r+1));
+  }
+}
+
+console.log(&#39;====&#39;);
+var y = [7, 8, 9, 10, 1, 2, 3];
+console.log(getMin(y));
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -1707,36 +2020,6 @@ still go with someone who’s done it better than you did (so it may not be all 
         
         
         <category>exercise</category>
-        
-      </item>
-    
-      <item>
-        <title>Man Shoes</title>
-        <description>&lt;p&gt;There comes a time when a guy has to graduate from sneakers. After doing research on what shoes I’d like to partake in for the next years of my life, I’ve discovered bucks, bluchers, and loafers.&lt;/p&gt;
-
-&lt;h2 id=&quot;choices-choices-choices&quot;&gt;Choices, choices, choices…&lt;/h2&gt;
-
-&lt;p&gt;I’m a shorts man. It’s the most comfortable attire for me because I have thick legs (thanks for squatting). For this reason, I’ve decided to incorporate shoes that can work with shorts. After going thorough Reddit’s MaleFashionAdvice sub, I’ve discovered loafers, bluchers, and bucks. Am now learning how to incorporate them in my wardrobe.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1. Loafers.&lt;/strong&gt; There are &lt;a href=&quot;https://www.reddit.com/r/malefashionadvice/comments/1ansx6/penny_loafers_3_in_a_series_of_springsummer_boat/&quot;&gt;various kinds of loafers&lt;/a&gt;.  However, beefroll penny loafers appeal to me the most. The contrast between the stitches and the material give a more casual vibe for me.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/beefroll.jpg&quot; width=&quot;250&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. Bluchers.&lt;/strong&gt;  Bluchers are lace-up shoes and they are the casual versions of oxford shoes – really formal dress shoes.  A thorough &lt;a href=&quot;/assets/shoe_jargon.jpg&quot;&gt;definition between bluchers and oxfords can be seen on this link&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Furthermore, Brogues shoes are shoes with perforation. I’ve discovered that blucher brogues can go well with shorts.  I am set to own a pair of blucher brogues with wingtip perforation.  Wingtip is one of &lt;a href=&quot;http://perfectgentlemansa.blogspot.com/2010/10/brogues-vs-wingtips.html&quot;&gt;several brogue perforation styles&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. Bucks.&lt;/strong&gt; Bucks are shoes made of suede or nubuck and has a blucher-type of lacing. They’re pretty versatile as long as it’s not raining or wet – especially since suede/nubuck don’t go well with wet weather.  Most common colors are tan and white. &lt;a href=&quot;https://www.reddit.com/r/malefashionadvice/comments/p7usf/shoe_guide_v20/&quot;&gt;More bucks definiton can be found here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/bucks_shoes.jpg&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 22 Nov 2015 06:43:59 -0800</pubDate>
-        <link>www.anton23.com/man-shoes</link>
-        <guid isPermaLink="true">www.anton23.com/man-shoes</guid>
-        
-        
-        <category>style</category>
         
       </item>
     

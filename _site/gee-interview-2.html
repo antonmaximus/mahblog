@@ -229,6 +229,18 @@ console.log(myCounter2()); // outputs "2"
 </code></pre>
 </div>
 
+<p>Another Closure Example</p>
+
+<p>function retainVal(i) {
+    setTimeout(function () {
+        console.log(i)
+      }, 1);
+  }</p>
+
+<p>for (var i = 0; i &lt; 5; i++) {
+    var a = retainVal(i)
+  }</p>
+
 <p><strong>Create a Power Function (i.e., base<sup>exponent</sup>)</strong></p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>function power(base, exponent) {
@@ -276,6 +288,37 @@ function powerRecursive(base, exponent) {
 
 //Call Function
 powerRecursive(2, 4);
+</code></pre>
+</div>
+
+<p>How to find minimum value in a rotated sorted array?
+Actual array - [1,2,3,4,6,7,8,9,10]
+Ex Input :- [6,7,8,9,10,1,2,3,4]
+Output - 1</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function getMin(array) {
+
+  if(array.length === 2) {
+    return (array[0] &lt; array[1]) ? array[0] : array[1];
+  } else if(array.length === 1) {
+    return array[0];
+  } else if (array[0] &lt; array[array.length - 1]) { //Special Case
+    return array[0];
+  }
+  
+ let r = Math.floor(array.length/2);
+  
+
+  if(array[0] &gt; array[r]) {
+    return getMin(array.slice(0, r+1));
+  } else {
+    return getMin(array.slice(r+1));
+  }
+}
+
+console.log('====');
+var y = [7, 8, 9, 10, 1, 2, 3];
+console.log(getMin(y));
 </code></pre>
 </div>
 

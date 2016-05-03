@@ -565,6 +565,166 @@ flash.renderLog();
 continue execution by passing callbacks – which can grow to a <em>complicated nested code</em>.  A <strong>Promise</strong> is a new
 abstraction that allows us to write async code in an easier way.</p>
 
+<div class="highlighter-rouge"><pre class="highlight"><code>getPollResultsFromServer("Sass vs Less")
+  .then(ui.renderSidebar)
+  .then(sendNotificationToServer)
+  .then(doSomethingElseNonBlocking)
+  .catch(function(error){
+    console.log("Error: ", error);
+    });
+</code></pre>
+</div>
+
+<p>The Promise constructor function takes an anonymous function with 2 callback arguments known as handlers – responsible for <em>resolving</em>
+or <em>rejecting</em> the Promise.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function getPollResultsFromServer(pollName){
+  return new Promise(function(resolve, reject) {
+    //...
+    request.onload = function(){
+      if(request.status &gt;= 200 &amp;&amp; request.status &lt; 400)
+        resolve(request.response);
+      else 
+        reject(new Error(request.status));
+    }
+    request.onerror = function(){
+      reject(new Error("Error Fetching Results"));
+    });
+    //...
+};
+</code></pre>
+</div>
+
+<p><strong>Resolving</strong> a Promise is handled by <code class="highlighter-rouge">then()</code> functions.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>getPollResultsFromServer("Sass vs Less")
+  .then(function(results){
+    return results.filter((result) =&gt; result.city == "Orlando"); // returns only those that match filter.
+    })
+  .then(function(resultsFromOrlando){ // The return value from the first then becomes the argument here
+    ui.renderSidebar(resultsFromOrlando);
+    })
+  .catch(function(error){
+    console.log("Error: ", error);
+    })
+</code></pre>
+</div>
+
+<p><strong>Rejecting</strong> a Promise is handled above by the <code class="highlighter-rouge">.catch</code> function. We’ll call the <em>reject()</em> handler for <strong>unsuccessful status codes</strong> and also when the  <em>onerror</em> event is triggered on our request object.  Both move the Promise to a rejected stated. Once an error occurs, execution moves immediately  to the <code class="highlighter-rouge">catch()</code> function.</p>
+
+<p>Shorthand and succinct version can be done by passing function arguments to <code class="highlighter-rouge">then</code> instead of using anonymous functions.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function filterResults(results) { //.. }
+
+let ui  = { 
+  renderSidebar(filteredResuls) { //.. }
+}
+
+getPollResultsFromServer("Sass vs Less")
+  .then(filteredResults)
+  .then(ui.renderSidebar)
+  .catch(function(error){
+    console.log("Error: ", error);
+    });
+</code></pre>
+</div>
+
+<h2 id="iterators">Iterators</h2>
+
+<p>Arrays are <strong>iterable</strong> objects, which means we can use them with <code class="highlighter-rouge">for...of</code>.   Iterables return an <strong>iterator</strong> object, which knows
+how to access items from a collection one-at-a-time, while keeping track of its current position within the sequence.</p>
+
+<p>Below is an example of making a <strong>manual iterator</strong> that iterates through an <code class="highlighter-rouge">object</code> (which is non-iterable by default). 
+Objects that are now iteraable can use the <em>spread operator</em> and the <em>destructuring assignment</em> as well.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let post = {
+  title: "New Festures",
+  replies: 19
+};
+
+post[Symbol.iterator] = function(){
+  let properties = Object.keys(this);
+  let count = 0;
+  let isDone = false;
+
+  let next = () =&gt; {
+    if(count &gt;= properties.length) {
+      isDone = true;
+    }
+    return { done: isDone, value: this[properties[count++]] };
+  }
+  
+  return {next};
+}
+
+post.dog = 'mmk';
+
+console.log("====");
+for(let p of post) { // p refers to property values
+  console.log(p);
+}
+
+console.log("+++++++");
+Object.getPrototypeOf(post)['cat'] = 'meow';
+//`for...in` iterates through all properties including those in prototype
+for(let p in post) {  // p refers to property keys. 
+  if(post.hasOwnProperty(p)) // limits to own property only
+    console.log(post[p]);
+}
+
+let spreadOperated = [...post];
+console.log(spreadOperated);
+
+let [title, ,replies] = post;
+console.log(title, replies);
+</code></pre>
+</div>
+
+<h2 id="generators">Generators</h2>
+
+<p>The <code class="highlighter-rouge">function *</code> declaration defines <em>generator functions</em>.  These are special functions from which we can use the <em>yield</em> keyword
+to return <strong>iterator</strong> objects.  Generator functions return objects that provide the same <em>next</em> method expected by <code class="highlighter-rouge">for...of</code>,
+the <em>spread operator</em>, and the <em>destructuring assignment</em>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function *nameList() {
+  yield "Sam";  // {done: false, value: "Sam"}
+  yield "Tyler"; // {done: false, value: "Tyler"}
+
+}
+
+for(let name of nameList()) {
+  console.log( name ); // prints out Sam and Tyler in each line.
+}
+
+let spreadOperated = [...nameList()];
+console.log(spreadOperated);  // ["Sam", "Tyler"]
+
+let [title, ,replies] = nameList();
+console.log(title, replies);
+
+let [first, second] = nameList();
+console.log(first, second);  // Sam, Tyler
+</code></pre>
+</div>
+
+<p>Let’s replace our <strong>manual iterator</strong> in the previous section using a <strong>generator function</strong>.  Each time <em>yield</em> is called, our function returns a <strong>new iterator</strong> object adn then <strong>pauses</strong> until it’s called again.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let post = { title: "New Features", replies: 19};
+
+post[Symbol.iterator] = function *(){
+  let properties = Object.keys(this);
+  for(let p of properties) {
+    yield this[p];
+  }
+}
+
+console.log("====");
+for(let p of post) { // p refers to property values
+  console.log(p);
+}
+</code></pre>
+</div>
+
 <hr />
 
 

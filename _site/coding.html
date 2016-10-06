@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Coing?</title>
+  <meta name="description" content="I Love Lance &amp; Janice">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="canonical" href="www.anton23.com/coding">
+  <link rel="alternate" type="application/rss+xml" title="anton" href="www.anton23.com/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">anton</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Coing?</h1>
+    <p class="post-meta"><time datetime="2016-09-26T07:42:59-07:00" itemprop="datePublished">Sep 26, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h1 id="i-love-lance--janice">I Love Lance &amp; Janice</h1>
+
+<p>You’ve caught two of your fellow minions passing coded notes back and forth - while they’re on duty, no less! Worse, you’re pretty sure it’s not job-related - they’re both huge fans of the space soap opera “Lance &amp; Janice”. You know how much Commander Lambda hates waste, so if you can prove that these minions are wasting her time passing non-job-related notes, it’ll put you that much closer to a promotion.</p>
+
+<p>Fortunately for you, the minions aren’t exactly advanced cryptographers. In their code, every lowercase letter [a..z] is replaced with the corresponding one in [z..a], while every other character (including uppercase letters and punctuation) is left untouched.  That is, ‘a’ becomes ‘z’, ‘b’ becomes ‘y’, ‘c’ becomes ‘x’, etc.  For instance, the word “vmxibkgrlm”, when decoded, would become “encryption”.</p>
+
+<p>Write a function called answer(s) which takes in a string and returns the deciphered string so you can show the commander proof that these minions are talking about “Lance &amp; Janice” instead of doing their jobs.</p>
+
+<h1 id="test-cases">Test cases</h1>
+
+<p>Inputs:
+    (string) s = “wrw blf hvv ozhg mrtsg’h vkrhlwv?”
+Output:
+    (string) “did you see last night’s episode?”</p>
+
+<p>Inputs:
+    (string) s = “Yvzs! I xzm’g yvorvev Lzmxv olhg srh qly zg gsv xlolmb!!”
+Output:
+    (string) “Yeah! I can’t believe Lance lost his job at the colony!!”</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var s = "wrw blf hvv ozhg mrtsg'h vkrhlwv?";
+var s2 = "Yvzs! I xzm'g yvorvev Lzmxv olhg srh qly zg gsv xlolmb!!";
+
+var output = "did you see last night's episode?";
+
+function answer(s) {
+  let tD = {}; //table decoder
+  for (let i=0; i&lt;26; i++) {
+    let key = 'a'.charCodeAt(0) + i;
+    let value = 'z'.charCodeAt(0) - i;
+    tD[String.fromCharCode(key)] = String.fromCharCode(value);
+  }
+  
+  let newS = '';
+  for(let i=0; i&lt;s.length; i++) {
+    let letter = s[i];
+    if(letter &gt;= 'a' &amp;&amp; letter &lt;= 'z') 
+      newS += tD[letter];
+    else 
+      newS += letter;
+  }
+  
+  return newS;
+}
+
+console.log(answer(s));
+console.log(answer(s2));
+//console.log('a'.charCodeAt(0));
+
+
+def answer(s):
+    print 1
+    tD = {}
+    for i in range(0, 26):
+        key = ord('a') + i
+        value = ord('z') - i
+        tD[chr(key)] = chr(value)
+
+
+    newS = ''
+    for i in range(0, len(s)):
+        letter = s[i]
+        if letter &gt;= 'a' and letter &lt;= 'z':
+            newS += tD[letter]
+        else:
+            newS += letter
+    return newS
+
+s = "wrw blf hvv ozhg mrtsg'h vkrhlwv?"
+print(answer(s))
+</code></pre>
+</div>
+
+<h1 id="ion-flux-relabeling">Ion Flux Relabeling</h1>
+
+<p>Oh no! Commander Lambda’s latest experiment to improve the efficiency of her LAMBCHOP doomsday device has backfired spectacularly. She had been improving the structure of the ion flux converter tree, but something went terribly wrong and the flux chains exploded. Some of the ion flux converters survived the explosion intact, but others had their position labels blasted off. She’s having her henchmen rebuild the ion flux converter tree by hand, but you think you can do it much more quickly - quickly enough, perhaps, to earn a promotion!</p>
+
+<p>Flux chains require perfect binary trees, so Lambda’s design arranged the ion flux converters to form one. To label them, she performed a post-order traversal of the tree of converters and labeled each converter with the order of that converter in the traversal, starting at 1. For example, a tree of 7 converters would look like the following:</p>
+
+<p>7
+ 3   6
+1 2 4 5</p>
+
+<p>Write a function answer(h, q) - where h is the height of the perfect tree of converters and q is a list of positive integers representing different flux converters - which returns a list of integers p where each element in p is the label of the converter that sits on top of the respective converter in q, or -1 if there is no such converter.  For example, answer(3, [1, 4, 7]) would return the converters above the converters at indexes 1, 4, and 7 in a perfect binary tree of height 3, which is [3, 6, -1].</p>
+
+<p>The domain of the integer h is 1 &lt;= h &lt;= 30, where h = 1 represents a perfect binary tree containing only the root, h = 2 represents a perfect binary tree with the root and two leaf nodes, h = 3 represents a perfect binary tree with the root, two internal nodes and four leaf nodes (like the example above), and so forth.  The lists q and p contain at least one but no more than 10000 distinct integers, all of which will be between 1 and 2^h-1, inclusive.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>def answer(h, q):
+    p = [None] * len(q)
+    
+    def findIt(h, missingZ, stateFactor):
+        max = (2**h) - 1
+        maxhalf = max/2
+
+        #base
+        if missingZ == maxhalf + stateFactor:
+            return max + stateFactor
+        elif missingZ == maxhalf*2 + stateFactor:
+            return max + stateFactor
+
+        if missingZ &lt; maxhalf+stateFactor:
+            stateFactor += 0
+        else:
+            stateFactor += maxhalf
+
+        return findIt(h-1, missingZ, stateFactor)
+
+
+    for missingZ in q:
+        cornerCase = (2**h) - 1
+        if cornerCase == missingZ:
+            p[q.index(cornerCase)] = -1
+        else:
+            p[q.index(missingZ)] = findIt(h, missingZ, 0)
+
+
+    return p
+
+
+
+
+h = 3
+q = [7, 3, 5, 1]
+print answer( h, q )
+
+
+h2 = 5
+q2 = [19, 14, 28, 8]
+print(answer(h2, q2))
+</code></pre>
+</div>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <!-- <h2 class="footer-heading">anton</h2> -->
+
+    <div class="footer-col-wrapper">
+<!--       <div class="footer-col footer-col-2">
+        <ul class="contact-list">
+          <li>anton</li>
+          <li><a href="mailto:anton23@gmail.com">anton23@gmail.com</a></li>
+        </ul>
+      </div> -->
+
+      <div class="footer-col footer-col-1">
+        <ul class="social-media-list">
+          
+
+          
+          <li>
+            <a href="https://twitter.com/antonmaximus"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">antonmaximus</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-5">
+        <p>A small growth today makes progression happen...</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

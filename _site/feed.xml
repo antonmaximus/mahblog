@@ -5,9 +5,633 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 03 May 2016 14:44:59 -0700</pubDate>
-    <lastBuildDate>Tue, 03 May 2016 14:44:59 -0700</lastBuildDate>
+    <pubDate>Thu, 06 Oct 2016 13:37:03 -0700</pubDate>
+    <lastBuildDate>Thu, 06 Oct 2016 13:37:03 -0700</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>Gee Dude. 3</title>
+        <description>&lt;h2 id=&quot;what-worked&quot;&gt;What Worked&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You weren’t afraid to fail in phone screens, coding challenges, and in-person interviews. You face them and fail better.&lt;/li&gt;
+  &lt;li&gt;Resume gets the phone calls. Phone calls and coding challenge get you onsite. Onsite interview is how two future teammates get to know each other.&lt;/li&gt;
+  &lt;li&gt;Studying over the long term.&lt;/li&gt;
+  &lt;li&gt;Excitement about coding challenges.&lt;/li&gt;
+  &lt;li&gt;Arriving ahead of time, and checking parking/driving instructions.&lt;/li&gt;
+  &lt;li&gt;Having inquisitive questions about your future teammates.&lt;/li&gt;
+  &lt;li&gt;Acknowledging and reading your teammates.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-didnt&quot;&gt;What Didn’t&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Self-expression. Find how to “express” yourself in all aspects: the way you move, talk, dress, and communicate.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;topics&quot;&gt;Topics:&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;How many H1 should be used in a page?&lt;/strong&gt; You can use as many as long as you used it in context.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What is DOM?&lt;/strong&gt; The Document Object Model (DOM) is a programming interface for HTML and XML documents. The DOM provides a representation of the document as a structured group of nodes and objects that have properties and methods. Essentially, it connects web pages to scripts or programming languages.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Data Types in JavaScript.&lt;/strong&gt; There are 6 &lt;em&gt;primitive&lt;/em&gt;  data types:  Null, Undefined, Boolean, Number, String, &amp;amp; Symbol, and 1 &lt;em&gt;non-primitive&lt;/em&gt; data-type  Object. Primitive means incapable of being changed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Weakly vs Strongly?&lt;/strong&gt; JavaScript is a &lt;em&gt;weakly&lt;/em&gt; programming language, but a better definition is it’s a &lt;em&gt;loosely typed&lt;/em&gt; language where you don’t have do declare a variable ahead of time.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Timeout Scope.&lt;/strong&gt; Depending on where the function is defined, the function will follow its immediate scope.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How is &lt;code class=&quot;highlighter-rouge&quot;&gt;this&lt;/code&gt; defined in JS?&lt;/strong&gt; In most cases, the value of &lt;code class=&quot;highlighter-rouge&quot;&gt;this&lt;/code&gt; is determined by how a function is called.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What is Dependency Injection?&lt;/strong&gt; Not instantiating the dependencies explicitly in the class, and, instead, declaratively expressing the dependencies in the class definition.  This enables easy replacement of the dependency concrete implementation without modifying your classes’ source code.  An example would be a Constructor Injection.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Success and Error codes?&lt;/strong&gt;  Codes that indicate success are in the 2xx format. The 4xx codes are intended for cases in which the client seems to have erred, and the 5xx codes for the cases in which the server is aware that the server has erred.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What is RESTful?&lt;/strong&gt;  Being RESTful means that we’re not expecting the server to know what it wants.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pros and cons of single-app vs multi-page?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Null vs Undefined?&lt;/strong&gt; They are both primitive data types inJavaScript. In general, The undefined value means a variable that has been declared but not assigned a value. The null value is a primitive value that represents the null, empty, or non-existent reference.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Margins of an inline element?&lt;/strong&gt;  Top and bottom don’t exist, while right &amp;amp; left can be modified.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What is Local Storage?&lt;/strong&gt; The &lt;code class=&quot;highlighter-rouge&quot;&gt;localStorage&lt;/code&gt; property allows you to access a local &lt;code class=&quot;highlighter-rouge&quot;&gt;Storage&lt;/code&gt; object. &lt;code class=&quot;highlighter-rouge&quot;&gt;localStorage&lt;/code&gt; is similar to &lt;code class=&quot;highlighter-rouge&quot;&gt;sessionStorage&lt;/code&gt;. The data stored in the former has no expiration time, while data stored in &lt;code class=&quot;highlighter-rouge&quot;&gt;sessionStorage&lt;/code&gt; gets cleared when the browsing session ends—that is, when the browser is closed. An example of using it is &lt;code class=&quot;highlighter-rouge&quot;&gt;localStorage.setItem(&#39;myCat&#39;, &#39;Tom&#39;);&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Sort an Array. Merge sort provides good time complexity (Big O(nlogn)) and a straight-forward divide &amp;amp; conquer algorithm. Quick sort (not shown) has better time complexity in real-life application.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function mergeSort(arr, p, r) {
+  
+  // base case
+  if(r === p) 
+    return [arr[p]];
+  
+  let q = Math.floor((r-p)/2 + p) ; //half length
+  
+  let firstHalf = mergeSort(arr, p, q);
+  let secondHalf = mergeSort(arr, q+1, r);
+  
+  let sorted = [];
+
+  for(let j=0, k=0; j&amp;lt;firstHalf.length || k&amp;lt;secondHalf.length;) {
+    if(firstHalf[j] &amp;lt; secondHalf[k] || k&amp;gt;=secondHalf.length) {
+      sorted.push(firstHalf[j++]);
+    } else {
+      sorted.push(secondHalf[k++]);
+    }
+  }
+  
+  return sorted;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;=============&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function combineNoDups(a, b) {
+  //Go through a array. Pick the shorter one.
+  var shortArr;
+  var longArr;
+  
+  if(a.length &amp;gt; b.length){
+    longArr = a;
+    shortArr = b;
+  } else{
+    longArr = b;
+    shortArr = a;
+  }
+  
+  for(let i=0; i&amp;lt;shortArr.length; i++) {
+    if(longArr.indexOf(shortArr[i]) &amp;lt; 0) {
+      longArr.push(shortArr[i]);
+    }
+  }
+  
+  console.log(longArr);
+  
+}
+
+combineNoDups(a, b)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;=============&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Anton Accordion&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nc&quot;&gt;.accordion&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;400px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Arial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Helvetica&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;border-bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nc&quot;&gt;.entry&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;border-bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+      &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;overflow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nc&quot;&gt;.header&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#CCC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;font-weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nc&quot;&gt;.header&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:hover&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;pointer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#999&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nc&quot;&gt;.content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;accordion&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;entry&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;header&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Header#1 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;content&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; Bacon ipsum dolor amet spare ribs turkey alcatra &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;    
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;entry&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;header&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; Header#2 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;content&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; Bacon ipsum dolor amet spare ribs turkey alcatra &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt; 
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;entry&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;header&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; Header#3 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;content&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; Bacon ipsum dolor amet spare ribs turkey alcatra &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt; 
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;entry&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;header&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; Header#4 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;content&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; Bacon ipsum dolor amet spare ribs turkey alcatra&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt; 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;s1&quot;&gt;&#39;use strict&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Accordion&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;accordion&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;activeEntry&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+      &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;entries&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelectorAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;.entry&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;entries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;entry&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;entries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;.header&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;click&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;actionAcc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;updateEntry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;activeEntry&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;actionAcc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newEntry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;newEntry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;.header&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;none&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;newEntry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;.content&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;block&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;activeEntry&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;activeEntry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;.header&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;block&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;activeEntry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;.content&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;none&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;updateEntry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newEntry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;accordions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelectorAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;.accordion&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;accordions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Accordion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);});&lt;/span&gt;
+
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;=============&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Anton Wireframe&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nf&quot;&gt;#page-wrap&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;800px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nf&quot;&gt;#page-wrap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;margin,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;vertical-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;box-sizing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border-box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;white-space&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nowrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nf&quot;&gt;#page-wrap&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.noborder&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nc&quot;&gt;.left&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;232px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;margin-right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;11px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inline-block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nc&quot;&gt;.main&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;557px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inline-block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nf&quot;&gt;#logo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;82px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;margin-bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;11px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;nav&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;49px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;margin-bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;15px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;384px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;aside&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;210px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;margin-bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;33px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nf&quot;&gt;#ad&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;205px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;footer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;margin-top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;15px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;800px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;44px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;page-wrap&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;left noborder&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;logo&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;aside&amp;gt;&amp;lt;/aside&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;ad&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;main noborder&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;header&amp;gt;&amp;lt;/header&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;nav&amp;gt;&amp;lt;/nav&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;main&amp;gt;&amp;lt;/main&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;footer&amp;gt;&amp;lt;/footer&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sun, 02 Oct 2016 12:00:00 -0700</pubDate>
+        <link>www.anton23.com/gee-dude-3</link>
+        <guid isPermaLink="true">www.anton23.com/gee-dude-3</guid>
+        
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Sort</title>
+        <description>&lt;hr /&gt;
+&lt;p&gt;layout: post
+title:  “How I Sort”
+date:   2016-09-26 14:42:59
+categories: programming
+—&lt;/p&gt;
+
+&lt;p&gt;‘use strict’;&lt;/p&gt;
+
+&lt;p&gt;// We pick out the smallest each time
+function regSort(arr) { 
+ function getPosition(arr) {
+   var value = arr[0];
+   var position = 0;
+   for(var i = 0; i &amp;lt; arr.length; i++ ) {
+     if (arr[i] &amp;lt; value) {
+       value = arr[i];
+       position = i;
+     }
+   }
+   return position;
+ }&lt;/p&gt;
+
+&lt;p&gt;var sorted = [];
+ var totalLength = arr.length;&lt;/p&gt;
+
+&lt;p&gt;for(var i=0; i&amp;lt;totalLength; i++) {
+   var x = getPosition(arr);
+   sorted.push(arr[x]);
+   arr.splice(x, 1);
+  }
+  return sorted;
+}&lt;/p&gt;
+
+&lt;p&gt;// We assume that object sorts its keys in numerical order
+function hashSort(arr) {
+  var x = {};
+  var sorted = [];&lt;/p&gt;
+
+&lt;p&gt;for(var i=0; i&amp;lt;arr.length; i++) {
+    x[arr[i]] = x[arr[i]]  + 1 || 1;
+  }&lt;/p&gt;
+
+&lt;p&gt;for(var sub in x) {
+    for(var j=0; j&amp;lt; x[sub]; j++) {
+      sorted.push(Number(sub))
+    }
+  }&lt;/p&gt;
+
+&lt;p&gt;return sorted;
+}&lt;/p&gt;
+
+&lt;p&gt;function insertionSort(arr) {
+  for(let i=0; i&amp;lt;arr.length; i++) {
+    let x = arr[i];
+    let pos = 0;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// compare within sorted bounds
+for(let j=i; j&amp;gt;=0; j--) {
+  pos = j;
+  if(x &amp;gt; arr[j-1])
+    break;
+}
+
+// Then move contents
+for(let k=i; k&amp;gt;pos; k--){
+  arr[k] = arr[k-1];
+}
+arr[pos] = x; // insert into position   }   return arr; }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;function mergeSort(arr, p, r) {
+  // base case
+  if(r === p) 
+    return [arr[p]];&lt;/p&gt;
+
+&lt;p&gt;let q = Math.floor((r-p)/2 + p) ; //half length&lt;/p&gt;
+
+&lt;p&gt;let firstHalf = mergeSort(arr, p, q);
+  let secondHalf = mergeSort(arr, q+1, r);&lt;/p&gt;
+
+&lt;p&gt;let sorted = [];&lt;/p&gt;
+
+&lt;p&gt;for(let j=0, k=0; j&amp;lt;firstHalf.length || k&amp;lt;secondHalf.length;) {
+    if(firstHalf[j] &amp;lt; secondHalf[k] || k&amp;gt;=secondHalf.length) {
+      sorted.push(firstHalf[j++]);
+    } else {
+      sorted.push(secondHalf[k++]);
+    }
+  }&lt;/p&gt;
+
+&lt;p&gt;return sorted;
+}&lt;/p&gt;
+
+&lt;p&gt;function mergeSort2(arr){
+  //base case
+  if(arr.length === 1) 
+    return [arr[0]];&lt;/p&gt;
+
+&lt;p&gt;//Divide 
+  let halfLength = arr.length / 2;
+  let firstPart = mergeSort(arr.slice(0, halfLength));
+  let secondPart = mergeSort(arr.slice(halfLength));&lt;/p&gt;
+
+&lt;p&gt;//Conquer
+  let sorted = [];
+  for(let i=0, j=0; i&amp;lt;firstPart.length || j&amp;lt;secondPart.length;) {
+    if(firstPart[i]&amp;lt;secondPart[j] || j&amp;gt;=secondPart.length)
+      sorted.push(firstPart[i++]);
+    else 
+      sorted.push(secondPart[j++]);
+  }&lt;/p&gt;
+
+&lt;p&gt;return sorted
+}&lt;/p&gt;
+
+&lt;p&gt;function quickSort(arr) {
+  let p = 0;
+  let r = arr.length-1;&lt;/p&gt;
+
+&lt;p&gt;function partition(arr, p, r) {
+    // base case
+    if(r-p &amp;lt;= 0)
+      return;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let pivot = arr[r];  
+let q=p, u=p;
+for(; u&amp;lt;=r; u++) {
+  if(arr[u] &amp;lt;= pivot) {
+    let temp = arr[q];
+    arr[q++] = arr[u];
+    arr[u] = temp;
+  }
+}
+
+partition(arr, p, q-2); // You don&#39;t sort the pivot (q-1)
+partition(arr, q, r);   }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;partition(arr, p, r);
+  return arr;
+}&lt;/p&gt;
+
+&lt;p&gt;var s2 = [‘z’, “dog”, 4, 3, 1, 6, 1, ‘x’];
+var s3 = [3, 7, 12, 14, 123, 7, 12, 12, 2, 6, 9, 11];
+//  s3 = [13, 7,  12, 8, 11, 12, 11];
+//s3 = [13, 16, 13, 14, 9, 7, 8, 12];
+//s3 = [7, 8, 9, 6]
+console.log(“===&amp;gt; “, quickSort(s3));&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 29 Sep 2016 00:00:00 -0700</pubDate>
+        <link>www.anton23.com/sort</link>
+        <guid isPermaLink="true">www.anton23.com/sort</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Coing?</title>
+        <description>&lt;h1 id=&quot;i-love-lance--janice&quot;&gt;I Love Lance &amp;amp; Janice&lt;/h1&gt;
+
+&lt;p&gt;You’ve caught two of your fellow minions passing coded notes back and forth - while they’re on duty, no less! Worse, you’re pretty sure it’s not job-related - they’re both huge fans of the space soap opera “Lance &amp;amp; Janice”. You know how much Commander Lambda hates waste, so if you can prove that these minions are wasting her time passing non-job-related notes, it’ll put you that much closer to a promotion.&lt;/p&gt;
+
+&lt;p&gt;Fortunately for you, the minions aren’t exactly advanced cryptographers. In their code, every lowercase letter [a..z] is replaced with the corresponding one in [z..a], while every other character (including uppercase letters and punctuation) is left untouched.  That is, ‘a’ becomes ‘z’, ‘b’ becomes ‘y’, ‘c’ becomes ‘x’, etc.  For instance, the word “vmxibkgrlm”, when decoded, would become “encryption”.&lt;/p&gt;
+
+&lt;p&gt;Write a function called answer(s) which takes in a string and returns the deciphered string so you can show the commander proof that these minions are talking about “Lance &amp;amp; Janice” instead of doing their jobs.&lt;/p&gt;
+
+&lt;h1 id=&quot;test-cases&quot;&gt;Test cases&lt;/h1&gt;
+
+&lt;p&gt;Inputs:
+    (string) s = “wrw blf hvv ozhg mrtsg’h vkrhlwv?”
+Output:
+    (string) “did you see last night’s episode?”&lt;/p&gt;
+
+&lt;p&gt;Inputs:
+    (string) s = “Yvzs! I xzm’g yvorvev Lzmxv olhg srh qly zg gsv xlolmb!!”
+Output:
+    (string) “Yeah! I can’t believe Lance lost his job at the colony!!”&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var s = &quot;wrw blf hvv ozhg mrtsg&#39;h vkrhlwv?&quot;;
+var s2 = &quot;Yvzs! I xzm&#39;g yvorvev Lzmxv olhg srh qly zg gsv xlolmb!!&quot;;
+
+var output = &quot;did you see last night&#39;s episode?&quot;;
+
+function answer(s) {
+  let tD = {}; //table decoder
+  for (let i=0; i&amp;lt;26; i++) {
+    let key = &#39;a&#39;.charCodeAt(0) + i;
+    let value = &#39;z&#39;.charCodeAt(0) - i;
+    tD[String.fromCharCode(key)] = String.fromCharCode(value);
+  }
+  
+  let newS = &#39;&#39;;
+  for(let i=0; i&amp;lt;s.length; i++) {
+    let letter = s[i];
+    if(letter &amp;gt;= &#39;a&#39; &amp;amp;&amp;amp; letter &amp;lt;= &#39;z&#39;) 
+      newS += tD[letter];
+    else 
+      newS += letter;
+  }
+  
+  return newS;
+}
+
+console.log(answer(s));
+console.log(answer(s2));
+//console.log(&#39;a&#39;.charCodeAt(0));
+
+
+def answer(s):
+    print 1
+    tD = {}
+    for i in range(0, 26):
+        key = ord(&#39;a&#39;) + i
+        value = ord(&#39;z&#39;) - i
+        tD[chr(key)] = chr(value)
+
+
+    newS = &#39;&#39;
+    for i in range(0, len(s)):
+        letter = s[i]
+        if letter &amp;gt;= &#39;a&#39; and letter &amp;lt;= &#39;z&#39;:
+            newS += tD[letter]
+        else:
+            newS += letter
+    return newS
+
+s = &quot;wrw blf hvv ozhg mrtsg&#39;h vkrhlwv?&quot;
+print(answer(s))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;ion-flux-relabeling&quot;&gt;Ion Flux Relabeling&lt;/h1&gt;
+
+&lt;p&gt;Oh no! Commander Lambda’s latest experiment to improve the efficiency of her LAMBCHOP doomsday device has backfired spectacularly. She had been improving the structure of the ion flux converter tree, but something went terribly wrong and the flux chains exploded. Some of the ion flux converters survived the explosion intact, but others had their position labels blasted off. She’s having her henchmen rebuild the ion flux converter tree by hand, but you think you can do it much more quickly - quickly enough, perhaps, to earn a promotion!&lt;/p&gt;
+
+&lt;p&gt;Flux chains require perfect binary trees, so Lambda’s design arranged the ion flux converters to form one. To label them, she performed a post-order traversal of the tree of converters and labeled each converter with the order of that converter in the traversal, starting at 1. For example, a tree of 7 converters would look like the following:&lt;/p&gt;
+
+&lt;p&gt;7
+ 3   6
+1 2 4 5&lt;/p&gt;
+
+&lt;p&gt;Write a function answer(h, q) - where h is the height of the perfect tree of converters and q is a list of positive integers representing different flux converters - which returns a list of integers p where each element in p is the label of the converter that sits on top of the respective converter in q, or -1 if there is no such converter.  For example, answer(3, [1, 4, 7]) would return the converters above the converters at indexes 1, 4, and 7 in a perfect binary tree of height 3, which is [3, 6, -1].&lt;/p&gt;
+
+&lt;p&gt;The domain of the integer h is 1 &amp;lt;= h &amp;lt;= 30, where h = 1 represents a perfect binary tree containing only the root, h = 2 represents a perfect binary tree with the root and two leaf nodes, h = 3 represents a perfect binary tree with the root, two internal nodes and four leaf nodes (like the example above), and so forth.  The lists q and p contain at least one but no more than 10000 distinct integers, all of which will be between 1 and 2^h-1, inclusive.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def answer(h, q):
+    p = [None] * len(q)
+    
+    def findIt(h, missingZ, stateFactor):
+        max = (2**h) - 1
+        maxhalf = max/2
+
+        #base
+        if missingZ == maxhalf + stateFactor:
+            return max + stateFactor
+        elif missingZ == maxhalf*2 + stateFactor:
+            return max + stateFactor
+
+        if missingZ &amp;lt; maxhalf+stateFactor:
+            stateFactor += 0
+        else:
+            stateFactor += maxhalf
+
+        return findIt(h-1, missingZ, stateFactor)
+
+
+    for missingZ in q:
+        cornerCase = (2**h) - 1
+        if cornerCase == missingZ:
+            p[q.index(cornerCase)] = -1
+        else:
+            p[q.index(missingZ)] = findIt(h, missingZ, 0)
+
+
+    return p
+
+
+
+
+h = 3
+q = [7, 3, 5, 1]
+print answer( h, q )
+
+
+h2 = 5
+q2 = [19, 14, 28, 8]
+print(answer(h2, q2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 26 Sep 2016 07:42:59 -0700</pubDate>
+        <link>www.anton23.com/coding</link>
+        <guid isPermaLink="true">www.anton23.com/coding</guid>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>JavaScript Objects</title>
@@ -812,7 +1436,7 @@ for(let p of post) { // p refers to property values
       </item>
     
       <item>
-        <title>Gee Dude. Interviewing 2</title>
+        <title>Gee Dude. 2.</title>
         <description>&lt;h2 id=&quot;what-worked&quot;&gt;What Worked&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -981,15 +1605,17 @@ console.log(myCounter2()); // outputs &quot;2&quot;
 
 &lt;p&gt;Another Closure Example&lt;/p&gt;
 
-&lt;p&gt;function retainVal(i) {
-    setTimeout(function () {
-        console.log(i)
-      }, 1);
-  }&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function retainVal(i) {
+  setTimeout(function () {
+      console.log(i)
+    }, 1);
+}
 
-&lt;p&gt;for (var i = 0; i &amp;lt; 5; i++) {
-    var a = retainVal(i)
-  }&lt;/p&gt;
+for (var i = 0; i &amp;lt; 5; i++) {
+  var a = retainVal(i)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;Create a Power Function (i.e., base&lt;sup&gt;exponent&lt;/sup&gt;)&lt;/strong&gt;&lt;/p&gt;
 
@@ -1074,8 +1700,8 @@ console.log(getMin(y));
 
 </description>
         <pubDate>Tue, 15 Mar 2016 12:00:00 -0700</pubDate>
-        <link>www.anton23.com/gee-interview-2</link>
-        <guid isPermaLink="true">www.anton23.com/gee-interview-2</guid>
+        <link>www.anton23.com/gee-dude-2</link>
+        <guid isPermaLink="true">www.anton23.com/gee-dude-2</guid>
         
         
         <category>craft</category>
@@ -1264,762 +1890,6 @@ still go with someone who’s done it better than you did (so it may not be all 
         
         
         <category>kickass</category>
-        
-      </item>
-    
-      <item>
-        <title>Jekyll Set-up</title>
-        <description>&lt;p&gt;Two things I found out in configuring Jekyll&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;I can publish posts &lt;a href=&quot;http://kellysutton.com/2015/02/18/public-drafts-with-jekyll.html&quot;&gt;without having it linked on the homepage&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;A post’s url can be customized &lt;a href=&quot;http://stackoverflow.com/questions/8664675/how-to-customize-jekylls-url&quot;&gt;if you edit the permalink&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-</description>
-        <pubDate>Thu, 11 Feb 2016 11:00:00 -0800</pubDate>
-        <link>www.anton23.com/jekyll-setup</link>
-        <guid isPermaLink="true">www.anton23.com/jekyll-setup</guid>
-        
-        
-        <category>jekyll</category>
-        
-      </item>
-    
-      <item>
-        <title>Meet &amp; Attract at Events</title>
-        <description>&lt;h4 id=&quot;i-intro&quot;&gt;I. Intro&lt;/h4&gt;
-
-&lt;p&gt;The point of &lt;em&gt;Kickassery&lt;/em&gt; (self-development) is to become a solid person – embodying self-respect.  Two rules:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Don’t lie – It shoots down your self-esteem.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Leave people better than you found them – Is this person have become better for having known you?&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;ii-why-go-to-clubsevents-in-the-first-place&quot;&gt;II. Why Go To Clubs/Events in the First Place?&lt;/h4&gt;
-
-&lt;p&gt;Advantages:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Rooms full of stunningly beautiful women.&lt;/li&gt;
-  &lt;li&gt;Leads to getting connected elsewhere:&lt;/li&gt;
-  &lt;li&gt;actors, dancers, doctors – people outside your common social bubble.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Disadvantages:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Pain in the ass to get in (if you don’t know how)&lt;/li&gt;
-  &lt;li&gt;Being a typical dude won’t fly with the girls&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;How Clubs Really Make Money&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Clubs charge a few guys a ton of $&lt;/li&gt;
-  &lt;li&gt;Guys are the customers: They pay mad covers or buy tables.&lt;/li&gt;
-  &lt;li&gt;Hot girls are the reason the guys come. Clubs pay promoters to get girls there.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;There is fluidity in case of genders: Cool gudes get in free.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;To exploit the business model, you cannot act like a customer.  You must be an insider.&lt;/li&gt;
-  &lt;li&gt;The guys that have tables &amp;amp; are like celebrities are the promoters.  They are not paying any money.&lt;/li&gt;
-  &lt;li&gt;Don’t act as a customer, act like an insider/product.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;How to Get into Clubs for Free&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The Doorman
-    &lt;ul&gt;
-      &lt;li&gt;He’s the Gatekeeper&lt;/li&gt;
-      &lt;li&gt;Know his goal: That is to make an awesome party and be profitable.&lt;/li&gt;
-      &lt;li&gt;Know what he wants. He’s gonna “thin slice” you.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;To Get in, show the doorman that you are low-cost, a G, and a human.
-    &lt;ul&gt;
-      &lt;li&gt;The first time(s)
-        &lt;ul&gt;
-          &lt;li&gt;Go early or on off-nights – this makes you low-cost.&lt;/li&gt;
-          &lt;li&gt;Bring 4 people max, with at least 2 cute girls.&lt;/li&gt;
-          &lt;li&gt;Dress the part: No suits, no plaid&lt;/li&gt;
-          &lt;li&gt;On your way out, shake hands and get his name.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Every other time
-        &lt;ul&gt;
-          &lt;li&gt;cut the line&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;Smile, no nervous energy&lt;/strong&gt; (Take it to them!)– if nervous, delve into it. It’s internal discomfort.&lt;/li&gt;
-          &lt;li&gt;Walk straight up, say “What’s up man?”&lt;/li&gt;
-          &lt;li&gt;Give members of your group names.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;The doorman is to get in for the first couple of times, the promoter guarantees access.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Meet promoters by bringing in value
-    &lt;ul&gt;
-      &lt;li&gt;Once in, find the promoters.
-        &lt;ul&gt;
-          &lt;li&gt;Introduce yourself, introduce your girls.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Bring Value
-        &lt;ul&gt;
-          &lt;li&gt;Make everyone have fun, introduce people.&lt;/li&gt;
-          &lt;li&gt;Bring girls until you are friends with the promoter.&lt;/li&gt;
-          &lt;li&gt;Promoters get paid by how many girls they bring, how hot the girls are, and how fun the girls/tables are having.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Speak his language ($)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;iii-body-language-eye-contact-vibe&quot;&gt;III. Body Language, Eye Contact, Vibe&lt;/h4&gt;
-
-&lt;p&gt;Treat your Wingman like He is You&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Give him your full attention
-    &lt;ul&gt;
-      &lt;li&gt;Explosive High Five when seeing for the first time&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Rules
-    &lt;ul&gt;
-      &lt;li&gt;If you’re the first person to talk to the group, that is your group.&lt;/li&gt;
-      &lt;li&gt;Elevate each other. Exaggeration helps a lot.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Have his best interest in mind&lt;/li&gt;
-  &lt;li&gt;Communicate: Shaq
-    &lt;ul&gt;
-      &lt;li&gt;Kobe – I got this. Steve Nash – I need an assist. Shawn Bradley – Do whatever you want&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;How do you Help your Friend?
-    &lt;ul&gt;
-      &lt;li&gt;The Best Way: over-the-top compliments that get everyone laughing
-        &lt;ul&gt;
-          &lt;li&gt;“He’s taller. He’s good-looking. He’s got a charming accent. And he’s got a bigger dick.”&lt;/li&gt;
-          &lt;li&gt;“He’s Thor.” (Then, place the girl’s hand on your friend’s abs as if forcing her to molest him.)&lt;/li&gt;
-          &lt;li&gt;“Charlie is the best gringo salsa dancer you’ve ever seen.  Trust me, I’ll be saying &#39;I told you so&#39; on your wedding day.”&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The Most Important Thing you can do is have &lt;strong&gt;ENERGY&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;You’re not paying, you’re not a hot chick. The value you bring is &lt;strong&gt;awesomeness&lt;/strong&gt;.
-    &lt;ul&gt;
-      &lt;li&gt;No Texting. Bring the party! Be fun, funny, witty!&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Don’t get drunk.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Motion creates emotion&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Open up your body.&lt;/li&gt;
-      &lt;li&gt;Smile when not happy, dance when not dance-y&lt;/li&gt;
-      &lt;li&gt;Fire yourself up!
-        &lt;ul&gt;
-          &lt;li&gt;Bite a pencil if you have to.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Get a friend who knows how to lock eyes with you.
-    &lt;ul&gt;
-      &lt;li&gt;The coolest spot in the bar is half the distance between you &amp;amp; your wing!&lt;/li&gt;
-      &lt;li&gt;No one wants to join a loitering shark.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The 2nd Most Important Thing is &lt;strong&gt;Non-verbal Communication&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Eye Contact
-    &lt;ul&gt;
-      &lt;li&gt;Most important when you’re speaking to them. &lt;strong&gt;Look them in the eye as you speak.&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Take a mental note of their eyes&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Make the body language feel like she is hitting on you.
-    &lt;ul&gt;
-      &lt;li&gt;From a 3rd party’s perspective, position yourselves as if she’s hitting on you.&lt;/li&gt;
-      &lt;li&gt;Avoid leaning on them as that can make them feel trapped.&lt;/li&gt;
-      &lt;li&gt;Switch seats if you have to.  Spin!&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Escalate physically&lt;/strong&gt; throughout the interaction
-    &lt;ul&gt;
-      &lt;li&gt;The place you wanna be is you’re leaned back and she’s leaning on to you.&lt;/li&gt;
-      &lt;li&gt;Touch more: “You’re from Minnesota?! Fuck Yea! I love girls from Minnesota!” (Then, high five!)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;iv-in-the-club&quot;&gt;IV. In The Club&lt;/h4&gt;
-
-&lt;p&gt;Speak to groups in one of 3 ways:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;When she is staring at you: “You can’t look at me like that and not say, &#39;Hi&#39;.”&lt;/li&gt;
-  &lt;li&gt;When she can see you but is not staring: Wave like a crazy little kid.
-    &lt;ul&gt;
-      &lt;li&gt;Commitment is the essence of comedy.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;When she doesn’t have a line of sight: “I don’t think I’ve met you yet. I’m…”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Be Different – instead of trying to build rapport, &lt;strong&gt;tease her&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;“Can I buy you a drink” &amp;amp; &lt;strong&gt;“Where are you from” do not work.&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Push/Pull works
-    &lt;ul&gt;
-      &lt;li&gt;Teasing her or breaking rapport, while sporadically giving her your approval.&lt;/li&gt;
-      &lt;li&gt;Push-pull ratio is different for every girl.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Conversation is a topic for another day as it’s too broad for here.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;What &lt;strong&gt;Friends do is they tease&lt;/strong&gt; &amp;amp; break rapport.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Must be playful.&lt;/li&gt;
-  &lt;li&gt;Be aware if you’re getting a laugh; otherwise, you’re hurting them.&lt;/li&gt;
-  &lt;li&gt;Tease the 2nd layer
-    &lt;ul&gt;
-      &lt;li&gt;If she’s says she’s from SF, imagine you google image SF and see what images would come up (e.g., hippies)&lt;/li&gt;
-      &lt;li&gt;“Oh god, are you gonna start a drum circle here tonight?”&lt;/li&gt;
-      &lt;li&gt;Avoid teasing permanent identity (e.g., religion)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Calibrate push-pull.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The best frame to set is one of “She’s hitting on you.”&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;For now focus on adding one push/pull theme: she’s hitting on you role plays.
-    &lt;ul&gt;
-      &lt;li&gt;“My eyes are up here.”&lt;/li&gt;
-      &lt;li&gt;“My mom warned me about girls like you. You’re just gonna break my heart after you sleep with me. You won’t even cuddle after sex.”&lt;/li&gt;
-      &lt;li&gt;“I’m not that easy. You need to take me out to dinner first.”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Have Standards&lt;/strong&gt; &amp;amp; Screen for them.  &lt;strong&gt;Have self-respect&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Come-up with 3 non-physical traits girls must have:
-    &lt;ul&gt;
-      &lt;li&gt;Affectionate&lt;/li&gt;
-      &lt;li&gt;Fun/Positive&lt;/li&gt;
-      &lt;li&gt;Takes care of her body&lt;/li&gt;
-      &lt;li&gt;Values Time&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Develop ways to Test
-    &lt;ul&gt;
-      &lt;li&gt;Cuddle Test&lt;/li&gt;
-      &lt;li&gt;Sexually Open: Talking openly about sex &amp;amp; non-judgmentalness&lt;/li&gt;
-      &lt;li&gt;Non-Flaky: Discussing how you hate flakes&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Sleeping with a girl can be destructive
-    &lt;ul&gt;
-      &lt;li&gt;I sleep with girls that I don’t plan to see again in 2.5 weeks.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;How to Test for Standards&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Look for trigger (e.g., someone saying flakiness)&lt;/li&gt;
-  &lt;li&gt;Say it as a Monologue/Statement
-    &lt;ul&gt;
-      &lt;li&gt;“I can’t fucking stand flakiness.” (Statement)&lt;/li&gt;
-      &lt;li&gt;Describe a story… (Describe something that negative happened)&lt;/li&gt;
-      &lt;li&gt;“I love people who ahve the courtesty to say what they mean to do…” (Make it a good thing)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Set Boundaries for Bad Behavior&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Girls in clubs sometimes act like bitches because no one demands anything of them.&lt;/li&gt;
-  &lt;li&gt;If she does something that is actually bad human behavior, call her out on her shit.&lt;/li&gt;
-  &lt;li&gt;It has to be real.  You have to be &lt;strong&gt;willing to walk away&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;Example
-    &lt;ul&gt;
-      &lt;li&gt;Her: “I don’t like that promoter. He makes us pour our drinks.”&lt;/li&gt;
-      &lt;li&gt;You: “You have to fucking kidding me.  Do you want him to wipe your ass too?”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The Kiss&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The kiss is just &lt;strong&gt;an extension of physical escalation.&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Wait until she is staying close to your face, hanging out wihtin 6 inches. (Splash zone)&lt;/li&gt;
-  &lt;li&gt;Say, “If you keep looking at me like that, I’m going to kiss you.”
-    &lt;ul&gt;
-      &lt;li&gt;If she does anything but run away, kiss her.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Pull-off first, and accuse her of seducing you.&lt;/li&gt;
-  &lt;li&gt;Missing isn’t game over. You can always try again (unless if she already ran away).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;v-mission-1-initiating-conversations&quot;&gt;V. Mission 1: Initiating Conversations&lt;/h4&gt;
-
-&lt;p&gt;Adopt a beginner’s mindset &amp;amp; don’t get drunk. &lt;strong&gt;You’re gonna screw up. That’s how you learn.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Initiate A Conversation&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Wave like a kid.&lt;/li&gt;
-  &lt;li&gt;“You cannot look at me like that and not say ‘hi’.”&lt;/li&gt;
-  &lt;li&gt;“I don’t think I’ve met you yet. I’m….”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Inner Game&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What is your ritual? – pregaming, talking to buddies, and &lt;strong&gt;not approaching?&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Your ritual translates into your destiny for tonight.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;If that ritual continues, say this time next year, where will you be?
-    &lt;ul&gt;
-      &lt;li&gt;Are you gonna be with a girl that you really like?&lt;/li&gt;
-      &lt;li&gt;Is that the type of guy you want to be in a year?&lt;/li&gt;
-      &lt;li&gt;Are you likely going to these bars all the time pretending that you have something important to talk about, when you actually wanna do is talk to women?&lt;/li&gt;
-      &lt;li&gt;Guys let fear dictate their action and avoid talking to women by saying &lt;em&gt;she’s a bitch, not hot enough, or not into them.&lt;/em&gt;  All of these excuses are &lt;strong&gt;fear in disguise.&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Are you gonna set strong boundaries for your friends &amp;amp; your family, and tell them what you need from them in terms of love &amp;amp; support? OR are they gonna push you around?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Answer me from 1 to 10:
-    &lt;ul&gt;
-      &lt;li&gt;What does your life look like if it’s controlled by the current rituals that control you now when you go out in any social situation? – after the Richard Greg’ry incident, it’s 2/10&lt;/li&gt;
-      &lt;li&gt;What if you went out, you let courage control your actions.
-        &lt;ul&gt;
-          &lt;li&gt;You got yourself exercising your courage. – 9/10&lt;/li&gt;
-          &lt;li&gt;It’s worth it to go out to practice the action of exercising courage.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Practice:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Exercise courage.  Be self-aware when you have excuses and see if they’re fear in disguis. Shyness &amp;amp; embarassment are all connected to fear.  The opposite of fear is &lt;strong&gt;courage.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;vi-mission-2-body-language&quot;&gt;VI. Mission 2: Body Language&lt;/h4&gt;
-
-&lt;p&gt;Non-verbals:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Inflection – tonality or tone of voice.&lt;/li&gt;
-  &lt;li&gt;Conviction on how to say things
-    &lt;ul&gt;
-      &lt;li&gt;Finish your sentence.&lt;/li&gt;
-      &lt;li&gt;If you allow yourself to be cutoff, it’s a subtle admission that what you’re saying is not important.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Speak loudly.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Non-verbals Moar:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Eye Contact – most important when you are speaking to another
-    &lt;ul&gt;
-      &lt;li&gt;relax/looseness in the eye area&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Any shift&lt;/strong&gt; in the environment, &lt;strong&gt;SMILE&lt;/strong&gt;!
-    &lt;ul&gt;
-      &lt;li&gt;Toothy smile!&lt;/li&gt;
-      &lt;li&gt;James Dean coolness are only in movies.&lt;/li&gt;
-      &lt;li&gt;Cues: Entering a room/environment, meeting someone, etc.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Inner Game&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Emotional state and body language feeds off of each other.&lt;/strong&gt; Hence, you influence your emotions in order to influence your body language.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Steps for a &lt;strong&gt;state building routine&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Figure out where you wanna go. What are your ideal emotional states for going out?
-    &lt;ul&gt;
-      &lt;li&gt;Do you want to feel funny &amp;amp; free? Playful &amp;amp; confident?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Think of a time in your life when you felt like that (or a movie or a friend).&lt;/li&gt;
-  &lt;li&gt;Adopt the body language of that person.
-    &lt;ul&gt;
-      &lt;li&gt;smile, tonality, looseness in expression&lt;/li&gt;
-      &lt;li&gt;Act it out the best you can.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Now that you feel like this guy, how does this guy feel about the world? What’s this guy’s one sentence summary of how he feels about himself &amp;amp; the world?
-    &lt;ul&gt;
-      &lt;li&gt;Funny: Life is awesome &amp;amp; I am hilarious.
-        &lt;ul&gt;
-          &lt;li&gt;Modulate the tonality (while chanting) to reflect the statement. Conviction.  Commit.&lt;/li&gt;
-          &lt;li&gt;By saying the statement with conviction, you’re blazing a neural pathway to your brain.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;How do you personally feel about life? about yourself?
-        &lt;ul&gt;
-          &lt;li&gt;Life is awesome, growth, &amp;amp; fun.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Practice:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Put your emotional state in &lt;strong&gt;neutral&lt;/strong&gt;, then fire that anger/state-building routine.  You should feel the emotional state.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;vii-mission-3-conversation--role-plays&quot;&gt;VII. Mission 3: Conversation &amp;amp; Role-plays&lt;/h4&gt;
-
-&lt;p&gt;Intro&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Conversation Habits are really helpful for keeping things fun, interesting, on-track, and that things are going somewhere.&lt;/li&gt;
-  &lt;li&gt;A lot of guys flounder around with “Where they work” &amp;amp; “Where they’re from” – but these are not interesting. We use role-play instead!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Role-play Steps:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Give her a role that she wants to play. If she’s not participating, it’s not going to go anywhere.
-    &lt;ul&gt;
-      &lt;li&gt;Fun roles: Princess, ex-wife, or somebody you show affection to.  (Not: stable/poor girl)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Even though she has a really cool role to play, she is pursuing you.  Pick a subtext where she’s pursuing you.
-    &lt;ul&gt;
-      &lt;li&gt;Right: If ex-husband &amp;amp; ex-wife, she’s madly in love with you.&lt;/li&gt;
-      &lt;li&gt;Wrong: “Remember in high school, you were so cool and I was such a loser, and you ignored me?”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Keep it detail-rich.  Practice getting 4-6 beats in there because that’s where acceptance, laughter, &amp;amp; fun come in.
-    &lt;ul&gt;
-      &lt;li&gt;“We’re gonna get married. We’re gonna pack you up in a bag, we’ll fly to Vegas by Southwest. ONce we get there, we’ll have the best shotgun wedding.”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Add elements of push/pull.
-    &lt;ul&gt;
-      &lt;li&gt;Too much pull is rapport-seeking
-        &lt;ul&gt;
-          &lt;li&gt;“I love you, we’re gonna get married, we’re just gonna be in love forever.”&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Too much push is really harsh &amp;amp; mean
-        &lt;ul&gt;
-          &lt;li&gt;“Oh my god, we’re gonna get a divorce, you fucking suck, game over.”&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Incorporate both
-        &lt;ul&gt;
-          &lt;li&gt;“I love you, we’re gonna get married.  But you better be able to cook or else I’m gonna dump you.”&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Commit
-    &lt;ul&gt;
-      &lt;li&gt;Finish your thought &amp;amp; what you’re saying.&lt;/li&gt;
-      &lt;li&gt;Don’t just stop after one beat&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;There has to be a sexual undertone.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Inner Game&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;We’re all a bunch of social accidents growing up. But now, you have the chance to become the person you want to interact with others today.&lt;/li&gt;
-  &lt;li&gt;How can one be true to themselves while actively changing their mode of interaction?
-    &lt;ul&gt;
-      &lt;li&gt;Who he is today &lt;strong&gt;is a choice&lt;/strong&gt;.  He doesn’t have to be shy or bashful.&lt;/li&gt;
-      &lt;li&gt;I don’t deny who I was, but that doesn’t ahve to define who I am today &amp;amp; going forward.&lt;/li&gt;
-      &lt;li&gt;It’s your responsibility how you want to behave &amp;amp; what you want to become.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Practice:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;At home:
-    &lt;ul&gt;
-      &lt;li&gt;Design a role-play from your own or from a list (see book).&lt;/li&gt;
-      &lt;li&gt;Record yourself.&lt;/li&gt;
-      &lt;li&gt;Practice at least 5 times.  Keep in mind the 6 Role-play steps –  don’t forget being sexual.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Who you are today is a choice.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;viii-mission-4-have-standards&quot;&gt;VIII. Mission 4: Have Standards&lt;/h4&gt;
-
-&lt;p&gt;Importance of Having Standards:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Filter crappy people out of your life.&lt;/li&gt;
-  &lt;li&gt;Nobody like to be with someone that they feel they’ve used them as an object.  They want you to have a bar that they need to live up to.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Think About It…&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What does this girl have to do or to not do for you to say, “Holy cow, I can’t deal with that.”  And hone in to that type of behavior.
-    &lt;ul&gt;
-      &lt;li&gt;It might be difficult to come up with behaviors right now, but you start to see as you go out there are behaviors that totally turn you off.&lt;/li&gt;
-      &lt;li&gt;Personally: Treating me like crap, treating anyone like crap, mean, a bitch&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;What matters to you the most?
-    &lt;ul&gt;
-      &lt;li&gt;Personally: Affectionate, not a flake &amp;amp; dependable, passionate, positive/fun, has a Northstar&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;How To Monologue… (You segue to it when you see a trigger)&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Statement of Standard
-    &lt;ul&gt;
-      &lt;li&gt;(When you see someone affectionate…)  I absolutely need people who are affectionate.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Description of failing/violation
-    &lt;ul&gt;
-      &lt;li&gt;There are types of girls that can’t statnd to be touched.  And I don’t care how hot you are, but if you don’t to cuddle after sex or you can’t stand to be hugged in public, I don’t want to be with you.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Descripton of what you like
-    &lt;ul&gt;
-      &lt;li&gt;I want someone that generally likes to hug, gives a back rub, &amp;amp; who likes to cuddle with me after sex.  Affection is freaking important to me.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Why? (Ties everything together…)
-    &lt;ul&gt;
-      &lt;li&gt;And it’s because that’s the type of person I am.  I am a physical person. I express how I care physically, and if someone is not how interacts, I’m done.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Inner Game&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Northstar – we wanna know where you’re headed.&lt;/li&gt;
-  &lt;li&gt;Set in your head, what kind of relationship you want.
-    &lt;ul&gt;
-      &lt;li&gt;This is fluid &amp;amp; will change overtime, so don’t get too locked up.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;What do you want to do in a relationship?
-    &lt;ul&gt;
-      &lt;li&gt;Do you want to be monogamous?&lt;/li&gt;
-      &lt;li&gt;Are you looking to date for a while, then eventually settle?&lt;/li&gt;
-      &lt;li&gt;Are you looking to be single or have open relationships?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;If I was John Mayer, what relationship scenario appeals the most?&lt;/li&gt;
-  &lt;li&gt;Define what you want and not settle.
-    &lt;ul&gt;
-      &lt;li&gt;Don’t let society tells you what you want.&lt;/li&gt;
-      &lt;li&gt;The definition fluctuates overtime, but you &lt;strong&gt;don’t compromise your fundamentals&lt;/strong&gt; in the &lt;strong&gt;heat of the moment.&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Practice:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;At home:
-    &lt;ul&gt;
-      &lt;li&gt;Record yourself.&lt;/li&gt;
-      &lt;li&gt;Practice at least 5 times.  Keep in mind the conviction. Commit&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;What’s your Northstar?&lt;/strong&gt; What are your &lt;strong&gt;Standards?&lt;/strong&gt; Your &lt;strong&gt;fundamentals?&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;ix-mission-5-kissing&quot;&gt;IX. Mission 5: Kissing&lt;/h4&gt;
-
-&lt;p&gt;Think About It…&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;When you go out, go to this point at least once.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;What Leads to the Kiss?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Lean against a wall or a bar, and have her lean into you. This reinforces that she’s into you.&lt;/li&gt;
-  &lt;li&gt;The kiss is just &lt;strong&gt;an extension of physical escalation&lt;/strong&gt; and you’ve &lt;strong&gt;broken down physical barriers&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;You’ve high-fived her, given her a hug, etc.&lt;/li&gt;
-      &lt;li&gt;A playful push/pull&lt;/li&gt;
-      &lt;li&gt;You two are comfortable touching one another&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Two ways to go for a kiss…&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Let conversation slow-down like in movies. Then, let it linger (sound of peaceful silence).  Then, look her in the eye, smirk, and lean in.  Not a lot needs to be said.&lt;/li&gt;
-  &lt;li&gt;Once she’s in the Splash Zone say, “If you keep looking at me like that, I’m going to kiss you.”
-    &lt;ul&gt;
-      &lt;li&gt;If she does anything but run away, kiss her.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Pull-off first, and &lt;strong&gt;accuse her of seducing you&lt;/strong&gt; – it keeps things fun.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Inner Game&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Be Honest to yourself: Either Friendzone her OR Demonstrate Interest.
-    &lt;ul&gt;
-      &lt;li&gt;If you’ve been dishonest and have been friends with a girl for a long time AND you suddenly go for the kiss, that throws the every interaction you had with her into a doubt – were you playing her the whole time?&lt;/li&gt;
-      &lt;li&gt;Don’t be that guy that befriend girls and surprise kiss them.  Be the guy who is comfortable admitting “I’m interested in you”.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Handle Rejection.
-    &lt;ul&gt;
-      &lt;li&gt;If you let yourself feel like shit after a rejection, you essentially put your self-worth in the hands of others.
-        &lt;ul&gt;
-          &lt;li&gt;If you’re doing this with girls, I bet you’re doing this in other areas of your life, so &lt;strong&gt;You need to stop.&lt;/strong&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Be aware of Pavlov’s Dog, and you never let this be the association:
-        &lt;ul&gt;
-          &lt;li&gt;Going for the kiss =&amp;gt; Rejected =&amp;gt; Feeling like shit (hence, Going for the Kiss == Feeling like like shit)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Here’s how you feel good about yourself:
-    &lt;ul&gt;
-      &lt;li&gt;You feel that the person you are today is living up to the values that you have.  You’re becoming the man that you want to be, and you feel that you’re growing every single day.  That’s what’s gonna make you feel good and not making any basket in a basketball court or any girl kissing you – that is fleeting. The process of becoming the person you want to be and living up to your values – that is continuous.&lt;/li&gt;
-      &lt;li&gt;If external validation is your source of happiness, you’ll ultimately be miserable as soon as that gets taken away from you.&lt;/li&gt;
-      &lt;li&gt;If you keep your internal validation as the source of your happiness, you’re going to be much, much better.&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;When you go for the kiss, it’s important to realize you’re extending yourself.  You’re growing. You’re stepping out of your comfort zone, you’re putting yourself in a new situation, and you don’t know how it’s gonna workout. That is growth and you should feel good about that no matter how the kiss goes.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;As long as you’re living up to your values and as long as you’re on track to become the guy you want to be, you have nothing to be embarass about.  I don’t care if you suck at kissing, having sex, or at your job – that is all fleeting, fleeting shit. If you’re becoming the man you want to be every single day, you’re being honest, and you’re leaving people better than you found them be proud and be happy of where you are and where you’re going.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Wed, 20 Jan 2016 13:40:03 -0800</pubDate>
-        <link>www.anton23.com/kickass0</link>
-        <guid isPermaLink="true">www.anton23.com/kickass0</guid>
-        
-        
-        <category>kickass</category>
-        
-      </item>
-    
-      <item>
-        <title>December Deadz 2015</title>
-        <description>&lt;p&gt;It’s that time of the year again!&lt;/p&gt;
-
-&lt;p&gt;Last December 2014, I had a goal of pulling close to 4 plates.  Looking back now, that goal was wayyy too ambitious.  Furthermore, after being plagued with illness every couple of months, my deadlifts has now gone down.  The graph best display how my deadlifts have gone the past year (note that there were a couple of months with missing info as I went through some dark times).&lt;/p&gt;
-
-&lt;p&gt;The good news is that in the past year, I’ve discovered that my deadlifts need to have a more vertical back.  I learned via lifting forum that my lower body is shorter than my torso similar (just like most Asians). Hence, a more vertical back at the start position is expected.&lt;/p&gt;
-
-&lt;p&gt;As for my deadlifting goal for next December, I’m looking to pull 3 plates (315 lbs).  I’m currently pulling 275 lbs for 5 reps.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/deadz_2015.png&quot; width=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;figure style=&quot;display: inline-block;&quot;&gt;&lt;iframe width=&quot;360&quot; height=&quot;480&quot; allowfullscreen=&quot;&quot; class=&quot;youtube-player&quot; src=&quot;//www.youtube.com/embed/VdZn_FRxY7k?wmode=transparent&amp;amp;amp;autoplay=0&amp;amp;amp;rel=0&amp;amp;amp;showinfo=0&amp;amp;amp;autohide=1&amp;amp;amp;color=white&amp;amp;amp;&quot; type=&quot;text/html&quot;&gt;&lt;/iframe&gt;
-  &lt;figcaption&gt;2014 December Deadz (305x6)&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure style=&quot;display: inline-block;&quot;&gt;&lt;iframe width=&quot;360&quot; height=&quot;480&quot; allowfullscreen=&quot;&quot; class=&quot;youtube-player&quot; src=&quot;//www.youtube.com/embed/lUAkYkW0_h8?wmode=transparent&amp;amp;amp;autoplay=0&amp;amp;amp;rel=0&amp;amp;amp;showinfo=0&amp;amp;amp;autohide=1&amp;amp;amp;color=white&amp;amp;amp;&quot; type=&quot;text/html&quot;&gt;&lt;/iframe&gt;
-  &lt;figcaption&gt;2015 December Deadz (275x4)&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;hr /&gt;
-</description>
-        <pubDate>Thu, 31 Dec 2015 14:00:00 -0800</pubDate>
-        <link>www.anton23.com/december-deadz-2015</link>
-        <guid isPermaLink="true">www.anton23.com/december-deadz-2015</guid>
-        
-        
-        <category>exercise</category>
         
       </item>
     

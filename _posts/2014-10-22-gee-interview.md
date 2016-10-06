@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Gee Interviewing: What Worked and What Didn't"
+title:  "Gee Dude: What Worked and What Didn't"
 date:   2014-10-22 14:44:58
 categories: craft
 ---
@@ -53,6 +53,15 @@ still go with someone who's done it better than you did (so it may not be all yo
 * There will be a waiting game.  Don't play it by focusing on more important items on your to-do list.
 
 
+
+### Looking back from a 2016 Oct POV....
+
+There was no connection. "Why?", you asked. Here's why:
+
+* You whined about that former "the guy"
+* You fabricated about that "salon"
+
+Be candid. Be associated with positive feelings/stories.
 
 
 

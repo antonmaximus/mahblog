@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Gee Dude. Interviewing 2</title>
+  <title>Gee Dude. 2.</title>
   <meta name="description" content="What Worked">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/custom.css">
-  <link rel="canonical" href="www.anton23.com/gee-interview-2">
+  <link rel="canonical" href="www.anton23.com/gee-dude-2">
   <link rel="alternate" type="application/rss+xml" title="anton" href="www.anton23.com/feed.xml">
 </head>
 
@@ -58,7 +58,7 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Gee Dude. Interviewing 2</h1>
+    <h1 class="post-title" itemprop="name headline">Gee Dude. 2.</h1>
     <p class="post-meta"><time datetime="2016-03-15T12:00:00-07:00" itemprop="datePublished">Mar 15, 2016</time></p>
   </header>
 
@@ -231,15 +231,17 @@ console.log(myCounter2()); // outputs "2"
 
 <p>Another Closure Example</p>
 
-<p>function retainVal(i) {
-    setTimeout(function () {
-        console.log(i)
-      }, 1);
-  }</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>function retainVal(i) {
+  setTimeout(function () {
+      console.log(i)
+    }, 1);
+}
 
-<p>for (var i = 0; i &lt; 5; i++) {
-    var a = retainVal(i)
-  }</p>
+for (var i = 0; i &lt; 5; i++) {
+  var a = retainVal(i)
+}
+</code></pre>
+</div>
 
 <p><strong>Create a Power Function (i.e., base<sup>exponent</sup>)</strong></p>
 

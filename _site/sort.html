@@ -1,0 +1,152 @@
+<hr />
+<p>layout: post
+title:  “How I Sort”
+date:   2016-09-26 14:42:59
+categories: programming
+—</p>
+
+<p>‘use strict’;</p>
+
+<p>// We pick out the smallest each time
+function regSort(arr) { 
+ function getPosition(arr) {
+   var value = arr[0];
+   var position = 0;
+   for(var i = 0; i &lt; arr.length; i++ ) {
+     if (arr[i] &lt; value) {
+       value = arr[i];
+       position = i;
+     }
+   }
+   return position;
+ }</p>
+
+<p>var sorted = [];
+ var totalLength = arr.length;</p>
+
+<p>for(var i=0; i&lt;totalLength; i++) {
+   var x = getPosition(arr);
+   sorted.push(arr[x]);
+   arr.splice(x, 1);
+  }
+  return sorted;
+}</p>
+
+<p>// We assume that object sorts its keys in numerical order
+function hashSort(arr) {
+  var x = {};
+  var sorted = [];</p>
+
+<p>for(var i=0; i&lt;arr.length; i++) {
+    x[arr[i]] = x[arr[i]]  + 1 || 1;
+  }</p>
+
+<p>for(var sub in x) {
+    for(var j=0; j&lt; x[sub]; j++) {
+      sorted.push(Number(sub))
+    }
+  }</p>
+
+<p>return sorted;
+}</p>
+
+<p>function insertionSort(arr) {
+  for(let i=0; i&lt;arr.length; i++) {
+    let x = arr[i];
+    let pos = 0;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// compare within sorted bounds
+for(let j=i; j&gt;=0; j--) {
+  pos = j;
+  if(x &gt; arr[j-1])
+    break;
+}
+
+// Then move contents
+for(let k=i; k&gt;pos; k--){
+  arr[k] = arr[k-1];
+}
+arr[pos] = x; // insert into position   }   return arr; }
+</code></pre>
+</div>
+
+<p>function mergeSort(arr, p, r) {
+  // base case
+  if(r === p) 
+    return [arr[p]];</p>
+
+<p>let q = Math.floor((r-p)/2 + p) ; //half length</p>
+
+<p>let firstHalf = mergeSort(arr, p, q);
+  let secondHalf = mergeSort(arr, q+1, r);</p>
+
+<p>let sorted = [];</p>
+
+<p>for(let j=0, k=0; j&lt;firstHalf.length || k&lt;secondHalf.length;) {
+    if(firstHalf[j] &lt; secondHalf[k] || k&gt;=secondHalf.length) {
+      sorted.push(firstHalf[j++]);
+    } else {
+      sorted.push(secondHalf[k++]);
+    }
+  }</p>
+
+<p>return sorted;
+}</p>
+
+<p>function mergeSort2(arr){
+  //base case
+  if(arr.length === 1) 
+    return [arr[0]];</p>
+
+<p>//Divide 
+  let halfLength = arr.length / 2;
+  let firstPart = mergeSort(arr.slice(0, halfLength));
+  let secondPart = mergeSort(arr.slice(halfLength));</p>
+
+<p>//Conquer
+  let sorted = [];
+  for(let i=0, j=0; i&lt;firstPart.length || j&lt;secondPart.length;) {
+    if(firstPart[i]&lt;secondPart[j] || j&gt;=secondPart.length)
+      sorted.push(firstPart[i++]);
+    else 
+      sorted.push(secondPart[j++]);
+  }</p>
+
+<p>return sorted
+}</p>
+
+<p>function quickSort(arr) {
+  let p = 0;
+  let r = arr.length-1;</p>
+
+<p>function partition(arr, p, r) {
+    // base case
+    if(r-p &lt;= 0)
+      return;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let pivot = arr[r];  
+let q=p, u=p;
+for(; u&lt;=r; u++) {
+  if(arr[u] &lt;= pivot) {
+    let temp = arr[q];
+    arr[q++] = arr[u];
+    arr[u] = temp;
+  }
+}
+
+partition(arr, p, q-2); // You don't sort the pivot (q-1)
+partition(arr, q, r);   }
+</code></pre>
+</div>
+
+<p>partition(arr, p, r);
+  return arr;
+}</p>
+
+<p>var s2 = [‘z’, “dog”, 4, 3, 1, 6, 1, ‘x’];
+var s3 = [3, 7, 12, 14, 123, 7, 12, 12, 2, 6, 9, 11];
+//  s3 = [13, 7,  12, 8, 11, 12, 11];
+//s3 = [13, 16, 13, 14, 9, 7, 8, 12];
+//s3 = [7, 8, 9, 6]
+console.log(“===&gt; “, quickSort(s3));</p>
+

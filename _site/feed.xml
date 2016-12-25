@@ -5,8 +5,8 @@
     <description>A small growth today makes progression happen...</description>
     <link>www.anton23.com/</link>
     <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Dec 2016 17:53:31 -0800</pubDate>
-    <lastBuildDate>Sat, 24 Dec 2016 17:53:31 -0800</lastBuildDate>
+    <pubDate>Sat, 24 Dec 2016 17:55:14 -0800</pubDate>
+    <lastBuildDate>Sat, 24 Dec 2016 17:55:14 -0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -350,9 +350,9 @@ combineNoDups(a, b)
     
       <item>
         <title>How I Sort</title>
-        <description>&lt;p&gt;‘use strict’;&lt;/p&gt;
+        <description>&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&#39;use strict&#39;;
 
-&lt;p&gt;// We pick out the smallest each time
+// We pick out the smallest each time
 function regSort(arr) { 
  function getPosition(arr) {
    var value = arr[0];
@@ -364,136 +364,143 @@ function regSort(arr) {
      }
    }
    return position;
- }&lt;/p&gt;
-
-&lt;p&gt;var sorted = [];
- var totalLength = arr.length;&lt;/p&gt;
-
-&lt;p&gt;for(var i=0; i&amp;lt;totalLength; i++) {
+ }
+  
+ var sorted = [];
+ var totalLength = arr.length;
+  
+ for(var i=0; i&amp;lt;totalLength; i++) {
    var x = getPosition(arr);
    sorted.push(arr[x]);
    arr.splice(x, 1);
   }
   return sorted;
-}&lt;/p&gt;
+}
 
-&lt;p&gt;// We assume that object sorts its keys in numerical order
+// We assume that object sorts its keys in numerical order
 function hashSort(arr) {
   var x = {};
-  var sorted = [];&lt;/p&gt;
-
-&lt;p&gt;for(var i=0; i&amp;lt;arr.length; i++) {
+  var sorted = [];
+  
+  for(var i=0; i&amp;lt;arr.length; i++) {
     x[arr[i]] = x[arr[i]]  + 1 || 1;
-  }&lt;/p&gt;
-
-&lt;p&gt;for(var sub in x) {
+  }
+  
+  for(var sub in x) {
     for(var j=0; j&amp;lt; x[sub]; j++) {
       sorted.push(Number(sub))
     }
-  }&lt;/p&gt;
+  }
+  
+  return sorted;
+}
 
-&lt;p&gt;return sorted;
-}&lt;/p&gt;
 
-&lt;p&gt;function insertionSort(arr) {
+function insertionSort(arr) {
   for(let i=0; i&amp;lt;arr.length; i++) {
     let x = arr[i];
-    let pos = 0;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// compare within sorted bounds
-for(let j=i; j&amp;gt;=0; j--) {
-  pos = j;
-  if(x &amp;gt; arr[j-1])
-    break;
+    let pos = 0;
+    
+    // compare within sorted bounds
+    for(let j=i; j&amp;gt;=0; j--) {
+      pos = j;
+      if(x &amp;gt; arr[j-1])
+        break;
+    }
+    
+    // Then move contents
+    for(let k=i; k&amp;gt;pos; k--){
+      arr[k] = arr[k-1];
+    }
+    arr[pos] = x; // insert into position
+  }
+  return arr;
 }
 
-// Then move contents
-for(let k=i; k&amp;gt;pos; k--){
-  arr[k] = arr[k-1];
-}
-arr[pos] = x; // insert into position   }   return arr; }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;function mergeSort(arr, p, r) {
+
+function mergeSort(arr, p, r) {
   // base case
   if(r === p) 
-    return [arr[p]];&lt;/p&gt;
+    return [arr[p]];
+  
+  let q = Math.floor((r-p)/2 + p) ; //half length
+  
+  let firstHalf = mergeSort(arr, p, q);
+  let secondHalf = mergeSort(arr, q+1, r);
+  
+  let sorted = [];
 
-&lt;p&gt;let q = Math.floor((r-p)/2 + p) ; //half length&lt;/p&gt;
-
-&lt;p&gt;let firstHalf = mergeSort(arr, p, q);
-  let secondHalf = mergeSort(arr, q+1, r);&lt;/p&gt;
-
-&lt;p&gt;let sorted = [];&lt;/p&gt;
-
-&lt;p&gt;for(let j=0, k=0; j&amp;lt;firstHalf.length || k&amp;lt;secondHalf.length;) {
+  for(let j=0, k=0; j&amp;lt;firstHalf.length || k&amp;lt;secondHalf.length;) {
     if(firstHalf[j] &amp;lt; secondHalf[k] || k&amp;gt;=secondHalf.length) {
       sorted.push(firstHalf[j++]);
     } else {
       sorted.push(secondHalf[k++]);
     }
-  }&lt;/p&gt;
+  }
+  
+  return sorted;
+}
 
-&lt;p&gt;return sorted;
-}&lt;/p&gt;
 
-&lt;p&gt;function mergeSort2(arr){
+function mergeSort2(arr){
   //base case
   if(arr.length === 1) 
-    return [arr[0]];&lt;/p&gt;
-
-&lt;p&gt;//Divide 
+    return [arr[0]];
+  
+  //Divide 
   let halfLength = arr.length / 2;
   let firstPart = mergeSort(arr.slice(0, halfLength));
-  let secondPart = mergeSort(arr.slice(halfLength));&lt;/p&gt;
-
-&lt;p&gt;//Conquer
+  let secondPart = mergeSort(arr.slice(halfLength));
+  
+  //Conquer
   let sorted = [];
   for(let i=0, j=0; i&amp;lt;firstPart.length || j&amp;lt;secondPart.length;) {
     if(firstPart[i]&amp;lt;secondPart[j] || j&amp;gt;=secondPart.length)
       sorted.push(firstPart[i++]);
     else 
       sorted.push(secondPart[j++]);
-  }&lt;/p&gt;
-
-&lt;p&gt;return sorted
-}&lt;/p&gt;
-
-&lt;p&gt;function quickSort(arr) {
-  let p = 0;
-  let r = arr.length-1;&lt;/p&gt;
-
-&lt;p&gt;function partition(arr, p, r) {
-    // base case
-    if(r-p &amp;lt;= 0)
-      return;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let pivot = arr[r];  
-let q=p, u=p;
-for(; u&amp;lt;=r; u++) {
-  if(arr[u] &amp;lt;= pivot) {
-    let temp = arr[q];
-    arr[q++] = arr[u];
-    arr[u] = temp;
   }
+  
+  return sorted
 }
 
-partition(arr, p, q-2); // You don&#39;t sort the pivot (q-1)
-partition(arr, q, r);   }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;partition(arr, p, r);
+function quickSort(arr) {
+  let p = 0;
+  let r = arr.length-1;
+  
+  function partition(arr, p, r) {
+    // base case
+    if(r-p &amp;lt;= 0)
+      return;
+    
+    let pivot = arr[r];  
+    let q=p, u=p;
+    for(; u&amp;lt;=r; u++) {
+      if(arr[u] &amp;lt;= pivot) {
+        let temp = arr[q];
+        arr[q++] = arr[u];
+        arr[u] = temp;
+      }
+    }
+    
+    partition(arr, p, q-2); // You don&#39;t sort the pivot (q-1)
+    partition(arr, q, r);
+  }
+  
+  partition(arr, p, r);
   return arr;
-}&lt;/p&gt;
+}
 
-&lt;p&gt;var s2 = [‘z’, “dog”, 4, 3, 1, 6, 1, ‘x’];
+var s2 = [&#39;z&#39;, &quot;dog&quot;, 4, 3, 1, 6, 1, &#39;x&#39;];
 var s3 = [3, 7, 12, 14, 123, 7, 12, 12, 2, 6, 9, 11];
 //  s3 = [13, 7,  12, 8, 11, 12, 11];
 //s3 = [13, 16, 13, 14, 9, 7, 8, 12];
 //s3 = [7, 8, 9, 6]
-console.log(“===&amp;gt; “, quickSort(s3));&lt;/p&gt;
+console.log(&quot;===&amp;gt; &quot;, quickSort(s3));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 </description>
         <pubDate>Mon, 26 Sep 2016 07:42:59 -0700</pubDate>

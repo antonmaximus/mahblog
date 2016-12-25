@@ -150,6 +150,63 @@ print(answer(s))
 
 <p>The domain of the integer h is 1 &lt;= h &lt;= 30, where h = 1 represents a perfect binary tree containing only the root, h = 2 represents a perfect binary tree with the root and two leaf nodes, h = 3 represents a perfect binary tree with the root, two internal nodes and four leaf nodes (like the example above), and so forth.  The lists q and p contain at least one but no more than 10000 distinct integers, all of which will be between 1 and 2^h-1, inclusive.</p>
 
+<p>JavaScript:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  def answer(h, q):
+      p = [None] * len(q)
+      state = {'x': 0, 'counter': len(p)}
+      hashTable = {}
+      
+
+      def postOrderTraversal(h):
+          if state['counter'] &lt; 1:
+              return None
+          elif h &lt;= 0:
+              return None
+
+          z1 = postOrderTraversal(h-1)
+          z2 = postOrderTraversal(h-1)
+          state['x'] = state['x'] + 1
+
+          if(z1):
+              p[q.index(z1)] = state['x']
+
+          if(z2):
+              p[q.index(z2)] = state['x']
+
+          if state['counter'] &lt; 1:
+              return None
+          elif state['x'] in q:
+              state['counter'] = state['counter'] - 1
+              return  state['x']
+          else:
+              return None
+      
+      # coner case
+      cornerCase = (2**h) - 1
+      if cornerCase in q:
+          p[q.index(cornerCase)] = -1
+          state['counter'] = state['counter'] - 1
+      postOrderTraversal(h)
+
+      return p
+
+
+
+
+  h = 3
+  q = [7, 3, 5, 1]
+  print answer( h, q )
+
+
+  h2 = 5
+  q2 = [19, 14, 28, 8]
+  print(answer(h2, q2))
+</code></pre>
+</div>
+
+<p>Python</p>
+
 <div class="highlighter-rouge"><pre class="highlight"><code>def answer(h, q):
     p = [None] * len(q)
     
@@ -194,6 +251,178 @@ q2 = [19, 14, 28, 8]
 print(answer(h2, q2))
 </code></pre>
 </div>
+
+<h1 id="lovely-lucky-lambs">Lovely Lucky LAMBs</h1>
+
+<p>Being a henchman isn’t all drudgery. Occasionally, when Commander Lambda is feeling generous, she’ll hand out Lucky LAMBs (Lambda’s All-purpose Money Bucks). Henchmen can use Lucky LAMBs to buy things like a second pair of socks, a pillow for their bunks, or even a third daily meal!</p>
+
+<p>However, actually passing out LAMBs isn’t easy. Each henchman squad has a strict seniority ranking which must be respected - or else the henchmen will revolt and you’ll all get demoted back to minions again!</p>
+
+<p>There are 4 key rules which you must follow in order to avoid a revolt:
+    1. The most junior henchman (with the least seniority) gets exactly 1 LAMB.  (There will always be at least 1 henchman on a team.)
+    2. A henchman will revolt if the person who ranks immediately above them gets more than double the number of LAMBs they do.
+    3. A henchman will revolt if the amount of LAMBs given to their next two subordinates combined is more than the number of LAMBs they get.  (Note that the two most junior henchmen won’t have two subordinates, so this rule doesn’t apply to them.  The 2nd most junior henchman would require at least as many LAMBs as the most junior henchman.)
+    4. You can always find more henchmen to pay - the Commander has plenty of employees.  If there are enough LAMBs left over such that another henchman could be added as the most senior while obeying the other rules, you must always add and pay that henchman.</p>
+
+<p>Note that you may not be able to hand out all the LAMBs. A single LAMB cannot be subdivided. That is, all henchmen must get a positive integer number of LAMBs.</p>
+
+<p>Write a function called answer(total_lambs), where total_lambs is the integer number of LAMBs in the handout you are trying to divide. It should return an integer which represents the difference between the minimum and maximum number of henchmen who can share the LAMBs (that is, being as generous as possible to those you pay and as stingy as possible, respectively) while still obeying all of the above rules to avoid a revolt.  For instance, if you had 10 LAMBs and were as generous as possible, you could only pay 3 henchmen (1, 2, and 4 LAMBs, in order of ascending seniority), whereas if you were as stingy as possible, you could pay 4 henchmen (1, 1, 2, and 3 LAMBs). Therefore, answer(10) should return 4-3 = 1.</p>
+
+<p>To keep things interesting, Commander Lambda varies the sizes of the Lucky LAMB payouts: you can expect total_lambs to always be between 10 and 1 billion (10 ^ 9).</p>
+
+<h1 id="test-cases-1">Test cases</h1>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Inputs:
+    (int) total_lambs = 10
+Output:
+    (int) 1
+
+Inputs:
+    (int) total_lambs = 143
+Output:
+    (int) 3
+</code></pre>
+</div>
+
+<p>JavaScript:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function generous(total_lambs) {
+  let rank = 1;
+  let counter = 0;
+  for(; total_lambs &gt; 0; ) {
+    total_lambs -= rank;
+    rank *= 2;
+    
+    if(total_lambs &gt;= 0)
+      counter++;
+  }
+  return counter;
+}
+
+
+function stingy(total_lambs){
+  let rank = [0, 1];
+  let twoJuniors = 1;
+  let counter = 0;
+  for(; total_lambs &gt; 0;) {
+    let totalRank = rank[0] + rank[1];
+    total_lambs -= totalRank;
+    
+    if(twoJuniors &lt; 2) {
+      twoJuniors++;
+    } else {
+      rank[0] = rank[1];
+      rank[1] = totalRank;
+    }
+    
+    if(total_lambs &gt;= 0)
+      counter++;
+  }
+  
+  return counter;
+}
+
+let total = 143;
+
+let x = Math.abs(generous(total) - stingy(total));
+console.log(x);
+</code></pre>
+</div>
+
+<p>Python</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>def answer(total_lambs):
+    def generous(total_lambs):
+        rank = 1
+        counter = 0
+        while(total_lambs &gt; 0):
+            total_lambs -= rank
+            rank *= 2
+            if(total_lambs &gt;= 0):
+                counter += 1
+        return counter
+
+
+    def stingy(total_lambs):
+        rank = [0, 1]
+        twoJuniors = 1
+        counter = 0
+        while(total_lambs &gt; 0):
+            totalRank = rank[0] + rank[1]
+            total_lambs -= totalRank
+
+            if(twoJuniors &lt; 2):
+                twoJuniors += 1
+            else:
+                rank[0] = rank[1]
+                rank[1] = totalRank
+            if(total_lambs &gt;= 0):
+                counter += 1
+        return counter
+
+
+    return abs(generous(total_lambs) - stingy(total_lambs))
+
+total_lambs = 143
+print answer(total_lambs)
+</code></pre>
+</div>
+
+<h1 id="fuel-injection-perfection">Fuel Injection Perfection</h1>
+
+<p>Commander Lambda has asked for your help to refine the automatic quantum antimatter fuel injection system for her LAMBCHOP doomsday device. It’s a great chance for you to get a closer look at the LAMBCHOP - and maybe sneak in a bit of sabotage while you’re at it - so you took the job gladly.</p>
+
+<p>Quantum antimatter fuel comes in small pellets, which is convenient since the many moving parts of the LAMBCHOP each need to be fed fuel one pellet at a time. However, minions dump pellets in bulk into the fuel intake. You need to figure out the most efficient way to sort and shift the pellets down to a single pellet at a time.</p>
+
+<p>The fuel control mechanisms have three operations:</p>
+
+<p>1) Add one fuel pellet
+2) Remove one fuel pellet
+3) Divide the entire group of fuel pellets by 2 (due to the destructive energy released when a quantum antimatter pellet is cut in half, the safety controls will only allow this to happen if there is an even number of pellets)</p>
+
+<p>Write a function called answer(n) which takes a positive integer as a string and returns the minimum number of operations needed to transform the number of pellets to 1. The fuel intake control panel can only display a number up to 309 digits long, so there won’t ever be more pellets than you can express in that many digits.</p>
+
+<p>For example:</p>
+
+<ul>
+  <li>answer(4) returns 2: 4 -&gt; 2 -&gt; 1</li>
+  <li>
+    <p>answer(15) returns 5: 15 -&gt; 16 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>def answer(n):
+    counter = 0
+    num = long(n)
+    while(num &gt; 1):
+        if num % 2 == 0:
+            num = num / 2
+        elif num == 3 or num % 4 == 1:
+            num -= 1
+        elif num % 4 == 3 :
+            num += 1
+        else:
+            print 'ruh roh'
+            break
+        counter += 1
+    return counter
+
+
+
+
+print "Input: 1. Expected: 0. Actual Answer: ", answer('1')
+print "Input: 2. Expected: 1. Actual Answer: ", answer('2')
+print "Input: 4. Expected: 2. Actual Answer: ", answer('4')
+print "Input: 15. Expected: 5. Actual Answer: ", answer('15')
+print "Input: 17. Expected: 5. Actual Answer: ", answer('17')
+print "Input: 18. Expected: 6 or less. Actual Answer: ", answer('18')
+print "Input: 12. Expected: 7 or less. Actual Answer: ", answer('12')
+print "Input: 1024. Expected: 10 or less. Actual Answer: ", answer('1024')
+print "Input: 1536. Expected: 11 or less. Actual Answer: ", answer('1536')
+print "Input: 1048576. Expected: 20. Actual Answer: ", answer('1048576')
+print "Input: 18446744073709551615. Expected: 64. Actual Answer: ", answer('18446744073709551616')
+</code></pre>
+    </div>
+  </li>
+</ul>
 
 
   </div>

@@ -2,7 +2,7 @@
 layout: post
 title:  "Design: Typography"
 date:   2014-07-10 14:43:59
-categories: craft
+categories: [Web Development]
 ---
 
 ## Style Guide
@@ -11,7 +11,7 @@ be used throughout your application.  An example is shown below.  Putting this
 guide beforehand will avoid any inconsistency and create a better overall 
 design/user-experience.
 
-![](http://i.imgur.com/ZLXQtur.png)
+<img src="/assets/webdev_typo1.jpg"  width=""/>
 
 
 ---
@@ -35,10 +35,12 @@ type in this Serif Classification are:
 * Modern -- arts and culture
 * Egyptian -- marketing and promotional
 
-![](http://i.imgur.com/Zs5zo2S.jpg)
-![](http://i.imgur.com/y2oLzyq.jpg)
-![](http://i.imgur.com/vF8inNJ.jpg)
-![](http://i.imgur.com/xYv4Sbh.jpg)
+<img src="/assets/webdev_serif_humanist.jpg"  width=""/>
+<img src="/assets/webdev_serif_transitional.jpg"  width=""/>
+<img src="/assets/webdev_serif_modern.jpg"  width=""/>
+<img src="/assets/webdev_serif_egyptian.jpg"  width=""/>
+
+
 
 ### Sans Serif Font
 
@@ -46,9 +48,11 @@ type in this Serif Classification are:
 * Transitional Sans -- technology or transportation
 * Geometric Sans -- science or architecture
 
-![](http://i.imgur.com/ZbM9mpq.jpg)
-![](http://i.imgur.com/LhxJsqI.jpg)
-![](http://i.imgur.com/MzJ38Os.jpg)
+
+<img src="/assets/webdev_sans_humanist.jpg"  width=""/>
+<img src="/assets/webdev_sans_transitional.jpg"  width=""/>
+<img src="/assets/webdev_sans_geometric.jpg"  width=""/>
+
 
 
 ### Script Font

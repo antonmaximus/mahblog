@@ -912,7 +912,7 @@ Pass in data to start
     _.template("<span><%= description %></span" +
       "<em><%= assigned_to %></em>")
 
-{{mustache template}}: 
+\{\{mustache template}}: 
 
     Mustache.compile("<span>{{ description }}</span" +
       "<em>{{ assigned_to }}</em>")

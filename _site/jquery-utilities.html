@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>jQuery Utilities</title>
-  <meta name="description" content="4.1 $.each and Templating">
+  <meta name="description" content="###4.1 $.each and Templating">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/custom.css">
-  <link rel="canonical" href="www.anton23.com/jquery-utilities">
-  <link rel="alternate" type="application/rss+xml" title="anton" href="www.anton23.com/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/jquery-utilities">
+  <link rel="alternate" type="application/rss+xml" title="anton" href="http://localhost:4000/feed.xml">
 </head>
 
 
@@ -40,6 +40,10 @@
           
         
           
+          <a class="page-link" href="/categories/">Categories</a>
+          
+        
+          
         
           
         
@@ -63,7 +67,7 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h3 id="each-and-templating">4.1 $.each and Templating</h3>
+    <p>###4.1 $.each and Templating</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
@@ -118,7 +122,7 @@
 </code></pre>
 </div>
 
-<h3 id="say-hello-to-handlebars">4.2 Say Hello to Handlebars</h3>
+<p>###4.2 Say Hello to Handlebars</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;head&gt;</span>
@@ -141,10 +145,10 @@
         <span class="o">&lt;</span><span class="nx">h5</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">quote</span><span class="p">}}</span><span class="o">&lt;</span><span class="sr">/h5</span><span class="err">&gt;
 </span>      <span class="p">{{</span><span class="k">else</span><span class="p">}}</span>
         <span class="o">&lt;</span><span class="nx">h5</span><span class="o">&gt;</span><span class="nx">Author</span> <span class="nx">does</span> <span class="nx">not</span> <span class="nx">have</span> <span class="nx">a</span> <span class="nx">quote</span><span class="p">.</span><span class="o">&lt;</span><span class="sr">/h5</span><span class="err">&gt;
-</span>      <span class="p">{{</span><span class="sr">/if}</span><span class="err">}
-</span>    <span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
-</span>    <span class="p">{{</span><span class="sr">/each}</span><span class="err">}
-</span>  <span class="nt">&lt;/script&gt;</span>
+</span>      <span class="p">{{</span><span class="o">/</span><span class="k">if</span><span class="p">}}</span>
+    <span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>    <span class="p">{{</span><span class="o">/</span><span class="nx">each</span><span class="p">}}</span>
+  <span class="nt">&lt;/script&gt;</span>
 <span class="nt">&lt;/ul&gt;</span>
 
 
@@ -184,7 +188,7 @@
 </code></pre>
 </div>
 
-<h3 id="the-twitter-api">4.3 The Twitter API</h3>
+<p>###4.3 The Twitter API</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;head&gt;</span>
@@ -207,8 +211,8 @@
       <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"{{thumb}}"</span> <span class="nx">alt</span><span class="o">=</span><span class="s2">"{{author}}"</span><span class="o">&gt;</span>
       <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">"{{url}}"</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">tweet</span><span class="p">}}</span><span class="o">&lt;</span><span class="sr">/a&gt;&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
-</span>    <span class="p">{{</span><span class="sr">/each}</span><span class="err">}
-</span>  <span class="nt">&lt;/script&gt;</span>   
+</span>    <span class="p">{{</span><span class="o">/</span><span class="nx">each</span><span class="p">}}</span>
+  <span class="nt">&lt;/script&gt;</span>   
 <span class="nt">&lt;/ul&gt;</span>
 
 
@@ -271,7 +275,7 @@
 </code></pre>
 </div>
 
-<h3 id="filtering-with-jquerygrep">4.4 Filtering with jQuery.grep</h3>
+<p>###4.4 Filtering with jQuery.grep</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;head&gt;</span>

@@ -2,7 +2,7 @@
 layout: post
 title:  "Design: Color"
 date:   2014-07-11 14:43:58
-categories: craft
+categories: [Web Development]
 ---
 
 ## Color Theory 101:
@@ -23,7 +23,8 @@ the most vibrant color.  (Lightness's maximum value is white.)
 ## Color Scheme
 It's a collection of 4-5 colors built into the style guide.
 
-![](http://i.imgur.com/81q88zc.png)
+
+<img src="/assets/webdev_color1.jpg"  width=""/>
 
 Steps in Building a Color Scheme:
 
@@ -41,9 +42,12 @@ Steps in Building a Color Scheme:
 2. Keep culture in mind when choosing a base color.
 3. Build Scheme around base color.
 
-![w500](http://i.imgur.com/NM1JoMf.png)
-![w500](http://i.imgur.com/qsGyiAG.png)
-![w500](http://i.imgur.com/RepXI6G.png)
+
+<img src="/assets/webdev_color_monochromatic.jpg"  width=""/>
+<img src="/assets/webdev_color_analogous.jpg"  width=""/>
+<img src="/assets/webdev_color_complementary.jpg"  width=""/>
+
+
 
 ---
 
@@ -62,7 +66,8 @@ Saturation, or Brightness. The left part of the image below shows a contrast of
 Hue only; the right part shows a contrast of Hue & Brightness. WCAG determines the the standard for contrasts.  It stands for Web Content 
 Accessibility Guidelines.
 
-![](http://i.imgur.com/gMRWgSh.png)
+
+<img src="/assets/webdev_color_contrast.jpg"  width=""/>
 
 
 
@@ -73,7 +78,8 @@ Accessibility Guidelines.
 Some contrasts are intrinsically difficult for humans to distinguish (and 
 are plain ugly too).
 
-![](http://i.imgur.com/QmBHemf.png)
+<img src="/assets/webdev_color_ugly.jpg"  width=""/>
+
 
 
 ### Natural Values
@@ -83,16 +89,18 @@ yellow is darker than the blue creates an awkward user-experience.  However,
 this can be fixed by adjusting the lightness to make yellow be lighter and blue 
 darker -- so as to correspond with the natural values.
 
-![](http://i.imgur.com/9SAMo1W.png)
+<img src="/assets/webdev_color_natural.jpg"  width=""/>
 
 
 ### Warm & Cold Colors
 Red, orange, & yellow side are warm.  Green, blue, and purple are on the cooler side.
 Use warm & cold to create depth.  Warm is always closer, and cold is in the back.
 
-![](http://i.imgur.com/GdjR4nf.png)
+<img src="/assets/webdev_color_warmcool1.jpg"  width=""/>
 
-![](http://i.imgur.com/jpd33E4.png)
+
+
+<img src="/assets/webdev_color_warmcool2.jpg"  width=""/>
 
 
 
@@ -100,7 +108,7 @@ Use warm & cold to create depth.  Warm is always closer, and cold is in the back
 Combine colors to reinforce a hierarchy.  Use color differences to contribute 
 to relationships between elements on the page.
 
-![](http://i.imgur.com/XqQ2sZF.png)
+<img src="/assets/webdev_color_hierarchy.jpg"  width=""/>
 
 
 ### Types and Images
@@ -115,4 +123,4 @@ Below is a good example of color combination that was used on Code School's site
 A combination of analogous, complementary colors with high enough contrast for 
 text colors and backgrounds.
 
-![](http://i.imgur.com/UN2it1x.png)
+<img src="/assets/webdev_color_combination.jpg"  width=""/>

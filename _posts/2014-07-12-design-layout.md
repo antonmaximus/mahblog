@@ -2,8 +2,10 @@
 layout: post
 title:  "Design: Layout"
 date:   2014-07-12 14:43:58
-categories: craft
+categories: [Web Development]
 ---
+
+HEEREREE
 
 ## Visual Hierarchy
 Arrange elements to engage and direct the users eye.

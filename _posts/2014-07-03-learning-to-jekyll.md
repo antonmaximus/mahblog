@@ -2,7 +2,7 @@
 layout: post
 title:  "Learning to Jekyll!"
 date:   2014-07-03 14:42:59
-categories: craft
+categories: Programming
 ---
 
 

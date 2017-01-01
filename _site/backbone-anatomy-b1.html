@@ -11,8 +11,8 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/custom.css">
-  <link rel="canonical" href="www.anton23.com/backbone-anatomy-b1">
-  <link rel="alternate" type="application/rss+xml" title="anton" href="www.anton23.com/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/backbone-anatomy-b1">
+  <link rel="alternate" type="application/rss+xml" title="anton" href="http://localhost:4000/feed.xml">
 </head>
 
 
@@ -40,6 +40,10 @@
           
         
           
+          <a class="page-link" href="/categories/">Categories</a>
+          
+        
+          
         
           
         
@@ -63,7 +67,7 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h2 id="more-models">1. More Models</h2>
+    <h2 id="1-more-models">1. More Models</h2>
 
 <h3 id="parsing-non-standard-json-into-your-models">Parsing non-standard JSON into your Models</h3>
 
@@ -161,7 +165,7 @@ return response.todo; }
 </code></pre>
 </div>
 
-<h2 id="customizing-collections">2. Customizing Collections</h2>
+<h2 id="2-customizing-collections">2. Customizing Collections</h2>
 
 <h3 id="review-fetching-data-from-the-server">Review Fetching Data from the Server</h3>
 
@@ -366,7 +370,7 @@ todoItems.completedCount(); // This returns 1
 </code></pre>
 </div>
 
-<h2 id="real-routes">3. Real Routes</h2>
+<h2 id="3-real-routes">3. Real Routes</h2>
 
 <h3 id="optional-routes">Optional Routes</h3>
 
@@ -487,7 +491,7 @@ TodoRouter.navigate('search/Hello%20World/p2', {trigger: true})  // ==&gt; "Hell
 </code></pre>
 </div>
 
-<h2 id="varying-views">4. Varying Views</h2>
+<h2 id="4-varying-views">4. Varying Views</h2>
 
 <h3 id="view-initialization-options-review">View Initialization Options Review</h3>
 
@@ -657,7 +661,7 @@ because Model still holds reference to the view.</p>
 </code></pre>
 </div>
 
-<h2 id="working-with-forms">5. Working with Forms</h2>
+<h2 id="5-working-with-forms">5. Working with Forms</h2>
 
 <h3 id="the-plain-no-backbone-way">The Plain (no Backbone) Way</h3>
 
@@ -850,7 +854,7 @@ var TodoApp = new (Backbone.Router.extend({
 </code></pre>
 </div>
 
-<h2 id="app-organization">6. App Organization</h2>
+<h2 id="6-app-organization">6. App Organization</h2>
 
 <h3 id="class-naming">Class Naming</h3>
 
@@ -1090,7 +1094,7 @@ boostrapping the HTML data which will be called on <code class="highlighter-roug
 </code></pre>
 </div>
 
-<h2 id="customizing-backbone">7. Customizing Backbone</h2>
+<h2 id="7-customizing-backbone">7. Customizing Backbone</h2>
 
 <h3 id="using-other-templates">Using Other Templates</h3>
 
@@ -1101,7 +1105,7 @@ boostrapping the HTML data which will be called on <code class="highlighter-roug
 </code></pre>
 </div>
 
-<p>:</p>
+<p>{{mustache template}}:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>Mustache.compile("&lt;span&gt;&lt;/span" +
   "&lt;em&gt;&lt;/em&gt;")

@@ -2,7 +2,7 @@
 layout: post
 title:  "Front-end Formations"
 date:   2014-07-05 14:42:59
-categories: craft
+categories: [Web Development]
 ---
 
 ### New HTML5 elements...

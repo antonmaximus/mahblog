@@ -2,7 +2,7 @@
 layout: post
 title:  "Design Fundamentals"
 date:   2014-07-09 14:43:58
-categories: craft
+categories: [Web Development]
 ---
 
 ## Design Theory 101:

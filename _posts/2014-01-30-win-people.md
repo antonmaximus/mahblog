@@ -2,10 +2,11 @@
 layout: post
 title:  "How to Win People to Your Way of Thinking"
 date:   2014-01-30 14:43:59
-categories: interact
+categories: Interact
 ---
 
-![drawing-small](http://i.imgur.com/FfUJnSl.jpg)
+
+<img src="/assets/knight.jpg" style="display: block; margin: auto;" width=""/>
 
 
 
@@ -21,7 +22,16 @@ tell anyone, "You're wrong."**  This is the sure fire way to avoid making enemie
 Trying to enlighten someone? There's magic, positive magic, in such phrases as: "I may be wrong. I frequently am. Let's examine the facts."  This increases the probability in your favor.
 
 
-    "I made it a rule," said Franklin, "to forbear all direct contradiction to  the sentiment of others, and all positive assertion of my own, I even forbade myself the use of every word or expression in the language that imported a fix'd opinion, such as 'certainly,' 'undoubtedly,' etc., and I adopted, instead of them, 'I conceive,' 'I apprehend, ' or 'I imagine' a thing to be so or so, or 'it so appears to me at present.' When another asserted something that I thought an error, I deny'd myself the pleasure of contradicting him abruptly...
+    "I made it a rule," said Franklin, 
+    "to forbear all direct contradiction to  the sentiment of others, 
+    and all positive assertion of my own, 
+    I even forbade myself the use of every word 
+    or expression in the language that imported a fix'd opinion, 
+    such as 'certainly,' 'undoubtedly,' etc., 
+    and I adopted, instead of them, 'I conceive,' 'I apprehend, ' or 'I imagine' 
+    a thing to be so or so, or 'it so appears to me at present.' 
+    When another asserted something that I thought an error, 
+    I deny'd myself the pleasure of contradicting him abruptly...
 
 
 **3. If you're wrong, admit it quickly and emphatically."** Remember the old proverb: *"By fighting you never get enough, but by yielding you get more than you expected."*
@@ -49,7 +59,11 @@ Trying to enlighten someone? There's magic, positive magic, in such phrases as: 
 
 *“The way to get things done,”* say Schwab, *“is to stimulate competition. I do not mean in a sordid, money-getting way, but in the desire to excel.”*
 
-    That is what every successful person loves: the game. The chance for self-expression. The chance to prove his or her worth, to excel, to win. That is what makes foot races and hog-calling and pie-eating contests. The desire to excel. The desire for a feeling of importance.
+    That is what every successful person loves: the game. 
+    The chance for self-expression. 
+    The chance to prove his or her worth, to excel, to win. 
+    That is what makes foot races and hog-calling and pie-eating contests. 
+    The desire to excel. The desire for a feeling of importance.
     
 
 

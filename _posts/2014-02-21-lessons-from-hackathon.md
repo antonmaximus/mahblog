@@ -2,7 +2,7 @@
 layout: post
 title:  "Lessons learned from a Hackathon"
 date:   2014-02-21 14:43:59
-categories: craft
+categories: Programming Interact Life
 ---
 
 I attended a [UX Design Hackathon](https://www.eventbrite.com/e/redesign-a-ux-design-hackathon-tickets-10500873395) this past Sunday in Santa Monica.  A few takeaways from my observation... 
@@ -11,8 +11,11 @@ I attended a [UX Design Hackathon](https://www.eventbrite.com/e/redesign-a-ux-de
 
 **A five-hour UX design Hackathon is not enough time.**  It seemed that everyone was gung-ho about delivering a product.  Each group picked a team meber from each background (e.g., programming, design, UX/UI, etc.) to ensure that all kinds of tasks would get covered -- not a bad idea if you ask me.  However, at the end of the day, no one was able to deliver a finished product and all final presentations were PowerPoint slides of theoretical solutions.  It seemed that picking a team member based on skillset wasn't useful for that five-hour task.  I wonder how the experienced would have been if teams picked their members based on some other criteria.
 
-**Make it more personal.**  According to the [science of persuasion](http://www.youtube.com/watch?v=cFdCzN7RYbw), exchanging personal information and identifying similarities before tackling business leads to 90% more agreeable outcomes. My next goal is to make a conscious decision to start  group work like this.
+**Make it more personal.**  According to the science of persuasion (video below), exchanging personal information and identifying similarities before tackling business leads to 90% more agreeable outcomes. My next goal is to make a conscious decision to start  group work like this.
 
 
 The hackathon was definitely a good way to spend the day.  It made me think about the Psychology of team dynamics and product delivery.  I'll definitely tweak a few things on my approach the next time I do it.
 
+
+
+<iframe style="margin: auto; display: block;" width="560" height="315"  allowfullscreen="" class="youtube-player" src="//www.youtube.com/embed/cFdCzN7RYbw?wmode=transparent&amp;amp;autoplay=0&amp;amp;rel=0&amp;amp;showinfo=0&amp;amp;autohide=1&amp;amp;color=white&amp;amp;" type="text/html"></iframe>

@@ -2,10 +2,10 @@
 layout: post
 title:  "Be a Leader: How to Change People without Arousing Resentment"
 date:   2014-01-31 14:43:59
-categories: interact
+categories: Interact
 ---
 
-![drawing-small](http://i.imgur.com/7X70A2c.jpg)
+<img src="/assets/wolf.jpg" style="display: block; margin: auto;" width=""/>
 
 
 In Dale Carnegie's *"How to Win Friends and Influence People,"* he noted ways on influencing people. To me these points can be summarized into: creating a friendly atmosphere, nourishing the other person's self-esteem, and instilling fire.
@@ -25,7 +25,12 @@ In Dale Carnegie's *"How to Win Friends and Influence People,"* he noted ways on
 
 **6. To Spur People into Success: Praise the slightest improvement and praise every improvement.**  Be 'hearty in your approbation and lavish in your praise.'  Animal trainers have been using this technique for ages.  
 
-      "Use of praise instead of criticism is the basic concept of B. F. Skinner’s teachings. This great contemporary psychologist has shown by experiments with animals and with humans that when criticism is minimized and praise emphasized, the good things people do will be reinforced and the poorer things will atrophy for lack of attention."
+      "Use of praise instead of criticism is the basic concept of 
+      B.F. Skinner’s teachings. 
+      This great contemporary psychologist has shown by experiments with animals 
+      and with humans that when criticism is minimized and praise emphasized, 
+      the good things people do will be reinforced 
+      and the poorer things will atrophy for lack of attention."
 
 **7. Give the other person a fine reputation to live up to.**  This becomes an exciting challenge to live up to for anyone.  
 

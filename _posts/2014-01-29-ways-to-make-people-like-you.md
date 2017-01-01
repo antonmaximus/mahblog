@@ -2,13 +2,13 @@
 layout: post
 title:  "Ways to Make People Like You"
 date:   2014-01-29 14:43:59
-categories: interact
+categories: Interact
 ---
 
-![drawing-small](http://i.imgur.com/4XZxFdh.png)
+<img src="/assets/dog.jpg"  style="display: block; margin: auto;" width=""/>
 
 
-In Dale Carnegie's *"How to Win Friends and Influence People,"* Carnegie provided 3 principles on ways to make people like you.
+In Dale Carnegie's *"How to Win Friends and Influence People,"* Carnegie provided 6 ways to make people to like you.
 
 
 **1. Become genuinely interested in other people.**  *"Do this and you'll be welcomed anywhere."*  
@@ -17,7 +17,10 @@ When dealing with others, be interested in them as a dog would be interested in 
 
 If we merely try to impress people and get people interested in us, we will never have many true, sincere friends. Friends, real friends, are not made that way.  Alfred Adler, the famous Viennese psychologist, wrote in his book: 
 
-    It is the individual who is not interested in his fellow men who has the greatest difficulties in life and provides the greatest injury to others. It is from among such individuals that all human failures spring.
+    It is the individual who is not interested in his fellow men 
+    who has the greatest difficulties in life 
+    and provides the greatest injury to others. 
+    It is from among such individuals that all human failures spring.
     
     
 And be grateful.  A magician once said, “I am grateful because these people come to see me, They make it possible for me to make my living in a very agreeable way. I’m going to give them the very best I possibly can."  A show of interest, as with every other principle of human relations, must be sincere.

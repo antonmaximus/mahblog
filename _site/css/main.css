@@ -1,3 +1,6 @@
+/* Colors 
+ * Based on colors from Base16: http://chriskempson.github.io/base16/#default.
+ */
 /**
  * Reset some basic elements
  */
@@ -455,3 +458,41 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+.post-tag {
+  margin: .2em .3em;
+  display: inline-block;
+  background: rgba(106, 159, 181, 0.15);
+  padding: 0 .5rem;
+  border-radius: 4px;
+  box-sizing: border-box; }
+  .post-tag:hover {
+    text-decoration: none;
+    background: #6a9fb5;
+    color: #fff; }
+
+.tags-expo :target:before {
+  content: "";
+  display: block; }
+@media (min-width: 38em) {
+  .tags-expo .tags-expo-list {
+    font-size: 0.9rem; }
+    .tags-expo .tags-expo-list .post-tag {
+      margin: .2em .3em; } }
+.tags-expo .tags-expo-section h2 {
+  margin-bottom: 0;
+  font-size: 24px; }
+.tags-expo .tags-expo-section ul {
+  padding: 0;
+  list-style: none;
+  margin-top: 0;
+  margin-left: 15px; }
+  .tags-expo .tags-expo-section ul li {
+    font-size: 24px;
+    line-height: 1.33; }
+.tags-expo .tags-expo-section .post-date {
+  display: inline-block;
+  font-size: 14px;
+  color: #9a9a9a;
+  margin: 0;
+  padding: 0; }

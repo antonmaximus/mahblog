@@ -2,7 +2,7 @@
 layout: post
 title:  "CSS Cross Country"
 date:   2014-07-07 14:42:59
-categories: craft
+categories: [Web Development]
 ---
 
 ### Primary DOM Selectors
@@ -58,7 +58,9 @@ Priority of a Selector follows this order: **A, B, C, D, E**
 Happens when the margins of two block elements collapse to the larger one
 instead of adding the two. [Source.][w3c]
 
-![](http://i.imgur.com/KXipDH8.png)
+<img src="/assets/webdev_margin.jpg" width=""/>
+
+
 
 Collapsing margins will not occur when one or more block element has:
 

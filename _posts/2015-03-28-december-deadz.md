@@ -2,7 +2,7 @@
 layout: post
 title:  "December Deadz"
 date:   2015-03-28 14:00:00
-categories: Sports
+categories: Training
 ---
 
 

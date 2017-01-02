@@ -2,7 +2,7 @@
 layout: post
 title:  "September Squatz 2"
 date:   2014-09-30 14:40:58
-categories: Sports
+categories: Training
 ---
 
 

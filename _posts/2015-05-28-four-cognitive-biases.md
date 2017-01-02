@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "How To Improve Daily Decision Making by Avoiding 4 Cognitive Biases"
-date:   2015-05-28 14:00:00
-categories: meditate
+title:  "Improve Daily Decision Making by Avoiding 4 Cognitive Biases"
+date:   2015-05-28 14:00:00  -0800
+categories: [Life, Mental Health]
 ---
 
 

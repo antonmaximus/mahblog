@@ -2,11 +2,11 @@
 layout: post
 title:  "jQuery Effects"
 date:   2014-10-06 14:43:58
-categories: craft
+categories: [Web Development]
 ---
 
 
-###3.1 Slides and Structure
+### 3.1 Slides and Structure
 
 {% raw %}
     <html>
@@ -174,7 +174,7 @@ categories: craft
 
 
 
-###3.2 The `this` Keyword
+### 3.2 The `this` Keyword
 {% raw %}
     <html>
     <head>
@@ -214,7 +214,7 @@ categories: craft
 
 
 
-###3.3 Modifying Effect Speeds (and utilizing jQuery.extend)
+### 3.3 Modifying Effect Speeds (and utilizing jQuery.extend)
 {% raw %}
     <html>
     <head>
@@ -282,7 +282,7 @@ categories: craft
 
 
 
-###3.4 Creating Custom Effect Methods
+### 3.4 Creating Custom Effect Methods
 {% raw %}
     <html>
     <head>
@@ -345,12 +345,12 @@ categories: craft
 
 
 
-###3.5 Full Control With Animate
+### 3.5 Full Control With Animate
 No code for this one.
 
 
 
-###3.6 Homework Solutions
+### 3.6 Homework Solutions
 {% raw %}
     <html>
     <head>
@@ -414,7 +414,7 @@ No code for this one.
 
 
 
-###3.7 The Obligatory Slider (First Attempt)
+### 3.7 The Obligatory Slider (First Attempt)
 
 index.html
 {% raw %}
@@ -536,7 +536,7 @@ slider.js
 
 
 
-###3.8 Prototypal Inheritance and Refactoring the Slider
+### 3.8 Prototypal Inheritance and Refactoring the Slider
 
 index.html
 {% raw %}
@@ -650,7 +650,7 @@ index.html
 {% endraw %}
 
 
-###3.9 Your Questions Answered
+### 3.9 Your Questions Answered
 No code for this one.
 ---
 

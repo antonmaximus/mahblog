@@ -2,11 +2,11 @@
 layout: post
 title:  "jQuery AJAX"
 date:   2014-10-09 14:44:58
-categories: craft
+categories: [Web Development]
 ---
 
 
-###6.1 Loading Pages Asynchronously
+### 6.1 Loading Pages Asynchronously
 index.html
 {% raw %}
     <!doctype html>
@@ -101,7 +101,7 @@ contact.html
 
 
 
-###6.2 Interacting with the Server-Side
+### 6.2 Interacting with the Server-Side
 index.html
 {% raw %}
     <html>
@@ -168,13 +168,13 @@ load.php
 {% endraw %}
 
 
-###6.3 
+### 6.3 
 index.html
 
 {% raw %}
 {% endraw %}
 
-###6.5 Deferreds
+### 6.5 Deferreds
 {% raw %}
     <html>
     <head>

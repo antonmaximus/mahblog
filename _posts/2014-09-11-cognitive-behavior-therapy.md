@@ -2,12 +2,12 @@
 layout: post
 title:  "Cognitive Behavior Therapy"
 date:   2014-09-11 14:43:58
-categories: life
+categories: [Mental Health]
 ---
 
-##Feelings
+## Feelings
 
-####Why do you feel the way you do?  
+#### Why do you feel the way you do?  
 
 According to Cognitive Behaviour Therapy, people feel emotionally bad for three reasons:
 
@@ -20,8 +20,8 @@ If this is true, this might also mean that happy people feel happy for the follo
 * They have a positive view of themselves as people;
 * They interpret experiences in a positive and unbiased (or even positively biased) way; and
 * They have a positive view of the future, they expect everything to continue the way it is.
-
-####Identifying Negative Thoughts in People.  
+ 
+#### Identifying Negative Thoughts in People.  
 
 Do they...
 
@@ -36,7 +36,7 @@ Do they...
 Most depressed or anxious people do not like feeling unhappy, depressed or anxious. However, having a negative view of oneself, of the situation and of the future can become a habit. Depression or vulnerability to depression may come from too many years of holding wrong views of oneself as weak or unlovable, thinking in negative or biased ways, and knowing (or thinking one knows) that problems will continue in the future.
 
 
-####Am I to blame if I feel bad?
+#### Am I to blame if I feel bad?
 
 No, not at all! Many factors contribute to feeling depressed and anxious. It is suggested that you might be able to protect yourself from some of these feelings by taking positive action to improve your thinking patterns and thereby changing your life.
 
@@ -66,7 +66,7 @@ Anger is often only displayed where the person feels in a powerful position or a
 
 ----
 
-##Thoughts
+## Thoughts
 
 #### David Burns’ Warped Thoughts 
 

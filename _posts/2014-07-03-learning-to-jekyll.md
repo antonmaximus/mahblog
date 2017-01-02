@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Learning to Jekyll!"
+title:  Saving Moolah With Jekyll
 date:   2014-07-03 14:42:59
-categories: Programming
+categories: Career
 ---
 
 

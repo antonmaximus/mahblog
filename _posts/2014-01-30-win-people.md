@@ -2,7 +2,7 @@
 layout: post
 title:  "How to Win People to Your Way of Thinking"
 date:   2014-01-30 14:43:59
-categories: Interact
+categories: Interaction
 ---
 
 

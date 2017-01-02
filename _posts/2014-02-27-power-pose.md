@@ -2,7 +2,7 @@
 layout: post
 title:  "Power Pose: Increasing the T in 2 Minutes"
 date:   2014-02-27 14:43:59
-categories: Life Interact
+categories: Life Interaction
 ---
 
 

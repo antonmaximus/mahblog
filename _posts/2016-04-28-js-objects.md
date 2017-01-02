@@ -2,7 +2,7 @@
 layout: post
 title:  "JavaScript Objects"
 date:   2016-04-12 00:01:00 -0800
-categories: craft
+categories: [Web Development]
 ---
 
 

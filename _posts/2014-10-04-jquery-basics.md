@@ -2,11 +2,11 @@
 layout: post
 title:  "jQuery Basics"
 date:   2014-10-04 14:43:58
-categories: craft
+categories: [Web Development]
 ---
 
 
-###1. Simple jQuery
+### 1. Simple jQuery
 
 {% raw %}
     <!doctype html>
@@ -40,7 +40,7 @@ categories: craft
 {% endraw %}
 
 
-###2. Document Ready?
+### 2. Document Ready?
 {% raw %}
     <!doctype html>
     <html>
@@ -77,7 +77,7 @@ categories: craft
 {% endraw %}
 
 
-###3. The Basics of Querying the DOM
+### 3. The Basics of Querying the DOM
 
 See [api.jquery.com](http://api.jquery.com/) for functions.
 {% raw %}
@@ -138,7 +138,7 @@ See [api.jquery.com](http://api.jquery.com/) for functions.
 
 
 
-###4. Events 101
+### 4. Events 101
 
 index.html
 {% raw %}
@@ -204,7 +204,7 @@ night.css
 
 
 
-###5. Events 201
+### 5. Events 201
 index.html
 {% raw %}
     <html>
@@ -294,7 +294,7 @@ style.css
 No info.  
 
 
-###7. Creating and Appending Content
+### 7. Creating and Appending Content
 
 {% raw %}
     <html>

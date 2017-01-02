@@ -2,7 +2,7 @@
 layout: post
 title:  "Technique 3: Make Them See the Fire!"
 date:   2014-01-28 14:43:59
-categories: Interact
+categories: Interaction
 ---
 
 

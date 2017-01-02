@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "That Beauty Salon"
+title:  "Tech Item: That Beauty Salon"
 date:   2014-10-24 14:00:00
-categories: craft
+categories: Career
 ---
 
 

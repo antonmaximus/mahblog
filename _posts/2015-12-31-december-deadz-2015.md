@@ -2,7 +2,7 @@
 layout: post
 title:  "December Deadz 2015"
 date:   2015-12-31 14:00:00 -0800
-categories: exercise
+categories: Sports
 ---
 
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Strength Training"
 date:   2014-06-01 14:43:59
-categories: Athletics
+categories: Sports
 ---
 
 

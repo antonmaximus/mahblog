@@ -2,7 +2,7 @@
 layout: post
 title:  "Optimize Web Speed: Low Effort, Big Impact"
 date:   2014-10-22 14:44:59
-categories: craft
+categories: [Web Development]
 ---
 
 
@@ -26,7 +26,7 @@ the TL;DW.
  * If you can, do sprites for images too.
 
 <figure><iframe width="480" height="360"  allowfullscreen="" class="youtube-player" src="//www.youtube.com/embed/IQKVtAMyiG0?wmode=transparent&amp;amp;autoplay=0&amp;amp;rel=0&amp;amp;showinfo=0&amp;amp;autohide=1&amp;amp;color=white&amp;amp;" type="text/html"></iframe>
-  <figcaption>2013 September Squatz (205x4)</figcaption>
+  <figcaption></figcaption>
 </figure>
 
 

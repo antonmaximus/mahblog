@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Angular</title>
-  <meta name="description" content="Why Angular?">
+  <title>Angular.js</title>
+  <meta name="description" content="Example of minimum set-up for Angular">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/custom.css">
@@ -62,53 +62,66 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Angular</h1>
-    <p class="post-meta"><time datetime="2015-05-11T07:00:00-07:00" itemprop="datePublished">May 11, 2015</time></p>
+    <h1 class="post-title" itemprop="name headline">Angular.js</h1>
+    <p class="post-meta"><time datetime="2014-09-24T07:43:58-07:00" itemprop="datePublished">Sep 24, 2014</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h2 id="why-angular">Why Angular?</h2>
+    <h2 id="example-of-minimum-set-up-for-angular">Example of minimum set-up for Angular</h2>
 
-<p>If you’re using JavaScript to create a dynamic website, Angular is a good choice.</p>
+<p>index.html.haml</p>
 
-<ul>
-  <li>Angular helps you organize your JavaScript</li>
-  <li>Angular helps create responsive (as in fast) websites</li>
-  <li><del>Angular plays well with jQuery</del></li>
-  <li>Angular is easy to test</li>
-  <li>Angular is “responsive” – only requests the information it needs (hence; no need to load an entire page)</li>
-  <li>Modern API-Driven Application – like the one being built in the code school course</li>
-</ul>
+<div class="highlighter-rouge"><pre class="highlight"><code>!!! 5
+%html{"ng-app"=&gt;"gemStore"}
+  %head
+    / $BOOTSTRAP  CSS CDN 
+    %link(rel="stylesheet"  href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
 
-<h2 id="what-is-angular-js">What is Angular JS?</h2>
+    / Stylesheets
+    = stylesheet_link_tag 'custom'
 
-<p>A client-side JavaScript Framework for adding interactivity to HTML.</p>
+  %body{"ng-controller"=&gt;"StoreController as store"}
+    .container
+      .product.row{"ng-hide" =&gt; "store.product.soldOut"}
+        %h3
+          {{store.product.name}}
+          %em.pull-right ${{store.product.price}}
+        %button{"ng-show" =&gt; "store.product.canPurchase"} Add to Cart
 
-<p><strong>Directives</strong> is used to tell our HTML when to trigger our JavaScript.  We add behavior to our HTML through Directives.  It is how we bind the behavior. (I know, I know. You get it!)</p>
 
-<p><strong>Modules</strong></p>
+    / JQUERY CDN
+    = javascript_include_tag  "//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"
 
-<ul>
-  <li>Where we write pieces of our Angular application, and keep our code encapsulated.</li>
-  <li>Makes our code more maintainable, testable, and readable.</li>
-  <li>Where we define dependencies for our app.
-<img src="http://i.imgur.com/m08hpjY.png" alt="" />
-<img src="http://i.imgur.com/oFQopox.png" alt="" /></li>
-</ul>
+    / AngularJS
+    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"
 
-<p><strong>Expressions</strong> allow you to insert dynamic values into your HTML. <code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="p">}</span><span class="err">}</span></code></p>
+    / Javascripts
+    = javascript_include_tag "app.js"
+</code></pre>
+</div>
 
-<p><strong>Controllers</strong> are where we define our app’s behavior by defining functions and values. The scope of the controller is inside the DOM element it’s attached to.
-<img src="http://i.imgur.com/QNLkJR8.png" alt="" /></p>
+<p>app.js</p>
 
-<!-- tsk -->
-<!-- Defaul Backbone `parse` just returns response, so we edit it like so...
+<div class="highlighter-rouge"><pre class="highlight"><code>(function() {
+  var app = angular.module('gemStore', []);
 
-    var TodoItem = Backbone.Model.extend({
-      parse: function(response){
-    return response.todo; }
-    });
- -->
+  app.controller('StoreController', function(){
+    this.product = gem;
+  });
+
+  var gem = {
+    name: 'Azurite',
+    price: 110.50,
+    canPurchase: true,
+    soldOut: false
+  };
+})();
+</code></pre>
+</div>
+
+<h2 id="module">Module</h2>
+
+<p><a href="https://docs.angularjs.org/guide/module">You can think of a module as a container for the different parts of your app – controllers, services, filters, directives, etc.</a></p>
 
 <hr />
 

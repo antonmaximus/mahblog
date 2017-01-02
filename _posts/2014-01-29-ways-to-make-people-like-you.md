@@ -2,7 +2,7 @@
 layout: post
 title:  "Ways to Make People Like You"
 date:   2014-01-29 14:43:59
-categories: Interact
+categories: Interaction
 ---
 
 <img src="/assets/dog.jpg"  style="display: block; margin: auto;" width=""/>

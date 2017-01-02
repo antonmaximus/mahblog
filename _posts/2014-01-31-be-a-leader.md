@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Be a Leader: How to Change People without Arousing Resentment"
+title:  "How to Change People without Arousing Resentment"
 date:   2014-01-31 14:43:59
-categories: Interact
+categories: Interaction
 ---
 
 <img src="/assets/wolf.jpg" style="display: block; margin: auto;" width=""/>

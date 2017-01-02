@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Cholesterol
-date:   2017-01-01 01:02:03
+date:   2017-01-01 01:02:03  -0800
 categories: Nutrition
 ---
 

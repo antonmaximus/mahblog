@@ -2,7 +2,7 @@
 layout: post
 title:  "Anatomy of Backbone A1"
 date:   2014-11-04 14:00:00
-categories: craft
+categories: [Web Development]
 ---
 
 
@@ -11,10 +11,10 @@ categories: craft
 
 Generating a model class and a model instance:
 
-  var TodoItem = Backbone.Model.extend({});￼
-  var todoItem = new TodoItem(
-    { description: 'Pick up milk', status: 'incomplete', id: 1 }
-  );
+    var TodoItem = Backbone.Model.extend({});￼
+    var todoItem = new TodoItem(
+      { description: 'Pick up milk', status: 'incomplete', id: 1 }
+    );
 
 
 To get, set, and save an attribute
@@ -264,8 +264,11 @@ Re-render the view (Model updates change the view)
 
 Why the 3rd argument (i.e., What is ***this***)?
 
-<img src="http://i.imgur.com/vM1T1jh.png" alt="" title="" >
-<img src="http://i.imgur.com/GpBENlX.png" alt="" title="" >
+<img src="/assets/backboneA1_a.png"  width=""/>
+
+<img src="/assets/backboneA1_b.png"  width=""/>
+
+
 
 
 Remove View on model destroy

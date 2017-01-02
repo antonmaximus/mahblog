@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Investing... Here we go again."
-date:   2014-11-16 14:00:00
-categories: investing
+date:   2014-11-16 14:00:00  -0800
+categories: [Personal Finance]
 ---
 
 
@@ -28,7 +28,7 @@ Since I've been procrastinating  reading those fun reads mentioned above, I just
 The first resource I went to was [reddit's /r/personalfinance sub](https://www.reddit.com/r/personalfinance/wiki/commontopics).
 Here's the plan of action:
 
-###1a. Emergency Fund
+### 1a. Emergency Fund
 This is typically the basic Savings Account.  It's a fund where you can easily take money from
  for the unexpecteds: job loss, appliance replacement,
 medical procedures, unexpected travel, and more.  Since it's easy to have access to
@@ -53,19 +53,19 @@ so you can take advantage of the higher interest rates that some accounts offer.
 
 
 
-###1b. Higher Education Expenses
+### 1b. Higher Education Expenses
 
 
-###2. Employer-sponsored matching funds
+### 2. Employer-sponsored matching funds
 You want to ensure you get the guaranteed free money to its full-extent.  That's all there is to it.
 
-###3. Pay down high interest debts
+### 3. Pay down high interest debts
 I've heard the rule of thumb that over 6% is **high**, under 4% is low, and between that you trust your gut.
 In context, the average inflation rate is 3%  and the average stock market return is 7%. Hence,
 by paying those high interest rates, you're ensuring yourself to not lose money by that much.
 
 
-###4. Additional savings for retirement in an IRA
+### 4. Additional savings for retirement in an IRA
 **Why contribute to an IRA? Shouldn't I go back to my 401k?** Choose IRAs, since they are opened by individuals with a provider of your choice, are generally better than 401k plans because you have more fund choices. Low cost providers like Vanguard, Fidelity, and Schwab all offer low expense ratio index funds to invest in. However, if you have an excellent 401k plan such as the U.S. Federal government's Thrift Savings Plan or work for a large company that has negotiated institutional rates for the mutual funds in their 401k plan, you may want to "Maximize contributions to employer-sponsored plan" (i.e., 401k) first and return to your IRA contribution afterwards.
 
 

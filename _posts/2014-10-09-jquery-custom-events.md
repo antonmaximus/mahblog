@@ -2,11 +2,11 @@
 layout: post
 title:  "jQuery Custom Events"
 date:   2014-10-09 14:43:58
-categories: craft
+categories: [Web Development]
 ---
 
 
-###5.1 Custom Events and the Observer Pattern
+### 5.1 Custom Events and the Observer Pattern
 index.html
 {% raw %}
     <!doctype html>

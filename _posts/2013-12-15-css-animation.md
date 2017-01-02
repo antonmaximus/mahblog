@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Pure HTML & CSS Squat Animation"
+title:  "Squat Animation Challenge"
 date:   2013-12-15 14:43:59
-categories: Programming
+categories: [Web Development, Career]
 ---
 
 

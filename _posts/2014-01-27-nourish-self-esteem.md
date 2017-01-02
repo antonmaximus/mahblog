@@ -2,7 +2,7 @@
 layout: post
 title:  "Technique 2: Nourish People's Self-esteem."
 date:   2014-01-27 14:43:59
-categories: Interact
+categories: Interaction
 ---
 
 <img src="/assets/singingbird.jpg" style="display: block; margin: auto;" width=""/>

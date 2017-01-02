@@ -2,7 +2,7 @@
 layout: post
 title:  "Jekyll Set-up"
 date:   2016-02-11 11:00:00 -0800
-categories: jekyll
+categories: [Web Development]
 ---
 
 

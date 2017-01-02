@@ -1,23 +1,25 @@
 ---
 layout: post
-title:  "Beginning Gulp"
-date:   2016-03-15 11:00:00 -0800
-categories: jekyll
+title:  "Tech Item: Interviewing 1 (Gee)"
+date:   2014-10-22 14:44:58
+categories: Career
 ---
-
 
 
 ## What Worked
 
-* You practiced courage in taking a high-stake, anxiety-inducing situation.
-* You studied for the short-term.
+* You were excited -- this made you alert and attentive.
 
 
 ## What Didn't
 
-* You weren't ready... like long-term ready.  There are things that you can review up on in the imminent term, and then there are things that could only be learned in the long-term.
-* Scheduled the talk a tad bit earlier than your normal functioning hours.
-* You didn't effuse and laugh.
+* You were too excited like a kid -- one who's looking to add a person is looking to
+solve issues and not take care of one.
+* You were not calm -- the need to be composed and interested at the same time
+* You were not prepared -- you went to the interview on a 24 hour notice and didn't spend 
+much time reading.
+* Your website didn't showcase enough of you -- add projects you've completed.
+* Being funny.
 
 
 ## Always:
@@ -52,5 +54,19 @@ still go with someone who's done it better than you did (so it may not be all yo
 
 
 
+### Looking back from a 2016 Oct POV....
+
+There was no connection. "Why?", you asked. Here's why:
+
+* You whined about that former "the guy"
+* You fabricated about that "salon"
+
+Be candid. Be associated with positive feelings/stories.
+
+
+
 
 ---
+
+
+

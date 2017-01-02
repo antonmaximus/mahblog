@@ -2,7 +2,7 @@
 layout: post
 title:  "The Daily Stretch"
 date:   2014-01-03 14:43:59
-categories: Athletics
+categories: Sports
 ---
 
 <img src="/assets/stretch.jpg" style="display: block; margin: auto;" width=""/>

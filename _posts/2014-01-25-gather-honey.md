@@ -2,7 +2,7 @@
 layout: post
 title:  "Technique 1: If you want to gather honey, keep the beehive intact."
 date:   2014-01-25 14:43:59
-categories: Interact
+categories: Interaction
 ---
 
 <img src="/assets/beehive.jpg" style="display: block; margin: auto;" width=""/>

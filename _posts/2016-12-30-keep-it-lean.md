@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Keep It  Lean
-date:   2016-12-30 14:42:59
+date:   2016-12-30 14:42:59  -0800
 categories: Life
 ---
 

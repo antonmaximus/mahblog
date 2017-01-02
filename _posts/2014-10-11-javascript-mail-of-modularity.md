@@ -2,7 +2,7 @@
 layout: post
 title:  "JavaScript: Mail of Modularity"
 date:   2014-10-11 14:44:58
-categories: craft
+categories: [Web Development]
 ---
 
 

@@ -5,8 +5,8 @@
     <description>A small growth today makes progression happen...</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 Jan 2017 13:02:10 -0800</pubDate>
-    <lastBuildDate>Sun, 01 Jan 2017 13:02:10 -0800</lastBuildDate>
+    <pubDate>Sun, 01 Jan 2017 22:35:33 -0800</pubDate>
+    <lastBuildDate>Sun, 01 Jan 2017 22:35:33 -0800</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -49,7 +49,7 @@
 
 &lt;p&gt;&lt;a href=&quot;http://www.marksdailyapple.com/cholesterol/&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sat, 31 Dec 2016 17:02:03 -0800</pubDate>
+        <pubDate>Sun, 01 Jan 2017 01:02:03 -0800</pubDate>
         <link>http://localhost:4000/cholesterol</link>
         <guid isPermaLink="true">http://localhost:4000/cholesterol</guid>
         
@@ -115,7 +115,7 @@ Listen to you gut.&lt;/p&gt;
 strings attached or any sort of compromises.&lt;/p&gt;
 
 </description>
-        <pubDate>Sat, 31 Dec 2016 17:01:01 -0800</pubDate>
+        <pubDate>Sun, 01 Jan 2017 01:01:01 -0800</pubDate>
         <link>http://localhost:4000/be-honest-with-yourself</link>
         <guid isPermaLink="true">http://localhost:4000/be-honest-with-yourself</guid>
         
@@ -154,7 +154,7 @@ Focus on the 20%.&lt;/p&gt;
 &lt;p&gt;Keep. It. &lt;del&gt;Simple&lt;/del&gt; Lean. Stupid.&lt;/p&gt;
 
 </description>
-        <pubDate>Fri, 30 Dec 2016 06:42:59 -0800</pubDate>
+        <pubDate>Fri, 30 Dec 2016 14:42:59 -0800</pubDate>
         <link>http://localhost:4000/keep-it-lean</link>
         <guid isPermaLink="true">http://localhost:4000/keep-it-lean</guid>
         
@@ -164,26 +164,8 @@ Focus on the 20%.&lt;/p&gt;
       </item>
     
       <item>
-        <title>Gee Dude. 3</title>
-        <description>&lt;h2 id=&quot;what-worked&quot;&gt;What Worked&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;You weren’t afraid to fail in phone screens, coding challenges, and in-person interviews. You face them and fail better.&lt;/li&gt;
-  &lt;li&gt;Resume gets the phone calls. Phone calls and coding challenge get you onsite. Onsite interview is how two future teammates get to know each other.&lt;/li&gt;
-  &lt;li&gt;Studying over the long term.&lt;/li&gt;
-  &lt;li&gt;Excitement about coding challenges.&lt;/li&gt;
-  &lt;li&gt;Arriving ahead of time, and checking parking/driving instructions.&lt;/li&gt;
-  &lt;li&gt;Having inquisitive questions about your future teammates.&lt;/li&gt;
-  &lt;li&gt;Acknowledging and reading your teammates.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;what-didnt&quot;&gt;What Didn’t&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Self-expression. Find how to “express” yourself in all aspects: the way you move, talk, dress, and communicate.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;topics&quot;&gt;Topics:&lt;/h2&gt;
+        <title>Technical Interview Preparation 2</title>
+        <description>&lt;h2 id=&quot;topics&quot;&gt;Topics:&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;How many H1 should be used in a page?&lt;/strong&gt; You can use as many as long as you used it in context.&lt;/p&gt;
 
@@ -494,11 +476,41 @@ combineNoDups(a, b)
 
 </description>
         <pubDate>Sun, 02 Oct 2016 12:00:00 -0700</pubDate>
-        <link>http://localhost:4000/gee-dude-3</link>
-        <guid isPermaLink="true">http://localhost:4000/gee-dude-3</guid>
+        <link>http://localhost:4000/technical-interview-2</link>
+        <guid isPermaLink="true">http://localhost:4000/technical-interview-2</guid>
         
         
-        <category>programming</category>
+        <category>Web Development</category>
+        
+      </item>
+    
+      <item>
+        <title>Tech Item: Interviewing 3</title>
+        <description>&lt;h2 id=&quot;what-worked&quot;&gt;What Worked&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You weren’t afraid to fail in phone screens, coding challenges, and in-person interviews. You face them and fail better.&lt;/li&gt;
+  &lt;li&gt;Resume gets the phone calls. Phone calls and coding challenge get you onsite. Onsite interview is how two future teammates get to know each other.&lt;/li&gt;
+  &lt;li&gt;Studying over the long term.&lt;/li&gt;
+  &lt;li&gt;Excitement about coding challenges.&lt;/li&gt;
+  &lt;li&gt;Arriving ahead of time, and checking parking/driving instructions.&lt;/li&gt;
+  &lt;li&gt;Having inquisitive questions about your future teammates.&lt;/li&gt;
+  &lt;li&gt;Acknowledging and reading your teammates.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-didnt&quot;&gt;What Didn’t&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Self-expression. Find how to “express” yourself in all aspects: the way you move, talk, dress, and communicate.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 02 Oct 2016 12:00:00 -0700</pubDate>
+        <link>http://localhost:4000/interviewing-3</link>
+        <guid isPermaLink="true">http://localhost:4000/interviewing-3</guid>
+        
+        
+        <category>Career</category>
         
       </item>
     
@@ -736,12 +748,12 @@ console.log(&quot;===&amp;gt; &quot;, quickSort(s3));
         <guid isPermaLink="true">http://localhost:4000/sort</guid>
         
         
-        <category>programming</category>
+        <category>Web Development</category>
         
       </item>
     
       <item>
-        <title>Coing?</title>
+        <title>Coding</title>
         <description>&lt;h1 id=&quot;i-love-lance--janice&quot;&gt;I Love Lance &amp;amp; Janice&lt;/h1&gt;
 
 &lt;p&gt;You’ve caught two of your fellow minions passing coded notes back and forth - while they’re on duty, no less! Worse, you’re pretty sure it’s not job-related - they’re both huge fans of the space soap opera “Lance &amp;amp; Janice”. You know how much Commander Lambda hates waste, so if you can prove that these minions are wasting her time passing non-job-related notes, it’ll put you that much closer to a promotion.&lt;/p&gt;
@@ -1104,12 +1116,12 @@ print &quot;Input: 18446744073709551615. Expected: 64. Actual Answer: &quot;, an
 &lt;/ul&gt;
 
 </description>
-        <pubDate>Mon, 26 Sep 2016 07:42:59 -0700</pubDate>
+        <pubDate>Mon, 26 Sep 2016 01:00:01 -0700</pubDate>
         <link>http://localhost:4000/coding</link>
         <guid isPermaLink="true">http://localhost:4000/coding</guid>
         
         
-        <category>programming</category>
+        <category>Web Development</category>
         
       </item>
     
@@ -1219,7 +1231,7 @@ console.log(&quot;pizza&quot; in map);
         <guid isPermaLink="true">http://localhost:4000/js-objects</guid>
         
         
-        <category>craft</category>
+        <category>Web Development</category>
         
       </item>
     
@@ -1895,23 +1907,7 @@ for(let p of post) { // p refers to property values
         <guid isPermaLink="true">http://localhost:4000/ES2015</guid>
         
         
-        <category>craft</category>
-        
-      </item>
-    
-      <item>
-        <title>Gee Dude. Interviewing 2</title>
-        <description>&lt;p&gt;https://janechin.quora.com/The-Bullsh*t-that-is-Follow-Your-Bliss&lt;/p&gt;
-
-&lt;hr /&gt;
-
-</description>
-        <pubDate>Fri, 01 Apr 2016 01:00:01 -0700</pubDate>
-        <link>http://localhost:4000/follow-your-bliss</link>
-        <guid isPermaLink="true">http://localhost:4000/follow-your-bliss</guid>
-        
-        
-        <category>life</category>
+        <category>Web Development</category>
         
       </item>
     

@@ -2,11 +2,11 @@
 layout: post
 title:  "jQuery Utilities"
 date:   2014-10-08 14:43:58
-categories: craft
+categories: [Web Development]
 ---
 
 
-###4.1 $.each and Templating
+### 4.1 $.each and Templating
 
 {% raw %}
     <!doctype html>
@@ -62,7 +62,7 @@ categories: craft
 {% endraw %}
    
 
-###4.2 Say Hello to Handlebars
+### 4.2 Say Hello to Handlebars
 {% raw %}
     <html>
     <head>
@@ -128,7 +128,7 @@ categories: craft
 {% endraw %}
 
 
-###4.3 The Twitter API
+### 4.3 The Twitter API
 {% raw %}
     <html>
     <head>
@@ -216,7 +216,7 @@ categories: craft
 
 
 
-###4.4 Filtering with jQuery.grep
+### 4.4 Filtering with jQuery.grep
 {% raw %}
     <html>
     <head>

@@ -2,11 +2,11 @@
 layout: post
 title:  "jQuery Plugin Development"
 date:   2014-10-10 14:44:58
-categories: craft
+categories: [Web Development]
 ---
 
 
-###7.1 Head First Into Plugin Development
+### 7.1 Head First Into Plugin Development
 index.html
 {% raw %}
     <!doctype html>

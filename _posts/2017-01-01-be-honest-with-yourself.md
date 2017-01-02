@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Be Honest With Yourself
-date:   2017-01-01 01:01:01
+date:   2017-01-01 01:01:01  -0800
 categories: Life
 ---
 

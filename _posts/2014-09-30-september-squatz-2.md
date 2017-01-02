@@ -2,11 +2,11 @@
 layout: post
 title:  "September Squatz 2"
 date:   2014-09-30 14:40:58
-categories: exercise
+categories: Sports
 ---
 
 
-##Assessing Data Objectively
+## Assessing Data Objectively
 
 Last year September, my squats was 205x4.  This September of this year it's 245x3.  It may appear like a 40 pound increase over the 12 months.  However, there are a few important distinctions:
 
@@ -19,9 +19,13 @@ Conclusion, looking at the data, there was about a 40-pound increase in my squat
 
 
 
-![](http://i.imgur.com/KWC64e5.png)
+<img src="/assets/squatz2_excelSnap.png"  width=""/>
 
-![](http://i.imgur.com/oUA3iv6.png)
+<img src="/assets/squatz2_graph.png"  width=""/>
+
+
+
+
 
 
 <figure><iframe width="360" height="480"  allowfullscreen="" class="youtube-player" src="//www.youtube.com/embed/8e_qFHtg2os?wmode=transparent&amp;amp;autoplay=0&amp;amp;rel=0&amp;amp;showinfo=0&amp;amp;autohide=1&amp;amp;color=white&amp;amp;" type="text/html"></iframe>

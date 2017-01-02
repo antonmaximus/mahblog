@@ -2,7 +2,7 @@
 layout: post
 title:  "Anatomy of Backbone A2"
 date:   2014-11-05 14:00:01
-categories: craft
+categories: [Web Development]
 ---
 
 

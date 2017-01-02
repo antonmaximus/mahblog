@@ -2,10 +2,10 @@
 layout: post
 title:  "A Poem for Rob"
 date:   2014-08-26 14:43:58
-categories: poems
+categories: Moments
 ---
 
-![Alt text](http://i.imgur.com/y4xXSQ1.png "Image Unit")
+<img src="/assets/rob_poem.png"  width="" alt="Image Unit"/>
 
 
 This week is my former boss's last week at Lucasfilm, and those of use who were close 
@@ -16,7 +16,7 @@ everything's been done, an awesome backdrop has been made along with the poem us
 Farewell, Rob!  T'was a ride.
 
 
-##O Captain! My Captain!
+## O Captain! My Captain!
 
 *O Captain! My Captain! Our fearful trip is done;  
 The ship has weather'd every rack, the prize we sought is won;  

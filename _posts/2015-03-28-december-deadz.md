@@ -2,7 +2,7 @@
 layout: post
 title:  "December Deadz"
 date:   2015-03-28 14:00:00
-categories: exercise
+categories: Sports
 ---
 
 
@@ -16,7 +16,7 @@ For next December (the one in 2015), I'd like to hit 4 plates for 1 -- this is a
 
 
 
-![](http://i.imgur.com/eAAPnBF.png)
+<img src="/assets/deadz_march2015.png" style="margin: auto; display: block;" width=""/>
 
 
 

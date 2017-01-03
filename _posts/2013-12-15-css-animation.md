@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Squat Animation Challenge"
-date:   2013-12-15 14:43:59
-categories: [Web Development, Career]
+date:   2013-12-15 00:43:59
+categories: [Business Dealings, Career, Web Development]
 ---
 
 

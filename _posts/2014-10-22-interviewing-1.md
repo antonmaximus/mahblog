@@ -2,7 +2,7 @@
 layout: post
 title:  "Tech Item: Interviewing 1 (Gee)"
 date:   2014-10-22 14:44:58
-categories: Career
+categories: [Business Dealings]
 ---
 
 

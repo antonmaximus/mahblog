@@ -2,7 +2,7 @@
 layout: post
 title:  Saving Moolah With Jekyll
 date:   2014-07-03 14:42:59
-categories: Career
+categories: [Business Dealings]
 ---
 
 

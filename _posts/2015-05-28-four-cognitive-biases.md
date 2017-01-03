@@ -2,7 +2,7 @@
 layout: post
 title:  "Improve Daily Decision Making by Avoiding 4 Cognitive Biases"
 date:   2015-05-28 14:00:00  -0800
-categories: [Life, Mental Health]
+categories: [Mental Health]
 ---
 
 

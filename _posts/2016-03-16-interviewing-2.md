@@ -2,7 +2,7 @@
 layout: post
 title:  "Tech Item: Interviewing 2"
 date:   2016-03-15 11:00:00 -0800
-categories: Career
+categories: [Business Dealings]
 ---
 
 

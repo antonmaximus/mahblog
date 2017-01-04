@@ -151,25 +151,108 @@ From what I gather, I'd do well in a career that uses diagnostic reasoning, spat
 
 
 
+#### Chapter 18: Natural Roles 
+
+#### Inquiry 17: My natural roles
 
 
 
 
+Basic Universal Roles | | | Public or "Social Face" Roles | |
+---|---|----|----|----
+Child | 1 | | Extrovert | 2
+Mother | 1 | | Group Worker/Team Member | 1
+Father | 1 | | Insider | 0
+Warrior | 2 | | Outsider | 0
+Hero | 2 | | Marketeer | 1
+Comedian | 1 | | Networker | 1
+Leader/King/Queen | 2 | | Bullshooter | 1
+Prince/Princess | 1 | | Politician | 2
+Money Person | 2 | | Deal Maker | 2
+ |  | | Introvert | 1
+ |  | | Hermit | 0
+
+
+Adventurer Roles |   |  | Antisocial Roles |  |
+---|---|----|----|----
+Free Spirit | 1.5 |   | Sellout | 1.5
+Naturewiser Person | 0 |   | Criminal | 0
+**Seeker** | **3** |   | Bully | 0
+Humanitarian | 2 |   |  | 
+Rule Breaker/Rebel | 1 |   |  | 
+Risk Taker | 1 | | 
+Innovator/Pioneer | 1 |   | |
+
+
+Roles Grouped By Personality Type
+
+
+Roles Common with Sensor-Thinkers (ST) |   |   | Roles Common with Sensor-Feelers (SF) |  |
+---|---|----|----|----
+Manager | 2 |   | Teacher/Mentor | 2
+Builder/Designer | 1 |   | Healer | 2
+Athlete | 2 |   | Caregiver/Helper | 1
+Streetwise Person | 1 |   | Animal Lover | 2
+Protector | 0 |   | Artisan | 1
+Right-hand Person | 1 |   | Hedonist | 0
+  |   |   | Sensualist | 1
 
 
 
+Roles Common with Intuitive-Thinkers (NT) |   |   | Roles Common with Intuitive-Feelers (NF) |  |
+---|---|----|----|----
+Scientist | 2 |   | Guide/Coach/Counserl/Therapist | 2
+Academic | 2 |   | Charming Enchanter | 1.5
+Investigator | 2 |   | Romantic | 1
+Analyst | 2 |  | Artist/Poet | 1
+Entrepreneur | 2 |   | Visionary | 1
+Amateur | 2 |   | Advocate | 1
+Critic | 1.5 |   | Mediator/Peacemaker | 1
+Perfectionist, Stickler | 1.5 |   |   |  
+Geek | 1.5 |   |   |  
+**Lifelong Learner** | **3** |   |   |  
 
 
+-----
+
+#### Chapter 19: The Games of Life
+#### Inquiry 18: What Am I Playing For?
+
+My main games are personal growth and knowledge (30 Oct 2016). A more detailed worksheet is located in the Purpose Folder. 
+
+#### Inquiry 19: What Games will I Play?
+
+*Ask yourself these questions:*
+- Are my main games worth playing?
+- How well is it working for me to play the games I do?
+- Do I want to keep playing them?
+- Do I want to promote or demote any of them?
+- Will I take on any new games that are more worthy of playing?
 
 
+My main games are worth playing. I want to keep playing them. They are worth it. It's when I don't play them  
+(eg., lose focus/sight) that when I become miserable. I would also like to take on the game of awakening.
+I've caught myself on autopilot especially when dealing with unusual situations where I left without an 
+equal footing (eg., that time someone told me to unrack weights without asking why, that time failing to understand 
+that Kyle was showing interest)
+
+Awakening -- Players discover that they are rarey present, mainly functioning on autopilot, and take on the game of waking up.
 
 
+*What games would you like to wake up to in the morning and play wholeheartedly, every day?*
 
+I'd like to play the games of personal growth, knowledge, and awakening every day.
 
+*What sort of work would best serve to help you to win the main games you intend to play?*
 
+Doctor? Leader? 
 
+*What are some of the qualities, functions, activities, and rewards that a job might offer that would help you win the games you 
+intend to play?*
 
+*What might interfere with winning the games you most want to play?*
 
+One major interference I could see is me focusing on the aesthetics. Failing to look beyond the superficial.
 
 
 

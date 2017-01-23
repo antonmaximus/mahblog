@@ -5,13 +5,17 @@
     <description>A small growth today makes progression happen...</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Jan 2017 12:56:41 -0800</pubDate>
-    <lastBuildDate>Tue, 10 Jan 2017 12:56:41 -0800</lastBuildDate>
+    <pubDate>Sun, 22 Jan 2017 20:47:22 -0800</pubDate>
+    <lastBuildDate>Sun, 22 Jan 2017 20:47:22 -0800</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
         <title>Quotes 2017</title>
-        <description>&lt;blockquote&gt;
+        <description>&lt;p&gt;January&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
   &lt;p&gt;“It’s only when we’re afraid that we can be courageous. It’s only only we’re helpless that we can be strong.””&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -24,6 +28,45 @@
 &lt;/blockquote&gt;
 
 &lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Tiger got to hunt, bird got to fly; Man got to sit and wonder ‘why, why, why?’ Tiger got to sleep, bird got to land; Man got to tell himself he understand.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;~ Bokonon&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;~~If you would regret going to Tufts IMO!! there’s pretty much no situation your partner could have that would indicate you should sacrifice your personal happiness and wellbeing for them.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;~ &lt;a href=&quot;https://www.reddit.com/r/premed/comments/5p629n/tufts_vs_university_of_rochester/dcoosvp/&quot;&gt;redditor on sacrificing your wellbing for others&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Having is not so pleasing a thing as wanting. It is not logical, but it is often true.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;~ Spock&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Life is short. Don’t waste time and energy going after stuff you don’t really want.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;~ Me&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Remember to be your own best friend&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
 </description>
         <pubDate>Sat, 07 Jan 2017 01:02:03 -0800</pubDate>
         <link>http://localhost:4000/quotes-2017</link>

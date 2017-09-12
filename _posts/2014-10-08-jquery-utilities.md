@@ -208,8 +208,6 @@ categories: [Web Development]
     })();
 
     </script>
-
-
     </body>
     </html>
 }}{% endraw %}

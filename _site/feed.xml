@@ -3,10 +3,10 @@
   <channel>
     <title>anton</title>
     <description>A small growth today makes progression happen...</description>
-    <link>www.anton23.com/</link>
-    <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 11 Sep 2017 21:30:37 -0700</pubDate>
-    <lastBuildDate>Mon, 11 Sep 2017 21:30:37 -0700</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 11 Sep 2017 22:15:15 -0700</pubDate>
+    <lastBuildDate>Mon, 11 Sep 2017 22:15:15 -0700</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -41,8 +41,8 @@ Below are my PRs for this September 2017.&lt;/p&gt;
 &lt;hr /&gt;
 </description>
         <pubDate>Mon, 11 Sep 2017 07:40:58 -0700</pubDate>
-        <link>www.anton23.com/september-squatz-deadlifts</link>
-        <guid isPermaLink="true">www.anton23.com/september-squatz-deadlifts</guid>
+        <link>http://localhost:4000/september-squatz-deadlifts</link>
+        <guid isPermaLink="true">http://localhost:4000/september-squatz-deadlifts</guid>
         
         
         <category>Training</category>
@@ -69,8 +69,8 @@ like while you’re here.&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 11 Sep 2017 01:02:03 -0700</pubDate>
-        <link>www.anton23.com/track-yourself</link>
-        <guid isPermaLink="true">www.anton23.com/track-yourself</guid>
+        <link>http://localhost:4000/track-yourself</link>
+        <guid isPermaLink="true">http://localhost:4000/track-yourself</guid>
         
         
         <category>Life</category>
@@ -88,8 +88,8 @@ people. I’ve never been more prouder to embrace myself. Though late to the gam
 I feel there’s a lot of things I need to learn more about myself.&lt;/p&gt;
 </description>
         <pubDate>Mon, 11 Sep 2017 01:01:03 -0700</pubDate>
-        <link>www.anton23.com/embrace-yourself</link>
-        <guid isPermaLink="true">www.anton23.com/embrace-yourself</guid>
+        <link>http://localhost:4000/embrace-yourself</link>
+        <guid isPermaLink="true">http://localhost:4000/embrace-yourself</guid>
         
         
         <category>Life</category>
@@ -189,8 +189,8 @@ Put thought to someone that doesn’t love you back, you  die daily.&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 07 Jan 2017 01:02:03 -0800</pubDate>
-        <link>www.anton23.com/quotes-2017</link>
-        <guid isPermaLink="true">www.anton23.com/quotes-2017</guid>
+        <link>http://localhost:4000/quotes-2017</link>
+        <guid isPermaLink="true">http://localhost:4000/quotes-2017</guid>
         
         
         <category>Quotes</category>
@@ -217,8 +217,8 @@ things that are of interest to me? Maybe meet their friends and see
 if you can get a better overall view of that person?&lt;/p&gt;
 </description>
         <pubDate>Mon, 02 Jan 2017 00:02:03 -0800</pubDate>
-        <link>www.anton23.com/focus-beyond-the-aesthetics</link>
-        <guid isPermaLink="true">www.anton23.com/focus-beyond-the-aesthetics</guid>
+        <link>http://localhost:4000/focus-beyond-the-aesthetics</link>
+        <guid isPermaLink="true">http://localhost:4000/focus-beyond-the-aesthetics</guid>
         
         
         <category>Life</category>
@@ -266,8 +266,8 @@ if you can get a better overall view of that person?&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.marksdailyapple.com/cholesterol/&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 01 Jan 2017 01:02:03 -0800</pubDate>
-        <link>www.anton23.com/cholesterol</link>
-        <guid isPermaLink="true">www.anton23.com/cholesterol</guid>
+        <link>http://localhost:4000/cholesterol</link>
+        <guid isPermaLink="true">http://localhost:4000/cholesterol</guid>
         
         
         <category>Nutrition</category>
@@ -332,8 +332,8 @@ strings attached or any sort of compromises.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 01 Jan 2017 01:01:01 -0800</pubDate>
-        <link>www.anton23.com/be-honest-with-yourself</link>
-        <guid isPermaLink="true">www.anton23.com/be-honest-with-yourself</guid>
+        <link>http://localhost:4000/be-honest-with-yourself</link>
+        <guid isPermaLink="true">http://localhost:4000/be-honest-with-yourself</guid>
         
         
         <category>Life</category>
@@ -371,8 +371,8 @@ Focus on the 20%.&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 30 Dec 2016 14:42:59 -0800</pubDate>
-        <link>www.anton23.com/keep-it-lean</link>
-        <guid isPermaLink="true">www.anton23.com/keep-it-lean</guid>
+        <link>http://localhost:4000/keep-it-lean</link>
+        <guid isPermaLink="true">http://localhost:4000/keep-it-lean</guid>
         
         
         <category>Life</category>
@@ -898,8 +898,8 @@ intend to play?&lt;/em&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 14 Oct 2016 01:04:03 -0700</pubDate>
-        <link>www.anton23.com/design-your-career</link>
-        <guid isPermaLink="true">www.anton23.com/design-your-career</guid>
+        <link>http://localhost:4000/design-your-career</link>
+        <guid isPermaLink="true">http://localhost:4000/design-your-career</guid>
         
         
         <category>Business Dealings</category>
@@ -1221,8 +1221,8 @@ combineNoDups(a, b)
 
 </description>
         <pubDate>Sun, 02 Oct 2016 12:00:00 -0700</pubDate>
-        <link>www.anton23.com/technical-interview-2</link>
-        <guid isPermaLink="true">www.anton23.com/technical-interview-2</guid>
+        <link>http://localhost:4000/technical-interview-2</link>
+        <guid isPermaLink="true">http://localhost:4000/technical-interview-2</guid>
         
         
         <category>Web Development</category>

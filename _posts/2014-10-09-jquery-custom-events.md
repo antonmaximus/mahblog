@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  jQuery Custom Events
+title:  "jQuery Custom Events"
 date:   2014-10-09 14:43:58
 categories: [Web Development]
 ---
@@ -8,7 +8,7 @@ categories: [Web Development]
 
 ### 5.1 Custom Events and the Observer Pattern
 index.html
-{% raw %}
+{% raw %}{{
     <!doctype html>
     <html>
     <head>
@@ -63,7 +63,7 @@ index.html
 {% endraw %}
 
 tweets.html
-{% raw %}
+{% raw %}{{
     <!doctype html>
     <html>
     <head>

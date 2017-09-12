@@ -8,7 +8,7 @@ categories: [Web Development]
 
 ### 4.1 $.each and Templating
 
-{% raw %}
+{% raw %}{{
     <!doctype html>
     <html>
     <head>
@@ -59,11 +59,11 @@ categories: [Web Development]
     </script>
     </body>
     </html>
-{% endraw %}
+}}{% endraw %}
    
 
 ### 4.2 Say Hello to Handlebars
-{% raw %}
+{% raw %}{{
     <html>
     <head>
       <meta charset=utf-8>
@@ -125,11 +125,11 @@ categories: [Web Development]
 
     </body>
     </html>
-{% endraw %}
+}}{% endraw %}
 
 
 ### 4.3 The Twitter API
-{% raw %}
+{% raw %}{{
     <html>
     <head>
       <meta charset=utf-8>
@@ -212,12 +212,12 @@ categories: [Web Development]
 
     </body>
     </html>
-{% endraw %}
+}}{% endraw %}
 
 
 
 ### 4.4 Filtering with jQuery.grep
-{% raw %}
+{% raw %}{{
     <html>
     <head>
       <meta charset=utf-8>
@@ -265,7 +265,7 @@ categories: [Web Development]
 
     </body>
     </html>
-{% raw %}
+{% raw %}{{
 
 
 

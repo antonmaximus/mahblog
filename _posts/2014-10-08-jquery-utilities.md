@@ -59,11 +59,11 @@ categories: [Web Development]
     </script>
     </body>
     </html>
-}}{% endraw %}
+
    
 
 ### 4.2 Say Hello to Handlebars
-{% raw %}{{
+
     <html>
     <head>
       <meta charset=utf-8>
@@ -125,11 +125,11 @@ categories: [Web Development]
 
     </body>
     </html>
-}}{% endraw %}
+
 
 
 ### 4.3 The Twitter API
-{% raw %}{{
+
     <html>
     <head>
       <meta charset=utf-8>
@@ -210,12 +210,12 @@ categories: [Web Development]
     </script>
     </body>
     </html>
-}}{% endraw %}
+
 
 
 
 ### 4.4 Filtering with jQuery.grep
-{% raw %}{{
+
     <html>
     <head>
       <meta charset=utf-8>
@@ -263,7 +263,7 @@ categories: [Web Development]
 
     </body>
     </html>
-{% raw %}{{
+{% endraw %}
 
 
 

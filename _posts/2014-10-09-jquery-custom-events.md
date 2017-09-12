@@ -9,6 +9,7 @@ categories: [Web Development]
 ### 5.1 Custom Events and the Observer Pattern
 index.html
 {% raw %}{{
+
     <!doctype html>
     <html>
     <head>
@@ -64,6 +65,7 @@ index.html
 
 tweets.html
 {% raw %}{{
+
     <!doctype html>
     <html>
     <head>
@@ -187,6 +189,7 @@ tweets.html
 
     </body>
     </html>
+    
 {% endraw %}
 
 ---

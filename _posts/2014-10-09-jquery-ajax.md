@@ -8,7 +8,8 @@ categories: [Web Development]
 
 ### 6.1 Loading Pages Asynchronously
 index.html
-{% raw %}
+{% raw %}{{
+
     <!doctype html>
     <html>
     <head>
@@ -48,10 +49,11 @@ index.html
     </body>
     </html>
 
-{% endraw %}
+}}{% endraw %}
 
 about.html
-{% raw %}
+{% raw %}{{
+
     <html>
     <head>
       <meta charset=utf-8>
@@ -72,10 +74,11 @@ about.html
 
     </body>
     </html>
-{% endraw %}
+}}{% endraw %}
 
 contact.html
 {% raw %}
+
     <html>
     <head>
       <meta charset=utf-8>
@@ -96,14 +99,16 @@ contact.html
 
     </body>
     </html>
-{% endraw %}
+
+}}{% endraw %}
 
 
 
 
 ### 6.2 Interacting with the Server-Side
 index.html
-{% raw %}
+{% raw %}{{
+
     <html>
     <head>
       <meta charset=utf-8>
@@ -146,10 +151,12 @@ index.html
       
     </body>
     </html>
-{% endraw %}
+
+}}{% endraw %}
 
 save.php
-{% raw %}
+{% raw %}{{
+
     <?php
 
     $f = fopen('data.txt', 'w');
@@ -161,10 +168,10 @@ save.php
 
 load.php
 {% raw %}
-    <?php
-
+    '<?php
     $data = file( 'data.txt');
     echo stripslashes( $data[0] );
+
 {% endraw %}
 
 
@@ -176,6 +183,7 @@ index.html
 
 ### 6.5 Deferreds
 {% raw %}
+
     <html>
     <head>
       <meta charset=utf-8>
@@ -230,6 +238,7 @@ index.html
 
     </body>
     </html>
+
 {% endraw %}
 
 

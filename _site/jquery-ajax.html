@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>jQuery AJAX</title>
-  <meta name="description" content="6.1 Loading Pages Asynchronouslyindex.html&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;  &lt;meta charset=utf-8&gt;  &lt;title&gt;AJAX: load&lt;/title&gt;&lt...">
+  <meta name="description" content="6.1 Loading Pages Asynchronouslyindex.html{{">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/custom.css">
-  <link rel="canonical" href="http://localhost:4000/jquery-ajax">
-  <link rel="alternate" type="application/rss+xml" title="anton" href="http://localhost:4000/feed.xml">
+  <link rel="canonical" href="www.anton23.com/jquery-ajax">
+  <link rel="alternate" type="application/rss+xml" title="anton" href="www.anton23.com/feed.xml">
 </head>
 
 
@@ -68,7 +68,8 @@
 
   <div class="post-content" itemprop="articleBody">
     <h3 id="61-loading-pages-asynchronously">6.1 Loading Pages Asynchronously</h3>
-<p>index.html</p>
+<p>index.html
+{{</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
@@ -111,7 +112,10 @@
 </code></pre>
 </div>
 
-<p>about.html</p>
+<p>}}</p>
+
+<p>about.html
+{{</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;head&gt;</span>
@@ -132,7 +136,7 @@
 
 
 <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
+<span class="nt">&lt;/html&gt;</span> }}
 </code></pre>
 </div>
 
@@ -161,8 +165,11 @@
 </code></pre>
 </div>
 
+<p>}}</p>
+
 <h3 id="62-interacting-with-the-server-side">6.2 Interacting with the Server-Side</h3>
-<p>index.html</p>
+<p>index.html
+{{</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;head&gt;</span>
@@ -209,7 +216,10 @@
 </code></pre>
 </div>
 
-<p>save.php</p>
+<p>}}</p>
+
+<p>save.php
+{{</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php
 
@@ -223,8 +233,7 @@ echo 'Comment has been saved';
 
 <p>load.php</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php
-
+<div class="highlighter-rouge"><pre class="highlight"><code>'&lt;?php
 $data = file( 'data.txt');
 echo stripslashes( $data[0] );
 </code></pre>

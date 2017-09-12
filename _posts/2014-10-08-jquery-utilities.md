@@ -8,8 +8,7 @@ categories: [Web Development]
 
 ### 4.1 $.each and Templating
 
-{% raw %}{{
-
+{% raw %}
     <!doctype html>
     <html>
     <head>
@@ -19,8 +18,8 @@ categories: [Web Development]
     <body>
 
     <script id=blogTemplate type=tuts/template>
-      <h2> {{title}} </h2>
-      <img src={{thumbnail}} alt={{title}}>
+      <h2> {-{title}-} </h2>
+      <img src={-{thumbnail}-} alt={-{title}-}>
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -49,8 +48,8 @@ categories: [Web Development]
 
       $.each( content, function( index, obj ) {
         frag +=
-          template.replace( /{{title}}/ig, obj.title )
-              .replace( /{{thumbnail}}/ig, obj.thumbnail );   
+          template.replace( /{-{title}-}/ig, obj.title )
+              .replace( /{-{thumbnail}-}/ig, obj.thumbnail );   
       });
 
       $('body').append(frag);
@@ -60,12 +59,11 @@ categories: [Web Development]
     </script>
     </body>
     </html>
-}}{% endraw %}
+{% endraw %}
    
 
 ### 4.2 Say Hello to Handlebars
-{% raw %}{{
-
+{% raw %}
     <html>
     <head>
       <meta charset=utf-8>
@@ -78,18 +76,18 @@ categories: [Web Development]
 
     <ul class="tweets">
       <script id="template" type="text/x-handlebars-template">
-        {{#each this}}
+        {-{#each this}-}
         <li>
-          <h2>{{fullName author}}</h2>
-          <p>{{{tweet}}}</p>
+          <h2>{-{fullName author}-}</h2>
+          <p>{-{{tweet}-}}</p>
 
-          {{#if quote}}
-            <h5>{{quote}}</h5>
-          {{else}}
+          {-{#if quote}-}
+            <h5>{-{quote}-}</h5>
+          {-{else}-}
             <h5>Author does not have a quote.</h5>
-          {{/if}}
+          {-{/if}-}
         </li>
-        {{/each}}
+        {-{/each}-}
       </script>
     </ul>
 
@@ -127,13 +125,11 @@ categories: [Web Development]
 
     </body>
     </html>
-    
-}}{% endraw %}
+{% endraw %}
 
 
 ### 4.3 The Twitter API
-{% raw %}{{
-
+{% raw %}
     <html>
     <head>
       <meta charset=utf-8>
@@ -150,12 +146,12 @@ categories: [Web Development]
 
     <ul id="biebster-tweets">
       <script id="tweets-template" type="text/x-handlebars-template">
-        {{#each this}}
+        {-{#each this}-}
         <li>
-          <img src="{{thumb}}" alt="{{author}}">
-          <p><a href="{{url}}">{{tweet}}</a></p>
+          <img src="{-{thumb}-}" alt="{-{author}-}">
+          <p><a href="{-{url}-}">{-{tweet}-}</a></p>
         </li>
-        {{/each}}
+        {-{/each}-}
       </script>   
     </ul>
 
@@ -216,13 +212,12 @@ categories: [Web Development]
 
     </body>
     </html>
-}}{% endraw %}
+{% endraw %}
 
 
 
 ### 4.4 Filtering with jQuery.grep
-{% raw %}{{
-
+{% raw %}
     <html>
     <head>
       <meta charset=utf-8>
@@ -270,8 +265,7 @@ categories: [Web Development]
 
     </body>
     </html>
-
-}}{% endraw %}
+{% raw %}
 
 
 

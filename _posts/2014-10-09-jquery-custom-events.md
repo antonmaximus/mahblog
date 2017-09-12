@@ -8,7 +8,7 @@ categories: [Web Development]
 
 ### 5.1 Custom Events and the Observer Pattern
 index.html
-{% raw %}{{
+{% raw %}
 
     <!doctype html>
     <html>
@@ -61,10 +61,10 @@ index.html
     </body>
     </html>
 
-}}{% endraw %}
+{% endraw %}
 
 tweets.html
-{% raw %}{{
+{% raw %}
 
     <!doctype html>
     <html>
@@ -190,7 +190,7 @@ tweets.html
     </body>
     </html>
     
-}}{% endraw %}
+{% endraw %}
 
 ---
 

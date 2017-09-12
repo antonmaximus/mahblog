@@ -61,7 +61,7 @@ index.html
     </body>
     </html>
 
-{% endraw %}
+}}{% endraw %}
 
 tweets.html
 {% raw %}{{
@@ -190,7 +190,7 @@ tweets.html
     </body>
     </html>
     
-{% endraw %}
+}}{% endraw %}
 
 ---
 

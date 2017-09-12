@@ -79,7 +79,7 @@ categories: [Web Development]
         {-{#each this}-}
         <li>
           <h2>{-{fullName author}-}</h2>
-          <p>{-{{tweet}-}}</p>
+          <p>{-{tweet}-}}</p>
 
           {-{#if quote}-}
             <h5>{-{quote}-}</h5>

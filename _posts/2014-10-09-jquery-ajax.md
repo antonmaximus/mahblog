@@ -167,22 +167,23 @@ save.php
 {% endraw %}
 
 load.php
-{% raw %}
+{% raw %}{{
     '<?php
     $data = file( 'data.txt');
     echo stripslashes( $data[0] );
 
-{% endraw %}
+}}{% endraw %}
 
 
 ### 6.3 
 index.html
 
 {% raw %}
+{{}}
 {% endraw %}
 
 ### 6.5 Deferreds
-{% raw %}
+{% raw %}{{
 
     <html>
     <head>
@@ -239,7 +240,7 @@ index.html
     </body>
     </html>
 
-{% endraw %}
+}}{% endraw %}
 
 
 

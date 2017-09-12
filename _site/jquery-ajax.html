@@ -231,18 +231,21 @@ echo 'Comment has been saved';
 </code></pre>
 </div>
 
-<p>load.php</p>
+<p>load.php
+{{
+    ‘&lt;?php
+    $data = file( ‘data.txt’);
+    echo stripslashes( $data[0] );</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>'&lt;?php
-$data = file( 'data.txt');
-echo stripslashes( $data[0] );
-</code></pre>
-</div>
+<p>}}</p>
 
 <h3 id="63">6.3</h3>
 <p>index.html</p>
 
+<p>{{}}</p>
+
 <h3 id="65-deferreds">6.5 Deferreds</h3>
+<p>{{</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;head&gt;</span>
@@ -300,6 +303,8 @@ echo stripslashes( $data[0] );
 <span class="nt">&lt;/html&gt;</span>
 </code></pre>
 </div>
+
+<p>}}</p>
 
 <hr />
 

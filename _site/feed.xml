@@ -3,10 +3,10 @@
   <channel>
     <title>anton</title>
     <description>A small growth today makes progression happen...</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 Sep 2017 17:02:44 -0700</pubDate>
-    <lastBuildDate>Tue, 12 Sep 2017 17:02:44 -0700</lastBuildDate>
+    <link>/mahblog/</link>
+    <atom:link href="/mahblog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 01 Dec 2018 17:44:55 -0800</pubDate>
+    <lastBuildDate>Sat, 01 Dec 2018 17:44:55 -0800</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -51,8 +51,8 @@ from 2016 Spring.&lt;/p&gt;
 &lt;hr /&gt;
 </description>
         <pubDate>Mon, 11 Sep 2017 07:40:58 -0700</pubDate>
-        <link>http://localhost:4000/september-squatz-deadlifts</link>
-        <guid isPermaLink="true">http://localhost:4000/september-squatz-deadlifts</guid>
+        <link>/mahblog/september-squatz-deadlifts</link>
+        <guid isPermaLink="true">/mahblog/september-squatz-deadlifts</guid>
         
         
         <category>Training</category>
@@ -79,8 +79,8 @@ like while you’re here. I’m rambling.&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 11 Sep 2017 01:02:03 -0700</pubDate>
-        <link>http://localhost:4000/track-yourself</link>
-        <guid isPermaLink="true">http://localhost:4000/track-yourself</guid>
+        <link>/mahblog/track-yourself</link>
+        <guid isPermaLink="true">/mahblog/track-yourself</guid>
         
         
         <category>Life</category>
@@ -98,8 +98,8 @@ people. I’ve never been more prouder to embrace myself. Though late to the gam
 I feel there’s a lot of things I need to learn more about myself.&lt;/p&gt;
 </description>
         <pubDate>Mon, 11 Sep 2017 01:01:03 -0700</pubDate>
-        <link>http://localhost:4000/embrace-yourself</link>
-        <guid isPermaLink="true">http://localhost:4000/embrace-yourself</guid>
+        <link>/mahblog/embrace-yourself</link>
+        <guid isPermaLink="true">/mahblog/embrace-yourself</guid>
         
         
         <category>Life</category>
@@ -199,8 +199,8 @@ Put thought to someone that doesn’t love you back, you  die daily.&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 07 Jan 2017 01:02:03 -0800</pubDate>
-        <link>http://localhost:4000/quotes-2017</link>
-        <guid isPermaLink="true">http://localhost:4000/quotes-2017</guid>
+        <link>/mahblog/quotes-2017</link>
+        <guid isPermaLink="true">/mahblog/quotes-2017</guid>
         
         
         <category>Quotes</category>
@@ -227,8 +227,8 @@ things that are of interest to me? Maybe meet their friends and see
 if you can get a better overall view of that person?&lt;/p&gt;
 </description>
         <pubDate>Mon, 02 Jan 2017 00:02:03 -0800</pubDate>
-        <link>http://localhost:4000/focus-beyond-the-aesthetics</link>
-        <guid isPermaLink="true">http://localhost:4000/focus-beyond-the-aesthetics</guid>
+        <link>/mahblog/focus-beyond-the-aesthetics</link>
+        <guid isPermaLink="true">/mahblog/focus-beyond-the-aesthetics</guid>
         
         
         <category>Life</category>
@@ -276,8 +276,8 @@ if you can get a better overall view of that person?&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.marksdailyapple.com/cholesterol/&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 01 Jan 2017 01:02:03 -0800</pubDate>
-        <link>http://localhost:4000/cholesterol</link>
-        <guid isPermaLink="true">http://localhost:4000/cholesterol</guid>
+        <link>/mahblog/cholesterol</link>
+        <guid isPermaLink="true">/mahblog/cholesterol</guid>
         
         
         <category>Nutrition</category>
@@ -342,8 +342,8 @@ strings attached or any sort of compromises.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 01 Jan 2017 01:01:01 -0800</pubDate>
-        <link>http://localhost:4000/be-honest-with-yourself</link>
-        <guid isPermaLink="true">http://localhost:4000/be-honest-with-yourself</guid>
+        <link>/mahblog/be-honest-with-yourself</link>
+        <guid isPermaLink="true">/mahblog/be-honest-with-yourself</guid>
         
         
         <category>Life</category>
@@ -381,8 +381,8 @@ Focus on the 20%.&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 30 Dec 2016 14:42:59 -0800</pubDate>
-        <link>http://localhost:4000/keep-it-lean</link>
-        <guid isPermaLink="true">http://localhost:4000/keep-it-lean</guid>
+        <link>/mahblog/keep-it-lean</link>
+        <guid isPermaLink="true">/mahblog/keep-it-lean</guid>
         
         
         <category>Life</category>
@@ -908,8 +908,8 @@ intend to play?&lt;/em&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 14 Oct 2016 01:04:03 -0700</pubDate>
-        <link>http://localhost:4000/design-your-career</link>
-        <guid isPermaLink="true">http://localhost:4000/design-your-career</guid>
+        <link>/mahblog/design-your-career</link>
+        <guid isPermaLink="true">/mahblog/design-your-career</guid>
         
         
         <category>Business Dealings</category>
@@ -1231,8 +1231,8 @@ combineNoDups(a, b)
 
 </description>
         <pubDate>Sun, 02 Oct 2016 12:00:00 -0700</pubDate>
-        <link>http://localhost:4000/technical-interview-2</link>
-        <guid isPermaLink="true">http://localhost:4000/technical-interview-2</guid>
+        <link>/mahblog/technical-interview-2</link>
+        <guid isPermaLink="true">/mahblog/technical-interview-2</guid>
         
         
         <category>Web Development</category>

@@ -5,7 +5,7 @@ date:   2014-01-31 14:43:59
 categories: Interaction
 ---
 
-<img src="/assets/wolf.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/wolf.jpg" style="display: block; margin: auto;" width=""/>
 
 
 In Dale Carnegie's *"How to Win Friends and Influence People,"* he noted ways on influencing people. To me these points can be summarized into: creating a friendly atmosphere, nourishing the other person's self-esteem, and instilling fire.

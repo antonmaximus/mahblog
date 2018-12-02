@@ -5,7 +5,7 @@ date:   2014-01-27 14:43:59
 categories: Interaction
 ---
 
-<img src="/assets/singingbird.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/singingbird.jpg" style="display: block; margin: auto;" width=""/>
 
 
 

@@ -1,11 +1,11 @@
----
+{{ site.baseurl }}---
 layout: post
 title:  "The Daily Stretch"
 date:   2014-01-03 14:43:59
 categories: Training
 ---
 
-<img src="/assets/stretch.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/stretch.jpg" style="display: block; margin: auto;" width=""/>
 
 
 

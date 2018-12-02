@@ -6,7 +6,7 @@ categories: Nutrition
 ---
 
 
-<img src="/assets/oil_in_bottles.jpg" width=""/>
+<img src="{{ site.baseurl }}/assets/oil_in_bottles.jpg" width=""/>
 
 
 

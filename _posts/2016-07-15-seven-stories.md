@@ -34,7 +34,7 @@ A more quantitative approach I took was to compare the monthly temperature avera
 
 Using the data and the personal stories I've gathered,  I decided that I would be moving to Los Angeles because I knew it was the city that was inline with the weather that I value.
 
-<img src="/assets/weather.png"  style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/weather.png"  style="display: block; margin: auto;" width=""/>
 
 
 

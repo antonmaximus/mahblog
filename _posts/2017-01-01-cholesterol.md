@@ -5,7 +5,7 @@ date:   2017-01-01 01:02:03  -0800
 categories: Nutrition
 ---
 
-<img src="/assets/cholesterol.jpg" style="display: block; margin: auto;"  width=""/>
+<img src="{{ site.baseurl }}/assets/cholesterol.jpg" style="display: block; margin: auto;"  width=""/>
 
 Cholesterol is not the bad guy!  You got the wrong guy!
 

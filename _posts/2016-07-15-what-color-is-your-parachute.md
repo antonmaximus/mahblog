@@ -156,7 +156,7 @@ The 5 questions you should find out answers to:
 > You #3: "I'm looking for a salary in the range of $35,000 to $45,000 a year."
 
   
-<img src="/assets/negotiate.png"  style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/negotiate.png"  style="display: block; margin: auto;" width=""/>
 
 
 **2. The purpose of salary negotiation is to uncover the most that an employer is willing to pay to get you.**

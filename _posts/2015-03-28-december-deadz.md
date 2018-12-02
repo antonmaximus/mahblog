@@ -16,7 +16,7 @@ For next December (the one in 2015), I'd like to hit 4 plates for 1 -- this is a
 
 
 
-<img src="/assets/deadz_march2015.png" style="margin: auto; display: block;" width=""/>
+<img src="{{ site.baseurl }}/assets/deadz_march2015.png" style="margin: auto; display: block;" width=""/>
 
 
 

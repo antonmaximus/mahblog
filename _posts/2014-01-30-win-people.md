@@ -6,7 +6,7 @@ categories: Interaction
 ---
 
 
-<img src="/assets/knight.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/knight.jpg" style="display: block; margin: auto;" width=""/>
 
 
 

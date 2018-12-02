@@ -6,7 +6,7 @@ categories: Life
 ---
 
 
-<img src="/assets/hugme.png" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/hugme.png" style="display: block; margin: auto;" width=""/>
 
 
 

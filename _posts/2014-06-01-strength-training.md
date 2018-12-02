@@ -19,7 +19,7 @@ One of the things that amaze me about the human body is how it learns to adapt. 
 
 **It's like shooting darts in the dark.**  When I started lifting, it was not very inspiring.  I would go to the gym and would get some good workout, but I wasn't seeing any results even after several months of working out.  The good thing that came out of it was that I learned various exercises. The bad thing was that I wasted soo much time as there was no way for me to see where I was in the grand scheme of things.  I was in this period for a long time, and since it did not occur to me to focus on my progression, there's no data to see other than some random photos taken at arbitrary times.  :/
 
-<img src="/assets/beforePics.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/beforePics.jpg" style="display: block; margin: auto;" width=""/>
 
 
 ## The First Wave.
@@ -60,7 +60,7 @@ The *whatever exercise* was any exercise that I fancied doing because I was alre
 Unfortunately, I'm not the best logger of all time and I started creating logs in October 2013, and I'm pretty sure I started doing the routine even earlier than that. I did with the routine above for a few months.  There was small progression in the lift's numbers; however, some noticeable progression on the physique could be seen. 
 
 <video autoplay loop width="560" height="315" style="margin: auto; display: block;" controls>
-  <source src="/assets/progress.mp4" type="video/mp4">
+  <source src="{{ site.baseurl }}/assets/progress.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 <br> 
@@ -78,7 +78,7 @@ The first 2  months of documenting was not really inspiring as I wasn't seeing m
 
 **Diet.** During this period, I was in a very low carb diet, which was almost keto on certain days. Since I was a vagabond (a story for another blog), I would only buy food  to be finished that day.  I would eat about 1.25 lbs of cooked meat from Albertson's, a bag of vegetables, and 12 hard-boiled eggs.  There would be certain days when I would buy a couple of bananas and yogurt because I felt I needed more calories and they're cheap.  I would throw in protein powder at times.  With the exception of protein powder and yogurt, all of my caloric intake was paleo.  The chart below shows what typical food items I would eat, and the total calories would average between 2200 - 2600. In addition to all of these, I followed an [intermittent fasting](https://en.wikipedia.org/wiki/Intermittent_fasting) way of eating where I typically would eat within an 8 hour window and fast for the other 16 hours of the day.
 
-<img src="/assets/foodlog.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/foodlog.jpg" style="display: block; margin: auto;" width=""/>
 
 
 **Order of Exercises.**  The only rule I followed was to always Squat before Deadlift.  All other main exercises could be shuffled.  Also, *whatever exercises* must be done after main exercises.
@@ -118,7 +118,7 @@ Upper-body Day:
 I based my squats (low-bar) initially from the Starting Strength book too, but a low-bar style of squats caused  some knee pain; hence, I looked into the high-bar style (aka Ass-To-Grass) squats which is the more natural way of squatting (this is the squat that a toddler naturally does if he was to squat or pick something up from the ground).  I had to start from very light weight again when I switched, so I could learn and critique my form. Once I got hold of the proper motion, I felt at home with the high-bar squat.
 
 
-<img src="/assets/babysquat.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/babysquat.jpg" style="display: block; margin: auto;" width=""/>
 
 
 I also have developed some shoulder pain when doing bench press with a barbell.  I switched to dumbbells and it no longer bothers me.  My observation was that barbell puts my arm in a less-natural position (probably due to length and my anatomy, I don't know).  By switching to dumbbells, my arm has been able to position itself optimally, so I experience no pain.
@@ -132,7 +132,7 @@ Also, since I'm now doing a different style of squat and chest press now, I had 
 
 
 
-<img src="/assets/foodlog2.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/foodlog2.jpg" style="display: block; margin: auto;" width=""/>
 
 
 **Progression.** The charts below show my progression on the main exercises from my monthly check-ins.  I separated the pull-up/chin-up routine in a different graph because it doesn't involve added weights.  As I mentioned earlier, Squats and Chest Press have 2 logs each (one for each style) which doesn't really help to show the overall trend of their progression because of the shorter time period.  Nonetheless, there is a trend that ought to be noticed on the deadlifts, shoulder presses, and pull-up/chin-up -- they're progressing overtime.
@@ -142,16 +142,16 @@ Also, since I'm now doing a different style of squat and chest press now, I had 
 
 
 
-<img src="/assets/progressionExcel.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/progressionExcel.jpg" style="display: block; margin: auto;" width=""/>
 
 
 
 
-<img src="/assets/progressionGraph.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/progressionGraph.jpg" style="display: block; margin: auto;" width=""/>
 
 
 
-<img src="/assets/progressionBodyweight.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/progressionBodyweight.jpg" style="display: block; margin: auto;" width=""/>
 
 
 

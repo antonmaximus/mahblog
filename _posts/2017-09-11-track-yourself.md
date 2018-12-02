@@ -6,7 +6,7 @@ categories: Life
 ---
 
 
-<img src="/assets/track.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/track.jpg" style="display: block; margin: auto;" width=""/>
 
 
 Track Yourself.  See the forest for the trees

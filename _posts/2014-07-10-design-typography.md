@@ -11,7 +11,7 @@ be used throughout your application.  An example is shown below.  Putting this
 guide beforehand will avoid any inconsistency and create a better overall 
 design/user-experience.
 
-<img src="/assets/webdev_typo1.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_typo1.jpg"  width=""/>
 
 
 ---
@@ -35,10 +35,10 @@ type in this Serif Classification are:
 * Modern -- arts and culture
 * Egyptian -- marketing and promotional
 
-<img src="/assets/webdev_serif_humanist.jpg"  width=""/>
-<img src="/assets/webdev_serif_transitional.jpg"  width=""/>
-<img src="/assets/webdev_serif_modern.jpg"  width=""/>
-<img src="/assets/webdev_serif_egyptian.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_serif_humanist.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_serif_transitional.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_serif_modern.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_serif_egyptian.jpg"  width=""/>
 
 
 
@@ -49,9 +49,9 @@ type in this Serif Classification are:
 * Geometric Sans -- science or architecture
 
 
-<img src="/assets/webdev_sans_humanist.jpg"  width=""/>
-<img src="/assets/webdev_sans_transitional.jpg"  width=""/>
-<img src="/assets/webdev_sans_geometric.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_sans_humanist.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_sans_transitional.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_sans_geometric.jpg"  width=""/>
 
 
 

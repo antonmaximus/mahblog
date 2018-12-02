@@ -12,13 +12,13 @@ Orange is the color of Energy, Happiness, and Vitality.  These qualities embody
 improv, so this will be the main color of the Improv Masters site. And what goes well with
 orange? It's complementary blue, of course.  Hence, here's the scheme:
 
-<img src="/assets/improvMasters_scheme.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/improvMasters_scheme.jpg"  width=""/>
 
 
 ## Typography
 
 Since improv is within arts and culture, the type will be in Modern Serif Fonts.
-<img src="/assets/improvMasters_typography.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/improvMasters_typography.jpg"  width=""/>
 
 
 {% highlight ruby %}

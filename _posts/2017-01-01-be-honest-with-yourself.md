@@ -5,7 +5,7 @@ date:   2017-01-01 01:01:01  -0800
 categories: Life
 ---
 
-<img src="/assets/pinocchio.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/pinocchio.jpg" style="display: block; margin: auto;" width=""/>
 
 
 The worst situations that I've been in were the times when I was not honest with myself.

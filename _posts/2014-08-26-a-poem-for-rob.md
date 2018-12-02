@@ -5,7 +5,7 @@ date:   2014-08-26 14:43:58
 categories: Moments
 ---
 
-<img src="/assets/rob_poem.png"  width="" alt="Image Unit"/>
+<img src="{{ site.baseurl }}/assets/rob_poem.png"  width="" alt="Image Unit"/>
 
 
 This week is my former boss's last week at Lucasfilm, and those of use who were close 

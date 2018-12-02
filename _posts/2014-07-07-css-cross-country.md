@@ -58,7 +58,7 @@ Priority of a Selector follows this order: **A, B, C, D, E**
 Happens when the margins of two block elements collapse to the larger one
 instead of adding the two. [Source.][w3c]
 
-<img src="/assets/webdev_margin.jpg" width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_margin.jpg" width=""/>
 
 
 

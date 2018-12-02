@@ -4,6 +4,7 @@ email: anton23@gmail.com
 description: "A small growth today makes progression happen..."
 #baseurl: ""
 baseurl: "/mahblog"
+site.baseurl: "/mahblog"
 #url: "www.anton23.com"
 twitter_username: antonmaximus
 # github_username:  antonmaximus

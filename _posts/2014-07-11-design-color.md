@@ -24,7 +24,7 @@ the most vibrant color.  (Lightness's maximum value is white.)
 It's a collection of 4-5 colors built into the style guide.
 
 
-<img src="/assets/webdev_color1.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_color1.jpg"  width=""/>
 
 Steps in Building a Color Scheme:
 
@@ -43,9 +43,9 @@ Steps in Building a Color Scheme:
 3. Build Scheme around base color.
 
 
-<img src="/assets/webdev_color_monochromatic.jpg"  width=""/>
-<img src="/assets/webdev_color_analogous.jpg"  width=""/>
-<img src="/assets/webdev_color_complementary.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_color_monochromatic.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_color_analogous.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_color_complementary.jpg"  width=""/>
 
 
 
@@ -67,7 +67,7 @@ Hue only; the right part shows a contrast of Hue & Brightness. WCAG determines t
 Accessibility Guidelines.
 
 
-<img src="/assets/webdev_color_contrast.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_color_contrast.jpg"  width=""/>
 
 
 
@@ -78,7 +78,7 @@ Accessibility Guidelines.
 Some contrasts are intrinsically difficult for humans to distinguish (and 
 are plain ugly too).
 
-<img src="/assets/webdev_color_ugly.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_color_ugly.jpg"  width=""/>
 
 
 
@@ -89,18 +89,18 @@ yellow is darker than the blue creates an awkward user-experience.  However,
 this can be fixed by adjusting the lightness to make yellow be lighter and blue 
 darker -- so as to correspond with the natural values.
 
-<img src="/assets/webdev_color_natural.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_color_natural.jpg"  width=""/>
 
 
 ### Warm & Cold Colors
 Red, orange, & yellow side are warm.  Green, blue, and purple are on the cooler side.
 Use warm & cold to create depth.  Warm is always closer, and cold is in the back.
 
-<img src="/assets/webdev_color_warmcool1.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_color_warmcool1.jpg"  width=""/>
 
 
 
-<img src="/assets/webdev_color_warmcool2.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_color_warmcool2.jpg"  width=""/>
 
 
 
@@ -108,7 +108,7 @@ Use warm & cold to create depth.  Warm is always closer, and cold is in the back
 Combine colors to reinforce a hierarchy.  Use color differences to contribute 
 to relationships between elements on the page.
 
-<img src="/assets/webdev_color_hierarchy.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_color_hierarchy.jpg"  width=""/>
 
 
 ### Types and Images
@@ -123,4 +123,4 @@ Below is a good example of color combination that was used on Code School's site
 A combination of analogous, complementary colors with high enough contrast for 
 text colors and backgrounds.
 
-<img src="/assets/webdev_color_combination.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/webdev_color_combination.jpg"  width=""/>

@@ -5,7 +5,7 @@ date:   2014-01-29 14:43:59
 categories: Interaction
 ---
 
-<img src="/assets/dog.jpg"  style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/dog.jpg"  style="display: block; margin: auto;" width=""/>
 
 
 In Dale Carnegie's *"How to Win Friends and Influence People,"* Carnegie provided 6 ways to make people to like you.

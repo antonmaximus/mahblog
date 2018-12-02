@@ -6,7 +6,7 @@ categories: [Business Dealings, Career, Web Development]
 ---
 
 
-<img src="/assets/squats.jpg"  style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/squats.jpg"  style="display: block; margin: auto;" width=""/>
 
 
 

@@ -22,9 +22,9 @@ Arrange elements to engage and direct the users eye.
 * Footer -- bottom of the page and provides quick hint information for users. 
   * It should always span the width of the page.
 
-<img src="/assets/designLayout_hierarchy1.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/designLayout_hierarchy1.jpg"  width=""/>
 
-<img src="/assets/designLayout_hierarchy2.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/designLayout_hierarchy2.jpg"  width=""/>
 
 ---
 
@@ -34,7 +34,7 @@ Arrange elements to engage and direct the users eye.
 * It also has horizontal lines that create a baseline for text that is equal to the line-height.
 * Always respect the gutters
 
-<img src="/assets/designLayout_grid.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/designLayout_grid.jpg"  width=""/>
 
 
 ### Fixed vs Fluid
@@ -56,7 +56,7 @@ A good design is a balanced design.  It can be symmetrical or asymmetrical.
 * Symmetry -- portrays a sense of stabilty and trust.
 * Asymmetry -- effective in drawing attention and breaking monotony.  It is inherently balanced, and creates intrigue and demands attention.  
 
-<img src="/assets/designLayout_balance.jpg"  width=""/>
+<img src="{{ site.baseurl }}/assets/designLayout_balance.jpg"  width=""/>
 
 
 ### All of the principles together Contribute to Balance.

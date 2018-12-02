@@ -5,7 +5,7 @@ date:   2014-01-25 14:43:59
 categories: Interaction
 ---
 
-<img src="/assets/beehive.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/beehive.jpg" style="display: block; margin: auto;" width=""/>
 
 
 ...or as Dale Carnegie calls it, *"If you want to gather honey, don’t kick over the beehive."*  I thought that I put a positive spin to it by removing the negation (i.e., do not kick) since positivity sticks better. Nonethless, this follows Carnegie's first principle (I call it **Technique**) in Handling People in his book *How To Win Friends and Influence People.* **PRINCIPLE 1:  Don’t criticize, condemn or complain.**
@@ -91,6 +91,6 @@ Point in short, if you're about to say anything (or write or text), do not conde
 
         
         
-<img src="/assets/honeybear.jpg" width=""/>
+<img src="{{ site.baseurl }}/assets/honeybear.jpg" width=""/>
 
 

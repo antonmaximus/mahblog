@@ -19,9 +19,9 @@ Conclusion, looking at the data, there was about a 40-pound increase in my squat
 
 
 
-<img src="/assets/squatz2_excelSnap.png"  width=""/>
+<img src="{{ site.baseurl }}/assets/squatz2_excelSnap.png"  width=""/>
 
-<img src="/assets/squatz2_graph.png"  width=""/>
+<img src="{{ site.baseurl }}/assets/squatz2_graph.png"  width=""/>
 
 
 

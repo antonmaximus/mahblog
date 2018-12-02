@@ -264,9 +264,9 @@ Re-render the view (Model updates change the view)
 
 Why the 3rd argument (i.e., What is ***this***)?
 
-<img src="/assets/backboneA1_a.png"  width=""/>
+<img src="{{ site.baseurl }}/assets/backboneA1_a.png"  width=""/>
 
-<img src="/assets/backboneA1_b.png"  width=""/>
+<img src="{{ site.baseurl }}/assets/backboneA1_b.png"  width=""/>
 
 
 

@@ -6,14 +6,14 @@ categories: Life Interaction
 ---
 
 
-<img src="/assets/openup.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/openup.jpg" style="display: block; margin: auto;" width=""/>
 
 
 Kinesthetic sense.  We've constantly trained our brain to focus on what's in front of our eyes, but many of us fail to develop the ability to recognize what posture our body is in without looking at one's reflection.  How many times throughout the day have we asked ourselves: *"Am I opening up, or is my body hunched down?"*  Opening the body up is a sign of power and is evident in the animal kingdom and human reaction.  
 
 
 
-<img src="/assets/pose.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/pose.jpg" style="display: block; margin: auto;" width=""/>
 
 
 In Amy Cuddy's *Ted Talk* presentation she explains that doing a high-power pose for 2-minutes increases testosterone by 20% (and reduces cortisol by 25%).  On the other hand, a low-power pose reduces testosterone by 10% (and increases cortisol by 15%).  In short, one's bodily posture produces hormones that will alter the mind which alter's the behavior.  

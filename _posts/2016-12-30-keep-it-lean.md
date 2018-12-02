@@ -5,7 +5,7 @@ date:   2016-12-30 14:42:59  -0800
 categories: Life
 ---
 
-<img src="/assets/lean.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/lean.jpg" style="display: block; margin: auto;" width=""/>
 
 
 Truths:

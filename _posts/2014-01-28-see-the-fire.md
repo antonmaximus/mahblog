@@ -6,7 +6,7 @@ categories: Interaction
 ---
 
 
-<img src="/assets/fire.jpg" style="display: block; margin: auto;" width=""/>
+<img src="{{ site.baseurl }}/assets/fire.jpg" style="display: block; margin: auto;" width=""/>
 
 
 

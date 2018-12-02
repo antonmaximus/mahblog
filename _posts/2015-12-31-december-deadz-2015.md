@@ -16,7 +16,7 @@ The good news is that in the past year, I've discovered that my deadlifts need t
 As for my deadlifting goal for next December, I'm looking to pull 3 plates (315 lbs).  I'm currently pulling 275 lbs for 5 reps.
 
 
-<img src="/assets/deadz_2015.png" width=""/>
+<img src="{{ site.baseurl }}/assets/deadz_2015.png" width=""/>
 
 
 

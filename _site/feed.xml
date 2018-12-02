@@ -3,10 +3,10 @@
   <channel>
     <title>anton</title>
     <description>A small growth today makes progression happen...</description>
-    <link>www.anton23.com/</link>
-    <atom:link href="www.anton23.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 11 Sep 2017 22:47:58 -0700</pubDate>
-    <lastBuildDate>Mon, 11 Sep 2017 22:47:58 -0700</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 12 Sep 2017 17:02:44 -0700</pubDate>
+    <lastBuildDate>Tue, 12 Sep 2017 17:02:44 -0700</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -14,20 +14,30 @@
         <description>&lt;h2 id=&quot;ive-lost-track-sadly&quot;&gt;I’ve lost Track. Sadly.&lt;/h2&gt;
 
 &lt;p&gt;Three years ago was the last time I tracked my squats and deadlifts. It’s not until 
-now that I’ve decided to keep a blog it. I failed at tracking myself.&lt;/p&gt;
+now that I’ve decided to blog it again. I failed at tracking myself, but am now picking it up
+back again.&lt;/p&gt;
 
-&lt;h2 id=&quot;a-workaround-keep-it-simple-stupid-keep-things-lean-embrace-yourself-own-it&quot;&gt;A workaround: Keep it simple stupid. Keep things lean. Embrace Yourself. Own it.&lt;/h2&gt;
+&lt;h3 id=&quot;a-workaround-keep-it-simple-stupid-keep-things-lean-embrace-yourself-own-it&quot;&gt;A workaround: Keep it simple stupid. Keep things lean. Embrace Yourself. Own it.&lt;/h3&gt;
 
-&lt;p&gt;I’ve accepted the fact that it’s a spiral path and things are not linear. I’ve noticed
-the past 2 years that every summer, I always not want to work lift hard. I’m not sure
-if it’s the summer bug or just the heat, but my best lifts have always been in the 
-fall. So now, I embrace myself and own this. I plan to take summers off.&lt;/p&gt;
+&lt;p&gt;I’ve accepted the fact that it’s a spiral path, things are not linear, and things
+are more cyclical. I’ve noticed
+the past 2 years that every summer, I would always not want to lift hard. I’m not sure
+if it was the summer bug or just the heat, but my best lifts have always been in the 
+fall. Now, I plan to take summers off, so am not too stressed too much and prepare for
+fall lifting.&lt;/p&gt;
 
-&lt;p&gt;To make things simple, I’ve decided to do 1 rep maxes for my squats and deadlifts. 
-Below are my PRs for this September 2017.&lt;/p&gt;
+&lt;p&gt;To make things simpler, I’ve decided to do 1 rep maxes for my squats and deadlifts. 
+Below are my PRs for this September 2017. They’re significanlty lower than my lifts 
+from 2016 Spring.&lt;/p&gt;
 
 &lt;figure&gt;&lt;iframe width=&quot;360&quot; height=&quot;480&quot; allowfullscreen=&quot;&quot; class=&quot;youtube-player&quot; src=&quot;//www.youtube.com/embed/7sdd56S2svM?wmode=transparent&amp;amp;amp;autoplay=0&amp;amp;amp;rel=0&amp;amp;amp;showinfo=0&amp;amp;amp;autohide=1&amp;amp;amp;color=white&amp;amp;amp;&quot; type=&quot;text/html&quot;&gt;&lt;/iframe&gt;
-  &lt;figcaption&gt;2014 September Squatz (245x3)&lt;/figcaption&gt;
+  &lt;figcaption&gt;2017 September Squatz (265x1), Deadz(315x1)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+  &lt;iframe width=&quot;360&quot; height=&quot;480&quot; allowfullscreen=&quot;&quot; class=&quot;youtube-player&quot; src=&quot;//www.youtube.com/embed/pTsDTAiyqus?wmode=transparent&amp;amp;amp;autoplay=0&amp;amp;amp;rel=0&amp;amp;amp;showinfo=0&amp;amp;amp;autohide=1&amp;amp;amp;color=white&amp;amp;amp;&quot; type=&quot;text/html&quot;&gt;&lt;/iframe&gt;
+  &lt;iframe width=&quot;360&quot; height=&quot;480&quot; allowfullscreen=&quot;&quot; class=&quot;youtube-player&quot; src=&quot;//www.youtube.com/embed/rRktZFIuSZs?wmode=transparent&amp;amp;amp;autoplay=0&amp;amp;amp;rel=0&amp;amp;amp;showinfo=0&amp;amp;amp;autohide=1&amp;amp;amp;color=white&amp;amp;amp;&quot; type=&quot;text/html&quot;&gt;&lt;/iframe&gt;
+  &lt;figcaption&gt;2016 March Squatz (285x1), Deadz(385x1)&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;&lt;iframe width=&quot;360&quot; height=&quot;480&quot; allowfullscreen=&quot;&quot; class=&quot;youtube-player&quot; src=&quot;//www.youtube.com/embed/jzT3osdYQ_A?wmode=transparent&amp;amp;amp;autoplay=0&amp;amp;amp;rel=0&amp;amp;amp;showinfo=0&amp;amp;amp;autohide=1&amp;amp;amp;color=white&amp;amp;amp;&quot; type=&quot;text/html&quot;&gt;&lt;/iframe&gt;
@@ -41,8 +51,8 @@ Below are my PRs for this September 2017.&lt;/p&gt;
 &lt;hr /&gt;
 </description>
         <pubDate>Mon, 11 Sep 2017 07:40:58 -0700</pubDate>
-        <link>www.anton23.com/september-squatz-deadlifts</link>
-        <guid isPermaLink="true">www.anton23.com/september-squatz-deadlifts</guid>
+        <link>http://localhost:4000/september-squatz-deadlifts</link>
+        <guid isPermaLink="true">http://localhost:4000/september-squatz-deadlifts</guid>
         
         
         <category>Training</category>
@@ -65,12 +75,12 @@ now. Maybe that’ll help you figure out the accomplishments and setbacks you’
 
 &lt;p&gt;How much do I enjoy this? Do I like what I do? Do more of what you like and do it 
 a lot. We’re in this world for a limited time. It would suck to not do what you 
-like while you’re here.&lt;/p&gt;
+like while you’re here. I’m rambling.&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 11 Sep 2017 01:02:03 -0700</pubDate>
-        <link>www.anton23.com/track-yourself</link>
-        <guid isPermaLink="true">www.anton23.com/track-yourself</guid>
+        <link>http://localhost:4000/track-yourself</link>
+        <guid isPermaLink="true">http://localhost:4000/track-yourself</guid>
         
         
         <category>Life</category>
@@ -88,8 +98,8 @@ people. I’ve never been more prouder to embrace myself. Though late to the gam
 I feel there’s a lot of things I need to learn more about myself.&lt;/p&gt;
 </description>
         <pubDate>Mon, 11 Sep 2017 01:01:03 -0700</pubDate>
-        <link>www.anton23.com/embrace-yourself</link>
-        <guid isPermaLink="true">www.anton23.com/embrace-yourself</guid>
+        <link>http://localhost:4000/embrace-yourself</link>
+        <guid isPermaLink="true">http://localhost:4000/embrace-yourself</guid>
         
         
         <category>Life</category>
@@ -189,8 +199,8 @@ Put thought to someone that doesn’t love you back, you  die daily.&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 07 Jan 2017 01:02:03 -0800</pubDate>
-        <link>www.anton23.com/quotes-2017</link>
-        <guid isPermaLink="true">www.anton23.com/quotes-2017</guid>
+        <link>http://localhost:4000/quotes-2017</link>
+        <guid isPermaLink="true">http://localhost:4000/quotes-2017</guid>
         
         
         <category>Quotes</category>
@@ -217,8 +227,8 @@ things that are of interest to me? Maybe meet their friends and see
 if you can get a better overall view of that person?&lt;/p&gt;
 </description>
         <pubDate>Mon, 02 Jan 2017 00:02:03 -0800</pubDate>
-        <link>www.anton23.com/focus-beyond-the-aesthetics</link>
-        <guid isPermaLink="true">www.anton23.com/focus-beyond-the-aesthetics</guid>
+        <link>http://localhost:4000/focus-beyond-the-aesthetics</link>
+        <guid isPermaLink="true">http://localhost:4000/focus-beyond-the-aesthetics</guid>
         
         
         <category>Life</category>
@@ -266,8 +276,8 @@ if you can get a better overall view of that person?&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.marksdailyapple.com/cholesterol/&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 01 Jan 2017 01:02:03 -0800</pubDate>
-        <link>www.anton23.com/cholesterol</link>
-        <guid isPermaLink="true">www.anton23.com/cholesterol</guid>
+        <link>http://localhost:4000/cholesterol</link>
+        <guid isPermaLink="true">http://localhost:4000/cholesterol</guid>
         
         
         <category>Nutrition</category>
@@ -332,8 +342,8 @@ strings attached or any sort of compromises.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 01 Jan 2017 01:01:01 -0800</pubDate>
-        <link>www.anton23.com/be-honest-with-yourself</link>
-        <guid isPermaLink="true">www.anton23.com/be-honest-with-yourself</guid>
+        <link>http://localhost:4000/be-honest-with-yourself</link>
+        <guid isPermaLink="true">http://localhost:4000/be-honest-with-yourself</guid>
         
         
         <category>Life</category>
@@ -371,8 +381,8 @@ Focus on the 20%.&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 30 Dec 2016 14:42:59 -0800</pubDate>
-        <link>www.anton23.com/keep-it-lean</link>
-        <guid isPermaLink="true">www.anton23.com/keep-it-lean</guid>
+        <link>http://localhost:4000/keep-it-lean</link>
+        <guid isPermaLink="true">http://localhost:4000/keep-it-lean</guid>
         
         
         <category>Life</category>
@@ -898,8 +908,8 @@ intend to play?&lt;/em&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 14 Oct 2016 01:04:03 -0700</pubDate>
-        <link>www.anton23.com/design-your-career</link>
-        <guid isPermaLink="true">www.anton23.com/design-your-career</guid>
+        <link>http://localhost:4000/design-your-career</link>
+        <guid isPermaLink="true">http://localhost:4000/design-your-career</guid>
         
         
         <category>Business Dealings</category>
@@ -1221,8 +1231,8 @@ combineNoDups(a, b)
 
 </description>
         <pubDate>Sun, 02 Oct 2016 12:00:00 -0700</pubDate>
-        <link>www.anton23.com/technical-interview-2</link>
-        <guid isPermaLink="true">www.anton23.com/technical-interview-2</guid>
+        <link>http://localhost:4000/technical-interview-2</link>
+        <guid isPermaLink="true">http://localhost:4000/technical-interview-2</guid>
         
         
         <category>Web Development</category>

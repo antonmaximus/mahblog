@@ -21,6 +21,6 @@ There's nothing else really much to say other than say good luck.
 
 How much do I enjoy this? Do I like what I do? Do more of what you like and do it 
 a lot. We're in this world for a limited time. It would suck to not do what you 
-like while you're here. 
+like while you're here. I'm rambling. 
 
 

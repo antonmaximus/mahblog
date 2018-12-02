@@ -9,26 +9,34 @@ categories: Training
 ## I've lost Track. Sadly.
 
 Three years ago was the last time I tracked my squats and deadlifts. It's not until 
-now that I've decided to keep a blog it. I failed at tracking myself. 
+now that I've decided to blog it again. I failed at tracking myself, but am now picking it up
+back again.
 
-## A workaround: Keep it simple stupid. Keep things lean. Embrace Yourself. Own it. 
+### A workaround: Keep it simple stupid. Keep things lean. Embrace Yourself. Own it. 
 
-I've accepted the fact that it's a spiral path and things are not linear. I've noticed
-the past 2 years that every summer, I always not want to work lift hard. I'm not sure
-if it's the summer bug or just the heat, but my best lifts have always been in the 
-fall. So now, I embrace myself and own this. I plan to take summers off. 
-
-
-To make things simple, I've decided to do 1 rep maxes for my squats and deadlifts. 
-Below are my PRs for this September 2017. 
+I've accepted the fact that it's a spiral path, things are not linear, and things
+are more cyclical. I've noticed
+the past 2 years that every summer, I would always not want to lift hard. I'm not sure
+if it was the summer bug or just the heat, but my best lifts have always been in the 
+fall. Now, I plan to take summers off, so am not too stressed too much and prepare for
+fall lifting. 
 
 
+To make things simpler, I've decided to do 1 rep maxes for my squats and deadlifts. 
+Below are my PRs for this September 2017. They're significanlty lower than my lifts 
+from 2016 Spring.
 
 
 <figure><iframe width="360" height="480"  allowfullscreen="" class="youtube-player" src="//www.youtube.com/embed/7sdd56S2svM?wmode=transparent&amp;amp;autoplay=0&amp;amp;rel=0&amp;amp;showinfo=0&amp;amp;autohide=1&amp;amp;color=white&amp;amp;" type="text/html"></iframe>
-  <figcaption>2014 September Squatz (245x3)</figcaption>
+  <figcaption>2017 September Squatz (265x1), Deadz(315x1)</figcaption>
 </figure>
 
+
+<figure>
+  <iframe  width="360" height="480" allowfullscreen="" class="youtube-player" src="//www.youtube.com/embed/pTsDTAiyqus?wmode=transparent&amp;amp;autoplay=0&amp;amp;rel=0&amp;amp;showinfo=0&amp;amp;autohide=1&amp;amp;color=white&amp;amp;" type="text/html"></iframe>
+  <iframe width="360" height="480" allowfullscreen="" class="youtube-player" src="//www.youtube.com/embed/rRktZFIuSZs?wmode=transparent&amp;amp;autoplay=0&amp;amp;rel=0&amp;amp;showinfo=0&amp;amp;autohide=1&amp;amp;color=white&amp;amp;" type="text/html"></iframe>
+  <figcaption>2016 March Squatz (285x1), Deadz(385x1)</figcaption>
+</figure>
 
 <figure><iframe width="360" height="480"  allowfullscreen="" class="youtube-player" src="//www.youtube.com/embed/jzT3osdYQ_A?wmode=transparent&amp;amp;autoplay=0&amp;amp;rel=0&amp;amp;showinfo=0&amp;amp;autohide=1&amp;amp;color=white&amp;amp;" type="text/html"></iframe>
   <figcaption>2014 September Squatz (245x3)</figcaption>

@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-We always need something to keep us back on track when lost.
+Something to keep me back on track when lost.

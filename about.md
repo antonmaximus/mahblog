@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-Taking Anton to the Maximum! And to keep him back on track when lost.
+We always need something to keep us back on track when lost.

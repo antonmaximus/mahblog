@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "December Deadz"
+title:  "December Deadz 2014"
 date:   2015-03-28 14:00:00
 categories: Training
 ---

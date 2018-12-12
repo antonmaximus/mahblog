@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Track Yourself
+title:  Track Yourself. See the Forest from the Trees.
 date:   2017-09-11 00:02:03  -0800
 categories: Life
 ---

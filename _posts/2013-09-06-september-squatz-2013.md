@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "September Squatz"
+title:  "September Squatz 2013"
 date:   2013-09-06 14:43:58
 categories: Training
 ---

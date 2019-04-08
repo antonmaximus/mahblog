@@ -22,4 +22,6 @@ Being Honest and what the Misael thing has done to you.
 
 Being grateful.
 
+How to pick a leather jacket and lumberjack plaid shirt. 
+
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "To Write"
-date:   2018-21-11 14:40:58
+date:   2018-12-11 14:40:58
 categories: Life
 ---
 
@@ -14,5 +14,12 @@ MCAT.
 
 Dextrose vs Maltodextrin. 
 
+How to take care of my teeth
+
+Soaps and pH
+
+Being Honest and what the Misael thing has done to you. 
+
+Being grateful.
 
 ---

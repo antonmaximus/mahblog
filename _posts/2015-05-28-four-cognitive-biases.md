@@ -48,7 +48,7 @@ Another consequence is that the framing of question is vital.  *Are you happy wi
 
 
 <figure><iframe width="560" height="315"  allowfullscreen="" class="youtube-player" src="//www.youtube.com/embed/3Ux3pm6UfCo?wmode=transparent&amp;amp;autoplay=0&amp;amp;rel=0&amp;amp;showinfo=0&amp;amp;autohide=1&amp;amp;color=white&amp;amp;" type="text/html"></iframe>
-  <figcaption>2014 September Squatz (245x3)</figcaption>
+  <figcaption>Video</figcaption>
 </figure>
 
 

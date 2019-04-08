@@ -31,7 +31,7 @@ Writing this in December 2018. I injured my left wrist last March 2018, and I ha
 
 <figure>
   <iframe  width="560" height="315" allowfullscreen="" class="youtube-player" src="//www.youtube.com/embed/qP2PBc16jPg?wmode=transparent&amp;amp;autoplay=0&amp;amp;rel=0&amp;amp;showinfo=0&amp;amp;autohide=1&amp;amp;color=white&amp;amp;" type="text/html"></iframe>
-  <figcaption>2016 March. 285 Squat, 385 Deadlift @ 154 Weight</figcaption>
+  <figcaption>2016 March. 285 Squat, 380 Deadlift @ 154 Weight</figcaption>
 </figure>
 
 <figure><iframe width="360" height="480"  allowfullscreen="" class="youtube-player" src="//www.youtube.com/embed/jzT3osdYQ_A?wmode=transparent&amp;amp;autoplay=0&amp;amp;rel=0&amp;amp;showinfo=0&amp;amp;autohide=1&amp;amp;color=white&amp;amp;" type="text/html"></iframe>

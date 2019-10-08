@@ -2,7 +2,7 @@
 layout: post
 title:  "Life after second MCAT in July"
 date:   2019-09-22 14:41:58
-categories: Training Kickass
+categories: [Life]
 ---
 
 On 20th July 2019, I took my MCAT and got my score of 500. I went down from the previous 506 last April. It was a big disappointment. I feel like I cut my chances of getting into an MD school by half. Things that I wish I did:
